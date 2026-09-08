@@ -1,0 +1,6 @@
+{
+  "final_test_fingerprint": "f15187a632ece61faccc8a90353d3b8b3b6c287b45425760b6c09defdeeac01a",
+  "locked_config_sha256": "a8836f418cd3edb53b7eb468e1c6369aa6edad3a3a2d1514de91dd939a85839f",
+  "protocol_version": "synthetic-impairment-v3-evidence-calibrated",
+  "warning": "This final-test cohort is burned. Future model or configuration changes require a new protocol salt and untouched reserve cohort."
+}

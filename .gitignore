@@ -1,6 +1,3 @@
 /data
 .agents
 
-**/*manifest*.json
-**/*manifest*.json.*
-/paper_typenet/weights/typenet_unbiased_1000_results.json

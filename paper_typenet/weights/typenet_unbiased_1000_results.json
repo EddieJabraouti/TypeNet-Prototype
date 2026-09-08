@@ -1,0 +1,38 @@
+{
+  "cohort_fingerprint": "4cb44bd7cb5436421557271d53656c73cf8b148aea80694d2c1710e01530220e",
+  "diagnostic_only": "All EER thresholds are test-derived; models were fixed before one-shot access.",
+  "results": {
+    "16x256_baseline": {
+      "eligible_users": 973,
+      "global_test_derived_eer": 0.0960119734899911,
+      "global_test_derived_threshold": 1.4072898626327515,
+      "model_sha256": "e863abeff2a94240998104685ef05ee3d7b02487a49ff40414b27b3d04c11686",
+      "paper_per_user_test_derived_eer_mean": 0.07633713135311855,
+      "paper_per_user_test_derived_eer_std": 0.0769187540211348
+    },
+    "16x512": {
+      "eligible_users": 973,
+      "global_test_derived_eer": 0.07625878133472061,
+      "global_test_derived_threshold": 1.5312178134918213,
+      "model_sha256": "1bcf9574f8af9756ee0cbeb2eca506bd316b31d235eda4070203d0cb76c20a23",
+      "paper_per_user_test_derived_eer_mean": 0.054329340760196076,
+      "paper_per_user_test_derived_eer_std": 0.0680812529331635
+    },
+    "32x512": {
+      "eligible_users": 973,
+      "global_test_derived_eer": 0.07132590224117002,
+      "global_test_derived_threshold": 1.6288774013519287,
+      "model_sha256": "bd2efe73eafd79a94e30d904f13c3eaa83e99f150a9502c042da867e2bddbd5e",
+      "paper_per_user_test_derived_eer_mean": 0.04532670160168162,
+      "paper_per_user_test_derived_eer_std": 0.0626105046587974
+    },
+    "64x512": {
+      "eligible_users": 973,
+      "global_test_derived_eer": 0.07502569373072968,
+      "global_test_derived_threshold": 1.5415866374969482,
+      "model_sha256": "04b7c11aa4a91fcf8f19027b09527c9962f31a1f4ec68913a0359b18e75696b7",
+      "paper_per_user_test_derived_eer_mean": 0.04981210798556921,
+      "paper_per_user_test_derived_eer_std": 0.06594651217312432
+    }
+  }
+}

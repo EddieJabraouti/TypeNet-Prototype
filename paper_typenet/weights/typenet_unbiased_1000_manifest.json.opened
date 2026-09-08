@@ -1,0 +1,10 @@
+{
+  "cohort_fingerprint": "4cb44bd7cb5436421557271d53656c73cf8b148aea80694d2c1710e01530220e",
+  "model_hashes": {
+    "16x256_baseline": "e863abeff2a94240998104685ef05ee3d7b02487a49ff40414b27b3d04c11686",
+    "16x512": "1bcf9574f8af9756ee0cbeb2eca506bd316b31d235eda4070203d0cb76c20a23",
+    "32x512": "bd2efe73eafd79a94e30d904f13c3eaa83e99f150a9502c042da867e2bddbd5e",
+    "64x512": "04b7c11aa4a91fcf8f19027b09527c9962f31a1f4ec68913a0359b18e75696b7"
+  },
+  "warning": "This benchmark cohort is burned for future model selection."
+}
