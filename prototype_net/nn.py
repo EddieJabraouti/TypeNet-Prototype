@@ -1,4 +1,4 @@
-"""Research-only synthetic timing-impairment prototype built on TypeNet
+"""Research evidence-calibrated timing-impairment prototype built on TypeNet
 
 The pretrained TypeNet architecture remains unchanged. Input batch
 normalization, the first LSTM, inter-layer dropout, and hidden batch
@@ -53,11 +53,43 @@ FROZEN_MODULE_NAMES = (
 
 @dataclass(frozen=True)
 class PerturbationConfig:
-    severity_factors: tuple[float, float, float] = (0.25, 0.50, 1.00)
-    pause_probabilities: tuple[float, float, float] = (0.01, 0.04, 0.10)
-    temporal_correlation: float = 0.80
+    """Priors constrained by open clinical keystroke evidence.
+
+    The severe hold-time location ratio (1.20) lies between the participant-
+    level ratios observed in Tappy (1.07) and neuroQWERTY (1.28). Press-to-press
+    location changes remain small because neither dataset showed a material
+    mean transition-time shift. Cognitive effects are represented primarily by
+    sparse pauses and shorter production bursts, consistent with the open
+    AD/MCI writing-process data (Zenodo 5942517), rather than by slowing every
+    transition.
+    """
+
+    severity_factors: tuple[float, float, float] = (0.25, 0.55, 1.00)
+    pause_probabilities: tuple[float, float, float] = (0.004, 0.012, 0.030)
+    temporal_correlation: float = 0.65
+    hold_location_ratio: float = 1.20
+    hold_log_variability: float = 0.30
+    press_location_ratio: float = 1.05
+    press_log_variability: float = 0.12
+    profile_log_variability: float = 0.35
+    session_log_variability: float = 0.15
+    speed_matched_probability: float = 0.50
+    word_boundary_pause_multiplier: float = 3.0
+    correction_pause_multiplier: float = 5.0
     pause_scale: float = 2.0
+    pause_tail_shape: float = 1.8
+    maximum_pause_seconds: float = 3.0
     minimum_timing_scale: float = 0.001
+
+
+@dataclass(frozen=True)
+class SyntheticImpairmentProfile:
+    """Participant-level latent motor/cognitive burden."""
+
+    severity_index: int
+    motor_burden: float
+    cognitive_burden: float
+    speed_matched: bool
 
 
 @dataclass(frozen=True)
@@ -90,6 +122,7 @@ class DetectionMetrics:
 class ProtocolSplits:
     train: list[Path]
     legacy_quarantine: list[Path]
+    historical_quarantine: list[Path]
     selection: list[Path]
     calibration: list[Path]
     final_test: list[Path]
@@ -98,22 +131,27 @@ class ProtocolSplits:
 
 
 class StructuredTimingPerturber:
-    """Severity-conditioned additive timing perturbations.
+    """Evidence-calibrated, severity-conditioned timing perturbations.
 
-    Noise is added to the independent HL and IL timing quantities. PL and RL
-    are then reconstructed to preserve the physical timing identities:
+    Hold latency (HL) and press-to-press latency (PL) are perturbed on the log
+    scale. Inter-key (IL) and release (RL) latencies are reconstructed to
+    preserve the physical timing identities:
 
-        PL[t] = HL[t] + IL[t]
+        IL[t] = PL[t] - HL[t]
         RL[t] = IL[t] + HL[t + 1]
 
-    Keycodes and zero padding are never changed.
+    Motor variation is temporally correlated and bidirectional. Cognitive
+    pauses are sparse, heavy-tailed, and more likely after word boundaries or
+    correction keys. Half of participant profiles are speed-matched so the
+    model cannot depend only on a global slowdown. Keycodes and zero padding
+    are never changed.
     """
 
     def __init__(self, config: PerturbationConfig) -> None:
         self.config = config
 
     @staticmethod
-    def _correlated_absolute_noise(
+    def _correlated_standard_noise(
         length: int, correlation: float, rng: np.random.Generator
     ) -> np.ndarray:
         if length <= 0:
@@ -127,7 +165,8 @@ class StructuredTimingPerturber:
                 correlation * correlated[index - 1]
                 + innovation_scale * innovations[index]
             )
-        return np.abs(correlated).astype(np.float32)
+        correlated -= np.median(correlated)
+        return correlated.astype(np.float32)
 
     @staticmethod
     def _robust_positive_scale(values: np.ndarray, minimum: float) -> float:
@@ -136,74 +175,191 @@ class StructuredTimingPerturber:
             return minimum
         return max(float(np.median(finite_positive)), minimum)
 
+    @staticmethod
+    def _bounded_lognormal_multiplier(
+        log_variability: float,
+        rng: np.random.Generator,
+        lower: float,
+        upper: float,
+    ) -> float:
+        value = math.exp(log_variability * float(rng.standard_normal()))
+        return float(np.clip(value, lower, upper))
+
+    @staticmethod
+    def _log_logistic(
+        size: int, shape: float, rng: np.random.Generator
+    ) -> np.ndarray:
+        if size <= 0:
+            return np.empty(0, dtype=np.float32)
+        uniform = np.clip(
+            rng.random(size), np.finfo(np.float64).eps, 1.0 - 1e-12
+        )
+        return np.power(uniform / (1.0 - uniform), 1.0 / shape).astype(
+            np.float32
+        )
+
+    def sample_profile(
+        self, severity_index: int, rng: np.random.Generator
+    ) -> SyntheticImpairmentProfile:
+        if severity_index not in range(SEVERITY_COUNT):
+            raise ValueError(f"severity_index must be 0..{SEVERITY_COUNT - 1}")
+        severity = self.config.severity_factors[severity_index]
+        heterogeneity = self._bounded_lognormal_multiplier(
+            self.config.profile_log_variability,
+            rng,
+            lower=0.35,
+            upper=1.75,
+        )
+        motor_fraction = float(rng.beta(2.0, 2.0))
+        motor_weight = 0.4 + 1.2 * motor_fraction
+        cognitive_weight = 1.6 - 1.2 * motor_fraction
+        return SyntheticImpairmentProfile(
+            severity_index=severity_index,
+            motor_burden=severity * heterogeneity * motor_weight,
+            cognitive_burden=severity * heterogeneity * cognitive_weight,
+            speed_matched=bool(
+                rng.random() < self.config.speed_matched_probability
+            ),
+        )
+
+    def _timing_multipliers(
+        self,
+        length: int,
+        burden: float,
+        location_ratio: float,
+        log_variability: float,
+        speed_matched: bool,
+        rng: np.random.Generator,
+    ) -> np.ndarray:
+        noise = self._correlated_standard_noise(
+            length, self.config.temporal_correlation, rng
+        )
+        location = (
+            0.0 if speed_matched else burden * math.log(location_ratio)
+        )
+        log_multipliers = location + burden * log_variability * noise
+        return np.clip(np.exp(log_multipliers), 0.35, 3.0).astype(np.float32)
+
+    @staticmethod
+    def _keycodes(features: np.ndarray, valid_length: int) -> np.ndarray:
+        return np.rint(features[:valid_length, 4] * 255.0).astype(np.int64)
+
+    def _pause_probabilities(
+        self,
+        features: np.ndarray,
+        valid_length: int,
+        severity_index: int,
+        relative_cognitive_burden: float,
+    ) -> np.ndarray:
+        transition_length = max(valid_length - 1, 0)
+        probabilities = np.full(
+            transition_length,
+            self.config.pause_probabilities[severity_index]
+            * relative_cognitive_burden,
+            dtype=np.float64,
+        )
+        if transition_length == 0:
+            return probabilities
+        preceding_key = self._keycodes(features, valid_length)[
+            :transition_length
+        ]
+        probabilities[np.isin(preceding_key, (13, 32))] *= (
+            self.config.word_boundary_pause_multiplier
+        )
+        probabilities[np.isin(preceding_key, (8, 46))] *= (
+            self.config.correction_pause_multiplier
+        )
+        return np.clip(probabilities, 0.0, 0.35)
+
     def perturb(
         self,
         features: np.ndarray,
         length: int,
         severity_index: int,
         rng: np.random.Generator,
+        profile: SyntheticImpairmentProfile | None = None,
     ) -> np.ndarray:
         if severity_index not in range(SEVERITY_COUNT):
             raise ValueError(f"severity_index must be 0..{SEVERITY_COUNT - 1}")
         if features.ndim != 2 or features.shape[1] != typenet.PAPER_FEATURE_COUNT:
             raise ValueError("Expected a [time, 5] TypeNet feature matrix")
+        if profile is None:
+            profile = self.sample_profile(severity_index, rng)
+        elif profile.severity_index != severity_index:
+            raise ValueError("Profile severity does not match severity_index")
 
         valid_length = min(max(int(length), 1), len(features))
         perturbed = np.asarray(features, dtype=np.float32).copy()
-        factor = self.config.severity_factors[severity_index]
-        pause_probability = self.config.pause_probabilities[severity_index]
-
-        hold_scale = self._robust_positive_scale(
-            perturbed[:valid_length, 0],
-            self.config.minimum_timing_scale,
-        )
         transition_length = max(valid_length - 1, 0)
         transition_scale = self._robust_positive_scale(
             perturbed[:transition_length, 2],
             self.config.minimum_timing_scale,
         )
-
-        hold_delay = (
-            factor
-            * hold_scale
-            * self._correlated_absolute_noise(
-                valid_length, self.config.temporal_correlation, rng
-            )
+        session_multiplier = self._bounded_lognormal_multiplier(
+            self.config.session_log_variability,
+            rng,
+            lower=0.50,
+            upper=1.50,
         )
-        inter_delay = (
-            factor
-            * transition_scale
-            * self._correlated_absolute_noise(
-                transition_length, self.config.temporal_correlation, rng
-            )
-        )
-        if transition_length:
-            pause_draws = rng.random(transition_length)
-            pause_magnitudes = rng.exponential(
-                scale=self.config.pause_scale * transition_scale,
-                size=transition_length,
-            )
-            inter_delay += (
-                (pause_draws < pause_probability)
-                * factor
-                * pause_magnitudes
-            ).astype(np.float32)
+        motor_burden = profile.motor_burden * session_multiplier
+        cognitive_burden = profile.cognitive_burden * session_multiplier
 
         hold_latency = np.maximum(
-            perturbed[:valid_length, 0] + hold_delay, 0.0
+            perturbed[:valid_length, 0]
+            * self._timing_multipliers(
+                valid_length,
+                motor_burden,
+                self.config.hold_location_ratio,
+                self.config.hold_log_variability,
+                profile.speed_matched,
+                rng,
+            ),
+            0.0,
         )
-        inter_latency = (
-            perturbed[:transition_length, 1] + inter_delay
-            if transition_length
-            else np.empty(0, dtype=np.float32)
+        press_latency = np.maximum(
+            perturbed[:transition_length, 2]
+            * self._timing_multipliers(
+                transition_length,
+                motor_burden,
+                self.config.press_location_ratio,
+                self.config.press_log_variability,
+                profile.speed_matched,
+                rng,
+            ),
+            0.0,
         )
+
+        if transition_length:
+            severity = self.config.severity_factors[severity_index]
+            relative_cognitive_burden = cognitive_burden / severity
+            pause_probabilities = self._pause_probabilities(
+                perturbed,
+                valid_length,
+                severity_index,
+                relative_cognitive_burden,
+            )
+            pause_mask = rng.random(transition_length) < pause_probabilities
+            pause_median = (
+                self.config.pause_scale
+                * transition_scale
+                * max(cognitive_burden, 0.10)
+            )
+            pause_delays = (
+                pause_median
+                * self._log_logistic(
+                    transition_length, self.config.pause_tail_shape, rng
+                )
+            )
+            pause_delays = np.minimum(
+                pause_delays, self.config.maximum_pause_seconds
+            )
+            press_latency += (pause_mask * pause_delays).astype(np.float32)
 
         perturbed[:valid_length, 0] = hold_latency
         if transition_length:
+            inter_latency = press_latency - hold_latency[:transition_length]
             perturbed[:transition_length, 1] = inter_latency
-            perturbed[:transition_length, 2] = (
-                hold_latency[:transition_length] + inter_latency
-            )
+            perturbed[:transition_length, 2] = press_latency
             perturbed[:transition_length, 3] = (
                 inter_latency + hold_latency[1:valid_length]
             )
@@ -559,12 +715,14 @@ def evaluate_impairment_scores(
         rng = np.random.default_rng(seed)
         perturbed_queries = np.empty_like(query_features)
         for user_index in range(users):
+            profile = perturber.sample_profile(severity_index, rng)
             for query_index in range(typenet.PAPER_QUERY_COUNT):
                 perturbed_queries[user_index, query_index] = perturber.perturb(
                     query_features[user_index, query_index],
                     int(query_lengths[user_index, query_index]),
                     severity_index,
                     rng,
+                    profile=profile,
                 )
         perturbed_embeddings = embed_feature_matrix(
             encoder,
@@ -670,7 +828,12 @@ def run_deterministic_perturbation_checks(
     clean[: length - 1, 1] = 0.05
     clean[: length - 1, 2] = 0.15
     clean[: length - 1, 3] = 0.15
-    clean[:length, 4] = np.linspace(32, 90, length) / 255.0
+    keycodes = np.asarray(
+        (84, 104, 101, 32, 111, 116, 104, 101, 114, 8, 32, 97),
+        dtype=np.float32,
+    )
+    clean[:length, 4] = keycodes[:length] / 255.0
+    clean_before = clean.copy()
 
     perturbation_magnitudes: list[float] = []
     for severity_index in range(SEVERITY_COUNT):
@@ -680,12 +843,24 @@ def run_deterministic_perturbation_checks(
             severity_index,
             np.random.default_rng(1234),
         )
+        repeated = perturber.perturb(
+            clean,
+            length,
+            severity_index,
+            np.random.default_rng(1234),
+        )
+        np.testing.assert_array_equal(perturbed, repeated)
+        np.testing.assert_array_equal(clean, clean_before)
         np.testing.assert_array_equal(perturbed[:, 4], clean[:, 4])
         np.testing.assert_array_equal(
             perturbed[length:], np.zeros_like(perturbed[length:])
         )
+        if not np.isfinite(perturbed).all():
+            raise AssertionError("Perturbation generated non-finite values")
         if np.any(perturbed[:length, 0] < 0):
             raise AssertionError("Perturbation generated negative hold latency")
+        if np.any(perturbed[: length - 1, 2] < 0):
+            raise AssertionError("Perturbation generated negative press latency")
         np.testing.assert_allclose(
             perturbed[: length - 1, 2],
             perturbed[: length - 1, 0] + perturbed[: length - 1, 1],
@@ -707,6 +882,43 @@ def run_deterministic_perturbation_checks(
         raise AssertionError(
             "Perturbation magnitude did not increase monotonically by severity"
         )
+
+    speed_matched_profile = SyntheticImpairmentProfile(
+        severity_index=2,
+        motor_burden=1.0,
+        cognitive_burden=1.0,
+        speed_matched=True,
+    )
+    speed_matched = perturber.perturb(
+        clean,
+        length,
+        2,
+        np.random.default_rng(4321),
+        profile=speed_matched_profile,
+    )
+    hold_change = speed_matched[:length, 0] - clean[:length, 0]
+    if not (np.any(hold_change < 0.0) and np.any(hold_change > 0.0)):
+        raise AssertionError(
+            "Speed-matched motor variation must be bidirectional"
+        )
+
+    context_probabilities = perturber._pause_probabilities(
+        clean,
+        length,
+        severity_index=2,
+        relative_cognitive_burden=1.0,
+    )
+    base_probability = perturber.config.pause_probabilities[2]
+    if not math.isclose(
+        context_probabilities[3],
+        base_probability * perturber.config.word_boundary_pause_multiplier,
+    ):
+        raise AssertionError("Word-boundary pause weighting is invalid")
+    if not math.isclose(
+        context_probabilities[9],
+        base_probability * perturber.config.correction_pause_multiplier,
+    ):
+        raise AssertionError("Correction pause weighting is invalid")
 
 
 def frozen_parameter_snapshot(
@@ -748,6 +960,41 @@ def identity_fingerprint(paths: Sequence[Path]) -> str:
     return hashlib.sha256(payload).hexdigest()
 
 
+def exposed_manifest_ids(paths: Sequence[Path]) -> set[str]:
+    """Load identities whose outcomes were exposed by earlier protocols."""
+
+    exposed_ids: set[str] = set()
+    for path in paths:
+        if not path.is_file():
+            raise FileNotFoundError(f"Quarantine manifest not found: {path}")
+        manifest = json.loads(path.read_text(encoding="utf-8"))
+        participant_ids = manifest.get("participant_ids", [])
+        if not isinstance(participant_ids, list):
+            raise TypeError(f"Invalid participant_ids in {path}")
+        exposed_ids.update(str(participant_id) for participant_id in participant_ids)
+
+        roles = manifest.get("roles", {})
+        if not isinstance(roles, Mapping):
+            raise TypeError(f"Invalid roles in {path}")
+        for role_name in (
+            "legacy_quarantine",
+            "historical_quarantine",
+            "selection",
+            "calibration",
+            "final_test",
+        ):
+            role = roles.get(role_name, {})
+            if not role:
+                continue
+            if not isinstance(role, Mapping):
+                raise TypeError(f"Invalid {role_name} role in {path}")
+            role_ids = role.get("participant_ids", [])
+            if not isinstance(role_ids, list):
+                raise TypeError(f"Invalid {role_name} participant_ids in {path}")
+            exposed_ids.update(str(participant_id) for participant_id in role_ids)
+    return exposed_ids
+
+
 def build_locked_protocol_splits(
     all_paths: Sequence[Path], args: argparse.Namespace
 ) -> ProtocolSplits:
@@ -759,23 +1006,36 @@ def build_locked_protocol_splits(
     legacy_count = (
         args.legacy_validation_users + args.quarantined_test_users
     )
-    required = (
-        args.train_users
-        + legacy_count
-        + args.validation_users
-        + args.calibration_users
-        + args.test_users
-    )
-    if len(selected) < required:
+    fixed_prefix_count = args.train_users + legacy_count
+    if len(selected) < fixed_prefix_count:
         raise ValueError(
-            f"Locked protocol requires {required:,} users, found {len(selected):,}"
+            f"Locked protocol requires at least {fixed_prefix_count:,} users, "
+            f"found {len(selected):,}"
         )
 
     train_stop = args.train_users
     legacy_stop = train_stop + legacy_count
     train = selected[:train_stop]
     legacy_quarantine = selected[train_stop:legacy_stop]
-    candidates = selected[legacy_stop:]
+    exposed_ids = exposed_manifest_ids(args.quarantine_manifests)
+    historical_quarantine = [
+        path
+        for path in selected[legacy_stop:]
+        if typenet.participant_id_from_path(path) in exposed_ids
+    ]
+    candidates = [
+        path
+        for path in selected[legacy_stop:]
+        if typenet.participant_id_from_path(path) not in exposed_ids
+    ]
+    fresh_required = (
+        args.validation_users + args.calibration_users + args.test_users
+    )
+    if len(candidates) < fresh_required:
+        raise ValueError(
+            f"Locked protocol requires {fresh_required:,} unexposed evaluation "
+            f"candidates, found {len(candidates):,}"
+        )
     candidates.sort(
         key=lambda path: hashlib.sha256(
             (
@@ -797,6 +1057,7 @@ def build_locked_protocol_splits(
     roles = {
         "train": train,
         "legacy_quarantine": legacy_quarantine,
+        "historical_quarantine": historical_quarantine,
         "selection": selection,
         "calibration": calibration,
         "final_test": final_test,
@@ -828,21 +1089,21 @@ def build_locked_protocol_splits(
         "steps_per_epoch": args.steps_per_epoch,
         "batch_size": args.batch_size,
         "learning_rate": args.learning_rate,
-        "severity_factors": list(args.severity_factors),
-        "pause_probabilities": list(args.pause_probabilities),
-        "temporal_correlation": args.temporal_correlation,
-        "pause_scale": args.pause_scale,
+        "perturbation": asdict(perturbation_config_from_args(args)),
         "seed": args.seed,
+        "quarantine_manifest_sha256": [
+            sha256_file(path) for path in args.quarantine_manifests
+        ],
     }
     config_json = json.dumps(
         locked_config, sort_keys=True, separators=(",", ":")
     ).encode("utf-8")
     manifest: dict[str, object] = {
-        "protocol_version": "synthetic-impairment-v1-locked",
+        "protocol_version": "synthetic-impairment-v4-64x512-evidence",
         "protocol_salt": args.protocol_salt,
         "purpose": (
-            "Identity-disjoint synthetic-proxy evaluation; legacy cohorts are "
-            "quarantined because prior TypeNet experiments exposed them."
+            "Identity-disjoint evidence-calibrated synthetic stress test; "
+            "every identity exposed by prior experiments is quarantined."
         ),
         "pretrained_weights_sha256": sha256_file(args.pretrained_weights),
         "prototype_source_sha256": sha256_file(Path(__file__)),
@@ -854,6 +1115,7 @@ def build_locked_protocol_splits(
     return ProtocolSplits(
         train=train,
         legacy_quarantine=legacy_quarantine,
+        historical_quarantine=historical_quarantine,
         selection=selection,
         calibration=calibration,
         final_test=final_test,
@@ -1007,18 +1269,28 @@ def build_argument_parser() -> argparse.ArgumentParser:
             REPO_ROOT
             / "paper_typenet"
             / "weights"
-            / "typenet_68k_m50_g10_32x512_best_weights.pt"
+            / "typenet_68k_m50_g10_64x512_best_weights.pt"
         ),
     )
     parser.add_argument(
         "--checkpoint",
         type=Path,
-        default=REPO_ROOT / "prototype_net" / "weights" / "prototype_checkpoint.pt",
+        default=(
+            REPO_ROOT
+            / "prototype_net"
+            / "weights"
+            / "synthetic_impairment_evidence_v4_64x512_checkpoint.pt"
+        ),
     )
     parser.add_argument(
         "--weights-output",
         type=Path,
-        default=REPO_ROOT / "prototype_net" / "weights" / "prototype_weights.pt",
+        default=(
+            REPO_ROOT
+            / "prototype_net"
+            / "weights"
+            / "synthetic_impairment_evidence_v4_64x512_weights.pt"
+        ),
     )
     parser.add_argument(
         "--protocol-manifest",
@@ -1027,16 +1299,40 @@ def build_argument_parser() -> argparse.ArgumentParser:
             REPO_ROOT
             / "prototype_net"
             / "weights"
-            / "synthetic_impairment_protocol_manifest.json"
+            / "synthetic_impairment_protocol_v4_64x512_evidence_manifest.json"
         ),
+    )
+    parser.add_argument(
+        "--quarantine-manifests",
+        type=Path,
+        nargs="*",
+        default=(
+            REPO_ROOT
+            / "prototype_net"
+            / "weights"
+            / "synthetic_impairment_protocol_manifest.json",
+            REPO_ROOT
+            / "paper_typenet"
+            / "weights"
+            / "typenet_unbiased_1000_manifest.json",
+            REPO_ROOT
+            / "prototype_net"
+            / "weights"
+            / "synthetic_impairment_protocol_v2_32x512_manifest.json",
+            REPO_ROOT
+            / "prototype_net"
+            / "weights"
+            / "synthetic_impairment_protocol_v3_evidence_manifest.json",
+        ),
+        help="Earlier manifests whose exposed identities must remain quarantined",
     )
     parser.add_argument("--sequence-length", type=int, default=50)
     parser.add_argument("--gallery-size", type=int, default=10)
     parser.add_argument("--margin", type=float, default=1.5)
     parser.add_argument("--epochs", type=int, default=100)
     parser.add_argument("--steps-per-epoch", type=int, default=32)
-    parser.add_argument("--batch-size", type=int, default=192)
-    parser.add_argument("--learning-rate", type=float, default=0.001)
+    parser.add_argument("--batch-size", type=int, default=512)
+    parser.add_argument("--learning-rate", type=float, default=0.025)
     parser.add_argument("--lr-decay-factor", type=float, default=0.5)
     parser.add_argument("--lr-decay-patience", type=int, default=2)
     parser.add_argument("--minimum-learning-rate", type=float, default=1e-6)
@@ -1084,21 +1380,36 @@ def build_argument_parser() -> argparse.ArgumentParser:
         type=float,
         nargs=3,
         metavar=("MILD", "MODERATE", "SEVERE"),
-        default=(0.25, 0.50, 1.00),
+        default=(0.25, 0.55, 1.00),
     )
     parser.add_argument(
         "--pause-probabilities",
         type=float,
         nargs=3,
         metavar=("MILD", "MODERATE", "SEVERE"),
-        default=(0.01, 0.04, 0.10),
+        default=(0.004, 0.012, 0.030),
     )
-    parser.add_argument("--temporal-correlation", type=float, default=0.80)
+    parser.add_argument("--temporal-correlation", type=float, default=0.65)
+    parser.add_argument("--hold-location-ratio", type=float, default=1.20)
+    parser.add_argument("--hold-log-variability", type=float, default=0.30)
+    parser.add_argument("--press-location-ratio", type=float, default=1.05)
+    parser.add_argument("--press-log-variability", type=float, default=0.12)
+    parser.add_argument("--profile-log-variability", type=float, default=0.35)
+    parser.add_argument("--session-log-variability", type=float, default=0.15)
+    parser.add_argument("--speed-matched-probability", type=float, default=0.50)
+    parser.add_argument(
+        "--word-boundary-pause-multiplier", type=float, default=3.0
+    )
+    parser.add_argument(
+        "--correction-pause-multiplier", type=float, default=5.0
+    )
     parser.add_argument("--pause-scale", type=float, default=2.0)
+    parser.add_argument("--pause-tail-shape", type=float, default=1.8)
+    parser.add_argument("--maximum-pause-seconds", type=float, default=3.0)
     parser.add_argument("--seed", type=int, default=7)
     parser.add_argument(
         "--protocol-salt",
-        default="synthetic-impairment-prototype-v1-2026-09-07",
+        default="synthetic-impairment-v4-64x512-evidence-2026-09-08",
         help="Locked salt for deterministic hash-randomized holdout assignment",
     )
     parser.add_argument("--device", default="auto")
@@ -1126,6 +1437,29 @@ def apply_smoke_settings(args: argparse.Namespace) -> None:
     args.checkpoint = None
     args.weights_output = None
     args.protocol_manifest = None
+    args.quarantine_manifests = ()
+
+
+def perturbation_config_from_args(
+    args: argparse.Namespace,
+) -> PerturbationConfig:
+    return PerturbationConfig(
+        severity_factors=tuple(args.severity_factors),
+        pause_probabilities=tuple(args.pause_probabilities),
+        temporal_correlation=args.temporal_correlation,
+        hold_location_ratio=args.hold_location_ratio,
+        hold_log_variability=args.hold_log_variability,
+        press_location_ratio=args.press_location_ratio,
+        press_log_variability=args.press_log_variability,
+        profile_log_variability=args.profile_log_variability,
+        session_log_variability=args.session_log_variability,
+        speed_matched_probability=args.speed_matched_probability,
+        word_boundary_pause_multiplier=args.word_boundary_pause_multiplier,
+        correction_pause_multiplier=args.correction_pause_multiplier,
+        pause_scale=args.pause_scale,
+        pause_tail_shape=args.pause_tail_shape,
+        maximum_pause_seconds=args.maximum_pause_seconds,
+    )
 
 
 def validate_arguments(args: argparse.Namespace) -> None:
@@ -1170,6 +1504,28 @@ def validate_arguments(args: argparse.Namespace) -> None:
         raise ValueError("Pause probabilities must increase within [0, 1]")
     if not 0.0 <= args.temporal_correlation < 1.0:
         raise ValueError("--temporal-correlation must be in [0, 1)")
+    ratios = (args.hold_location_ratio, args.press_location_ratio)
+    if any(ratio < 1.0 for ratio in ratios):
+        raise ValueError("Timing location ratios must be at least one")
+    nonnegative_values = (
+        args.hold_log_variability,
+        args.press_log_variability,
+        args.profile_log_variability,
+        args.session_log_variability,
+    )
+    if any(value < 0.0 for value in nonnegative_values):
+        raise ValueError("Log-variability parameters cannot be negative")
+    if not 0.0 <= args.speed_matched_probability <= 1.0:
+        raise ValueError("--speed-matched-probability must be within [0, 1]")
+    if (
+        args.word_boundary_pause_multiplier < 1.0
+        or args.correction_pause_multiplier < 1.0
+    ):
+        raise ValueError("Context pause multipliers must be at least one")
+    if args.pause_scale <= 0.0 or args.maximum_pause_seconds <= 0.0:
+        raise ValueError("Pause scale and maximum pause must be positive")
+    if args.pause_tail_shape <= 1.0:
+        raise ValueError("--pause-tail-shape must exceed one")
     if args.lr_decay_patience < 1:
         raise ValueError("--lr-decay-patience must be at least one")
     if not 0.0 < args.lr_decay_factor < 1.0:
@@ -1191,12 +1547,7 @@ def main() -> None:
     )
     print(f"Device: {device}")
 
-    perturbation_config = PerturbationConfig(
-        severity_factors=tuple(args.severity_factors),
-        pause_probabilities=tuple(args.pause_probabilities),
-        temporal_correlation=args.temporal_correlation,
-        pause_scale=args.pause_scale,
-    )
+    perturbation_config = perturbation_config_from_args(args)
     perturber = StructuredTimingPerturber(perturbation_config)
     run_deterministic_perturbation_checks(perturber, args.sequence_length)
 
@@ -1210,6 +1561,7 @@ def main() -> None:
         f"Found {len(all_paths):,} users; locked identity-disjoint protocol: "
         f"{len(protocol.train):,} train, "
         f"{len(protocol.legacy_quarantine):,} legacy quarantine, "
+        f"{len(protocol.historical_quarantine):,} historical quarantine, "
         f"{len(protocol.selection):,} selection, "
         f"{len(protocol.calibration):,} calibration, "
         f"{len(protocol.final_test):,} one-shot final test, "
@@ -1261,6 +1613,13 @@ def main() -> None:
         factor=args.lr_decay_factor,
         patience=args.lr_decay_patience - 1,
         min_lr=args.minimum_learning_rate,
+        threshold=0.0,
+    )
+    print(
+        "Selection schedule: evaluate every "
+        f"{args.validate_every} epochs; decay LR by {args.lr_decay_factor:g} "
+        f"after {args.lr_decay_patience} consecutive non-decreasing EERs "
+        f"(start LR={args.learning_rate:g})."
     )
 
     best_epoch = 0
