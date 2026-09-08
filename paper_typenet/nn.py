@@ -75,6 +75,14 @@ class VerificationMetrics:
     hter: float
 
 
+@dataclass
+class PerUserEERMetrics:
+    """Paper-compatible EER averaged after fitting one threshold per subject."""
+
+    mean: float
+    standard_deviation: float
+
+
 def set_reproducible_seed(seed: int) -> None:
     random.seed(seed)
     np.random.seed(seed)
@@ -656,6 +664,45 @@ def equal_error_threshold(
     return float(thresholds[index]), eer
 
 
+def paper_protocol_per_user_eer(
+    genuine_scores: np.ndarray,
+    impostor_scores: np.ndarray,
+    user_count: int,
+) -> PerUserEERMetrics:
+    """Compute the paper's mean of subject-specific, test-derived EERs.
+
+    The flattened score arrays are row-major: every subject contributes five
+    genuine scores followed by an equal number of impostor scores per subject.
+    A separate threshold is fitted for every claimed identity, then the EERs
+    are averaged. This is useful for paper comparison but is not a deployable
+    global-threshold protocol.
+    """
+
+    genuine = np.asarray(genuine_scores).reshape(-1)
+    impostor = np.asarray(impostor_scores).reshape(-1)
+    if user_count < 1:
+        raise ValueError("Paper-protocol EER requires at least one user")
+    if genuine.size % user_count != 0 or impostor.size % user_count != 0:
+        raise ValueError("Scores cannot be divided evenly among evaluation users")
+
+    genuine_by_user = genuine.reshape(user_count, -1)
+    impostor_by_user = impostor.reshape(user_count, -1)
+    subject_eers = np.asarray(
+        [
+            equal_error_threshold(
+                genuine_by_user[user_index],
+                impostor_by_user[user_index],
+            )[1]
+            for user_index in range(user_count)
+        ],
+        dtype=np.float64,
+    )
+    return PerUserEERMetrics(
+        mean=float(np.mean(subject_eers)),
+        standard_deviation=float(np.std(subject_eers)),
+    )
+
+
 def split_user_files(
     all_paths: Sequence[Path],
     max_users: int,
@@ -748,7 +795,7 @@ def build_argument_parser() -> argparse.ArgumentParser:
     parser.add_argument("--recurrent-dropout", type=float, default=0.2)
     parser.add_argument("--epochs", type=int, default=200)
     parser.add_argument("--steps-per-epoch", type=int, default=16)
-    parser.add_argument("--batch-size", type=int, default=256)
+    parser.add_argument("--batch-size", type=int, default=512)
     parser.add_argument("--learning-rate", type=float, default=0.025)
     parser.add_argument(
         "--max-gradient-norm",
@@ -1055,9 +1102,13 @@ def main() -> None:
             model, validation_paths, args, device, seed_offset=1
         )
         threshold, validation_eer = equal_error_threshold(genuine, impostor)
+        validation_per_user_eer = paper_protocol_per_user_eer(
+            genuine, impostor, validation_user_count
+        )
         print(
             f"  validation ({validation_user_count} users): "
-            f"EER={validation_eer * 100:.3f}% tau={threshold:.6f}"
+            f"global EER={validation_eer * 100:.3f}% tau={threshold:.6f} - "
+            f"paper per-user EER={validation_per_user_eer.mean * 100:.3f}%"
         )
         previous_learning_rate = optimizer.param_groups[0]["lr"]
         learning_rate_scheduler.step(validation_eer)
@@ -1121,6 +1172,9 @@ def main() -> None:
     test_eer_threshold, diagnostic_test_eer = equal_error_threshold(
         test_genuine, test_impostor
     )
+    paper_test_eer = paper_protocol_per_user_eer(
+        test_genuine, test_impostor, test_user_count
+    )
     print(
         f"Best validation checkpoint: epoch={best_epoch} "
         f"EER={best_validation_eer * 100:.3f}% tau={best_threshold:.6f}"
@@ -1134,6 +1188,11 @@ def main() -> None:
     print(
         f"Test diagnostic only: EER={diagnostic_test_eer * 100:.3f}% "
         f"test-derived tau={test_eer_threshold:.6f}"
+    )
+    print(
+        "Paper-compatible test-derived per-user EER: "
+        f"{paper_test_eer.mean * 100:.3f}% "
+        f"(std={paper_test_eer.standard_deviation * 100:.3f}%)"
     )
 
     if args.checkpoint is not None:
@@ -1149,6 +1208,7 @@ def main() -> None:
                 "best_epoch": best_epoch,
                 "validation_eer": best_validation_eer,
                 "test_metrics": asdict(test_metrics),
+                "paper_protocol_test_eer": asdict(paper_test_eer),
                 "training_in_progress": False,
                 "config": {
                     key: str(value) if isinstance(value, Path) else value
@@ -1166,6 +1226,8 @@ def main() -> None:
         "test_frr": test_metrics.frr,
         "test_hter": test_metrics.hter,
         "diagnostic_test_eer": diagnostic_test_eer,
+        "paper_protocol_test_eer": paper_test_eer.mean,
+        "paper_protocol_test_eer_std": paper_test_eer.standard_deviation,
         "final_learning_rate": optimizer.param_groups[0]["lr"],
     }
     print("RESULT_JSON " + json.dumps(summary, sort_keys=True))
