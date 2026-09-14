@@ -1,0 +1,36 @@
+device=cpu
+users=168,593  train=68,000  sel=1,000  cal=1,000  test=1,000  reserve=14,593  held-out=83,000
+fine-tune second_lstm  params=131,584  objective=triplet
+lr=0.025  margin=1.5  score=mean gallery distance  batch=512  steps=32
+ep 005  loss=0.792  lr=0.025
+  sel  overall 27.25%±12.3  mild 37.60%±14.0  moderate 25.60%±16.9  severe 12.41%±14.6
+ep 010  loss=0.652  lr=0.025
+  sel  overall 23.79%±12.0  mild 33.92%±13.9  moderate 21.20%±16.1  severe 9.82%±13.5
+ep 015  loss=0.587  lr=0.025
+  sel  overall 22.03%±11.4  mild 31.40%±13.7  moderate 19.59%±15.3  severe 8.85%±12.6
+ep 020  loss=0.573  lr=0.025
+  sel  overall 21.66%±11.4  mild 30.61%±13.7  moderate 18.90%±15.4  severe 8.52%±12.3
+ep 025  loss=0.544  lr=0.025
+  sel  overall 20.73%±11.2  mild 29.10%±13.9  moderate 18.08%±14.7  severe 8.40%±12.4
+ep 030  loss=0.511  lr=0.025
+  sel  overall 21.01%±11.6  mild 29.39%±13.7  moderate 18.04%±15.0  severe 8.23%±12.2
+ep 035  loss=0.529  lr=0.025
+  sel  overall 20.86%±11.5  mild 29.20%±13.4  moderate 17.97%±15.0  severe 7.47%±11.5
+  lr 0.025 -> 0.0125
+ep 040  loss=0.495  lr=0.0125
+  sel  overall 20.20%±11.5  mild 28.27%±13.7  moderate 17.39%±15.1  severe 7.01%±11.5
+ep 045  loss=0.485  lr=0.0125
+  sel  overall 19.76%±11.2  mild 27.88%±13.4  moderate 17.10%±14.2  severe 7.45%±11.5
+ep 050  loss=0.484  lr=0.0125
+  sel  overall 19.87%±11.1  mild 28.11%±13.4  moderate 17.19%±14.3  severe 7.28%±11.5
+ep 055  loss=0.468  lr=0.0125
+  sel  overall 19.42%±11.1  mild 28.00%±13.5  moderate 16.71%±14.1  severe 7.03%±11.4
+ep 060  loss=0.476  lr=0.0125
+  sel  overall 19.58%±11.6  mild 27.20%±13.9  moderate 16.88%±14.5  severe 7.20%±11.6
+ep 065  loss=0.462  lr=0.0125
+  sel  overall 19.63%±11.4  mild 27.24%±13.9  moderate 16.88%±14.6  severe 7.03%±11.4
+  lr 0.0125 -> 0.00625
+ep 070  loss=0.444  lr=0.00625
+  sel  overall 19.82%±11.4  mild 27.71%±14.0  moderate 16.92%±14.5  severe 6.95%±11.5
+ep 075  loss=0.447  lr=0.00625
+  sel  overall 19.32%±11.3  mild 27.36%±13.7  moderate 16.53%±14.5  severe 7.43%±11.7

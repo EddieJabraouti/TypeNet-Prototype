@@ -1,0 +1,61 @@
+device=cpu
+local users=28,208 (wanted 73,000); shrinking train/legacy
+cohorts train=22,208 sel=1,000 cal=1,000 test=1,000
+users=28,208  train=22,208  sel=1,000  cal=1,000  test=1,000
+fine-tune second_lstm  params=131,584
+lr=0.025  margin=1.5  batch=512  steps=32
+ep 005  loss=0.779  lr=0.025
+  sel  overall 27.09%±12.6  mild 37.39%±14.3  moderate 24.85%±17.0  severe 11.64%±14.9
+ep 010  loss=0.673  lr=0.025
+  sel  overall 23.64%±11.9  mild 33.43%±14.5  moderate 21.52%±15.8  severe 9.94%±13.5
+ep 015  loss=0.601  lr=0.025
+  sel  overall 22.72%±11.1  mild 31.87%±13.1  moderate 20.37%±15.1  severe 9.20%±12.6
+ep 020  loss=0.566  lr=0.025
+  sel  overall 22.82%±12.0  mild 32.24%±14.1  moderate 20.23%±15.8  severe 9.14%±13.4
+ep 025  loss=0.553  lr=0.025
+  sel  overall 22.33%±11.7  mild 30.97%±13.4  moderate 19.71%±15.5  severe 8.69%±12.6
+ep 030  loss=0.534  lr=0.025
+  sel  overall 21.65%±12.1  mild 30.25%±13.8  moderate 19.28%±15.3  severe 8.64%±12.3
+ep 035  loss=0.523  lr=0.025
+  sel  overall 21.54%±11.9  mild 30.21%±13.9  moderate 19.38%±15.3  severe 8.38%±12.2
+ep 040  loss=0.508  lr=0.025
+  sel  overall 20.92%±11.6  mild 29.75%±13.6  moderate 18.21%±14.8  severe 7.95%±12.0
+ep 045  loss=0.502  lr=0.025
+  sel  overall 21.12%±11.4  mild 29.45%±13.4  moderate 18.21%±14.7  severe 7.89%±11.7
+ep 050  loss=0.498  lr=0.025
+  sel  overall 20.62%±11.0  mild 29.10%±13.6  moderate 17.80%±14.2  severe 7.76%±11.8
+ep 055  loss=0.492  lr=0.025
+  sel  overall 20.62%±11.5  mild 29.14%±13.8  moderate 18.13%±14.8  severe 7.78%±12.0
+ep 060  loss=0.494  lr=0.025
+  sel  overall 20.44%±11.4  mild 28.69%±13.8  moderate 18.19%±14.9  severe 7.62%±11.5
+ep 065  loss=0.474  lr=0.025
+  sel  overall 20.33%±11.6  mild 27.99%±14.5  moderate 18.01%±14.8  severe 7.45%±11.2
+ep 070  loss=0.472  lr=0.025
+  sel  overall 20.22%±11.1  mild 28.52%±13.6  moderate 17.58%±14.4  severe 7.17%±11.4
+ep 075  loss=0.472  lr=0.025
+  sel  overall 20.21%±11.1  mild 28.48%±13.9  moderate 17.66%±14.1  severe 7.68%±11.6
+ep 080  loss=0.459  lr=0.025
+  sel  overall 19.63%±11.1  mild 28.40%±14.1  moderate 17.17%±13.9  severe 7.41%±11.5
+ep 085  loss=0.464  lr=0.025
+  sel  overall 20.04%±10.9  mild 28.56%±13.8  moderate 17.13%±14.0  severe 7.10%±11.2
+ep 090  loss=0.468  lr=0.025
+  sel  overall 19.48%±10.9  mild 27.70%±13.7  moderate 16.92%±14.1  severe 7.39%±11.4
+ep 095  loss=0.508  lr=0.025
+  sel  overall 20.65%±11.3  mild 28.58%±13.4  moderate 18.30%±14.4  severe 7.93%±12.1
+ep 100  loss=0.511  lr=0.025
+  sel  overall 20.31%±10.9  mild 28.95%±13.8  moderate 17.82%±14.3  severe 7.82%±11.7
+  lr 0.025 -> 0.0125
+ep 105  loss=0.468  lr=0.0125
+  sel  overall 19.78%±11.1  mild 28.25%±14.2  moderate 17.33%±14.3  severe 7.43%±11.4
+ep 110  loss=0.452  lr=0.0125
+  sel  overall 19.83%±11.2  mild 28.15%±13.9  moderate 17.23%±14.2  severe 7.21%±11.1
+  lr 0.0125 -> 0.00625
+ep 115  loss=0.459  lr=0.00625
+  sel  overall 19.49%±11.0  mild 27.68%±13.7  moderate 17.08%±13.9  severe 7.02%±10.9
+early stop after 5 flat checks
+best ep=90  sel 19.48%
+cal  overall 19.59%±11.3  mild 27.61%±13.9  moderate 17.16%±14.4  severe 7.16%±11.4
+sealed checkpoint
+final test
+test  overall 19.65%±11.7  mild 27.17%±13.9  moderate 17.15%±14.8  severe 7.31%±11.6
+RESULT_JSON {"best_epoch": 90, "calibration_per_user": {"mild": {"mean": 0.2761316872427984, "standard_deviation": 0.13894908008332027}, "moderate": {"mean": 0.17160493827160495, "standard_deviation": 0.1437887406959325}, "overall": {"mean": 0.1959190672153635, "standard_deviation": 0.11336414830590628}, "severe": {"mean": 0.07160493827160493, "standard_deviation": 0.11392861229688224}}, "final_test_fingerprint": "51e5183bb8814c682674825df0f0211a38ed06d8d77cc2aaf4deb1f577c8d95f", "model_selection_per_user": {"mild": {"mean": 0.2770020533880904, "standard_deviation": 0.13723900372571765}, "moderate": {"mean": 0.16919917864476386, "standard_deviation": 0.14082470265608757}, "overall": {"mean": 0.19479808350444902, "standard_deviation": 0.10942510078452}, "severe": {"mean": 0.07392197125256673, "standard_deviation": 0.11372730303520971}}, "model_selection_per_user_eer": 0.19479808350444902, "test_per_user": {"mild": {"mean": 0.2716632443531828, "standard_deviation": 0.13862742210802328}, "moderate": {"mean": 0.17145790554414783, "standard_deviation": 0.14797236608006914}, "overall": {"mean": 0.19647501711156742, "standard_deviation": 0.11653266873536296}, "severe": {"mean": 0.07310061601642709, "standard_deviation": 0.11639360106651216}}}

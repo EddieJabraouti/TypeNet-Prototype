@@ -1,0 +1,52 @@
+device=cpu
+unseen pool=85,593 of 168,593  train=61,627 (72%)  val=6,847 (8%)  test=17,119 (20%)
+users=168,593  train=61,627  val=6,847  test=17,119  reserve=0  held-out=83,000
+fine-tune second_lstm  params=131,584  objective=triplet
+lr=0.025  margin=1.5  score=mean gallery distance  batch=512  steps=32
+ep 005  loss=0.792  lr=0.025
+  val  overall 26.10%±12.2  mild 36.35%±13.9  moderate 23.93%±16.6  severe 11.28%±14.4
+ep 010  loss=0.671  lr=0.025
+  val  overall 23.21%±11.8  mild 32.57%±13.8  moderate 20.75%±15.6  severe 9.50%±13.0
+ep 015  loss=0.607  lr=0.025
+  val  overall 21.83%±11.5  mild 30.84%±13.9  moderate 19.15%±15.2  severe 8.49%±12.3
+ep 020  loss=0.594  lr=0.025
+  val  overall 21.52%±11.4  mild 30.44%±13.7  moderate 18.85%±14.9  severe 8.39%±12.2
+ep 025  loss=0.556  lr=0.025
+  val  overall 21.25%±11.2  mild 30.03%±13.7  moderate 18.63%±14.8  severe 8.14%±12.1
+ep 030  loss=0.557  lr=0.025
+  val  overall 21.07%±11.3  mild 30.12%±13.8  moderate 18.27%±14.9  severe 7.77%±11.8
+ep 035  loss=0.539  lr=0.025
+  val  overall 20.50%±11.1  mild 29.41%±13.7  moderate 17.86%±14.6  severe 7.83%±11.9
+ep 040  loss=0.525  lr=0.025
+  val  overall 20.59%±11.2  mild 29.20%±13.6  moderate 17.85%±14.7  severe 7.78%±11.8
+ep 045  loss=0.526  lr=0.025
+  val  overall 20.24%±11.2  mild 28.66%±13.8  moderate 17.65%±14.5  severe 7.71%±11.7
+ep 050  loss=0.516  lr=0.025
+  val  overall 20.30%±11.2  mild 29.03%±13.7  moderate 17.76%±14.6  severe 7.58%±11.6
+ep 055  loss=0.512  lr=0.025
+  val  overall 20.11%±11.2  mild 28.68%±13.8  moderate 17.48%±14.7  severe 7.63%±11.7
+ep 060  loss=0.498  lr=0.025
+  val  overall 19.91%±11.2  mild 28.33%±13.7  moderate 17.35%±14.5  severe 7.46%±11.6
+ep 065  loss=0.500  lr=0.025
+  val  overall 20.26%±11.1  mild 28.92%±13.7  moderate 17.64%±14.5  severe 7.34%±11.6
+ep 070  loss=0.500  lr=0.025
+  val  overall 20.25%±11.2  mild 29.12%±13.7  moderate 17.50%±14.5  severe 7.42%±11.6
+  lr 0.025 -> 0.0125
+ep 075  loss=0.486  lr=0.0125
+  val  overall 20.02%±11.1  mild 28.55%±13.6  moderate 17.36%±14.5  severe 7.37%±11.7
+ep 080  loss=0.472  lr=0.0125
+  val  overall 19.40%±11.0  mild 27.80%±13.7  moderate 16.70%±14.3  severe 7.08%±11.3
+ep 085  loss=0.483  lr=0.0125
+  val  overall 19.65%±10.9  mild 28.18%±13.6  moderate 16.85%±14.3  severe 7.13%±11.3
+ep 090  loss=0.463  lr=0.0125
+  val  overall 19.15%±11.0  mild 27.35%±13.6  moderate 16.64%±14.2  severe 7.03%±11.2
+ep 095  loss=0.454  lr=0.0125
+  val  overall 19.18%±11.1  mild 27.26%±13.6  moderate 16.64%±14.3  severe 6.95%±11.2
+ep 100  loss=0.469  lr=0.0125
+  val  overall 19.38%±11.1  mild 27.46%±13.6  moderate 16.63%±14.3  severe 6.98%±11.3
+  lr 0.0125 -> 0.00625
+best ep=90  val 19.15%
+sealed checkpoint
+test
+test  overall 19.16%±11.3  mild 27.13%±13.8  moderate 16.61%±14.4  severe 7.15%±11.3
+RESULT_JSON {"best_epoch": 90, "calibration_per_user": null, "final_test_fingerprint": "d9597ce6c21120e246e7533fd252555821f5bdbcc14490cb77dd28ccb931bcbc", "model_selection_per_user": {"mild": {"mean": 0.27350171872664775, "standard_deviation": 0.13576634187473025}, "moderate": {"mean": 0.166432521297265, "standard_deviation": 0.14207545461994803}, "overall": {"mean": 0.19147611219050467, "standard_deviation": 0.11005167710365944}, "severe": {"mean": 0.07033328351516963, "standard_deviation": 0.11245893438560005}}, "model_selection_per_user_eer": 0.19147611219050467, "test_per_user": {"mild": {"mean": 0.2712976824959579, "standard_deviation": 0.1381251835637867}, "moderate": {"mean": 0.16609377807054315, "standard_deviation": 0.14375273222950233}, "overall": {"mean": 0.1915603728766194, "standard_deviation": 0.11255128755042859}, "severe": {"mean": 0.07152524103239714, "standard_deviation": 0.1131855196597367}}}

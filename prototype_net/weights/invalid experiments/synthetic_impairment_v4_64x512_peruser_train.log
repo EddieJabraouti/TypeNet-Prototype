@@ -1,0 +1,54 @@
+device=cpu
+local users=28,208 (wanted 73,000); shrinking train/legacy
+cohorts train=25,208 sel=1,000 cal=1,000 test=1,000
+users=28,208  train=25,208  sel=1,000  cal=1,000  test=1,000
+fine-tune second_lstm  params=131,584
+lr=0.025  margin=1.5  batch=512  steps=32
+ep 005  loss=0.760  lr=0.025
+  sel  overall 25.01%±12.2  mild 35.20%±14.1  moderate 22.76%±16.5  severe 10.05%±13.8
+ep 010  loss=0.649  lr=0.025
+  sel  overall 22.68%±11.7  mild 32.24%±14.1  moderate 20.00%±15.7  severe 8.89%±12.9
+ep 015  loss=0.586  lr=0.025
+  sel  overall 21.68%±11.5  mild 30.52%±13.5  moderate 19.37%±15.2  severe 8.38%±12.3
+ep 020  loss=0.565  lr=0.025
+  sel  overall 21.21%±11.4  mild 29.72%±13.7  moderate 18.71%±15.2  severe 8.11%±12.1
+ep 025  loss=0.540  lr=0.025
+  sel  overall 20.94%±11.3  mild 29.34%±13.9  moderate 18.04%±14.9  severe 7.87%±11.8
+ep 030  loss=0.538  lr=0.025
+  sel  overall 20.56%±11.5  mild 28.97%±13.8  moderate 17.81%±15.2  severe 7.48%±11.3
+ep 035  loss=0.532  lr=0.025
+  sel  overall 21.08%±11.2  mild 29.52%±13.4  moderate 18.18%±14.7  severe 8.09%±11.7
+ep 040  loss=0.502  lr=0.025
+  sel  overall 20.52%±10.9  mild 28.76%±13.6  moderate 18.18%±14.5  severe 7.40%±11.4
+ep 045  loss=0.503  lr=0.025
+  sel  overall 19.82%±10.8  mild 28.13%±12.9  moderate 17.26%±14.6  severe 7.29%±11.3
+ep 050  loss=0.483  lr=0.025
+  sel  overall 19.88%±11.2  mild 28.31%±13.2  moderate 17.41%±14.7  severe 7.15%±11.3
+ep 055  loss=0.489  lr=0.025
+  sel  overall 19.92%±11.2  mild 28.42%±13.4  moderate 17.28%±14.6  severe 7.42%±11.5
+  lr 0.025 -> 0.0125
+ep 060  loss=0.486  lr=0.0125
+  sel  overall 20.23%±11.1  mild 27.91%±13.4  moderate 17.47%±14.6  severe 7.21%±11.5
+ep 065  loss=0.462  lr=0.0125
+  sel  overall 19.74%±10.8  mild 27.66%±12.9  moderate 16.89%±14.1  severe 7.33%±11.5
+ep 070  loss=0.452  lr=0.0125
+  sel  overall 19.73%±10.9  mild 27.80%±13.2  moderate 16.75%±14.3  severe 7.05%±11.1
+ep 075  loss=0.464  lr=0.0125
+  sel  overall 19.70%±10.8  mild 27.97%±13.3  moderate 16.61%±14.3  severe 6.82%±10.9
+ep 080  loss=0.456  lr=0.0125
+  sel  overall 19.39%±10.7  mild 27.50%±13.4  moderate 16.26%±13.8  severe 6.64%±10.9
+ep 085  loss=0.449  lr=0.0125
+  sel  overall 19.36%±10.6  mild 27.11%±13.3  moderate 16.45%±14.0  severe 7.01%±11.1
+ep 090  loss=0.439  lr=0.0125
+  sel  overall 19.52%±10.7  mild 28.09%±13.2  moderate 16.65%±14.1  severe 6.31%±10.5
+ep 095  loss=0.453  lr=0.0125
+  sel  overall 19.87%±10.7  mild 27.99%±13.2  moderate 17.10%±14.2  severe 6.50%±10.5
+  lr 0.0125 -> 0.00625
+ep 100  loss=0.437  lr=0.00625
+  sel  overall 19.46%±10.9  mild 27.52%±13.5  moderate 16.77%±14.2  severe 6.68%±10.8
+best ep=85  sel 19.36%
+cal  overall 19.63%±11.0  mild 28.19%±13.2  moderate 17.06%±14.1  severe 7.57%±11.2
+sealed checkpoint
+final test
+test  overall 19.24%±11.2  mild 27.00%±13.7  moderate 16.34%±13.7  severe 7.15%±11.4
+RESULT_JSON {"best_epoch": 85, "calibration_per_user": {"mild": {"mean": 0.28189300411522633, "standard_deviation": 0.1316300029920349}, "moderate": {"mean": 0.1705761316872428, "standard_deviation": 0.14054010076889373}, "overall": {"mean": 0.19626200274348424, "standard_deviation": 0.1097278961338153}, "severe": {"mean": 0.0757201646090535, "standard_deviation": 0.11234040295725495}}, "final_test_fingerprint": "441ff66e9c85616824035a7cb6255893f2473b37166089359c9d23d50fd5ba23", "model_selection_per_user": {"mild": {"mean": 0.2710929519918284, "standard_deviation": 0.13290165687365899}, "moderate": {"mean": 0.1644535240040858, "standard_deviation": 0.14049010461499253}, "overall": {"mean": 0.19359891045284303, "standard_deviation": 0.10629861732244998}, "severe": {"mean": 0.07007150153217569, "standard_deviation": 0.11086573146639084}}, "model_selection_per_user_eer": 0.19359891045284303, "test_per_user": {"mild": {"mean": 0.27004132231404965, "standard_deviation": 0.1367086481932049}, "moderate": {"mean": 0.16342975206611568, "standard_deviation": 0.13676234598786252}, "overall": {"mean": 0.19238980716253445, "standard_deviation": 0.11153894890539205}, "severe": {"mean": 0.07148760330578512, "standard_deviation": 0.11396796096848319}}}

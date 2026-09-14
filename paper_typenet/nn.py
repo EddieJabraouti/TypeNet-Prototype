@@ -106,7 +106,14 @@ def participant_sort_key(path: Path) -> tuple[int, int | str]:
 def discover_user_files(data_dir: Path) -> list[Path]:
     if not data_dir.is_dir():
         raise FileNotFoundError(f"Keystroke data directory does not exist: {data_dir}")
-    paths = sorted(data_dir.glob("*_keystrokes.txt"), key=participant_sort_key)
+    paths = sorted(
+        (
+            path
+            for path in data_dir.glob("*_keystrokes.txt")
+            if not path.name.startswith("._")
+        ),
+        key=participant_sort_key,
+    )
     if not paths:
         raise FileNotFoundError(
             f"No '<participant>_keystrokes.txt' files found under {data_dir}"
@@ -768,8 +775,20 @@ def evaluate_split(
 
 
 def resolve_device(requested: str) -> torch.device:
+    """Resolve the runtime device. Auto tries MLX, then CPU."""
+
     if requested == "auto":
-        return torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        try:
+            return torch.device("MLX")
+        except (RuntimeError, ValueError):
+            return torch.device("cpu")
+    if requested.lower() == "cpu":
+        return torch.device("cpu")
+    if requested.upper() == "MLX":
+        try:
+            return torch.device("MLX")
+        except (RuntimeError, ValueError) as exc:
+            raise RuntimeError("MLX was requested but is not available") from exc
     device = torch.device(requested)
     if device.type == "cuda" and not torch.cuda.is_available():
         raise RuntimeError("CUDA was requested but is not available")
@@ -883,7 +902,11 @@ def build_argument_parser() -> argparse.ArgumentParser:
         help="Stop after this many validation checks without improvement; zero disables.",
     )
     parser.add_argument("--seed", type=int, default=7)
-    parser.add_argument("--device", default="auto", help="auto, cpu, cuda, or cuda:N")
+    parser.add_argument(
+        "--device",
+        default="auto",
+        help="auto (MLX if available, else CPU), cpu, MLX, cuda, or cuda:N",
+    )
     parser.add_argument(
         "--checkpoint",
         type=Path,

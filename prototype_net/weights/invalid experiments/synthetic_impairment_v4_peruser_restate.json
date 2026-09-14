@@ -1,0 +1,21 @@
+{
+  "restated_checkpoint": "prototype_net/weights/synthetic_impairment_evidence_v4_64x512_checkpoint.pt",
+  "restatement_source": "local-proxy",
+  "note": "Locked v4 selection/calibration files are not present on this machine. These are per-user EERs on 1000+1000 local complete users.",
+  "selection_per_user_eer_mean": 0.19576666666666664,
+  "selection_global_eer": 0.27459999999999996,
+  "calibration_per_user_eer_mean": 0.202,
+  "calibration_global_eer": 0.27180000000000004,
+  "selection_per_user": {
+    "overall": {"mean": 0.19576666666666664, "standard_deviation": 0.1148180734901958},
+    "mild": {"mean": 0.2846, "standard_deviation": 0.14086461585508264},
+    "moderate": {"mean": 0.1658, "standard_deviation": 0.14720855953374448},
+    "severe": {"mean": 0.0716, "standard_deviation": 0.113813180256067}
+  },
+  "calibration_per_user": {
+    "overall": {"mean": 0.202, "standard_deviation": 0.10993129167297586},
+    "mild": {"mean": 0.28280000000000005, "standard_deviation": 0.13690931305064677},
+    "moderate": {"mean": 0.1762, "standard_deviation": 0.14238525204528735},
+    "severe": {"mean": 0.07419999999999999, "standard_deviation": 0.11477961491484452}
+  }
+}
