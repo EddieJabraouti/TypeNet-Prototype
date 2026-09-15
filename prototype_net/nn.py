@@ -1,13 +1,14 @@
 """Research evidence-calibrated timing-impairment prototype built on TypeNet
 
-The pretrained TypeNet frontend is frozen: input batch normalization, the
-first LSTM, inter-layer dropout, and hidden batch normalization keep their
-pretrained weights. The second LSTM is fine-tuned from the paper head.
+Default fine-tune freezes the TypeNet frontend (input BN, first LSTM,
+dropout, hidden BN) and updates only the second LSTM. `--unfreeze-all`
+trains every encoder parameter from the same pretrained weights; batch-norm
+affine scales move, but running mean/var stay in eval() on the 68k stats.
 
 Default protocol: identities used to train those 68k TypeNet weights are
 excluded. The remaining unseen pool (~86k) is hash-split once (80% develop /
-20% test; 10% of develop is validation). Later methods (paircls, LoRA) start
-from a fresh copy of the same pretrained TypeNet and reuse that split so
+20% test; 10% of develop is validation). Later methods (paircls, LoRA, FFT)
+start from a fresh copy of the same pretrained TypeNet and reuse that split so
 comparisons are identity-matched. Val/test are scored, not discarded.
 
 Run a short real-data check:
@@ -35,9 +36,26 @@ from torch import Tensor, nn
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-INVALID_EXPERIMENTS_DIR = (
-    REPO_ROOT / "prototype_net" / "weights" / "invalid experiments"
-)
+WEIGHTS_DIR = REPO_ROOT / "prototype_net" / "weights"
+PROTOCOL_DIR = WEIGHTS_DIR / "protocol"
+TRIPLET_DIR = WEIGHTS_DIR / "triplet"
+PAIRCLS_DIR = WEIGHTS_DIR / "paircls"
+PAIRCLS_SIDE_DIR = WEIGHTS_DIR / "paircls_side"
+ABORTED_DIR = WEIGHTS_DIR / "aborted"
+INVALID_EXPERIMENTS_DIR = WEIGHTS_DIR / "invalid experiments"
+
+
+def find_weights_file(name: str) -> Path | None:
+    if not name:
+        return None
+    matches = sorted(
+        path
+        for path in WEIGHTS_DIR.rglob(name)
+        if path.is_file() and INVALID_EXPERIMENTS_DIR not in path.parents
+    )
+    return matches[0] if matches else None
+
+
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
@@ -50,10 +68,18 @@ CLASS_NAMES = ("normal",) + SEVERITY_NAMES
 CLASS_COUNT = len(CLASS_NAMES)
 PAIR_HEAD_HIDDEN_DIM = 256
 PAIR_HEAD_DROPOUT = 0.2
+SIDE_HIDDEN_DIM = 64
+SIDE_OUTPUT_DIM = 128
 FROZEN_MODULE_NAMES = (
     "input_batch_norm",
     "first_lstm",
     "dropout",
+    "hidden_batch_norm",
+)
+BATCH_NORM_MODULE_NAMES = ("input_batch_norm", "hidden_batch_norm")
+FRONTEND_MODULE_NAMES = (
+    "input_batch_norm",
+    "first_lstm",
     "hidden_batch_norm",
 )
 
@@ -486,6 +512,23 @@ class ImpairmentTripletSampler:
         )
 
 
+def gallery_query_pair_features(gallery_mean: Tensor, query: Tensor) -> Tensor:
+    if gallery_mean.shape != query.shape:
+        raise ValueError(
+            "Gallery mean and query embeddings must share shape, got "
+            f"{tuple(gallery_mean.shape)} and {tuple(query.shape)}"
+        )
+    return torch.cat(
+        (
+            gallery_mean,
+            query,
+            (gallery_mean - query).abs(),
+            gallery_mean * query,
+        ),
+        dim=-1,
+    )
+
+
 class GalleryQueryPairHead(nn.Module):
     """4-way classifier over a mean-gallery / query embedding pair."""
 
@@ -494,9 +537,11 @@ class GalleryQueryPairHead(nn.Module):
         embedding_dim: int = typenet.PAPER_EMBEDDING_DIM,
         hidden_dim: int = PAIR_HEAD_HIDDEN_DIM,
         dropout: float = PAIR_HEAD_DROPOUT,
+        side_dim: int = 0,
     ) -> None:
         super().__init__()
-        pair_dim = embedding_dim * 4
+        self.side_dim = side_dim
+        pair_dim = embedding_dim * 4 + side_dim * 4
         self.net = nn.Sequential(
             nn.Linear(pair_dim, hidden_dim),
             nn.ReLU(),
@@ -504,28 +549,70 @@ class GalleryQueryPairHead(nn.Module):
             nn.Linear(hidden_dim, CLASS_COUNT),
         )
 
-    def forward(self, gallery_mean: Tensor, query: Tensor) -> Tensor:
-        if gallery_mean.shape != query.shape:
-            raise ValueError(
-                "Gallery mean and query embeddings must share shape, got "
-                f"{tuple(gallery_mean.shape)} and {tuple(query.shape)}"
+    def forward(
+        self,
+        gallery_mean: Tensor,
+        query: Tensor,
+        side_gallery_mean: Tensor | None = None,
+        side_query: Tensor | None = None,
+    ) -> Tensor:
+        features = gallery_query_pair_features(gallery_mean, query)
+        if self.side_dim > 0:
+            if side_gallery_mean is None or side_query is None:
+                raise ValueError("Side embeddings are required for this pair head")
+            features = torch.cat(
+                (
+                    features,
+                    gallery_query_pair_features(side_gallery_mean, side_query),
+                ),
+                dim=-1,
             )
-        features = torch.cat(
-            (
-                gallery_mean,
-                query,
-                (gallery_mean - query).abs(),
-                gallery_mean * query,
-            ),
-            dim=-1,
-        )
         return self.net(features)
+
+
+class RawTimingSideEncoder(nn.Module):
+    """Trainable residual encoder on raw 5-d timings; last layer starts at zero."""
+
+    def __init__(
+        self,
+        hidden_size: int = SIDE_HIDDEN_DIM,
+        output_size: int = SIDE_OUTPUT_DIM,
+    ) -> None:
+        super().__init__()
+        self.lstm = typenet.KerasStyleLSTM(
+            typenet.PAPER_FEATURE_COUNT,
+            hidden_size,
+            recurrent_dropout=0.2,
+        )
+        self.proj = nn.Linear(hidden_size, output_size)
+        nn.init.zeros_(self.proj.weight)
+        nn.init.zeros_(self.proj.bias)
+
+    def forward(self, inputs: Tensor, lengths: Tensor) -> Tensor:
+        _, hidden = self.lstm(inputs, lengths)
+        return self.proj(hidden)
 
 
 def pair_not_normal_probability(logits: Tensor) -> Tensor:
     """Binary impairment score: 1 - P(normal)."""
 
     return 1.0 - torch.softmax(logits, dim=-1)[:, 0]
+
+
+def paircls_loss(
+    logits: Tensor, labels: Tensor, bce_weight: float
+) -> Tensor:
+    """4-way CE plus optional BCE on P(not normal)."""
+
+    classification = nn.functional.cross_entropy(logits, labels)
+    if bce_weight == 0.0:
+        return classification
+    impaired = (labels != 0).to(dtype=logits.dtype)
+    detection = nn.functional.binary_cross_entropy(
+        pair_not_normal_probability(logits).clamp(1e-6, 1.0 - 1e-6),
+        impaired,
+    )
+    return classification + bce_weight * detection
 
 
 class GalleryQueryClassSampler:
@@ -643,8 +730,14 @@ def load_pretrained_encoder(path: Path, device: torch.device) -> typenet.TypeNet
     return encoder
 
 
-def build_pair_head(device: torch.device) -> GalleryQueryPairHead:
-    return GalleryQueryPairHead().to(device)
+def build_pair_head(
+    device: torch.device, side_dim: int = 0
+) -> GalleryQueryPairHead:
+    return GalleryQueryPairHead(side_dim=side_dim).to(device)
+
+
+def build_side_encoder(device: torch.device) -> RawTimingSideEncoder:
+    return RawTimingSideEncoder().to(device)
 
 
 def load_pair_head(
@@ -653,9 +746,38 @@ def load_pair_head(
     state = payload.get("pair_head_state_dict")
     if not isinstance(state, Mapping):
         return None
-    pair_head = build_pair_head(device)
+    weight = state.get("net.0.weight")
+    side_dim = 0
+    if isinstance(weight, Tensor) and weight.shape[1] > typenet.PAPER_EMBEDDING_DIM * 4:
+        side_dim = SIDE_OUTPUT_DIM
+    pair_head = build_pair_head(device, side_dim=side_dim)
     pair_head.load_state_dict(state, strict=True)
     return pair_head
+
+
+def load_side_encoder(
+    payload: Mapping[str, object], device: torch.device
+) -> RawTimingSideEncoder | None:
+    state = payload.get("side_encoder_state_dict")
+    if not isinstance(state, Mapping):
+        return None
+    side_encoder = build_side_encoder(device)
+    side_encoder.load_state_dict(state, strict=True)
+    return side_encoder
+
+
+def encoder_is_fully_unfrozen(encoder: typenet.TypeNetEncoder) -> bool:
+    return all(parameter.requires_grad for parameter in encoder.parameters())
+
+
+def configure_encoder_training(
+    encoder: typenet.TypeNetEncoder, unfreeze_all: bool
+) -> None:
+    for parameter in encoder.parameters():
+        parameter.requires_grad_(True)
+    if unfreeze_all:
+        return
+    freeze_intermediate_representation(encoder)
 
 
 def freeze_intermediate_representation(encoder: typenet.TypeNetEncoder) -> None:
@@ -670,6 +792,13 @@ def freeze_intermediate_representation(encoder: typenet.TypeNetEncoder) -> None:
 
 def set_fine_tuning_mode(encoder: typenet.TypeNetEncoder) -> None:
     encoder.train()
+    for module_name in BATCH_NORM_MODULE_NAMES:
+        getattr(encoder, module_name).eval()
+    if encoder_is_fully_unfrozen(encoder):
+        encoder.first_lstm.train()
+        encoder.dropout.train()
+        encoder.second_lstm.train()
+        return
     for module_name in FROZEN_MODULE_NAMES:
         getattr(encoder, module_name).eval()
     encoder.second_lstm.train()
@@ -679,6 +808,17 @@ def assert_freeze_configuration(encoder: typenet.TypeNetEncoder) -> None:
     trainable_names = [
         name for name, parameter in encoder.named_parameters() if parameter.requires_grad
     ]
+    if encoder_is_fully_unfrozen(encoder):
+        for module_name in BATCH_NORM_MODULE_NAMES:
+            if getattr(encoder, module_name).training:
+                raise AssertionError(
+                    f"Batch-norm running stats must stay in eval(): {module_name}"
+                )
+        if not encoder.first_lstm.training or not encoder.second_lstm.training:
+            raise AssertionError("Both LSTMs must be in train() for full fine-tune")
+        if not encoder.dropout.training:
+            raise AssertionError("Dropout must be in train() for full fine-tune")
+        return
     if not trainable_names or not all(
         name.startswith("second_lstm.") for name in trainable_names
     ):
@@ -689,6 +829,55 @@ def assert_freeze_configuration(encoder: typenet.TypeNetEncoder) -> None:
     for module_name in FROZEN_MODULE_NAMES:
         if getattr(encoder, module_name).training:
             raise AssertionError(f"Frozen module remained in training mode: {module_name}")
+
+
+def optimizer_param_groups(
+    encoder: typenet.TypeNetEncoder,
+    pair_head: GalleryQueryPairHead | None,
+    learning_rate: float,
+    unfreeze_all: bool,
+    frontend_lr_multiplier: float,
+    extra_parameters: Sequence[nn.Parameter] | None = None,
+) -> list[dict[str, object]]:
+    extra = list(extra_parameters or ())
+    if not unfreeze_all:
+        parameters = [
+            parameter for parameter in encoder.parameters() if parameter.requires_grad
+        ]
+        if pair_head is not None:
+            parameters.extend(pair_head.parameters())
+        parameters.extend(extra)
+        return [{"params": parameters, "lr": learning_rate}]
+
+    frontend_parameters: list[nn.Parameter] = []
+    head_parameters: list[nn.Parameter] = []
+    for name, parameter in encoder.named_parameters():
+        if not parameter.requires_grad:
+            continue
+        module_name = name.split(".", 1)[0]
+        if module_name in FRONTEND_MODULE_NAMES:
+            frontend_parameters.append(parameter)
+        else:
+            head_parameters.append(parameter)
+    if pair_head is not None:
+        head_parameters.extend(pair_head.parameters())
+    head_parameters.extend(extra)
+    if not frontend_parameters or not head_parameters:
+        raise AssertionError("Full fine-tune requires frontend and head parameter groups")
+    return [
+        {
+            "params": frontend_parameters,
+            "lr": learning_rate * frontend_lr_multiplier,
+        },
+        {"params": head_parameters, "lr": learning_rate},
+    ]
+
+
+def format_optimizer_lrs(optimizer: torch.optim.Optimizer) -> str:
+    return " ".join(
+        f"lr{index}={group['lr']:.4g}"
+        for index, group in enumerate(optimizer.param_groups)
+    )
 
 
 def triplet_losses(
@@ -799,9 +988,13 @@ def train_one_epoch_paircls(
     batch_size: int,
     steps_per_epoch: int,
     max_gradient_norm: float,
+    bce_weight: float,
+    side_encoder: RawTimingSideEncoder | None = None,
 ) -> tuple[float, float]:
     set_fine_tuning_mode(encoder)
     pair_head.train()
+    if side_encoder is not None:
+        side_encoder.train()
     assert_freeze_configuration(encoder)
     losses: list[float] = []
     accuracies: list[float] = []
@@ -831,8 +1024,22 @@ def train_one_epoch_paircls(
             batch, gallery_size, typenet.PAPER_EMBEDDING_DIM
         )
         query_embeddings = embeddings[batch * gallery_size :]
-        logits = pair_head(gallery_embeddings.mean(dim=1), query_embeddings)
-        loss = nn.functional.cross_entropy(logits, labels)
+        side_gallery_mean = None
+        side_query = None
+        if side_encoder is not None:
+            side_embeddings = side_encoder(combined, combined_lengths)
+            side_gallery = side_embeddings[: batch * gallery_size].reshape(
+                batch, gallery_size, SIDE_OUTPUT_DIM
+            )
+            side_gallery_mean = side_gallery.mean(dim=1)
+            side_query = side_embeddings[batch * gallery_size :]
+        logits = pair_head(
+            gallery_embeddings.mean(dim=1),
+            query_embeddings,
+            side_gallery_mean=side_gallery_mean,
+            side_query=side_query,
+        )
+        loss = paircls_loss(logits, labels, bce_weight)
 
         optimizer.zero_grad(set_to_none=True)
         loss.backward()
@@ -851,6 +1058,8 @@ def train_one_epoch_paircls(
             for parameter in encoder.parameters()
             if parameter.requires_grad
         ] + list(pair_head.parameters())
+        if side_encoder is not None:
+            trainable.extend(side_encoder.parameters())
         nn.utils.clip_grad_norm_(trainable, max_norm=max_gradient_norm)
         optimizer.step()
 
@@ -869,6 +1078,8 @@ def classify_pair_scores(
     queries: np.ndarray,
     batch_size: int,
     device: torch.device,
+    side_galleries: np.ndarray | None = None,
+    side_queries: np.ndarray | None = None,
 ) -> np.ndarray:
     """Score [users, queries] as P(not normal) from mean-gallery / query pairs."""
 
@@ -876,12 +1087,26 @@ def classify_pair_scores(
     users, query_count, dim = queries.shape
     gallery_mean = np.repeat(galleries.mean(axis=1), query_count, axis=0)
     query_flat = queries.reshape(-1, dim)
+    side_gallery_mean = None
+    side_query_flat = None
+    if side_galleries is not None and side_queries is not None:
+        side_gallery_mean = np.repeat(
+            side_galleries.mean(axis=1), query_count, axis=0
+        )
+        side_query_flat = side_queries.reshape(-1, side_queries.shape[-1])
     scores: list[np.ndarray] = []
     for start in range(0, len(query_flat), batch_size):
         stop = min(start + batch_size, len(query_flat))
+        side_g = None
+        side_q = None
+        if side_gallery_mean is not None and side_query_flat is not None:
+            side_g = torch.from_numpy(side_gallery_mean[start:stop]).to(device)
+            side_q = torch.from_numpy(side_query_flat[start:stop]).to(device)
         logits = pair_head(
             torch.from_numpy(gallery_mean[start:stop]).to(device),
             torch.from_numpy(query_flat[start:stop]).to(device),
+            side_gallery_mean=side_g,
+            side_query=side_q,
         )
         scores.append(pair_not_normal_probability(logits).cpu().numpy())
     return np.concatenate(scores).reshape(users, query_count)
@@ -889,7 +1114,7 @@ def classify_pair_scores(
 
 @torch.inference_mode()
 def embed_feature_matrix(
-    encoder: typenet.TypeNetEncoder,
+    encoder: nn.Module,
     features: np.ndarray,
     lengths: np.ndarray,
     batch_size: int,
@@ -930,6 +1155,7 @@ def evaluate_impairment_scores(
     device: torch.device,
     seed: int,
     pair_head: GalleryQueryPairHead | None = None,
+    side_encoder: RawTimingSideEncoder | None = None,
 ) -> ImpairmentScores:
     selected_paths = list(paths[:eval_users] if eval_users > 0 else paths)
     clean_user_features: list[np.ndarray] = []
@@ -974,11 +1200,40 @@ def evaluate_impairment_scores(
             typenet.PAPER_QUERY_START + typenet.PAPER_QUERY_COUNT
         ),
     ]
+    side_galleries = None
+    side_clean_queries = None
+    if side_encoder is not None:
+        clean_side = embed_feature_matrix(
+            side_encoder,
+            feature_matrix.reshape(
+                -1, sequence_length, typenet.PAPER_FEATURE_COUNT
+            ),
+            length_matrix.reshape(-1),
+            eval_batch_size,
+            device,
+        ).reshape(
+            users,
+            typenet.PAPER_SESSIONS_PER_USER,
+            SIDE_OUTPUT_DIM,
+        )
+        side_galleries = clean_side[:, :gallery_size]
+        side_clean_queries = clean_side[
+            :,
+            typenet.PAPER_QUERY_START : (
+                typenet.PAPER_QUERY_START + typenet.PAPER_QUERY_COUNT
+            ),
+        ]
     if pair_head is None:
         normal_scores = mean_gallery_distances(galleries, clean_queries)
     else:
         normal_scores = classify_pair_scores(
-            pair_head, galleries, clean_queries, eval_batch_size, device
+            pair_head,
+            galleries,
+            clean_queries,
+            eval_batch_size,
+            device,
+            side_galleries=side_galleries,
+            side_queries=side_clean_queries,
         )
 
     query_features = feature_matrix[
@@ -1025,12 +1280,25 @@ def evaluate_impairment_scores(
                 galleries, perturbed_embeddings
             )
         else:
+            side_perturbed = None
+            if side_encoder is not None:
+                side_perturbed = embed_feature_matrix(
+                    side_encoder,
+                    perturbed_queries.reshape(
+                        -1, sequence_length, typenet.PAPER_FEATURE_COUNT
+                    ),
+                    query_lengths.reshape(-1),
+                    eval_batch_size,
+                    device,
+                ).reshape(users, typenet.PAPER_QUERY_COUNT, SIDE_OUTPUT_DIM)
             impaired_by_severity[severity_name] = classify_pair_scores(
                 pair_head,
                 galleries,
                 perturbed_embeddings,
                 eval_batch_size,
                 device,
+                side_galleries=side_galleries,
+                side_queries=side_perturbed,
             )
 
     return ImpairmentScores(
@@ -1515,6 +1783,10 @@ def build_locked_protocol_splits(
         "steps_per_epoch": args.steps_per_epoch,
         "batch_size": args.batch_size,
         "learning_rate": args.learning_rate,
+        "unfreeze_all": bool(args.unfreeze_all),
+        "frontend_lr_multiplier": args.frontend_lr_multiplier,
+        "pair_bce_weight": args.pair_bce_weight,
+        "side_encoder": bool(args.side_encoder),
         "perturbation": asdict(perturbation_config_from_args(args)),
         "seed": args.seed,
         "quarantine_manifest_sha256": [
@@ -1746,6 +2018,7 @@ def checkpoint_payload(
     test_per_user: Mapping[str, typenet.PerUserEERMetrics] | None = None,
     final_test_accessed: bool = False,
     pair_head: GalleryQueryPairHead | None = None,
+    side_encoder: RawTimingSideEncoder | None = None,
 ) -> dict[str, object]:
     payload: dict[str, object] = {
         "model_state_dict": encoder.state_dict(),
@@ -1772,6 +2045,8 @@ def checkpoint_payload(
     }
     if pair_head is not None:
         payload["pair_head_state_dict"] = pair_head.state_dict()
+    if side_encoder is not None:
+        payload["side_encoder_state_dict"] = side_encoder.state_dict()
     if calibration_metrics is not None:
         payload["calibration_metrics"] = {
             name: asdict(metrics)
@@ -1819,9 +2094,7 @@ def build_argument_parser() -> argparse.ArgumentParser:
         "--checkpoint",
         type=Path,
         default=(
-            REPO_ROOT
-            / "prototype_net"
-            / "weights"
+            TRIPLET_DIR
             / "synthetic_impairment_evidence_v4_64x512_unseen_triplet_checkpoint.pt"
         ),
     )
@@ -1829,9 +2102,7 @@ def build_argument_parser() -> argparse.ArgumentParser:
         "--weights-output",
         type=Path,
         default=(
-            REPO_ROOT
-            / "prototype_net"
-            / "weights"
+            TRIPLET_DIR
             / "synthetic_impairment_evidence_v4_64x512_unseen_triplet_weights.pt"
         ),
     )
@@ -1839,9 +2110,7 @@ def build_argument_parser() -> argparse.ArgumentParser:
         "--protocol-manifest",
         type=Path,
         default=(
-            REPO_ROOT
-            / "prototype_net"
-            / "weights"
+            PROTOCOL_DIR
             / "synthetic_impairment_protocol_v4_64x512_unseen_triplet_manifest.json"
         ),
     )
@@ -1892,6 +2161,39 @@ def build_argument_parser() -> argparse.ArgumentParser:
         choices=("triplet", "paircls"),
         default="triplet",
         help="triplet: v4 gallery-distance fine-tune; paircls: 4-way pair head",
+    )
+    parser.add_argument(
+        "--unfreeze-all",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help=(
+            "Train every TypeNet parameter from the pretrained weights. "
+            "Batch-norm affine scales move; running mean/var stay frozen."
+        ),
+    )
+    parser.add_argument(
+        "--frontend-lr-multiplier",
+        type=float,
+        default=0.1,
+        help="LR multiplier for first LSTM and both batch-norms under --unfreeze-all",
+    )
+    parser.add_argument(
+        "--pair-bce-weight",
+        type=float,
+        default=0.0,
+        help=(
+            "Add λ * BCE(P(not normal), impaired) to paircls CE. "
+            "Zero keeps 4-way CE only."
+        ),
+    )
+    parser.add_argument(
+        "--side-encoder",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help=(
+            "Train a zero-init residual LSTM on raw 5-d timings and concat "
+            "it into the pair head. TypeNet frontend stays frozen."
+        ),
     )
     parser.add_argument(
         "--random-pool-split",
@@ -2018,7 +2320,7 @@ def build_argument_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--device",
         default="auto",
-        help="auto (MLX if available, else CPU), cpu, or MLX",
+        help="auto (MLX if present, else Apple GPU/MPS, else CPU), cpu, mps, or MLX",
     )
     parser.add_argument(
         "--restate-checkpoint",
@@ -2216,6 +2518,12 @@ def validate_arguments(args: argparse.Namespace) -> None:
         raise ValueError("--lr-decay-factor must be between zero and one")
     if args.objective not in {"triplet", "paircls"}:
         raise ValueError("--objective must be triplet or paircls")
+    if not 0.0 < args.frontend_lr_multiplier <= 1.0:
+        raise ValueError("--frontend-lr-multiplier must be in (0, 1]")
+    if args.pair_bce_weight < 0.0:
+        raise ValueError("--pair-bce-weight cannot be negative")
+    if args.side_encoder and args.objective != "paircls":
+        raise ValueError("--side-encoder requires --objective paircls")
     if not 0.5 <= args.dev_fraction < 1.0:
         raise ValueError("--dev-fraction must be in [0.5, 1)")
     if not 0.0 < args.val_fraction_of_dev < 0.5:
@@ -2231,6 +2539,7 @@ def score_cohort(
     seed: int,
     threshold: float | None = None,
     pair_head: GalleryQueryPairHead | None = None,
+    side_encoder: RawTimingSideEncoder | None = None,
 ) -> tuple[ImpairmentScores, float, float, dict[str, DetectionMetrics], dict[str, typenet.PerUserEERMetrics]]:
     scores = evaluate_impairment_scores(
         encoder,
@@ -2243,6 +2552,7 @@ def score_cohort(
         device,
         seed,
         pair_head=pair_head,
+        side_encoder=side_encoder,
     )
     fitted_threshold, fitted_eer = typenet.equal_error_threshold(
         scores.normal_flat, scores.impaired_flat
@@ -2278,9 +2588,7 @@ def run_restate(args: argparse.Namespace, device: torch.device) -> None:
     )
     manifest_candidates = [
         Path(str(saved_manifest)) if saved_manifest else None,
-        REPO_ROOT / "prototype_net" / "weights" / saved_manifest_name
-        if saved_manifest_name
-        else None,
+        find_weights_file(saved_manifest_name),
         args.protocol_manifest,
     ]
     manifest_path = next(
@@ -2347,11 +2655,20 @@ def run_restate(args: argparse.Namespace, device: torch.device) -> None:
     perturber = StructuredTimingPerturber(perturbation_config)
     encoder = load_pretrained_encoder(args.pretrained_weights, device)
     encoder.load_state_dict(payload["model_state_dict"], strict=True)
-    freeze_intermediate_representation(encoder)
+    saved_config = payload.get("config", {})
+    unfreeze_all = (
+        bool(saved_config.get("unfreeze_all", False))
+        if isinstance(saved_config, Mapping)
+        else False
+    )
+    configure_encoder_training(encoder, unfreeze_all)
     encoder.eval()
     pair_head = load_pair_head(payload, device)
     if pair_head is not None:
         pair_head.eval()
+    side_encoder = load_side_encoder(payload, device)
+    if side_encoder is not None:
+        side_encoder.eval()
 
     selection_scores, selection_threshold, selection_eer, selection_global, selection_per_user = (
         score_cohort(
@@ -2362,6 +2679,7 @@ def run_restate(args: argparse.Namespace, device: torch.device) -> None:
             device,
             args.seed + 10_000,
             pair_head=pair_head,
+            side_encoder=side_encoder,
         )
     )
     print_cohort_metrics("Restated selection", selection_per_user)
@@ -2376,6 +2694,7 @@ def run_restate(args: argparse.Namespace, device: torch.device) -> None:
             device,
             args.seed + 20_000,
             pair_head=pair_head,
+            side_encoder=side_encoder,
         )
     )
     print_cohort_metrics("Restated calibration", calibration_per_user)
@@ -2441,26 +2760,52 @@ def main() -> None:
             )
 
     encoder = load_pretrained_encoder(args.pretrained_weights, device)
-    freeze_intermediate_representation(encoder)
+    configure_encoder_training(encoder, args.unfreeze_all)
     set_fine_tuning_mode(encoder)
     assert_freeze_configuration(encoder)
     pair_head: GalleryQueryPairHead | None = None
+    side_encoder: RawTimingSideEncoder | None = None
     if args.objective == "paircls":
-        pair_head = build_pair_head(device)
+        if args.side_encoder:
+            side_encoder = build_side_encoder(device)
+            side_encoder.train()
+        pair_head = build_pair_head(
+            device, side_dim=SIDE_OUTPUT_DIM if side_encoder is not None else 0
+        )
         pair_head.train()
-    trainable_parameters = [
-        parameter for parameter in encoder.parameters() if parameter.requires_grad
-    ]
-    if pair_head is not None:
-        trainable_parameters.extend(pair_head.parameters())
-    trainable_count = sum(parameter.numel() for parameter in trainable_parameters)
+    param_groups = optimizer_param_groups(
+        encoder,
+        pair_head,
+        args.learning_rate,
+        args.unfreeze_all,
+        args.frontend_lr_multiplier,
+        extra_parameters=(
+            list(side_encoder.parameters()) if side_encoder is not None else None
+        ),
+    )
+    trainable_count = sum(
+        parameter.numel()
+        for group in param_groups
+        for parameter in group["params"]
+    )
+    scope = "all params" if args.unfreeze_all else "second_lstm"
     if pair_head is None:
-        print(f"fine-tune second_lstm  params={trainable_count:,}  objective=triplet")
+        print(f"fine-tune {scope}  params={trainable_count:,}  objective=triplet")
     else:
         pair_head_count = sum(parameter.numel() for parameter in pair_head.parameters())
+        side_count = (
+            sum(parameter.numel() for parameter in side_encoder.parameters())
+            if side_encoder is not None
+            else 0
+        )
+        head_scope = scope if args.unfreeze_all else "second_lstm+pair_head"
+        if side_encoder is not None:
+            head_scope += "+side"
         print(
-            f"fine-tune second_lstm+pair_head  params={trainable_count:,} "
-            f"(head={pair_head_count:,})  objective=paircls"
+            f"fine-tune {head_scope}  params={trainable_count:,} "
+            f"(head={pair_head_count:,}"
+            + (f"  side={side_count:,}" if side_count else "")
+            + ")  objective=paircls"
         )
     frozen_before = frozen_parameter_snapshot(encoder)
 
@@ -2484,7 +2829,7 @@ def main() -> None:
         if int(severity_counts.max() - severity_counts.min()) > 1:
             raise AssertionError("Severity sampling is not balanced")
 
-    optimizer = torch.optim.Adam(trainable_parameters, lr=args.learning_rate)
+    optimizer = torch.optim.Adam(param_groups)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
         optimizer,
         mode="min",
@@ -2495,13 +2840,17 @@ def main() -> None:
     )
     if args.objective == "paircls":
         print(
-            f"lr={args.learning_rate:g}  classes={','.join(CLASS_NAMES)}  "
-            f"score=P(not normal)  batch={args.batch_size}  "
+            f"{format_optimizer_lrs(optimizer)}  "
+            f"classes={','.join(CLASS_NAMES)}  "
+            f"score=P(not normal)  "
+            f"loss=CE+{args.pair_bce_weight:g}*BCE  "
+            f"side={'on' if side_encoder is not None else 'off'}  "
+            f"batch={args.batch_size}  "
             f"steps={args.steps_per_epoch}  G={args.gallery_size}"
         )
     else:
         print(
-            f"lr={args.learning_rate:g}  margin={args.margin:g}  "
+            f"{format_optimizer_lrs(optimizer)}  margin={args.margin:g}  "
             f"score=mean gallery distance  batch={args.batch_size}  "
             f"steps={args.steps_per_epoch}"
         )
@@ -2526,10 +2875,12 @@ def main() -> None:
                 args.batch_size,
                 args.steps_per_epoch,
                 args.max_gradient_norm,
+                args.pair_bce_weight,
+                side_encoder=side_encoder,
             )
             epoch_line = (
                 f"ep {epoch:03d}  loss={loss:.3f}  acc={accuracy:.3f}  "
-                f"lr={optimizer.param_groups[0]['lr']:.4g}"
+                f"{format_optimizer_lrs(optimizer)}"
             )
         else:
             assert isinstance(sampler, ImpairmentTripletSampler)
@@ -2545,7 +2896,7 @@ def main() -> None:
             )
             epoch_line = (
                 f"ep {epoch:03d}  loss={loss:.3f}  "
-                f"lr={optimizer.param_groups[0]['lr']:.4g}"
+                f"{format_optimizer_lrs(optimizer)}"
             )
         if epoch % args.validate_every != 0 and epoch != args.epochs:
             continue
@@ -2564,15 +2915,18 @@ def main() -> None:
             device,
             args.seed + 10_000,
             pair_head=pair_head,
+            side_encoder=side_encoder,
         )
         validation_eer = validation_per_user["overall"].mean
         print_cohort_metrics("  val", validation_per_user)
 
-        previous_lr = optimizer.param_groups[0]["lr"]
+        previous_lrs = [group["lr"] for group in optimizer.param_groups]
         scheduler.step(validation_eer)
-        current_lr = optimizer.param_groups[0]["lr"]
-        if current_lr < previous_lr:
-            print(f"  lr {previous_lr:.4g} -> {current_lr:.4g}")
+        current_lrs = [group["lr"] for group in optimizer.param_groups]
+        if current_lrs != previous_lrs:
+            before = " ".join(f"{lr:.4g}" for lr in previous_lrs)
+            after = " ".join(f"{lr:.4g}" for lr in current_lrs)
+            print(f"  lr {before} -> {after}")
 
         if validation_eer < best_validation_eer:
             best_epoch = epoch
@@ -2583,6 +2937,11 @@ def main() -> None:
                 "pair_head": (
                     copy.deepcopy(pair_head.state_dict())
                     if pair_head is not None
+                    else None
+                ),
+                "side_encoder": (
+                    copy.deepcopy(side_encoder.state_dict())
+                    if side_encoder is not None
                     else None
                 ),
             }
@@ -2605,6 +2964,7 @@ def main() -> None:
                         protocol_manifest=protocol.manifest,
                         selection_per_user=validation_per_user,
                         pair_head=pair_head,
+                        side_encoder=side_encoder,
                     ),
                     args.checkpoint,
                 )
@@ -2631,6 +2991,12 @@ def main() -> None:
             raise RuntimeError("Best pair-head weights are missing")
         pair_head.load_state_dict(pair_head_state)
         pair_head.eval()
+    if side_encoder is not None:
+        side_state = best_state.get("side_encoder")
+        if not isinstance(side_state, dict):
+            raise RuntimeError("Best side-encoder weights are missing")
+        side_encoder.load_state_dict(side_state)
+        side_encoder.eval()
     assert_frozen_parameters_unchanged(encoder, frozen_before)
 
     calibration_threshold = best_threshold
@@ -2652,6 +3018,7 @@ def main() -> None:
             device,
             args.seed + 20_000,
             pair_head=pair_head,
+            side_encoder=side_encoder,
         )
         print_cohort_metrics("cal", calibration_per_user)
     print(f"best ep={best_epoch}  val {best_validation_eer * 100:.2f}%")
@@ -2678,6 +3045,7 @@ def main() -> None:
                 selection_per_user=best_selection_per_user,
                 final_test_accessed=False,
                 pair_head=pair_head,
+                side_encoder=side_encoder,
             ),
             args.checkpoint,
         )
@@ -2701,6 +3069,7 @@ def main() -> None:
         args.seed + 30_000,
         threshold=calibration_threshold,
         pair_head=pair_head,
+        side_encoder=side_encoder,
     )
     print_cohort_metrics("test", test_per_user)
 
@@ -2728,6 +3097,7 @@ def main() -> None:
                 test_per_user=test_per_user,
                 final_test_accessed=bool(args.lock_final_test),
                 pair_head=pair_head,
+                side_encoder=side_encoder,
             ),
             args.checkpoint,
         )
@@ -2738,6 +3108,9 @@ def main() -> None:
                 "encoder": encoder.state_dict(),
                 "pair_head": (
                     pair_head.state_dict() if pair_head is not None else None
+                ),
+                "side_encoder": (
+                    side_encoder.state_dict() if side_encoder is not None else None
                 ),
                 "objective": args.objective,
             },

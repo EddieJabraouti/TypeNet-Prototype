@@ -1,0 +1,13 @@
+device=cpu
+reusing split synthetic_impairment_protocol_v4_64x512_unseen_triplet_manifest.json
+users=168,593  train=61,627  val=6,847  test=17,119  reserve=0  held-out=83,000
+fine-tune second_lstm+pair_head  params=263,940 (head=132,356)  objective=paircls
+lr0=0.025  classes=normal,mild,moderate,severe  score=P(not normal)  batch=512  steps=64  G=10
+ep 005  loss=0.975  acc=0.541  lr0=0.025
+  val  overall 16.70%±11.1  mild 23.65%±13.7  moderate 14.33%±13.5  severe 6.00%±10.4
+ep 010  loss=0.955  acc=0.548  lr0=0.025
+  val  overall 15.87%±11.0  mild 22.79%±13.6  moderate 13.30%±13.3  severe 5.44%±9.9
+ep 015  loss=0.952  acc=0.549  lr0=0.025
+  val  overall 15.79%±11.1  mild 22.48%±13.5  moderate 13.45%±13.3  severe 5.56%±10.0
+ep 020  loss=0.947  acc=0.555  lr0=0.025
+  val  overall 15.56%±11.1  mild 22.31%±13.7  moderate 13.21%±13.2  severe 5.47%±9.9

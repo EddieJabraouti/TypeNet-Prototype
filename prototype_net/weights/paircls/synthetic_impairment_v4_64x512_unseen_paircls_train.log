@@ -1,0 +1,52 @@
+device=cpu
+reusing split synthetic_impairment_protocol_v4_64x512_unseen_triplet_manifest.json
+users=168,593  train=61,627  val=6,847  test=17,119  reserve=0  held-out=83,000
+fine-tune second_lstm+pair_head  params=263,940 (head=132,356)  objective=paircls
+lr=0.025  classes=normal,mild,moderate,severe  score=P(not normal)  batch=512  steps=32  G=10
+ep 005  loss=1.017  acc=0.518  lr=0.025
+  val  overall 18.43%±11.4  mild 25.63%±13.8  moderate 15.71%±14.2  severe 6.56%±11.0
+ep 010  loss=0.973  acc=0.538  lr=0.025
+  val  overall 16.70%±11.1  mild 23.65%±13.7  moderate 14.33%±13.5  severe 6.00%±10.4
+ep 015  loss=0.971  acc=0.543  lr=0.025
+  val  overall 16.58%±11.1  mild 23.23%±13.5  moderate 14.25%±13.4  severe 6.27%±10.5
+ep 020  loss=0.956  acc=0.549  lr=0.025
+  val  overall 15.87%±11.0  mild 22.79%±13.6  moderate 13.30%±13.3  severe 5.44%±9.9
+ep 025  loss=0.952  acc=0.549  lr=0.025
+  val  overall 15.78%±11.1  mild 22.68%±13.6  moderate 13.27%±13.4  severe 5.53%±10.0
+ep 030  loss=0.957  acc=0.550  lr=0.025
+  val  overall 15.79%±11.1  mild 22.48%±13.5  moderate 13.45%±13.3  severe 5.56%±10.0
+ep 035  loss=0.948  acc=0.550  lr=0.025
+  val  overall 15.80%±11.0  mild 22.68%±13.6  moderate 13.45%±13.3  severe 5.35%±9.8
+  lr 0.025 -> 0.0125
+ep 040  loss=0.932  acc=0.562  lr=0.0125
+  val  overall 15.26%±10.9  mild 21.81%±13.6  moderate 12.98%±13.1  severe 5.28%±9.7
+ep 045  loss=0.935  acc=0.565  lr=0.0125
+  val  overall 15.02%±10.9  mild 21.57%±13.6  moderate 12.53%±13.1  severe 4.95%±9.5
+ep 050  loss=0.931  acc=0.565  lr=0.0125
+  val  overall 15.23%±11.0  mild 22.02%±13.6  moderate 12.82%±13.2  severe 5.06%±9.6
+ep 055  loss=0.932  acc=0.564  lr=0.0125
+  val  overall 14.96%±10.9  mild 21.83%±13.6  moderate 12.39%±13.0  severe 4.77%±9.4
+ep 060  loss=0.933  acc=0.563  lr=0.0125
+  val  overall 15.13%±10.8  mild 21.69%±13.4  moderate 12.84%±13.0  severe 5.13%±9.7
+ep 065  loss=0.923  acc=0.566  lr=0.0125
+  val  overall 14.97%±10.9  mild 21.57%±13.5  moderate 12.67%±13.0  severe 5.16%±9.7
+  lr 0.0125 -> 0.00625
+ep 070  loss=0.924  acc=0.570  lr=0.00625
+  val  overall 14.93%±10.9  mild 21.57%±13.6  moderate 12.38%±12.9  severe 4.76%±9.4
+ep 075  loss=0.915  acc=0.568  lr=0.00625
+  val  overall 14.81%±10.9  mild 21.47%±13.6  moderate 12.33%±12.9  severe 4.77%±9.4
+ep 080  loss=0.922  acc=0.569  lr=0.00625
+  val  overall 14.62%±10.9  mild 21.15%±13.5  moderate 12.23%±12.9  severe 4.75%±9.3
+ep 085  loss=0.920  acc=0.565  lr=0.00625
+  val  overall 14.58%±10.9  mild 21.23%±13.5  moderate 12.18%±13.0  severe 4.70%±9.4
+ep 090  loss=0.910  acc=0.574  lr=0.00625
+  val  overall 14.53%±10.9  mild 21.10%±13.5  moderate 12.29%±12.9  severe 4.78%±9.4
+ep 095  loss=0.916  acc=0.565  lr=0.00625
+  val  overall 14.68%±10.8  mild 21.11%±13.5  moderate 12.35%±12.8  severe 5.04%±9.5
+ep 100  loss=0.919  acc=0.569  lr=0.00625
+  val  overall 14.48%±10.9  mild 21.17%±13.6  moderate 11.99%±12.9  severe 4.57%±9.2
+best ep=100  val 14.48%
+sealed checkpoint
+test
+test  overall 14.34%±10.9  mild 21.09%±13.7  moderate 11.89%±12.9  severe 4.62%±9.2
+RESULT_JSON {"best_epoch": 100, "calibration_per_user": null, "final_test_fingerprint": "d9597ce6c21120e246e7533fd252555821f5bdbcc14490cb77dd28ccb931bcbc", "model_selection_per_user": {"mild": {"mean": 0.2117172321028247, "standard_deviation": 0.13593659508827444}, "moderate": {"mean": 0.11989239276640262, "standard_deviation": 0.1291142945207376}, "overall": {"mean": 0.1448463109649778, "standard_deviation": 0.10912075462131104}, "severe": {"mean": 0.04567329248243909, "standard_deviation": 0.09223494285524428}}, "model_selection_per_user_eer": 0.1448463109649778, "test_per_user": {"mild": {"mean": 0.21093478651416256, "standard_deviation": 0.1370829766911404}, "moderate": {"mean": 0.11890532367207617, "standard_deviation": 0.12937397098230435}, "overall": {"mean": 0.14342974629219313, "standard_deviation": 0.10876755221650164}, "severe": {"mean": 0.04620037127971735, "standard_deviation": 0.0924759121742355}}}

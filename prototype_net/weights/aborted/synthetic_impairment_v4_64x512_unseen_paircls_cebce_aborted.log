@@ -1,0 +1,42 @@
+device=mps
+reusing split synthetic_impairment_protocol_v4_64x512_unseen_triplet_manifest.json
+users=168,593  train=61,627  val=6,847  test=17,119  reserve=0  held-out=83,000
+fine-tune second_lstm+pair_head  params=263,940 (head=132,356)  objective=paircls
+lr0=0.025  classes=normal,mild,moderate,severe  score=P(not normal)  loss=CE+1*BCE  batch=512  steps=64  G=10
+ep 005  loss=1.284  acc=0.540  lr0=0.025
+  val  overall 16.53%±11.0  mild 23.31%±13.4  moderate 14.11%±13.4  severe 5.96%±10.4
+ep 010  loss=1.257  acc=0.547  lr0=0.025
+  val  overall 15.81%±10.9  mild 22.49%±13.6  moderate 13.49%±13.3  severe 5.61%±10.0
+ep 015  loss=1.258  acc=0.549  lr0=0.025
+  val  overall 15.56%±11.0  mild 21.96%±13.4  moderate 13.34%±13.2  severe 5.58%±10.0
+ep 020  loss=1.239  acc=0.552  lr0=0.025
+  val  overall 15.43%±10.9  mild 21.99%±13.6  moderate 13.32%±13.2  severe 5.57%±10.0
+ep 025  loss=1.236  acc=0.553  lr0=0.025
+  val  overall 15.40%±10.9  mild 22.05%±13.5  moderate 13.19%±13.2  severe 5.56%±9.9
+ep 030  loss=1.242  acc=0.556  lr0=0.025
+  val  overall 15.01%±10.7  mild 21.82%±13.4  moderate 12.81%±13.0  severe 5.25%±9.7
+ep 035  loss=1.236  acc=0.558  lr0=0.025
+  val  overall 15.15%±10.9  mild 22.15%±13.7  moderate 12.78%±13.1  severe 5.19%±9.8
+ep 040  loss=1.230  acc=0.555  lr0=0.025
+  val  overall 15.28%±10.8  mild 21.89%±13.5  moderate 12.76%±13.0  severe 5.08%±9.6
+  lr 0.025 -> 0.0125
+ep 045  loss=1.205  acc=0.565  lr0=0.0125
+  val  overall 14.52%±10.8  mild 21.00%±13.6  moderate 12.14%±12.9  severe 4.90%±9.5
+ep 050  loss=1.219  acc=0.566  lr0=0.0125
+  val  overall 14.60%±10.9  mild 21.05%±13.6  moderate 12.36%±12.9  severe 5.17%±9.7
+ep 055  loss=1.204  acc=0.565  lr0=0.0125
+  val  overall 14.53%±10.9  mild 21.26%±13.7  moderate 12.23%±12.8  severe 4.79%±9.4
+  lr 0.0125 -> 0.00625
+ep 060  loss=1.202  acc=0.568  lr0=0.00625
+  val  overall 14.32%±10.8  mild 20.72%±13.5  moderate 11.89%±12.8  severe 4.73%±9.3
+ep 065  loss=1.187  acc=0.569  lr0=0.00625
+  val  overall 14.17%±10.9  mild 20.79%±13.6  moderate 11.76%±12.8  severe 4.69%±9.3
+ep 070  loss=1.193  acc=0.569  lr0=0.00625
+  val  overall 14.41%±10.8  mild 21.06%±13.5  moderate 12.01%±12.8  severe 4.63%±9.2
+ep 075  loss=1.196  acc=0.571  lr0=0.00625
+  val  overall 14.35%±10.8  mild 21.11%±13.6  moderate 12.03%±12.8  severe 4.60%±9.2
+  lr 0.00625 -> 0.003125
+ep 080  loss=1.180  acc=0.573  lr0=0.003125
+  val  overall 14.21%±10.8  mild 20.82%±13.4  moderate 11.97%±12.8  severe 4.64%±9.2
+ep 085  loss=1.176  acc=0.572  lr0=0.003125
+  val  overall 14.09%±10.8  mild 20.77%±13.5  moderate 11.73%±12.7  severe 4.67%±9.3

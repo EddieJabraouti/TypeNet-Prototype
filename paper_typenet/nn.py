@@ -775,23 +775,36 @@ def evaluate_split(
 
 
 def resolve_device(requested: str) -> torch.device:
-    """Resolve the runtime device. Auto tries MLX, then CPU."""
+    """Resolve the runtime device. Auto tries MLX, then Apple GPU (MPS), then CPU.
+
+    Stock PyTorch has no MLX device. On Apple Silicon the GPU path is MPS.
+    """
 
     if requested == "auto":
         try:
             return torch.device("MLX")
         except (RuntimeError, ValueError):
-            return torch.device("cpu")
+            pass
+        if torch.backends.mps.is_available():
+            return torch.device("mps")
+        return torch.device("cpu")
     if requested.lower() == "cpu":
         return torch.device("cpu")
     if requested.upper() == "MLX":
         try:
             return torch.device("MLX")
-        except (RuntimeError, ValueError) as exc:
-            raise RuntimeError("MLX was requested but is not available") from exc
+        except (RuntimeError, ValueError):
+            if torch.backends.mps.is_available():
+                return torch.device("mps")
+            raise RuntimeError(
+                "torch.device('MLX') is not available in this PyTorch build, "
+                "and Apple GPU (MPS) is not available either"
+            )
     device = torch.device(requested)
     if device.type == "cuda" and not torch.cuda.is_available():
         raise RuntimeError("CUDA was requested but is not available")
+    if device.type == "mps" and not torch.backends.mps.is_available():
+        raise RuntimeError("MPS was requested but is not available")
     return device
 
 
@@ -905,7 +918,7 @@ def build_argument_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--device",
         default="auto",
-        help="auto (MLX if available, else CPU), cpu, MLX, cuda, or cuda:N",
+        help="auto (MLX if present, else Apple GPU/MPS, else CPU), cpu, mps, MLX, cuda, or cuda:N",
     )
     parser.add_argument(
         "--checkpoint",
