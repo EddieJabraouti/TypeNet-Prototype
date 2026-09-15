@@ -1,0 +1,10 @@
+device=mps
+reusing split synthetic_impairment_protocol_v4_64x512_unseen_triplet_manifest.json
+users=168,593  train=61,627  val=6,847  test=17,119  reserve=0  held-out=83,000
+fine-tune residual_net  params=168,581  objective=residual  typenet=frozen-identity
+lr0=0.025  classes=normal,mild,moderate,severe  select=val 4-way acc  loss=CE+1*BCE  lr-schedule=step every 20 epochs ×0.5  hidden=128  mag-prior=0  anti-collapse cos=0.5  ent-floor=0.4×1  galCos=0.5  galVar=0.5  batch=512  steps=64  G=10
+ep 005  loss=1.936  acc=0.256  gnorm=0.013  attnH=0.954  resCos=-0.025  galCos=0.000  lr0=0.025
+  val acc=0.261 (normal=0.000 mild=0.000 moderate=0.440 severe=0.605)
+  val conf normal[normal=0.00 mild=0.00 moderate=0.47 severe=0.53]  mild[normal=0.00 mild=0.00 moderate=0.47 severe=0.53]  moderate[normal=0.00 mild=0.00 moderate=0.44 severe=0.56]  severe[normal=0.00 mild=0.00 moderate=0.40 severe=0.60]
+  val attn normal H=0.97/cos=-0.02 mild H=0.97/cos=-0.02 moderate H=0.97/cos=-0.02 severe H=0.97/cos=-0.02
+  val  overall 43.79%±10.9  mild 47.67%±11.0  moderate 44.07%±12.5  severe 39.47%±15.0

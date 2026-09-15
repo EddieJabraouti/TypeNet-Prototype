@@ -7,7 +7,7 @@ affine scales move, but running mean/var stay in eval() on the 68k stats.
 
 Default protocol: identities used to train those 68k TypeNet weights are
 excluded. The remaining unseen pool (~86k) is hash-split once (80% develop /
-20% test; 10% of develop is validation). Later methods (paircls, LoRA, FFT)
+20% test; 10% of develop is validation). Later methods (paircls, residual, LoRA, FFT)
 start from a fresh copy of the same pretrained TypeNet and reuse that split so
 comparisons are identity-matched. Val/test are scored, not discarded.
 
@@ -37,29 +37,44 @@ from torch import Tensor, nn
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 WEIGHTS_DIR = REPO_ROOT / "prototype_net" / "weights"
+FAILED_DIR = REPO_ROOT / "prototype_net" / "failed"
 PROTOCOL_DIR = WEIGHTS_DIR / "protocol"
-TRIPLET_DIR = WEIGHTS_DIR / "triplet"
-PAIRCLS_DIR = WEIGHTS_DIR / "paircls"
-PAIRCLS_SIDE_DIR = WEIGHTS_DIR / "paircls_side"
-ABORTED_DIR = WEIGHTS_DIR / "aborted"
-INVALID_EXPERIMENTS_DIR = WEIGHTS_DIR / "invalid experiments"
+TRIPLET_DIR = FAILED_DIR / "triplet"
+PAIRCLS_DIR = FAILED_DIR / "paircls"
+PAIRCLS_SIDE_DIR = FAILED_DIR / "paircls_side"
+RESIDUAL_DIR = FAILED_DIR / "residual"
+ABORTED_DIR = FAILED_DIR / "aborted"
+INVALID_EXPERIMENTS_DIR = FAILED_DIR / "invalid experiments"
 
 
 def find_weights_file(name: str) -> Path | None:
     if not name:
         return None
-    matches = sorted(
-        path
-        for path in WEIGHTS_DIR.rglob(name)
-        if path.is_file() and INVALID_EXPERIMENTS_DIR not in path.parents
-    )
-    return matches[0] if matches else None
+    matches: list[Path] = []
+    for root in (WEIGHTS_DIR, FAILED_DIR):
+        if not root.is_dir():
+            continue
+        matches.extend(
+            path
+            for path in root.rglob(name)
+            if path.is_file() and INVALID_EXPERIMENTS_DIR not in path.parents
+        )
+    return sorted(matches)[0] if matches else None
 
 
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from paper_typenet import nn as typenet  # noqa: E402
+from prototype_net.failed.residual import (  # noqa: E402
+    FourWayAccuracy,
+    IdentityResidualNet,
+    evaluate_residual_cohort,
+    format_collapse,
+    format_confusion,
+    format_four_way,
+    train_one_epoch_residual,
+)
 
 
 SEVERITY_NAMES = ("mild", "moderate", "severe")
@@ -123,6 +138,34 @@ class SyntheticImpairmentProfile:
     motor_burden: float
     cognitive_burden: float
     speed_matched: bool
+
+
+@dataclass(frozen=True)
+class PerturbationTrace:
+    """Dense generator labels aligned to a TypeNet [T, 5] session.
+
+    Pause channels are defined on forward transitions (key t → t+1) and are
+    zero at the final valid key and in padding. Hold log-ratio is defined on
+    every valid key.
+    """
+
+    features: np.ndarray
+    pause_mask: np.ndarray
+    pause_delay: np.ndarray
+    hold_log_ratio: np.ndarray
+
+
+def empty_perturbation_trace(features: np.ndarray) -> PerturbationTrace:
+    """Clean-session trace: no pauses, no hold residual."""
+
+    time = int(np.asarray(features).shape[0])
+    zeros = np.zeros(time, dtype=np.float32)
+    return PerturbationTrace(
+        features=np.asarray(features, dtype=np.float32).copy(),
+        pause_mask=zeros.copy(),
+        pause_delay=zeros.copy(),
+        hold_log_ratio=zeros.copy(),
+    )
 
 
 @dataclass(frozen=True)
@@ -327,6 +370,18 @@ class StructuredTimingPerturber:
         rng: np.random.Generator,
         profile: SyntheticImpairmentProfile | None = None,
     ) -> np.ndarray:
+        return self.perturb_trace(
+            features, length, severity_index, rng, profile=profile
+        ).features
+
+    def perturb_trace(
+        self,
+        features: np.ndarray,
+        length: int,
+        severity_index: int,
+        rng: np.random.Generator,
+        profile: SyntheticImpairmentProfile | None = None,
+    ) -> PerturbationTrace:
         if severity_index not in range(SEVERITY_COUNT):
             raise ValueError(f"severity_index must be 0..{SEVERITY_COUNT - 1}")
         if features.ndim != 2 or features.shape[1] != typenet.PAPER_FEATURE_COUNT:
@@ -338,6 +393,11 @@ class StructuredTimingPerturber:
 
         valid_length = min(max(int(length), 1), len(features))
         perturbed = np.asarray(features, dtype=np.float32).copy()
+        original_hold = perturbed[:valid_length, 0].copy()
+        time = len(perturbed)
+        pause_mask_full = np.zeros(time, dtype=np.float32)
+        pause_delay_full = np.zeros(time, dtype=np.float32)
+        hold_log_ratio = np.zeros(time, dtype=np.float32)
         transition_length = max(valid_length - 1, 0)
         transition_scale = self._robust_positive_scale(
             perturbed[:transition_length, 2],
@@ -353,7 +413,7 @@ class StructuredTimingPerturber:
         cognitive_burden = profile.cognitive_burden * session_multiplier
 
         hold_latency = np.maximum(
-            perturbed[:valid_length, 0]
+            original_hold
             * self._timing_multipliers(
                 valid_length,
                 motor_burden,
@@ -401,7 +461,15 @@ class StructuredTimingPerturber:
             pause_delays = np.minimum(
                 pause_delays, self.config.maximum_pause_seconds
             )
-            press_latency += (pause_mask * pause_delays).astype(np.float32)
+            applied_delay = (pause_mask * pause_delays).astype(np.float32)
+            press_latency += applied_delay
+            pause_mask_full[:transition_length] = pause_mask.astype(np.float32)
+            pause_delay_full[:transition_length] = applied_delay
+
+        hold_floor = np.maximum(original_hold, self.config.minimum_timing_scale)
+        hold_log_ratio[:valid_length] = np.log(
+            np.maximum(hold_latency, self.config.minimum_timing_scale) / hold_floor
+        ).astype(np.float32)
 
         perturbed[:valid_length, 0] = hold_latency
         if transition_length:
@@ -416,7 +484,17 @@ class StructuredTimingPerturber:
         perturbed[valid_length - 1, 1:4] = 0.0
         if valid_length < len(perturbed):
             perturbed[valid_length:] = 0.0
-        return perturbed
+            pause_mask_full[valid_length:] = 0.0
+            pause_delay_full[valid_length:] = 0.0
+            hold_log_ratio[valid_length:] = 0.0
+        pause_mask_full[valid_length - 1] = 0.0
+        pause_delay_full[valid_length - 1] = 0.0
+        return PerturbationTrace(
+            features=perturbed,
+            pause_mask=pause_mask_full,
+            pause_delay=pause_delay_full,
+            hold_log_ratio=hold_log_ratio,
+        )
 
 
 class ImpairmentTripletSampler:
@@ -778,6 +856,14 @@ def configure_encoder_training(
     if unfreeze_all:
         return
     freeze_intermediate_representation(encoder)
+
+
+def freeze_identity_encoder(encoder: typenet.TypeNetEncoder) -> None:
+    """Freeze every TypeNet parameter; identity is a conditioner, not a classifier."""
+
+    encoder.eval()
+    for parameter in encoder.parameters():
+        parameter.requires_grad_(False)
 
 
 def freeze_intermediate_representation(encoder: typenet.TypeNetEncoder) -> None:
@@ -1447,6 +1533,19 @@ def run_deterministic_perturbation_checks(
         )
         np.testing.assert_array_equal(perturbed, repeated)
         np.testing.assert_array_equal(clean, clean_before)
+        trace = perturber.perturb_trace(
+            clean,
+            length,
+            severity_index,
+            np.random.default_rng(1234),
+        )
+        np.testing.assert_array_equal(trace.features, perturbed)
+        if trace.pause_mask.shape != (sequence_length,):
+            raise AssertionError("Pause mask must be aligned to the session length")
+        if np.any(trace.pause_mask[length - 1 :]):
+            raise AssertionError("The final key cannot carry a forward pause")
+        if np.any(trace.pause_delay[trace.pause_mask < 0.5] != 0.0):
+            raise AssertionError("Pause delay must be zero where the pause mask is off")
         np.testing.assert_array_equal(perturbed[:, 4], clean[:, 4])
         np.testing.assert_array_equal(
             perturbed[length:], np.zeros_like(perturbed[length:])
@@ -1774,9 +1873,13 @@ def build_locked_protocol_splits(
         "dev_fraction": args.dev_fraction,
         "val_fraction_of_dev": args.val_fraction_of_dev,
         "impairment_score": (
-            "p_not_normal"
-            if args.objective == "paircls"
-            else "mean_gallery_distance"
+            "class_argmax"
+            if args.objective == "residual"
+            else (
+                "p_not_normal"
+                if args.objective == "paircls"
+                else "mean_gallery_distance"
+            )
         ),
         "margin": args.margin,
         "epochs": args.epochs,
@@ -1787,6 +1890,9 @@ def build_locked_protocol_splits(
         "frontend_lr_multiplier": args.frontend_lr_multiplier,
         "pair_bce_weight": args.pair_bce_weight,
         "side_encoder": bool(args.side_encoder),
+        "residual_hidden_size": args.residual_hidden_size,
+        "residual_magnitude_prior": args.residual_magnitude_prior,
+        "lr_step_epochs": args.lr_step_epochs,
         "perturbation": asdict(perturbation_config_from_args(args)),
         "seed": args.seed,
         "quarantine_manifest_sha256": [
@@ -1796,7 +1902,7 @@ def build_locked_protocol_splits(
             sha256_file(path) for path in args.pretrain_manifests
         ],
     }
-    if args.objective == "paircls":
+    if args.objective in {"paircls", "residual"}:
         locked_config["classes"] = list(CLASS_NAMES)
     config_json = json.dumps(
         locked_config, sort_keys=True, separators=(",", ":")
@@ -2000,7 +2106,7 @@ def collect_complete_user_paths(
 def checkpoint_payload(
     encoder: typenet.TypeNetEncoder,
     optimizer: torch.optim.Optimizer,
-    scheduler: torch.optim.lr_scheduler.ReduceLROnPlateau,
+    scheduler: torch.optim.lr_scheduler.LRScheduler,
     sampler: ImpairmentTripletSampler | GalleryQueryClassSampler,
     args: argparse.Namespace,
     perturbation_config: PerturbationConfig,
@@ -2019,6 +2125,10 @@ def checkpoint_payload(
     final_test_accessed: bool = False,
     pair_head: GalleryQueryPairHead | None = None,
     side_encoder: RawTimingSideEncoder | None = None,
+    residual_net: IdentityResidualNet | None = None,
+    selection_accuracy: FourWayAccuracy | None = None,
+    test_accuracy: FourWayAccuracy | None = None,
+    train_accuracy_at_best: float | None = None,
 ) -> dict[str, object]:
     payload: dict[str, object] = {
         "model_state_dict": encoder.state_dict(),
@@ -2047,6 +2157,20 @@ def checkpoint_payload(
         payload["pair_head_state_dict"] = pair_head.state_dict()
     if side_encoder is not None:
         payload["side_encoder_state_dict"] = side_encoder.state_dict()
+    if residual_net is not None:
+        payload["residual_net_state_dict"] = residual_net.state_dict()
+    if selection_accuracy is not None:
+        payload["selection_accuracy"] = {
+            "overall": selection_accuracy.overall,
+            "by_class": dict(selection_accuracy.by_class),
+        }
+    if test_accuracy is not None:
+        payload["test_accuracy"] = {
+            "overall": test_accuracy.overall,
+            "by_class": dict(test_accuracy.by_class),
+        }
+    if train_accuracy_at_best is not None:
+        payload["train_accuracy_at_best"] = train_accuracy_at_best
     if calibration_metrics is not None:
         payload["calibration_metrics"] = {
             name: asdict(metrics)
@@ -2158,9 +2282,13 @@ def build_argument_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--objective",
-        choices=("triplet", "paircls"),
+        choices=("triplet", "paircls", "residual"),
         default="triplet",
-        help="triplet: v4 gallery-distance fine-tune; paircls: 4-way pair head",
+        help=(
+            "triplet: v4 gallery-distance fine-tune; paircls: 4-way pair head; "
+            "residual: classify query-vs-gallery raw-timing residual; "
+            "TypeNet stays frozen as identity only"
+        ),
     )
     parser.add_argument(
         "--unfreeze-all",
@@ -2182,7 +2310,7 @@ def build_argument_parser() -> argparse.ArgumentParser:
         type=float,
         default=0.0,
         help=(
-            "Add λ * BCE(P(not normal), impaired) to paircls CE. "
+            "Add λ * BCE(P(not normal), impaired) to paircls/residual CE. "
             "Zero keeps 4-way CE only."
         ),
     )
@@ -2236,6 +2364,15 @@ def build_argument_parser() -> argparse.ArgumentParser:
     parser.add_argument("--learning-rate", type=float, default=0.025)
     parser.add_argument("--lr-decay-factor", type=float, default=0.5)
     parser.add_argument("--lr-decay-patience", type=int, default=2)
+    parser.add_argument(
+        "--lr-step-epochs",
+        type=int,
+        default=None,
+        help=(
+            "Multiply LR by --lr-decay-factor every N epochs (StepLR). "
+            "Residual defaults to 20. 0 keeps ReduceLROnPlateau."
+        ),
+    )
     parser.add_argument("--minimum-learning-rate", type=float, default=1e-6)
     parser.add_argument("--max-gradient-norm", type=float, default=1.0)
     parser.add_argument("--validate-every", type=int, default=5)
@@ -2307,6 +2444,51 @@ def build_argument_parser() -> argparse.ArgumentParser:
     parser.add_argument("--pause-scale", type=float, default=2.0)
     parser.add_argument("--pause-tail-shape", type=float, default=1.8)
     parser.add_argument("--maximum-pause-seconds", type=float, default=3.0)
+    parser.add_argument(
+        "--residual-hidden-size",
+        type=int,
+        default=128,
+        help="Raw-timing LSTM size for --objective residual (TypeNet stays frozen)",
+    )
+    parser.add_argument(
+        "--residual-magnitude-prior",
+        type=float,
+        default=0.0,
+        help=(
+            "Add α * ||residual[t]|| / max_t ||residual|| to attention scores "
+            "before softmax. 0 keeps learned attention only."
+        ),
+    )
+    parser.add_argument(
+        "--residual-cosine-weight",
+        type=float,
+        default=0.0,
+        help="Penalize mean pairwise cosine of residual tokens (anti-collapse).",
+    )
+    parser.add_argument(
+        "--residual-entropy-floor",
+        type=float,
+        default=0.0,
+        help="Minimum attention entropy / log(length). 0 disables the floor.",
+    )
+    parser.add_argument(
+        "--residual-entropy-weight",
+        type=float,
+        default=0.0,
+        help="Weight on relu(entropy-floor - attnH).",
+    )
+    parser.add_argument(
+        "--residual-gallery-cosine-weight",
+        type=float,
+        default=0.0,
+        help="Penalize pairwise cosine of batch gallery means (person baselines).",
+    )
+    parser.add_argument(
+        "--residual-gallery-variance-weight",
+        type=float,
+        default=0.0,
+        help="VICReg variance hinge on gallery means across the batch.",
+    )
     parser.add_argument("--seed", type=int, default=7)
     parser.add_argument(
         "--protocol-version",
@@ -2333,6 +2515,32 @@ def build_argument_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--smoke-test", action="store_true")
     return parser
+
+
+def apply_residual_output_defaults(args: argparse.Namespace) -> None:
+    """Keep residual runs from clobbering the default triplet checkpoint paths."""
+
+    if args.objective != "residual":
+        return
+    triplet_checkpoint = (
+        TRIPLET_DIR
+        / "synthetic_impairment_evidence_v4_64x512_unseen_triplet_checkpoint.pt"
+    )
+    triplet_weights = (
+        TRIPLET_DIR
+        / "synthetic_impairment_evidence_v4_64x512_unseen_triplet_weights.pt"
+    )
+    if args.checkpoint == triplet_checkpoint:
+        args.checkpoint = (
+            RESIDUAL_DIR
+            / "synthetic_impairment_v4_64x512_unseen_residual_checkpoint.pt"
+        )
+    if args.weights_output == triplet_weights:
+        args.weights_output = (
+            RESIDUAL_DIR / "synthetic_impairment_v4_64x512_unseen_residual_weights.pt"
+        )
+    if args.lr_step_epochs is None:
+        args.lr_step_epochs = 20
 
 
 def apply_smoke_settings(args: argparse.Namespace) -> None:
@@ -2514,16 +2722,34 @@ def validate_arguments(args: argparse.Namespace) -> None:
         raise ValueError("--pause-tail-shape must exceed one")
     if args.lr_decay_patience < 1:
         raise ValueError("--lr-decay-patience must be at least one")
+    if args.lr_step_epochs is not None and args.lr_step_epochs < 0:
+        raise ValueError("--lr-step-epochs cannot be negative")
     if not 0.0 < args.lr_decay_factor < 1.0:
         raise ValueError("--lr-decay-factor must be between zero and one")
-    if args.objective not in {"triplet", "paircls"}:
-        raise ValueError("--objective must be triplet or paircls")
+    if args.objective not in {"triplet", "paircls", "residual"}:
+        raise ValueError("--objective must be triplet, paircls, or residual")
     if not 0.0 < args.frontend_lr_multiplier <= 1.0:
         raise ValueError("--frontend-lr-multiplier must be in (0, 1]")
     if args.pair_bce_weight < 0.0:
         raise ValueError("--pair-bce-weight cannot be negative")
+    if args.residual_hidden_size < 8:
+        raise ValueError("--residual-hidden-size must be at least 8")
+    if args.residual_magnitude_prior < 0.0:
+        raise ValueError("--residual-magnitude-prior cannot be negative")
+    if args.residual_cosine_weight < 0.0:
+        raise ValueError("--residual-cosine-weight cannot be negative")
+    if args.residual_entropy_floor < 0.0:
+        raise ValueError("--residual-entropy-floor cannot be negative")
+    if args.residual_entropy_weight < 0.0:
+        raise ValueError("--residual-entropy-weight cannot be negative")
+    if args.residual_gallery_cosine_weight < 0.0:
+        raise ValueError("--residual-gallery-cosine-weight cannot be negative")
+    if args.residual_gallery_variance_weight < 0.0:
+        raise ValueError("--residual-gallery-variance-weight cannot be negative")
     if args.side_encoder and args.objective != "paircls":
         raise ValueError("--side-encoder requires --objective paircls")
+    if args.objective == "residual" and args.unfreeze_all:
+        raise ValueError("--objective residual keeps the TypeNet identity encoder frozen")
     if not 0.5 <= args.dev_fraction < 1.0:
         raise ValueError("--dev-fraction must be in [0.5, 1)")
     if not 0.0 < args.val_fraction_of_dev < 0.5:
@@ -2565,6 +2791,393 @@ def score_cohort(
         evaluate_all_metrics(scores, operating_threshold),
         evaluate_all_per_user_metrics(scores),
     )
+
+
+def score_residual_cohort(
+    encoder: typenet.TypeNetEncoder,
+    residual_net: IdentityResidualNet,
+    paths: Sequence[Path],
+    perturber: StructuredTimingPerturber,
+    args: argparse.Namespace,
+    device: torch.device,
+    seed: int,
+    threshold: float | None = None,
+) -> tuple[
+    ImpairmentScores,
+    float,
+    float,
+    dict[str, DetectionMetrics],
+    dict[str, typenet.PerUserEERMetrics],
+    FourWayAccuracy,
+    dict[str, tuple[float, float]],
+]:
+    normal, impaired, user_count, accuracy, collapse = evaluate_residual_cohort(
+        encoder,
+        residual_net,
+        paths,
+        perturber,
+        args.sequence_length,
+        args.gallery_size,
+        args.eval_users,
+        args.eval_batch_size,
+        device,
+        seed,
+    )
+    scores = ImpairmentScores(
+        normal=normal,
+        impaired_by_severity=impaired,
+        user_count=user_count,
+    )
+    fitted_threshold, fitted_eer = typenet.equal_error_threshold(
+        scores.normal_flat, scores.impaired_flat
+    )
+    operating_threshold = fitted_threshold if threshold is None else threshold
+    return (
+        scores,
+        fitted_threshold,
+        fitted_eer,
+        evaluate_all_metrics(scores, operating_threshold),
+        evaluate_all_per_user_metrics(scores),
+        accuracy,
+        collapse,
+    )
+
+
+def four_way_payload(accuracy: FourWayAccuracy) -> dict[str, object]:
+    payload: dict[str, object] = {
+        "overall": accuracy.overall,
+        "by_class": dict(accuracy.by_class),
+    }
+    if accuracy.confusion:
+        payload["confusion"] = {
+            true_name: dict(shares) for true_name, shares in accuracy.confusion.items()
+        }
+    return payload
+
+
+def run_residual_training(
+    args: argparse.Namespace,
+    device: torch.device,
+    encoder: typenet.TypeNetEncoder,
+    perturber: StructuredTimingPerturber,
+    perturbation_config: PerturbationConfig,
+    protocol: ProtocolSplits,
+    fingerprints: Mapping[str, str],
+) -> None:
+    freeze_identity_encoder(encoder)
+    residual_net = IdentityResidualNet(
+        hidden_size=args.residual_hidden_size,
+        magnitude_prior=args.residual_magnitude_prior,
+    ).to(device)
+    residual_net.train()
+    if any(parameter.requires_grad for parameter in encoder.parameters()):
+        raise AssertionError("TypeNet must stay frozen for residual training")
+    trainable_count = sum(parameter.numel() for parameter in residual_net.parameters())
+    print(
+        f"fine-tune residual_net  params={trainable_count:,}  "
+        "objective=residual  typenet=frozen-identity"
+    )
+    frozen_before = frozen_parameter_snapshot(encoder)
+    store = typenet.KeystrokeStore(
+        protocol.train, args.sequence_length, args.cache_users
+    )
+    sampler = GalleryQueryClassSampler(
+        store, perturber, args.seed, args.gallery_size
+    )
+    class_check = sampler.balanced_class_indices(args.batch_size)
+    class_counts = np.bincount(class_check, minlength=CLASS_COUNT)
+    if int(class_counts.max() - class_counts.min()) > 1:
+        raise AssertionError("Class sampling is not balanced")
+    optimizer = torch.optim.Adam(residual_net.parameters(), lr=args.learning_rate)
+    step_epochs = 0 if args.lr_step_epochs is None else int(args.lr_step_epochs)
+    if step_epochs > 0:
+        scheduler: torch.optim.lr_scheduler.LRScheduler = (
+            torch.optim.lr_scheduler.StepLR(
+                optimizer,
+                step_size=step_epochs,
+                gamma=args.lr_decay_factor,
+            )
+        )
+        lr_schedule = (
+            f"step every {step_epochs} epochs ×{args.lr_decay_factor:g}"
+        )
+    else:
+        scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+            optimizer,
+            mode="max",
+            factor=args.lr_decay_factor,
+            patience=args.lr_decay_patience - 1,
+            min_lr=args.minimum_learning_rate,
+            threshold=0.0,
+        )
+        lr_schedule = (
+            f"plateau patience={args.lr_decay_patience} val checks"
+        )
+    print(
+        f"{format_optimizer_lrs(optimizer)}  "
+        f"classes={','.join(CLASS_NAMES)}  "
+        f"select=val 4-way acc  "
+        f"loss=CE+{args.pair_bce_weight:g}*BCE  "
+        f"lr-schedule={lr_schedule}  "
+        f"hidden={args.residual_hidden_size}  "
+        f"mag-prior={args.residual_magnitude_prior:g}  "
+        f"anti-collapse cos={args.residual_cosine_weight:g}  "
+        f"ent-floor={args.residual_entropy_floor:g}×{args.residual_entropy_weight:g}  "
+        f"galCos={args.residual_gallery_cosine_weight:g}  "
+        f"galVar={args.residual_gallery_variance_weight:g}  "
+        f"batch={args.batch_size}  "
+        f"steps={args.steps_per_epoch}  G={args.gallery_size}"
+    )
+
+    best_epoch = 0
+    best_validation_acc = -math.inf
+    best_validation_eer = math.inf
+    best_threshold: float | None = None
+    best_state: dict[str, object] | None = None
+    best_selection_per_user: dict[str, typenet.PerUserEERMetrics] | None = None
+    best_selection_accuracy: FourWayAccuracy | None = None
+    best_train_accuracy: float | None = None
+    checks_without_improvement = 0
+
+    for epoch in range(1, args.epochs + 1):
+        loss, accuracy, grad_norm, attn_entropy, residual_cosine, gallery_cosine = (
+            train_one_epoch_residual(
+            encoder,
+            residual_net,
+            sampler,
+            optimizer,
+            device,
+            args.batch_size,
+            args.steps_per_epoch,
+            args.max_gradient_norm,
+            args.pair_bce_weight,
+            cosine_weight=args.residual_cosine_weight,
+            entropy_floor=args.residual_entropy_floor,
+            entropy_weight=args.residual_entropy_weight,
+            gallery_cosine_weight=args.residual_gallery_cosine_weight,
+            gallery_variance_weight=args.residual_gallery_variance_weight,
+            )
+        )
+        if step_epochs > 0:
+            previous_lrs = [group["lr"] for group in optimizer.param_groups]
+            scheduler.step()
+            for group in optimizer.param_groups:
+                group["lr"] = max(group["lr"], args.minimum_learning_rate)
+            current_lrs = [group["lr"] for group in optimizer.param_groups]
+            if current_lrs != previous_lrs:
+                before = " ".join(f"{lr:.4g}" for lr in previous_lrs)
+                after = " ".join(f"{lr:.4g}" for lr in current_lrs)
+                print(f"ep {epoch:03d}  lr {before} -> {after}")
+        if epoch % args.validate_every != 0 and epoch != args.epochs:
+            continue
+        print(
+            f"ep {epoch:03d}  loss={loss:.3f}  acc={accuracy:.3f}  "
+            f"gnorm={grad_norm:.3f}  attnH={attn_entropy:.3f}  "
+            f"resCos={residual_cosine:.3f}  galCos={gallery_cosine:.3f}  "
+            f"{format_optimizer_lrs(optimizer)}"
+        )
+        (
+            _validation_scores,
+            validation_threshold,
+            _validation_global_eer,
+            _validation_metrics,
+            validation_per_user,
+            validation_accuracy,
+            validation_collapse,
+        ) = score_residual_cohort(
+            encoder,
+            residual_net,
+            protocol.selection,
+            perturber,
+            args,
+            device,
+            args.seed + 10_000,
+        )
+        validation_eer = validation_per_user["overall"].mean
+        print(f"  {format_four_way('val', validation_accuracy)}")
+        print(f"  {format_confusion('val', validation_accuracy)}")
+        print(f"  {format_collapse('val', validation_collapse)}")
+        print_cohort_metrics("  val", validation_per_user)
+
+        if step_epochs <= 0:
+            previous_lrs = [group["lr"] for group in optimizer.param_groups]
+            scheduler.step(validation_accuracy.overall)
+            current_lrs = [group["lr"] for group in optimizer.param_groups]
+            if current_lrs != previous_lrs:
+                before = " ".join(f"{lr:.4g}" for lr in previous_lrs)
+                after = " ".join(f"{lr:.4g}" for lr in current_lrs)
+                print(f"  lr {before} -> {after}")
+
+        if validation_accuracy.overall > best_validation_acc:
+            best_epoch = epoch
+            best_validation_acc = validation_accuracy.overall
+            best_validation_eer = validation_eer
+            best_threshold = validation_threshold
+            best_state = {
+                "encoder": copy.deepcopy(encoder.state_dict()),
+                "residual_net": copy.deepcopy(residual_net.state_dict()),
+            }
+            best_selection_per_user = validation_per_user
+            best_selection_accuracy = validation_accuracy
+            best_train_accuracy = accuracy
+            checks_without_improvement = 0
+            if args.checkpoint is not None:
+                args.checkpoint.parent.mkdir(parents=True, exist_ok=True)
+                torch.save(
+                    checkpoint_payload(
+                        encoder,
+                        optimizer,
+                        scheduler,
+                        sampler,
+                        args,
+                        perturbation_config,
+                        best_epoch,
+                        best_validation_eer,
+                        best_threshold,
+                        training_in_progress=True,
+                        protocol_manifest=protocol.manifest,
+                        selection_per_user=validation_per_user,
+                        residual_net=residual_net,
+                        selection_accuracy=validation_accuracy,
+                        train_accuracy_at_best=accuracy,
+                    ),
+                    args.checkpoint,
+                )
+            if args.weights_output is not None:
+                args.weights_output.parent.mkdir(parents=True, exist_ok=True)
+                torch.save(best_state, args.weights_output)
+        else:
+            checks_without_improvement += 1
+
+        if (
+            args.early_stopping_patience > 0
+            and epoch >= args.minimum_epochs
+            and checks_without_improvement >= args.early_stopping_patience
+        ):
+            print(f"early stop after {checks_without_improvement} flat checks")
+            break
+
+    if best_state is None or best_threshold is None or best_selection_accuracy is None:
+        raise RuntimeError("No validated residual checkpoint was produced")
+    residual_state = best_state["residual_net"]
+    if not isinstance(residual_state, dict):
+        raise RuntimeError("Best residual weights are missing")
+    residual_net.load_state_dict(residual_state)
+    residual_net.eval()
+    encoder.load_state_dict(best_state["encoder"])
+    encoder.eval()
+    assert_frozen_parameters_unchanged(encoder, frozen_before)
+
+    print(
+        f"best ep={best_epoch}  "
+        f"{format_four_way('val', best_selection_accuracy)}  "
+        f"train acc={best_train_accuracy:.3f}  "
+        f"val EER {best_validation_eer * 100:.2f}%"
+    )
+    if args.checkpoint is not None:
+        args.checkpoint.parent.mkdir(parents=True, exist_ok=True)
+        torch.save(
+            checkpoint_payload(
+                encoder,
+                optimizer,
+                scheduler,
+                sampler,
+                args,
+                perturbation_config,
+                best_epoch,
+                best_validation_eer,
+                best_threshold,
+                training_in_progress=False,
+                protocol_manifest=protocol.manifest,
+                selection_per_user=best_selection_per_user,
+                residual_net=residual_net,
+                selection_accuracy=best_selection_accuracy,
+                train_accuracy_at_best=best_train_accuracy,
+                final_test_accessed=False,
+            ),
+            args.checkpoint,
+        )
+        print("sealed checkpoint")
+
+    if args.lock_final_test:
+        lock_final_test_access(protocol.manifest, args.protocol_manifest)
+    print("test")
+    (
+        _test_scores,
+        _test_threshold,
+        _test_fitted_eer,
+        test_metrics,
+        test_per_user,
+        test_accuracy,
+        test_collapse,
+    ) = score_residual_cohort(
+        encoder,
+        residual_net,
+        protocol.final_test,
+        perturber,
+        args,
+        device,
+        args.seed + 30_000,
+        threshold=best_threshold,
+    )
+    print(format_four_way("test", test_accuracy))
+    print(format_confusion("test", test_accuracy))
+    print(format_collapse("test", test_collapse))
+    print_cohort_metrics("test", test_per_user)
+
+    if args.checkpoint is not None:
+        torch.save(
+            checkpoint_payload(
+                encoder,
+                optimizer,
+                scheduler,
+                sampler,
+                args,
+                perturbation_config,
+                best_epoch,
+                best_validation_eer,
+                best_threshold,
+                training_in_progress=False,
+                protocol_manifest=protocol.manifest,
+                selection_per_user=best_selection_per_user,
+                test_metrics=test_metrics,
+                test_per_user=test_per_user,
+                residual_net=residual_net,
+                selection_accuracy=best_selection_accuracy,
+                test_accuracy=test_accuracy,
+                train_accuracy_at_best=best_train_accuracy,
+                final_test_accessed=bool(args.lock_final_test),
+            ),
+            args.checkpoint,
+        )
+    if args.weights_output is not None:
+        args.weights_output.parent.mkdir(parents=True, exist_ok=True)
+        torch.save(
+            {
+                "encoder": encoder.state_dict(),
+                "residual_net": residual_net.state_dict(),
+                "objective": args.objective,
+            },
+            args.weights_output,
+        )
+
+    result = {
+        "best_epoch": best_epoch,
+        "train_acc_at_best": best_train_accuracy,
+        "model_selection_accuracy": four_way_payload(best_selection_accuracy),
+        "test_accuracy": four_way_payload(test_accuracy),
+        "model_selection_per_user_eer": best_validation_eer,
+        "model_selection_per_user": (
+            per_user_metrics_payload(best_selection_per_user)
+            if best_selection_per_user is not None
+            else None
+        ),
+        "final_test_fingerprint": fingerprints["final_test"],
+        "test_per_user": per_user_metrics_payload(test_per_user),
+    }
+    print("RESULT_JSON " + json.dumps(result, sort_keys=True))
+    if args.smoke_test:
+        print("SMOKE TEST PASSED")
 
 
 def print_cohort_metrics(
@@ -2711,6 +3324,7 @@ def run_restate(args: argparse.Namespace, device: torch.device) -> None:
 
 def main() -> None:
     args = build_argument_parser().parse_args()
+    apply_residual_output_defaults(args)
     if args.smoke_test:
         apply_smoke_settings(args)
     validate_arguments(args)
@@ -2751,6 +3365,18 @@ def main() -> None:
             else ""
         )
     )
+    if args.objective == "residual":
+        encoder = load_pretrained_encoder(args.pretrained_weights, device)
+        run_residual_training(
+            args,
+            device,
+            encoder,
+            perturber,
+            perturbation_config,
+            protocol,
+            fingerprints,
+        )
+        return
     if args.checkpoint is not None and args.checkpoint.exists():
         existing_checkpoint = load_checkpoint_payload(args.checkpoint)
         if existing_checkpoint.get("final_test_accessed", False):

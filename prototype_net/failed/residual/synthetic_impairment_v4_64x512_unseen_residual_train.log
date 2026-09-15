@@ -1,0 +1,54 @@
+device=mps
+reusing split synthetic_impairment_protocol_v4_64x512_unseen_triplet_manifest.json
+users=168,593  train=61,627  val=6,847  test=17,119  reserve=0  held-out=83,000
+fine-tune residual_net  params=168,581  objective=residual  typenet=frozen-identity
+lr0=0.025  classes=normal,mild,moderate,severe  select=val 4-way acc  loss=CE+1*BCE  hidden=128  batch=512  steps=64  G=10
+ep 005  loss=1.608  acc=0.452  lr0=0.025
+  val acc=0.469 (normal=0.658 mild=0.266 moderate=0.273 severe=0.679)
+  val  overall 25.27%±11.6  mild 36.68%±13.2  moderate 21.82%±16.2  severe 8.83%±13.0
+ep 010  loss=1.552  acc=0.475  lr0=0.025
+  val acc=0.493 (normal=0.663 mild=0.315 moderate=0.353 severe=0.642)
+  val  overall 23.09%±11.7  mild 34.13%±13.5  moderate 19.49%±16.0  severe 7.63%±12.2
+ep 015  loss=1.213  acc=0.556  lr0=0.025
+  val acc=0.572 (normal=0.774 mild=0.486 moderate=0.331 severe=0.697)
+  val  overall 13.66%±10.9  mild 20.17%±13.5  moderate 11.67%±12.7  severe 4.66%±9.2
+ep 020  loss=1.266  acc=0.537  lr0=0.025
+  val acc=0.565 (normal=0.801 mild=0.514 moderate=0.276 severe=0.670)
+  val  overall 13.90%±10.9  mild 20.32%±13.4  moderate 12.20%±12.8  severe 5.05%±9.6
+ep 025  loss=1.180  acc=0.563  lr0=0.025
+  val acc=0.575 (normal=0.856 mild=0.447 moderate=0.380 severe=0.619)
+  val  overall 13.29%±10.8  mild 19.85%±13.5  moderate 11.20%±12.6  severe 4.39%±9.0
+ep 030  loss=1.176  acc=0.567  lr0=0.025
+  val acc=0.582 (normal=0.814 mild=0.466 moderate=0.446 severe=0.601)
+  val  overall 12.97%±10.7  mild 19.73%±13.4  moderate 10.76%±12.5  severe 4.12%±8.8
+ep 035  loss=1.168  acc=0.573  lr0=0.025
+  val acc=0.583 (normal=0.823 mild=0.493 moderate=0.407 severe=0.610)
+  val  overall 12.78%±10.7  mild 19.53%±13.5  moderate 10.56%±12.4  severe 3.86%±8.6
+ep 040  loss=1.166  acc=0.569  lr0=0.025
+  val acc=0.585 (normal=0.818 mild=0.515 moderate=0.382 severe=0.626)
+  val  overall 12.58%±10.6  mild 19.32%±13.4  moderate 10.19%±12.4  severe 3.70%±8.3
+ep 045  loss=1.897  acc=0.315  lr0=0.025
+  val acc=0.299 (normal=0.809 mild=0.044 moderate=0.305 severe=0.038)
+  val  overall 40.21%±10.3  mild 46.80%±8.2  moderate 40.63%±12.1  severe 33.18%±14.9
+ep 050  loss=1.898  acc=0.315  lr0=0.025
+  val acc=0.326 (normal=0.778 mild=0.000 moderate=0.069 severe=0.458)
+  val  overall 41.01%±11.1  mild 47.39%±9.0  moderate 41.55%±12.9  severe 33.89%±15.8
+  lr 0.025 -> 0.0125
+ep 055  loss=1.885  acc=0.323  lr0=0.0125
+  val acc=0.342 (normal=0.831 mild=0.037 moderate=0.060 severe=0.441)
+  val  overall 38.38%±11.2  mild 45.64%±9.4  moderate 38.50%±13.2  severe 30.69%±15.5
+ep 060  loss=1.882  acc=0.324  lr0=0.0125
+  val acc=0.345 (normal=0.819 mild=0.003 moderate=0.107 severe=0.452)
+  val  overall 38.26%±11.2  mild 45.73%±9.5  moderate 38.35%±13.3  severe 30.23%±15.6
+  lr 0.0125 -> 0.00625
+ep 065  loss=1.873  acc=0.329  lr0=0.00625
+  val acc=0.351 (normal=0.794 mild=0.062 moderate=0.084 severe=0.463)
+  val  overall 37.53%±11.6  mild 44.95%±10.2  moderate 37.48%±13.9  severe 29.51%±15.6
+early stop after 5 flat checks
+best ep=40  val acc=0.585 (normal=0.818 mild=0.515 moderate=0.382 severe=0.626)  train acc=0.569  val EER 12.58%
+sealed checkpoint
+test
+test acc=0.585 (normal=0.822 mild=0.516 moderate=0.378 severe=0.626)
+test  overall 12.58%±10.6  mild 19.16%±13.6  moderate 10.26%±12.3  severe 3.63%±8.3
+RESULT_JSON {"best_epoch": 40, "final_test_fingerprint": "d9597ce6c21120e246e7533fd252555821f5bdbcc14490cb77dd28ccb931bcbc", "model_selection_accuracy": {"by_class": {"mild": 0.5149305036616351, "moderate": 0.38182633388133314, "normal": 0.8184127933044388, "severe": 0.6256762815722613}, "overall": 0.5852114781049171}, "model_selection_per_user": {"mild": {"mean": 0.1931699297563892, "standard_deviation": 0.1342642236416396}, "moderate": {"mean": 0.10191301748617546, "standard_deviation": 0.12355003510981077}, "overall": {"mean": 0.12577591789966622, "standard_deviation": 0.10625895247814293}, "severe": {"mean": 0.03703482289642804, "standard_deviation": 0.08347444217738956}}, "model_selection_per_user_eer": 0.12577591789966622, "test_accuracy": {"by_class": {"mild": 0.5157913647523804, "moderate": 0.3783100784478112, "normal": 0.8216060841966585, "severe": 0.6256183004970357}, "overall": 0.5853314569734716}, "test_per_user": {"mild": {"mean": 0.1916222528295108, "standard_deviation": 0.13551328834727852}, "moderate": {"mean": 0.10256302772621113, "standard_deviation": 0.1227200120362282}, "overall": {"mean": 0.12581791324829827, "standard_deviation": 0.10641572439734773}, "severe": {"mean": 0.036343493622372595, "standard_deviation": 0.08252016385705685}}, "train_acc_at_best": 0.568603515625}
+

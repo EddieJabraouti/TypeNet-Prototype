@@ -1,0 +1,76 @@
+device=mps
+reusing split synthetic_impairment_protocol_v4_64x512_unseen_triplet_manifest.json
+users=168,593  train=61,627  val=6,847  test=17,119  reserve=0  held-out=83,000
+fine-tune residual_net  params=168,581  objective=residual  typenet=frozen-identity
+lr0=0.025  classes=normal,mild,moderate,severe  select=val 4-way acc  loss=CE+1*BCE  lr-schedule=step every 20 epochs ×0.5  hidden=128  batch=512  steps=64  G=10
+ep 005  loss=1.608  acc=0.452  gnorm=0.206  lr0=0.025
+  val acc=0.469 (normal=0.658 mild=0.266 moderate=0.273 severe=0.679)
+  val  overall 25.27%±11.6  mild 36.68%±13.2  moderate 21.82%±16.2  severe 8.83%±13.0
+ep 010  loss=1.552  acc=0.475  gnorm=0.196  lr0=0.025
+  val acc=0.493 (normal=0.663 mild=0.315 moderate=0.353 severe=0.642)
+  val  overall 23.09%±11.7  mild 34.13%±13.5  moderate 19.49%±16.0  severe 7.63%±12.2
+ep 015  loss=1.213  acc=0.556  gnorm=0.193  lr0=0.025
+  val acc=0.572 (normal=0.774 mild=0.486 moderate=0.331 severe=0.697)
+  val  overall 13.66%±10.9  mild 20.17%±13.5  moderate 11.67%±12.7  severe 4.66%±9.2
+ep 020  lr 0.025 -> 0.0125
+ep 020  loss=1.266  acc=0.537  gnorm=0.636  lr0=0.0125
+  val acc=0.565 (normal=0.801 mild=0.514 moderate=0.276 severe=0.670)
+  val  overall 13.90%±10.9  mild 20.32%±13.4  moderate 12.20%±12.8  severe 5.05%±9.6
+ep 025  loss=1.171  acc=0.568  gnorm=0.169  lr0=0.0125
+  val acc=0.580 (normal=0.849 mild=0.482 moderate=0.370 severe=0.616)
+  val  overall 13.14%±10.8  mild 19.71%±13.5  moderate 11.03%±12.6  severe 4.43%±9.0
+ep 030  loss=1.168  acc=0.569  gnorm=0.158  lr0=0.0125
+  val acc=0.583 (normal=0.841 mild=0.478 moderate=0.375 severe=0.637)
+  val  overall 12.93%±10.7  mild 19.70%±13.5  moderate 10.69%±12.5  severe 3.99%±8.6
+ep 035  loss=1.165  acc=0.572  gnorm=0.148  lr0=0.0125
+  val acc=0.584 (normal=0.832 mild=0.437 moderate=0.379 severe=0.687)
+  val  overall 12.67%±10.6  mild 19.55%±13.6  moderate 10.41%±12.4  severe 3.71%±8.4
+ep 040  lr 0.0125 -> 0.00625
+ep 040  loss=1.164  acc=0.571  gnorm=0.284  lr0=0.00625
+  val acc=0.582 (normal=0.783 mild=0.593 moderate=0.353 severe=0.599)
+  val  overall 12.70%±10.7  mild 19.46%±13.4  moderate 10.38%±12.3  severe 3.92%±8.6
+ep 045  loss=1.143  acc=0.581  gnorm=0.154  lr0=0.00625
+  val acc=0.589 (normal=0.817 mild=0.533 moderate=0.390 severe=0.615)
+  val  overall 12.46%±10.5  mild 19.18%±13.4  moderate 10.11%±12.3  severe 3.63%±8.4
+ep 050  loss=1.154  acc=0.581  gnorm=0.171  lr0=0.00625
+  val acc=0.588 (normal=0.842 mild=0.488 moderate=0.382 severe=0.641)
+  val  overall 12.49%±10.6  mild 19.35%±13.6  moderate 10.17%±12.3  severe 3.68%±8.4
+ep 055  loss=1.149  acc=0.580  gnorm=0.156  lr0=0.00625
+  val acc=0.592 (normal=0.821 mild=0.525 moderate=0.364 severe=0.657)
+  val  overall 12.31%±10.6  mild 19.03%±13.5  moderate 9.99%±12.2  severe 3.58%±8.2
+ep 060  lr 0.00625 -> 0.003125
+ep 060  loss=1.146  acc=0.577  gnorm=0.148  lr0=0.003125
+  val acc=0.591 (normal=0.814 mild=0.542 moderate=0.376 severe=0.632)
+  val  overall 12.28%±10.6  mild 19.16%±13.5  moderate 9.88%±12.2  severe 3.61%±8.3
+ep 065  loss=1.136  acc=0.584  gnorm=0.149  lr0=0.003125
+  val acc=0.592 (normal=0.827 mild=0.519 moderate=0.363 severe=0.660)
+  val  overall 12.15%±10.6  mild 19.04%±13.6  moderate 9.74%±12.2  severe 3.52%±8.3
+ep 070  loss=1.138  acc=0.584  gnorm=0.153  lr0=0.003125
+  val acc=0.593 (normal=0.833 mild=0.529 moderate=0.338 severe=0.674)
+  val  overall 12.27%±10.5  mild 19.22%±13.5  moderate 9.80%±12.2  severe 3.35%±8.1
+ep 075  loss=1.142  acc=0.581  gnorm=0.151  lr0=0.003125
+  val acc=0.595 (normal=0.821 mild=0.519 moderate=0.364 severe=0.675)
+  val  overall 12.22%±10.5  mild 19.04%±13.5  moderate 9.77%±12.1  severe 3.34%±8.1
+ep 080  lr 0.003125 -> 0.001563
+ep 080  loss=1.134  acc=0.581  gnorm=0.150  lr0=0.001563
+  val acc=0.594 (normal=0.818 mild=0.525 moderate=0.364 severe=0.667)
+  val  overall 12.19%±10.5  mild 19.02%±13.5  moderate 9.73%±12.2  severe 3.34%±8.1
+ep 085  loss=1.127  acc=0.583  gnorm=0.150  lr0=0.001563
+  val acc=0.593 (normal=0.822 mild=0.538 moderate=0.375 severe=0.639)
+  val  overall 12.17%±10.6  mild 18.95%±13.5  moderate 9.75%±12.2  severe 3.41%±8.1
+ep 090  loss=1.132  acc=0.588  gnorm=0.151  lr0=0.001563
+  val acc=0.595 (normal=0.831 mild=0.514 moderate=0.373 severe=0.660)
+  val  overall 12.05%±10.6  mild 18.88%±13.5  moderate 9.56%±12.1  severe 3.31%±8.0
+ep 095  loss=1.135  acc=0.584  gnorm=0.152  lr0=0.001563
+  val acc=0.595 (normal=0.836 mild=0.536 moderate=0.331 severe=0.676)
+  val  overall 12.14%±10.5  mild 18.97%±13.5  moderate 9.73%±12.1  severe 3.37%±8.1
+ep 100  lr 0.001563 -> 0.0007813
+ep 100  loss=1.124  acc=0.586  gnorm=0.156  lr0=0.0007813
+  val acc=0.595 (normal=0.836 mild=0.537 moderate=0.360 severe=0.649)
+  val  overall 12.08%±10.5  mild 18.91%±13.5  moderate 9.59%±12.1  severe 3.32%±8.1
+best ep=100  val acc=0.595 (normal=0.836 mild=0.537 moderate=0.360 severe=0.649)  train acc=0.586  val EER 12.08%
+sealed checkpoint
+test
+test acc=0.594 (normal=0.836 mild=0.534 moderate=0.357 severe=0.647)
+test  overall 12.02%±10.5  mild 18.80%±13.6  moderate 9.51%±12.0  severe 3.25%±7.9
+RESULT_JSON {"best_epoch": 100, "final_test_fingerprint": "d9597ce6c21120e246e7533fd252555821f5bdbcc14490cb77dd28ccb931bcbc", "model_selection_accuracy": {"by_class": {"mild": 0.5367508593633239, "moderate": 0.3600358690778658, "normal": 0.8356000597817964, "severe": 0.6489015094903602}, "overall": 0.5953220744283366}, "model_selection_per_user": {"mild": {"mean": 0.1890599312509341, "standard_deviation": 0.13547283859374726}, "moderate": {"mean": 0.0959497832909879, "standard_deviation": 0.12072629254404833}, "overall": {"mean": 0.12076919244756637, "standard_deviation": 0.10517694230617507}, "severe": {"mean": 0.033238678822298605, "standard_deviation": 0.08061907179877184}}, "model_selection_per_user_eer": 0.12076919244756637, "test_accuracy": {"by_class": {"mild": 0.5340918617881311, "moderate": 0.3566680639559255, "normal": 0.8363255284747589, "severe": 0.6472962452841488}, "overall": 0.593595424875741}, "test_per_user": {"mild": {"mean": 0.18796933948140607, "standard_deviation": 0.1359842215244543}, "moderate": {"mean": 0.095053596023714, "standard_deviation": 0.12036519152144168}, "overall": {"mean": 0.12017286464259337, "standard_deviation": 0.10498167312549199}, "severe": {"mean": 0.03246302173782861, "standard_deviation": 0.07876973209177111}}, "train_acc_at_best": 0.58624267578125}
