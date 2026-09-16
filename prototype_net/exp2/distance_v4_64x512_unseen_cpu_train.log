@@ -1,0 +1,10 @@
+device=cpu
+reusing split synthetic_impairment_protocol_v4_64x512_unseen_triplet_manifest.json
+train=61,627  val=6,847  test=17,119  held-out=83,000
+distance-reg second_lstm+affine  params=131,586  targets=0,0.3,0.6,1  classes=normal,mild,moderate,severe  chance=0.25  select=val MAE  loss=SmoothL1 on each (baseline_i, query) pair  score=mean pairwise ||g_i-q||  lr0=0.0025 lr1=0.025  batch=512  steps=32  G=10
+ep 005  loss=0.057  mae=0.269  acc=0.337  gnorm=0.009  scale=0.4089  lr0=0.0025 lr1=0.025
+  val nearest-target acc=0.338 (normal=0.001 mild=0.724 moderate=0.465 severe=0.161)
+  val conf normal[normal=0.00 mild=0.79 moderate=0.21 severe=0.00]  mild[normal=0.00 mild=0.72 moderate=0.27 severe=0.00]  moderate[normal=0.00 mild=0.51 moderate=0.47 severe=0.02]  severe[normal=0.00 mild=0.24 moderate=0.59 severe=0.16]
+  val mae=0.265  pearson=0.514  spearman=0.467
+  val mean-d (normal=0.381 mild=0.399 moderate=0.465 severe=0.600)
+  val  overall 33.36%±12.8  mild 44.26%±13.1  moderate 32.31%±17.6  severe 17.68%±17.6

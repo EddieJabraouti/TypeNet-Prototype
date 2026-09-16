@@ -1,0 +1,1409 @@
+[
+  {
+    "study": "MIT-CS1PD",
+    "id": "11",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1402930351.011_001_014.csv",
+        "valid_keys": 2507,
+        "bad_rows": 21,
+        "windows_50": 50,
+        "duration_seconds": 718.5503
+      },
+      {
+        "file": "1403706430.011_003_014.csv",
+        "valid_keys": 2523,
+        "bad_rows": 10,
+        "windows_50": 50,
+        "duration_seconds": 730.6452
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "60",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1402932300.060_001_014.csv",
+        "valid_keys": 906,
+        "bad_rows": 8,
+        "windows_50": 18,
+        "duration_seconds": 900.9047
+      },
+      {
+        "file": "1403708258.060_003_014.csv",
+        "valid_keys": 949,
+        "bad_rows": 1,
+        "windows_50": 18,
+        "duration_seconds": 900.3684
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "67",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1401117235.067_001_014.csv",
+        "valid_keys": 824,
+        "bad_rows": 0,
+        "windows_50": 16,
+        "duration_seconds": 897.963
+      },
+      {
+        "file": "1401978395.067_003_014.csv",
+        "valid_keys": 825,
+        "bad_rows": 0,
+        "windows_50": 16,
+        "duration_seconds": 901.3702
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "68",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1401114972.068_001_014.csv",
+        "valid_keys": 1027,
+        "bad_rows": 1,
+        "windows_50": 20,
+        "duration_seconds": 899.0178
+      },
+      {
+        "file": "1401980765.068_003_014.csv",
+        "valid_keys": 1161,
+        "bad_rows": 8,
+        "windows_50": 23,
+        "duration_seconds": 897.4450999999999
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "70",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1404311419.070_001_014.csv",
+        "valid_keys": 514,
+        "bad_rows": 0,
+        "windows_50": 10,
+        "duration_seconds": 867.3291
+      },
+      {
+        "file": "1404743687.070_003_014.csv",
+        "valid_keys": 645,
+        "bad_rows": 1,
+        "windows_50": 12,
+        "duration_seconds": 900.7905
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "71",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1410446321.071_001_014.csv",
+        "valid_keys": 1245,
+        "bad_rows": 0,
+        "windows_50": 24,
+        "duration_seconds": 800.458
+      },
+      {
+        "file": "1411655869.071_003_014.csv",
+        "valid_keys": 1575,
+        "bad_rows": 2,
+        "windows_50": 31,
+        "duration_seconds": 717.5494
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "72",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1403795516.072_001_014.csv",
+        "valid_keys": 1231,
+        "bad_rows": 4,
+        "windows_50": 24,
+        "duration_seconds": 771.1372
+      },
+      {
+        "file": "1404832986.072_003_014.csv",
+        "valid_keys": 1219,
+        "bad_rows": 5,
+        "windows_50": 24,
+        "duration_seconds": 847.8163000000001
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "73",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1418748996.073_001_014.csv",
+        "valid_keys": 1442,
+        "bad_rows": 0,
+        "windows_50": 28,
+        "duration_seconds": 697.5545
+      },
+      {
+        "file": "1419870664.073_003_014.csv",
+        "valid_keys": 1365,
+        "bad_rows": 0,
+        "windows_50": 27,
+        "duration_seconds": 716.0616
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "74",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1403792224.074_001_014.csv",
+        "valid_keys": 2377,
+        "bad_rows": 28,
+        "windows_50": 47,
+        "duration_seconds": 719.9028999999999
+      },
+      {
+        "file": "1404747197.074_003_014.csv",
+        "valid_keys": 2564,
+        "bad_rows": 29,
+        "windows_50": 51,
+        "duration_seconds": 785.7942
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "75",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1407421738.075_001_014.csv",
+        "valid_keys": 2369,
+        "bad_rows": 27,
+        "windows_50": 47,
+        "duration_seconds": 721.1006
+      },
+      {
+        "file": "1409756763.075_003_014.csv",
+        "valid_keys": 2243,
+        "bad_rows": 60,
+        "windows_50": 44,
+        "duration_seconds": 733.3957999999999
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "76",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1407423449.076_001_014.csv",
+        "valid_keys": 3258,
+        "bad_rows": 44,
+        "windows_50": 65,
+        "duration_seconds": 728.6793
+      },
+      {
+        "file": "1409754834.076_003_014.csv",
+        "valid_keys": 3456,
+        "bad_rows": 37,
+        "windows_50": 69,
+        "duration_seconds": 719.0445
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "77",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1403797570.077_001_014.csv",
+        "valid_keys": 1212,
+        "bad_rows": 0,
+        "windows_50": 24,
+        "duration_seconds": 842.3499
+      },
+      {
+        "file": "1404834530.077_003_014.csv",
+        "valid_keys": 1243,
+        "bad_rows": 1,
+        "windows_50": 24,
+        "duration_seconds": 828.7007
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "78",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1410450204.078_001_014.csv",
+        "valid_keys": 1211,
+        "bad_rows": 7,
+        "windows_50": 24,
+        "duration_seconds": 824.4105999999999
+      },
+      {
+        "file": "1412088758.078_003_014.csv",
+        "valid_keys": 1193,
+        "bad_rows": 8,
+        "windows_50": 23,
+        "duration_seconds": 832.627
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "79",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1410451895.079_001_014.csv",
+        "valid_keys": 1224,
+        "bad_rows": 0,
+        "windows_50": 24,
+        "duration_seconds": 854.5772999999999
+      },
+      {
+        "file": "1412090543.079_003_014.csv",
+        "valid_keys": 1204,
+        "bad_rows": 0,
+        "windows_50": 24,
+        "duration_seconds": 772.5167
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "80",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1404819923.080_001_014.csv",
+        "valid_keys": 1109,
+        "bad_rows": 1,
+        "windows_50": 22,
+        "duration_seconds": 897.0059
+      },
+      {
+        "file": "1408630965.080_003_014.csv",
+        "valid_keys": 1078,
+        "bad_rows": 1,
+        "windows_50": 21,
+        "duration_seconds": 899.2774999999999
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "81",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1404313658.081_001_014.csv",
+        "valid_keys": 899,
+        "bad_rows": 2,
+        "windows_50": 17,
+        "duration_seconds": 902.5964
+      },
+      {
+        "file": "1404745424.081_003_014.csv",
+        "valid_keys": 1028,
+        "bad_rows": 7,
+        "windows_50": 20,
+        "duration_seconds": 913.4165999999999
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "82",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1404830509.082_001_014.csv",
+        "valid_keys": 469,
+        "bad_rows": 0,
+        "windows_50": 9,
+        "duration_seconds": 899.9286999999999
+      },
+      {
+        "file": "1407425493.082_003_014.csv",
+        "valid_keys": 583,
+        "bad_rows": 0,
+        "windows_50": 11,
+        "duration_seconds": 895.5999
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "83",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1404828566.083_001_014.csv",
+        "valid_keys": 1436,
+        "bad_rows": 9,
+        "windows_50": 28,
+        "duration_seconds": 736.7129
+      },
+      {
+        "file": "1407427375.083_003_014.csv",
+        "valid_keys": 1502,
+        "bad_rows": 3,
+        "windows_50": 30,
+        "duration_seconds": 719.9239
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "84",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1407163319.084_001_014.csv",
+        "valid_keys": 1207,
+        "bad_rows": 1,
+        "windows_50": 24,
+        "duration_seconds": 782.2709
+      },
+      {
+        "file": "1408982860.084_003_014.csv",
+        "valid_keys": 1390,
+        "bad_rows": 0,
+        "windows_50": 27,
+        "duration_seconds": 719.6395
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "85",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1407165254.085_001_014.csv",
+        "valid_keys": 1304,
+        "bad_rows": 0,
+        "windows_50": 26,
+        "duration_seconds": 728.41
+      },
+      {
+        "file": "1408980899.085_003_014.csv",
+        "valid_keys": 1369,
+        "bad_rows": 0,
+        "windows_50": 27,
+        "duration_seconds": 712.6737999999999
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "86",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1408976968.086_001_014.csv",
+        "valid_keys": 1457,
+        "bad_rows": 1,
+        "windows_50": 29,
+        "duration_seconds": 717.8114
+      },
+      {
+        "file": "1410274781.086_003_014.csv",
+        "valid_keys": 1484,
+        "bad_rows": 2,
+        "windows_50": 29,
+        "duration_seconds": 718.5285
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "87",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1408979136.087_001_014.csv",
+        "valid_keys": 2094,
+        "bad_rows": 2,
+        "windows_50": 41,
+        "duration_seconds": 719.3404
+      },
+      {
+        "file": "1410276815.087_003_014.csv",
+        "valid_keys": 2560,
+        "bad_rows": 10,
+        "windows_50": 51,
+        "duration_seconds": 720.1808
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "88",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1408372533.088_001_014.csv",
+        "valid_keys": 1198,
+        "bad_rows": 8,
+        "windows_50": 23,
+        "duration_seconds": 694.5614
+      },
+      {
+        "file": "1409235978.088_003_014.csv",
+        "valid_keys": 2830,
+        "bad_rows": 25,
+        "windows_50": 56,
+        "duration_seconds": 1366.1532
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "89",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1408374282.089_001_014.csv",
+        "valid_keys": 1809,
+        "bad_rows": 26,
+        "windows_50": 36,
+        "duration_seconds": 718.842
+      },
+      {
+        "file": "1409238087.089_003_014.csv",
+        "valid_keys": 1937,
+        "bad_rows": 32,
+        "windows_50": 38,
+        "duration_seconds": 718.5399
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "92",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1410272175.092_001_014.csv",
+        "valid_keys": 1186,
+        "bad_rows": 2,
+        "windows_50": 23,
+        "duration_seconds": 864.2054999999999
+      },
+      {
+        "file": "1412086661.092_003_014.csv",
+        "valid_keys": 1200,
+        "bad_rows": 4,
+        "windows_50": 24,
+        "duration_seconds": 778.5074000000001
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "93",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1408376132.093_001_014.csv",
+        "valid_keys": 1168,
+        "bad_rows": 7,
+        "windows_50": 23,
+        "duration_seconds": 901.8115
+      },
+      {
+        "file": "1412694503.093_003_014.csv",
+        "valid_keys": 1229,
+        "bad_rows": 0,
+        "windows_50": 24,
+        "duration_seconds": 735.8867
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "94",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1408378153.094_001_014.csv",
+        "valid_keys": 1198,
+        "bad_rows": 9,
+        "windows_50": 23,
+        "duration_seconds": 797.3829000000001
+      },
+      {
+        "file": "1412692310.094_003_014.csv",
+        "valid_keys": 1078,
+        "bad_rows": 1,
+        "windows_50": 21,
+        "duration_seconds": 723.7504
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "95",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1410448218.095_001_014.csv",
+        "valid_keys": 2668,
+        "bad_rows": 0,
+        "windows_50": 53,
+        "duration_seconds": 727.5196
+      },
+      {
+        "file": "1411657572.095_003_014.csv",
+        "valid_keys": 2699,
+        "bad_rows": 0,
+        "windows_50": 53,
+        "duration_seconds": 732.0529
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "97",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1408029544.097_001_014.csv",
+        "valid_keys": 1186,
+        "bad_rows": 15,
+        "windows_50": 23,
+        "duration_seconds": 876.336
+      },
+      {
+        "file": "1408633211.097_003_014.csv",
+        "valid_keys": 1435,
+        "bad_rows": 6,
+        "windows_50": 28,
+        "duration_seconds": 718.9212
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "98",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1418744709.098_001_014.csv",
+        "valid_keys": 917,
+        "bad_rows": 0,
+        "windows_50": 18,
+        "duration_seconds": 940.5337
+      },
+      {
+        "file": "1419866851.098_003_014.csv",
+        "valid_keys": 1091,
+        "bad_rows": 0,
+        "windows_50": 21,
+        "duration_seconds": 954.4227999999999
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS1PD",
+    "id": "99",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1418746466.099_001_014.csv",
+        "valid_keys": 1195,
+        "bad_rows": 0,
+        "windows_50": 23,
+        "duration_seconds": 886.282
+      },
+      {
+        "file": "1419868806.099_003_014.csv",
+        "valid_keys": 1478,
+        "bad_rows": 2,
+        "windows_50": 29,
+        "duration_seconds": 714.7433
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1000",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1424946827.1000_001_014.csv",
+        "valid_keys": 889,
+        "bad_rows": 0,
+        "windows_50": 17,
+        "duration_seconds": 899.7871
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1001",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1427279751.1001_001_014.csv",
+        "valid_keys": 1708,
+        "bad_rows": 33,
+        "windows_50": 34,
+        "duration_seconds": 777.6094999999999
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1002",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1426676689.1002_001_014.csv",
+        "valid_keys": 1664,
+        "bad_rows": 13,
+        "windows_50": 33,
+        "duration_seconds": 744.5093
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1004",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1429866367.1004_001_014.csv",
+        "valid_keys": 1199,
+        "bad_rows": 8,
+        "windows_50": 23,
+        "duration_seconds": 873.4117
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1005",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1430134526.1005_001_014.csv",
+        "valid_keys": 1249,
+        "bad_rows": 0,
+        "windows_50": 24,
+        "duration_seconds": 966.2596
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1006",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1429091219.1006_001_014.csv",
+        "valid_keys": 1421,
+        "bad_rows": 4,
+        "windows_50": 28,
+        "duration_seconds": 723.2389000000001
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1008",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1429176842.1008_001_014.csv",
+        "valid_keys": 2290,
+        "bad_rows": 1,
+        "windows_50": 45,
+        "duration_seconds": 723.6348
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1009",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1436192511.1009_001_014.csv",
+        "valid_keys": 1174,
+        "bad_rows": 13,
+        "windows_50": 22,
+        "duration_seconds": 1014.0113
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1010",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1435046994.1010_001_014.csv",
+        "valid_keys": 2191,
+        "bad_rows": 45,
+        "windows_50": 43,
+        "duration_seconds": 723.6005
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1011",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1436195831.1011_001_014.csv",
+        "valid_keys": 1752,
+        "bad_rows": 13,
+        "windows_50": 35,
+        "duration_seconds": 1001.0879
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1012",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1437583257.1012_001_014.csv",
+        "valid_keys": 1848,
+        "bad_rows": 41,
+        "windows_50": 36,
+        "duration_seconds": 779.5369
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1013",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1441110114.1013_001_014.csv",
+        "valid_keys": 1811,
+        "bad_rows": 31,
+        "windows_50": 36,
+        "duration_seconds": 771.0022
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1014",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1437580607.1014_001_014.csv",
+        "valid_keys": 1407,
+        "bad_rows": 6,
+        "windows_50": 28,
+        "duration_seconds": 736.9929999999999
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1015",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1441279015.1015_001_014.csv",
+        "valid_keys": 1118,
+        "bad_rows": 0,
+        "windows_50": 22,
+        "duration_seconds": 962.7322
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1016",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1437670749.1016_001_014.csv",
+        "valid_keys": 2206,
+        "bad_rows": 16,
+        "windows_50": 44,
+        "duration_seconds": 721.2151
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1017",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1441893019.1017_001_014.csv",
+        "valid_keys": 501,
+        "bad_rows": 0,
+        "windows_50": 8,
+        "duration_seconds": 964.8419
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1019",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1442299892.1019_001_014.csv",
+        "valid_keys": 1770,
+        "bad_rows": 1,
+        "windows_50": 35,
+        "duration_seconds": 748.4426000000001
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1020",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1444035286.1020_001_014.csv",
+        "valid_keys": 1354,
+        "bad_rows": 14,
+        "windows_50": 27,
+        "duration_seconds": 756.4051999999999
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1021",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1443534559.1021_001_014.csv",
+        "valid_keys": 1197,
+        "bad_rows": 0,
+        "windows_50": 22,
+        "duration_seconds": 922.0047000000001
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1022",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1440577460.1022_001_014.csv",
+        "valid_keys": 1668,
+        "bad_rows": 19,
+        "windows_50": 33,
+        "duration_seconds": 719.7072
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1023",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1444400554.1023_001_014.csv",
+        "valid_keys": 1905,
+        "bad_rows": 42,
+        "windows_50": 38,
+        "duration_seconds": 734.1835
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1024",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1442506646.1024_001_014.csv",
+        "valid_keys": 2019,
+        "bad_rows": 29,
+        "windows_50": 40,
+        "duration_seconds": 720.8691
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1025",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1444893029.1025_001_014.csv",
+        "valid_keys": 894,
+        "bad_rows": 0,
+        "windows_50": 17,
+        "duration_seconds": 1041.5473000000002
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1028",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1443090933.1028_001_014.csv",
+        "valid_keys": 1506,
+        "bad_rows": 15,
+        "windows_50": 30,
+        "duration_seconds": 727.967
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1029",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1445956280.1029_001_014.csv",
+        "valid_keys": 1179,
+        "bad_rows": 14,
+        "windows_50": 22,
+        "duration_seconds": 1053.7765
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1030",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1443094060.1030_001_014.csv",
+        "valid_keys": 2367,
+        "bad_rows": 12,
+        "windows_50": 47,
+        "duration_seconds": 749.3151
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1031",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1449158503.1031_001_014.csv",
+        "valid_keys": 2688,
+        "bad_rows": 3,
+        "windows_50": 53,
+        "duration_seconds": 898.7344
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1032",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1446028987.1032_001_014.csv",
+        "valid_keys": 1510,
+        "bad_rows": 15,
+        "windows_50": 30,
+        "duration_seconds": 764.4282
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1033",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1449842818.1033_001_014.csv",
+        "valid_keys": 1265,
+        "bad_rows": 27,
+        "windows_50": 25,
+        "duration_seconds": 834.3238
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1034",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1446626569.1034_001_014.csv",
+        "valid_keys": 1612,
+        "bad_rows": 4,
+        "windows_50": 32,
+        "duration_seconds": 562.8466000000001
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1035",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1452598928.1035_001_014.csv",
+        "valid_keys": 1728,
+        "bad_rows": 4,
+        "windows_50": 34,
+        "duration_seconds": 1492.1443
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1037",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1453990802.1037_001_014.csv",
+        "valid_keys": 2279,
+        "bad_rows": 0,
+        "windows_50": 45,
+        "duration_seconds": 1625.4507
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1039",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1457347484.1039_001_014.csv",
+        "valid_keys": 2894,
+        "bad_rows": 20,
+        "windows_50": 57,
+        "duration_seconds": 967.8571
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1041",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1456752658.1041_001_014.csv",
+        "valid_keys": 668,
+        "bad_rows": 1,
+        "windows_50": 12,
+        "duration_seconds": 980.6751
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1042",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1451987802.1042_001_014.csv",
+        "valid_keys": 3553,
+        "bad_rows": 93,
+        "windows_50": 71,
+        "duration_seconds": 812.8223
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1043",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1458555711.1043_001_014.csv",
+        "valid_keys": 1261,
+        "bad_rows": 0,
+        "windows_50": 24,
+        "duration_seconds": 1035.0802
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1045",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1459181723.1045_001_014.csv",
+        "valid_keys": 1884,
+        "bad_rows": 0,
+        "windows_50": 37,
+        "duration_seconds": 786.7026
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1047",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1459162558.1047_001_014.csv",
+        "valid_keys": 953,
+        "bad_rows": 0,
+        "windows_50": 17,
+        "duration_seconds": 1746.5501
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1049",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1461063976.1049_001_014.csv",
+        "valid_keys": 1567,
+        "bad_rows": 4,
+        "windows_50": 30,
+        "duration_seconds": 784.5729
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1050",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1454061159.1050_001_014.csv",
+        "valid_keys": 874,
+        "bad_rows": 0,
+        "windows_50": 17,
+        "duration_seconds": 966.3937999999999
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1051",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1461084495.1051_001_014.csv",
+        "valid_keys": 434,
+        "bad_rows": 0,
+        "windows_50": 7,
+        "duration_seconds": 1043.691
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1052",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1456139318.1052_001_014.csv",
+        "valid_keys": 1952,
+        "bad_rows": 13,
+        "windows_50": 39,
+        "duration_seconds": 725.5895
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1053",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1461082447.1053_001_014.csv",
+        "valid_keys": 675,
+        "bad_rows": 0,
+        "windows_50": 13,
+        "duration_seconds": 977.7691
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1055",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1461091652.1055_001_014.csv",
+        "valid_keys": 299,
+        "bad_rows": 1,
+        "windows_50": 4,
+        "duration_seconds": 1093.7233999999999
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1056",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1457345994.1056_001_014.csv",
+        "valid_keys": 3342,
+        "bad_rows": 85,
+        "windows_50": 66,
+        "duration_seconds": 718.0815
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1057",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1461089132.1057_001_014.csv",
+        "valid_keys": 328,
+        "bad_rows": 0,
+        "windows_50": 5,
+        "duration_seconds": 1041.5573
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1059",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1461677130.1059_001_014.csv",
+        "valid_keys": 1669,
+        "bad_rows": 1,
+        "windows_50": 32,
+        "duration_seconds": 1075.4711
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1061",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1463172280.1061_001_014.csv",
+        "valid_keys": 1216,
+        "bad_rows": 8,
+        "windows_50": 24,
+        "duration_seconds": 637.614
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1062",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1458557031.1062_001_014.csv",
+        "valid_keys": 1993,
+        "bad_rows": 4,
+        "windows_50": 39,
+        "duration_seconds": 785.9449000000001
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1063",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1463511198.1063_001_014.csv",
+        "valid_keys": 1685,
+        "bad_rows": 0,
+        "windows_50": 33,
+        "duration_seconds": 833.2624000000001
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1064",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1458723488.1064_001_014.csv",
+        "valid_keys": 1472,
+        "bad_rows": 0,
+        "windows_50": 29,
+        "duration_seconds": 743.9565
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1066",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1460104760.1066_001_014.csv",
+        "valid_keys": 1806,
+        "bad_rows": 19,
+        "windows_50": 36,
+        "duration_seconds": 718.589
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1068",
+    "pd": true,
+    "sessions": [
+      {
+        "file": "1460559248.1068_001_014.csv",
+        "valid_keys": 786,
+        "bad_rows": 1,
+        "windows_50": 15,
+        "duration_seconds": 912.2692000000001
+      }
+    ]
+  },
+  {
+    "study": "MIT-CS2PD",
+    "id": "1070",
+    "pd": false,
+    "sessions": [
+      {
+        "file": "1463130212.1070_001_014.csv",
+        "valid_keys": 870,
+        "bad_rows": 9,
+        "windows_50": 17,
+        "duration_seconds": 899.9179999999999
+      }
+    ]
+  }
+]

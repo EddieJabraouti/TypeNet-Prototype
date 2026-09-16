@@ -1,0 +1,11 @@
+{
+  "shared_participant_ids": 29,
+  "participant_only_ids": [
+    "20160310OLW1626"
+  ],
+  "word_only_ids": [
+    "20160310LW1626"
+  ],
+  "control_age_band_mismatches": 7,
+  "note": "Do not silently equate the unmatched identifiers or resolve disagreeing age categories without source verification."
+}

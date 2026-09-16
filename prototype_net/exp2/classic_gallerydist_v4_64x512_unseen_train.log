@@ -1,0 +1,16 @@
+device=mps
+reusing split synthetic_impairment_protocol_v4_64x512_unseen_triplet_manifest.json
+train=61,627  val=6,847  test=17,119  fit-users=2000  G=10
+TypeNet frozen  no-head  objective=classic-ml  features=concat(q, g_i, ||q-g_i||)
+train pairs=391,000  dim=257  class-counts=97750,97750,97750,97750
+fit rbf_svm samples=20,000  C=1  gamma=scale
+fit elasticnet_logreg samples=391,000  C=1  l1_ratio=0.5
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+train rbf_svm pair acc=0.414 (4-way, chance=0.25)
+train elasticnet_logreg pair acc=0.417 (4-way, chance=0.25)
+val

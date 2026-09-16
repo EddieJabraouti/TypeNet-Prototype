@@ -1,0 +1,22 @@
+{
+  "total_rows": 9316858,
+  "structurally_valid_timing_rows": 9301879,
+  "invalid_rows": 14979,
+  "participants_with_valid_rows": 266,
+  "participants_with_metadata": 227,
+  "self_reported_non_PD_with_valid_rows": 55,
+  "all_record_count_upper_bounds": {
+    "20": 143,
+    "50": 109,
+    "100": 82,
+    "200": 63
+  },
+  "non_PD_record_count_upper_bounds": {
+    "20": 33,
+    "50": 26,
+    "100": 20,
+    "200": 16
+  },
+  "non_PD_with_at_least_two_observed_dates": 48,
+  "caveat": "Counts are only availability upper bounds. No adjacency, duplication, chronological split, session-gap, or day-gap validation. Non-PD is self-reported and is not proven cognitive health. No keys were reconstructed; no modeling or clinical evaluation was performed."
+}
