@@ -1,0 +1,33 @@
+FEATURES train 500 12000 4
+FEATURES train 1000 12000 8
+FEATURES train 1500 12000 11
+FEATURES train 2000 12000 14
+FEATURES train 2500 12000 18
+FEATURES train 3000 12000 21
+FEATURES train 3500 12000 25
+FEATURES train 4000 12000 28
+FEATURES train 4500 12000 32
+FEATURES train 5000 12000 35
+FEATURES train 5500 12000 39
+FEATURES train 6000 12000 42
+FEATURES train 6500 12000 45
+FEATURES train 7000 12000 48
+FEATURES train 7500 12000 52
+FEATURES train 8000 12000 55
+FEATURES train 8500 12000 58
+FEATURES train 9000 12000 61
+FEATURES train 9500 12000 64
+FEATURES train 10000 12000 67
+FEATURES train 10500 12000 72
+FEATURES train 11000 12000 75
+FEATURES train 11500 12000 78
+FEATURES train 12000 12000 81
+FEATURES selection 500 800 5
+CANDIDATE {"windows_per_side": 5, "config": {"max_leaf_nodes": 15, "l2_regularization": 5.0, "max_iter": 300, "learning_rate": 0.06, "min_samples_leaf": 40}, "selection_accuracy": 0.5921875, "selection_log_loss": 0.8793709152889886}
+CANDIDATE {"windows_per_side": 5, "config": {"max_leaf_nodes": 31, "l2_regularization": 10.0, "max_iter": 300, "learning_rate": 0.06, "min_samples_leaf": 40}, "selection_accuracy": 0.5925, "selection_log_loss": 0.8819421914280354}
+CANDIDATE {"windows_per_side": 5, "config": {"max_leaf_nodes": 63, "l2_regularization": 20.0, "max_iter": 300, "learning_rate": 0.06, "min_samples_leaf": 40}, "selection_accuracy": 0.590625, "selection_log_loss": 0.8902187418746809}
+CANDIDATE {"windows_per_side": 10, "config": {"max_leaf_nodes": 15, "l2_regularization": 5.0, "max_iter": 300, "learning_rate": 0.06, "min_samples_leaf": 40}, "selection_accuracy": 0.6415625, "selection_log_loss": 0.8003623934421232}
+CANDIDATE {"windows_per_side": 10, "config": {"max_leaf_nodes": 31, "l2_regularization": 10.0, "max_iter": 300, "learning_rate": 0.06, "min_samples_leaf": 40}, "selection_accuracy": 0.6365625, "selection_log_loss": 0.7985177637011156}
+CANDIDATE {"windows_per_side": 10, "config": {"max_leaf_nodes": 63, "l2_regularization": 20.0, "max_iter": 300, "learning_rate": 0.06, "min_samples_leaf": 40}, "selection_accuracy": 0.6425, "selection_log_loss": 0.802099987207961}
+FEATURES calibration 500 600 5
+FROZEN

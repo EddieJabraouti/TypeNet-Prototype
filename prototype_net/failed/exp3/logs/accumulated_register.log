@@ -1,0 +1,5 @@
+REGISTER train 12000 skipped 19839
+REGISTER selection 800 skipped 1314
+REGISTER calibration 600 skipped 966
+REGISTER validation 800 skipped 1306
+REGISTER test 2000 skipped 3185

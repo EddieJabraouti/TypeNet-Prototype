@@ -1,0 +1,34 @@
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 5, "selection_accuracy": 0.5313032367972743, "selection_log_loss": 1.007006760340399, "seconds": 1.9067846249963623}
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 10, "selection_accuracy": 0.5279812606473595, "selection_log_loss": 1.012660108641441, "seconds": 3.7217807499982882}
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 15, "selection_accuracy": 0.5237223168654174, "selection_log_loss": 1.0231268073027528, "seconds": 5.438663250009995}
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 20, "selection_accuracy": 0.5247444633730834, "selection_log_loss": 1.037491721692174, "seconds": 7.118619959015632}
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 25, "selection_accuracy": 0.5186115843270869, "selection_log_loss": 1.0584146504264056, "seconds": 8.811276041989913}
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 30, "selection_accuracy": 0.5153747870528109, "selection_log_loss": 1.088737255748047, "seconds": 10.478285624994896}
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 35, "selection_accuracy": 0.5135008517887564, "selection_log_loss": 1.1344675287327735, "seconds": 12.142896834004205}
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 40, "selection_accuracy": 0.5073679727427598, "selection_log_loss": 1.1569695994724212, "seconds": 13.846186167007545}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 5, "selection_accuracy": 0.5289608177172062, "selection_log_loss": 1.0095158202944916, "seconds": 1.9355455839831848}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 10, "selection_accuracy": 0.5254684838160136, "selection_log_loss": 1.0244929747020377, "seconds": 3.757612416986376}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 15, "selection_accuracy": 0.514480408858603, "selection_log_loss": 1.0622669386816306, "seconds": 5.581790666998131}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 20, "selection_accuracy": 0.5100511073253833, "selection_log_loss": 1.1487890353036292, "seconds": 7.482827208994422}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 25, "selection_accuracy": 0.4897359454855196, "selection_log_loss": 1.265327413020747, "seconds": 9.666447083989624}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 30, "selection_accuracy": 0.4907580919931857, "selection_log_loss": 1.438053283902664, "seconds": 11.949618458980694}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 35, "selection_accuracy": 0.48577512776831344, "selection_log_loss": 1.5837280536452636, "seconds": 13.822757624991937}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 40, "selection_accuracy": 0.4844548551959114, "selection_log_loss": 1.740155308770718, "seconds": 15.754479916999117}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 5, "selection_accuracy": 0.6122231686541738, "selection_log_loss": 0.8558942808761087, "seconds": 0.41628045798279345}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 10, "selection_accuracy": 0.6049829642248722, "selection_log_loss": 0.8666078403998818, "seconds": 0.7459507079911418}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 15, "selection_accuracy": 0.5973168654173765, "selection_log_loss": 0.8957617281273339, "seconds": 1.122325207979884}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 20, "selection_accuracy": 0.5917802385008518, "selection_log_loss": 0.9357403592710815, "seconds": 1.5912430829775985}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 25, "selection_accuracy": 0.5919931856899489, "selection_log_loss": 1.0131721830600426, "seconds": 1.9967703330039512}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 30, "selection_accuracy": 0.5775127768313458, "selection_log_loss": 1.1134977658166516, "seconds": 2.469514208001783}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 35, "selection_accuracy": 0.57793867120954, "selection_log_loss": 1.248031251318297, "seconds": 2.8874144580040593}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 40, "selection_accuracy": 0.557495741056218, "selection_log_loss": 1.3709751328570532, "seconds": 3.302079416986089}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 5, "selection_accuracy": 0.6094548551959114, "selection_log_loss": 0.8574945885276434, "seconds": 0.5486193330143578}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 10, "selection_accuracy": 0.606473594548552, "selection_log_loss": 0.8982008823917433, "seconds": 1.020557625015499}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 15, "selection_accuracy": 0.5870954003407155, "selection_log_loss": 0.9896540974524337, "seconds": 1.4548663750174455}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 20, "selection_accuracy": 0.5796422487223168, "selection_log_loss": 1.1460427004257794, "seconds": 1.9275841249909718}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 25, "selection_accuracy": 0.5730408858603067, "selection_log_loss": 1.3719404490805875, "seconds": 2.3498137909919024}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 30, "selection_accuracy": 0.5728279386712095, "selection_log_loss": 1.6272943734115672, "seconds": 2.7800338749948423}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 35, "selection_accuracy": 0.5621805792163543, "selection_log_loss": 1.9238111515751126, "seconds": 3.2265131660096813}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 40, "selection_accuracy": 0.5687819420783645, "selection_log_loss": 2.243117484730337, "seconds": 3.6743190409906674}
+WINNER {"budget": "single", "family": "tree", "accuracy": 0.5443356047700171, "log_loss": 0.9771437905051934, "temperature": 1.0252963485428446}
+WINNER {"budget": "bundle", "family": "tree", "accuracy": 0.6181856899488927, "log_loss": 0.8300035993352198, "temperature": 1.009025177095591}

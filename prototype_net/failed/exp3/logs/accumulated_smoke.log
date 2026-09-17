@@ -1,0 +1,20 @@
+REGISTER train 8 skipped 15
+REGISTER selection 8 skipped 8
+REGISTER calibration 8 skipped 29
+REGISTER validation 8 skipped 10
+REGISTER test 8 skipped 9
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/joblib/externals/loky/backend/context.py:131: UserWarning: Could not find the number of physical cores for the following reason:
+invalid literal for int() with base 10: ''
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/joblib/externals/loky/backend/context.py", line 249, in _count_physical_cores
+    cpu_count_physical = _count_physical_cores_darwin()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/joblib/externals/loky/backend/context.py", line 318, in _count_physical_cores_darwin
+    return int(cpu_info)
+CANDIDATE {"windows_per_side": 5, "config": {"max_leaf_nodes": 15, "l2_regularization": 5.0, "max_iter": 5, "learning_rate": 0.06, "min_samples_leaf": 4}, "selection_accuracy": 0.40625, "selection_log_loss": 1.3126528895480494}
+CANDIDATE {"windows_per_side": 5, "config": {"max_leaf_nodes": 31, "l2_regularization": 10.0, "max_iter": 5, "learning_rate": 0.06, "min_samples_leaf": 4}, "selection_accuracy": 0.40625, "selection_log_loss": 1.338811055584505}
+CANDIDATE {"windows_per_side": 5, "config": {"max_leaf_nodes": 63, "l2_regularization": 20.0, "max_iter": 5, "learning_rate": 0.06, "min_samples_leaf": 4}, "selection_accuracy": 0.40625, "selection_log_loss": 1.3584856114019737}
+CANDIDATE {"windows_per_side": 10, "config": {"max_leaf_nodes": 15, "l2_regularization": 5.0, "max_iter": 5, "learning_rate": 0.06, "min_samples_leaf": 4}, "selection_accuracy": 0.53125, "selection_log_loss": 1.3012126483754125}
+CANDIDATE {"windows_per_side": 10, "config": {"max_leaf_nodes": 31, "l2_regularization": 10.0, "max_iter": 5, "learning_rate": 0.06, "min_samples_leaf": 4}, "selection_accuracy": 0.53125, "selection_log_loss": 1.332773785587908}
+CANDIDATE {"windows_per_side": 10, "config": {"max_leaf_nodes": 63, "l2_regularization": 20.0, "max_iter": 5, "learning_rate": 0.06, "min_samples_leaf": 4}, "selection_accuracy": 0.5, "selection_log_loss": 1.3555929775390618}
+FROZEN

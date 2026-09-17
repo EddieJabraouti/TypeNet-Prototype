@@ -1,0 +1,4 @@
+{"Keystrokes": {"participants": 168593, "session_histogram": {"15": 168593}, "maximum_windows": 73, "maximum_full_windows": 61, "eligible_equal_sides": {"5": 168593, "7": 168593, "10": 107842, "20": 3, "50": 0, "100": 0, "200": 0}, "eligible_full_windows_equal_sides": {"5": 18670, "7": 671, "10": 21, "20": 2, "50": 0, "100": 0, "200": 0}}}
+keystrokes_f 20000 4
+{"keystrokes_f": {"participants": 28208, "session_histogram": {"0": 1, "15": 28207}, "maximum_windows": 73, "maximum_full_windows": 61, "eligible_equal_sides": {"5": 28207, "7": 28207, "10": 18007, "20": 3, "50": 0, "100": 0, "200": 0}, "eligible_full_windows_equal_sides": {"5": 3046, "7": 127, "10": 7, "20": 2, "50": 0, "100": 0, "200": 0}}}
+{"shared_ids": 28208, "identical_files": 28207, "second_only": 0}

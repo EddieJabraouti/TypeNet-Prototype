@@ -1,0 +1,44 @@
+RAW validation: retained 1171/1200
+features validation: 200/1200, 2s
+features validation: 400/1200, 4s
+features validation: 600/1200, 6s
+features validation: 800/1200, 7s
+features validation: 1000/1200, 9s
+features validation: 1200/1200, 11s
+validation: 1171 participants, (4684, 5, 309) single, (4684, 618) bundle
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/metrics/_classification.py:259: UserWarning: The y_prob values do not sum to one. Make sure to pass probabilities.
+  warnings.warn(
+SEALED validation single: acc=0.5693 ECE=0.0129 EER=0.1937
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/metrics/_classification.py:259: UserWarning: The y_prob values do not sum to one. Make sure to pass probabilities.
+  warnings.warn(
+SEALED validation bundle: acc=0.6631 ECE=0.0167 EER=0.1364
+RAW test: 2000/4000, 3s
+RAW test: 4000/4000, 6s
+RAW test: retained 3899/4000
+features test: 200/4000, 2s
+features test: 400/4000, 4s
+features test: 600/4000, 6s
+features test: 800/4000, 8s
+features test: 1000/4000, 10s
+features test: 1200/4000, 12s
+features test: 1400/4000, 14s
+features test: 1600/4000, 16s
+features test: 1800/4000, 17s
+features test: 2000/4000, 19s
+features test: 2200/4000, 21s
+features test: 2400/4000, 23s
+features test: 2600/4000, 25s
+features test: 2800/4000, 27s
+features test: 3000/4000, 29s
+features test: 3200/4000, 31s
+features test: 3400/4000, 33s
+features test: 3600/4000, 35s
+features test: 3800/4000, 37s
+features test: 4000/4000, 39s
+test: 3899 participants, (15596, 5, 309) single, (15596, 618) bundle
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/metrics/_classification.py:259: UserWarning: The y_prob values do not sum to one. Make sure to pass probabilities.
+  warnings.warn(
+SEALED test single: acc=0.5690 ECE=0.0112 EER=0.1961
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/metrics/_classification.py:259: UserWarning: The y_prob values do not sum to one. Make sure to pass probabilities.
+  warnings.warn(
+SEALED test bundle: acc=0.6561 ECE=0.0139 EER=0.1407

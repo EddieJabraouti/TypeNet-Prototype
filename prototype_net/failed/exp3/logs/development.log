@@ -1,0 +1,51 @@
+features train: 200/6000, 3s
+features train: 400/6000, 5s
+features train: 600/6000, 8s
+features train: 800/6000, 10s
+features train: 1000/6000, 12s
+features train: 1200/6000, 14s
+features train: 1400/6000, 17s
+features train: 1600/6000, 19s
+features train: 1800/6000, 21s
+features train: 2000/6000, 24s
+features train: 2200/6000, 26s
+features train: 2400/6000, 28s
+features train: 2600/6000, 30s
+features train: 2800/6000, 33s
+features train: 3000/6000, 35s
+features train: 3200/6000, 37s
+features train: 3400/6000, 39s
+features train: 3600/6000, 41s
+features train: 3800/6000, 44s
+features train: 4000/6000, 46s
+features train: 4200/6000, 48s
+features train: 4400/6000, 50s
+features train: 4800/6000, 55s
+features train: 5000/6000, 57s
+features train: 5200/6000, 59s
+features train: 5400/6000, 62s
+features train: 5600/6000, 64s
+features train: 5800/6000, 66s
+features train: 6000/6000, 69s
+train: 5844 participants, (23376, 5, 309) single, (23376, 618) bundle
+features selection: 200/1200, 2s
+features selection: 400/1200, 5s
+features selection: 600/1200, 7s
+features selection: 800/1200, 9s
+features selection: 1000/1200, 11s
+features selection: 1200/1200, 13s
+selection: 1174 participants, (4696, 5, 309) single, (4696, 618) bundle
+CANDIDATE {"budget": "single", "config": {"max_leaf_nodes": 15, "l2_regularization": 5.0, "max_iter": 250, "learning_rate": 0.06, "min_samples_leaf": 40}, "selection_accuracy": 0.5433560477001703, "selection_log_loss": 0.9833177796107193, "seconds": 41.89417845799471}
+CANDIDATE {"budget": "single", "config": {"max_leaf_nodes": 31, "l2_regularization": 10.0, "max_iter": 250, "learning_rate": 0.06, "min_samples_leaf": 40}, "selection_accuracy": 0.5436967632027258, "selection_log_loss": 0.9779276658070016, "seconds": 53.80991262500174}
+CANDIDATE {"budget": "single", "config": {"max_leaf_nodes": 63, "l2_regularization": 20.0, "max_iter": 250, "learning_rate": 0.06, "min_samples_leaf": 40}, "selection_accuracy": 0.5443356047700171, "selection_log_loss": 0.9771437905051934, "seconds": 71.50054416598869}
+CANDIDATE {"budget": "bundle", "config": {"max_leaf_nodes": 15, "l2_regularization": 5.0, "max_iter": 250, "learning_rate": 0.06, "min_samples_leaf": 40}, "selection_accuracy": 0.6181856899488927, "selection_log_loss": 0.8300035993352198, "seconds": 16.74876241700258}
+CANDIDATE {"budget": "bundle", "config": {"max_leaf_nodes": 31, "l2_regularization": 10.0, "max_iter": 250, "learning_rate": 0.06, "min_samples_leaf": 40}, "selection_accuracy": 0.6152044293015332, "selection_log_loss": 0.8373296287397469, "seconds": 30.333101833995897}
+CANDIDATE {"budget": "bundle", "config": {"max_leaf_nodes": 63, "l2_regularization": 20.0, "max_iter": 250, "learning_rate": 0.06, "min_samples_leaf": 40}, "selection_accuracy": 0.6154173764906303, "selection_log_loss": 0.8549914990179603, "seconds": 61.89708924997831}
+features calibration: 200/1000, 2s
+features calibration: 400/1000, 4s
+features calibration: 600/1000, 7s
+features calibration: 800/1000, 9s
+features calibration: 1000/1000, 12s
+calibration: 971 participants, (3884, 5, 309) single, (3884, 618) bundle
+FROZEN single: train=0.7445 selection=0.5443 T=1.025
+FROZEN bundle: train=0.8107 selection=0.6182 T=1.009

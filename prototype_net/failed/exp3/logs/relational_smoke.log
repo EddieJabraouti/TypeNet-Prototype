@@ -1,0 +1,5 @@
+RAW train: retained 30/32
+RAW selection: retained 8/8
+SEQUENCE device=cpu params=391,752 train_users=30 epochs=2 steps=2
+EPOCH {"epoch": 1, "loss": 1.3873793482780457, "train_single_accuracy": 0.275, "train_bundle_accuracy": 0.375, "learning_rate": 2e-05, "epoch_seconds": 0.21109366699238308, "elapsed_seconds": 0.21117029199376702, "selection": {"single": {"accuracy": 0.25, "log_loss": 1.3887914393005232}, "bundle": {"accuracy": 0.25, "log_loss": 1.3866923641572848}}}
+EPOCH {"epoch": 2, "loss": 1.3877215385437012, "train_single_accuracy": 0.225, "train_bundle_accuracy": 0.375, "learning_rate": 4e-05, "epoch_seconds": 0.14597658402635716, "elapsed_seconds": 0.8026094579836354, "selection": {"single": {"accuracy": 0.25, "log_loss": 1.388742864617031}, "bundle": {"accuracy": 0.25, "log_loss": 1.386684835215192}}}

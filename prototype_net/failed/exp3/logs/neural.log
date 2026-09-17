@@ -1,0 +1,44 @@
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 5, "selection_accuracy": 0.5313032367972743, "selection_log_loss": 1.007006760340399, "seconds": 4.824722042016219}
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 10, "selection_accuracy": 0.5279812606473595, "selection_log_loss": 1.012660108641441, "seconds": 7.6392001250060275}
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 15, "selection_accuracy": 0.5237223168654174, "selection_log_loss": 1.0231268073027528, "seconds": 10.379003917012597}
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 20, "selection_accuracy": 0.5247444633730834, "selection_log_loss": 1.037491721692174, "seconds": 13.057868250005413}
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 25, "selection_accuracy": 0.5186115843270869, "selection_log_loss": 1.0584146504264056, "seconds": 15.436514083005022}
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 30, "selection_accuracy": 0.5153747870528109, "selection_log_loss": 1.088737255748047, "seconds": 17.942106250004144}
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 35, "selection_accuracy": 0.5135008517887564, "selection_log_loss": 1.1344675287327735, "seconds": 20.29134808300296}
+NEURAL {"budget": "single", "width": 128, "depth": 2, "epoch": 40, "selection_accuracy": 0.5073679727427598, "selection_log_loss": 1.1569695994724212, "seconds": 22.62829404202057}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 5, "selection_accuracy": 0.5289608177172062, "selection_log_loss": 1.0095158202944916, "seconds": 3.620012166997185}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 10, "selection_accuracy": 0.5254684838160136, "selection_log_loss": 1.0244929747020377, "seconds": 6.218538375018397}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 15, "selection_accuracy": 0.514480408858603, "selection_log_loss": 1.0622669386816306, "seconds": 8.837873334006872}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 20, "selection_accuracy": 0.5100511073253833, "selection_log_loss": 1.1487890353036292, "seconds": 11.55645166701288}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 25, "selection_accuracy": 0.4897359454855196, "selection_log_loss": 1.265327413020747, "seconds": 14.236426792020211}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 30, "selection_accuracy": 0.4907580919931857, "selection_log_loss": 1.438053283902664, "seconds": 17.15528337500291}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 35, "selection_accuracy": 0.48577512776831344, "selection_log_loss": 1.5837280536452636, "seconds": 20.333338958997047}
+NEURAL {"budget": "single", "width": 256, "depth": 3, "epoch": 40, "selection_accuracy": 0.4844548551959114, "selection_log_loss": 1.740155308770718, "seconds": 22.866618500003824}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 5, "selection_accuracy": 0.6122231686541738, "selection_log_loss": 0.8558942808761087, "seconds": 0.994502958987141}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 10, "selection_accuracy": 0.6049829642248722, "selection_log_loss": 0.8666078403998818, "seconds": 1.4926098749856465}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 15, "selection_accuracy": 0.5973168654173765, "selection_log_loss": 0.8957617281273339, "seconds": 1.9827516670047771}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 20, "selection_accuracy": 0.5917802385008518, "selection_log_loss": 0.9357403592710815, "seconds": 2.5038925840053707}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 25, "selection_accuracy": 0.5919931856899489, "selection_log_loss": 1.0131721830600426, "seconds": 2.993735916999867}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 30, "selection_accuracy": 0.5775127768313458, "selection_log_loss": 1.1134977658166516, "seconds": 3.473888500011526}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 35, "selection_accuracy": 0.57793867120954, "selection_log_loss": 1.248031251318297, "seconds": 3.9546786249848083}
+NEURAL {"budget": "bundle", "width": 128, "depth": 2, "epoch": 40, "selection_accuracy": 0.557495741056218, "selection_log_loss": 1.3709751328570532, "seconds": 4.441352208988974}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 5, "selection_accuracy": 0.6094548551959114, "selection_log_loss": 0.8574945885276434, "seconds": 0.8983271250035614}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 10, "selection_accuracy": 0.606473594548552, "selection_log_loss": 0.8982008823917433, "seconds": 1.432484332995955}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 15, "selection_accuracy": 0.5870954003407155, "selection_log_loss": 0.9896540974524337, "seconds": 1.9622544999874663}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 20, "selection_accuracy": 0.5796422487223168, "selection_log_loss": 1.1460427004257794, "seconds": 2.4716532499878667}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 25, "selection_accuracy": 0.5730408858603067, "selection_log_loss": 1.3719404490805875, "seconds": 2.9692438329802826}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 30, "selection_accuracy": 0.5728279386712095, "selection_log_loss": 1.6272943734115672, "seconds": 3.4746447500074282}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 35, "selection_accuracy": 0.5621805792163543, "selection_log_loss": 1.9238111515751126, "seconds": 4.02184779199888}
+NEURAL {"budget": "bundle", "width": 256, "depth": 3, "epoch": 40, "selection_accuracy": 0.5687819420783645, "selection_log_loss": 2.243117484730337, "seconds": 4.575080374983372}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp3/neural.py", line 131, in <module>
+    main()
+    ~~~~^^
+  File "/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp3/neural.py", line 84, in main
+    trees=joblib.load(source/'frozen.joblib')
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/joblib/numpy_pickle.py", line 735, in load
+    with open(filename, "rb") as f:
+         ~~~~^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp3/runs/timing_v1/frozen.joblib'
