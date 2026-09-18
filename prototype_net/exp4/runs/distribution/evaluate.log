@@ -1,0 +1,13 @@
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+Evaluated all 25 candidates for motor_pd

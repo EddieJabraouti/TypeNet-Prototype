@@ -1,0 +1,6 @@
+motor_pd 41 candidates: ownership, lineage, provenance and participant predictions passed
+motor_updrs 9 candidates: ownership, lineage, provenance and participant predictions passed
+touchscreen_pd 21 candidates: ownership, lineage, provenance and participant predictions passed
+touchscreen_updrs 5 candidates: ownership, lineage, provenance and participant predictions passed
+online_pd 41 candidates: ownership, lineage, provenance and participant predictions passed
+PASS: all 117 candidates; baseline provenance unchanged.

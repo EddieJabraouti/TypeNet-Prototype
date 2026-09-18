@@ -1,0 +1,5279 @@
+{
+  "seed": 9172026,
+  "selection": "none",
+  "rows": [
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "dummy_none_raw",
+      "model": "dummy",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "auroc": 0.5,
+        "average_precision": 0.5084745762711864,
+        "accuracy": 0.5084745762711864,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.6930035367960174,
+        "confusion_matrix": [
+          [
+            0,
+            29
+          ],
+          [
+            0,
+            30
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.48850574712643674,
+        "average_precision": 0.5028248587570622,
+        "accuracy": 0.5084745762711864,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.6933701223968846,
+        "confusion_matrix": [
+          [
+            0,
+            29
+          ],
+          [
+            0,
+            30
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.5,
+        "average_precision": 0.4444444444444444,
+        "accuracy": 0.4444444444444444,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.6951742576189425,
+        "confusion_matrix": [
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5,
+            0.5
+          ],
+          "ci975": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5,
+        "average_precision": 0.47058823529411764,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.6942879425424542,
+        "confusion_matrix": [
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            8
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5,
+            0.5
+          ],
+          "ci975": [
+            0.5,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "node_none_pretrained",
+      "model": "node",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "auroc": 0.810344827586207,
+        "average_precision": 0.8389734862459599,
+        "accuracy": 0.7796610169491526,
+        "balanced_accuracy": 0.7804597701149425,
+        "sensitivity": 0.7333333333333333,
+        "specificity": 0.8275862068965517,
+        "log_loss": 0.5676650571263291,
+        "confusion_matrix": [
+          [
+            24,
+            5
+          ],
+          [
+            8,
+            22
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.732183908045977,
+        "average_precision": 0.7401324387592735,
+        "accuracy": 0.6779661016949152,
+        "balanced_accuracy": 0.678735632183908,
+        "sensitivity": 0.6333333333333333,
+        "specificity": 0.7241379310344828,
+        "log_loss": 0.6153146279831391,
+        "confusion_matrix": [
+          [
+            21,
+            8
+          ],
+          [
+            11,
+            19
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.8,
+        "average_precision": 0.8166666666666667,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5763624750303299,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4,
+            1.0
+          ],
+          "ci975": [
+            0.4,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5694444444444444,
+        "average_precision": 0.666025641025641,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.4722222222222222,
+        "sensitivity": 0.5,
+        "specificity": 0.4444444444444444,
+        "log_loss": 0.6997077312410432,
+        "confusion_matrix": [
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2357638888888889,
+            0.8472222222222222
+          ],
+          "ci975": [
+            0.20833333333333334,
+            0.8888888888888888
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "node_none_raw",
+      "model": "node",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "auroc": 0.8597701149425288,
+        "average_precision": 0.8887629488922771,
+        "accuracy": 0.864406779661017,
+        "balanced_accuracy": 0.8649425287356323,
+        "sensitivity": 0.8333333333333334,
+        "specificity": 0.896551724137931,
+        "log_loss": 0.47436943690460853,
+        "confusion_matrix": [
+          [
+            26,
+            3
+          ],
+          [
+            5,
+            25
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7724137931034483,
+        "average_precision": 0.8103282115676159,
+        "accuracy": 0.711864406779661,
+        "balanced_accuracy": 0.7120689655172414,
+        "sensitivity": 0.7,
+        "specificity": 0.7241379310344828,
+        "log_loss": 0.5698895671449493,
+        "confusion_matrix": [
+          [
+            21,
+            8
+          ],
+          [
+            9,
+            21
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.8,
+        "average_precision": 0.8166666666666667,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5576865920520269,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4,
+            1.0
+          ],
+          "ci975": [
+            0.4,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5416666666666667,
+        "average_precision": 0.6686771561771562,
+        "accuracy": 0.4117647058823529,
+        "balanced_accuracy": 0.4236111111111111,
+        "sensitivity": 0.625,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.8243484186140035,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2222222222222222,
+            0.8333333333333334
+          ],
+          "ci975": [
+            0.1527777777777778,
+            0.8611111111111112
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "node_smote_pretrained",
+      "model": "node",
+      "augmentation": "smote",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 61,
+      "fit_rows": 120,
+      "training_fit": {
+        "auroc": 0.7954022988505747,
+        "average_precision": 0.8313925799023801,
+        "accuracy": 0.7627118644067796,
+        "balanced_accuracy": 0.7632183908045977,
+        "sensitivity": 0.7333333333333333,
+        "specificity": 0.7931034482758621,
+        "log_loss": 0.5760443547833904,
+        "confusion_matrix": [
+          [
+            23,
+            6
+          ],
+          [
+            8,
+            22
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7218390804597701,
+        "average_precision": 0.7352507651092338,
+        "accuracy": 0.6949152542372882,
+        "balanced_accuracy": 0.6954022988505747,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 0.7241379310344828,
+        "log_loss": 0.6173049173103079,
+        "confusion_matrix": [
+          [
+            21,
+            8
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.8,
+        "average_precision": 0.8166666666666667,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.6097809652547348,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4,
+            1.0
+          ],
+          "ci975": [
+            0.4,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5416666666666667,
+        "average_precision": 0.6848214285714285,
+        "accuracy": 0.4117647058823529,
+        "balanced_accuracy": 0.41666666666666663,
+        "sensitivity": 0.5,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.710053696699273,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2222222222222222,
+            0.8333333333333334
+          ],
+          "ci975": [
+            0.1388888888888889,
+            0.8751736111111117
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "node_smote_raw",
+      "model": "node",
+      "augmentation": "smote",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 61,
+      "fit_rows": 120,
+      "training_fit": {
+        "auroc": 0.828735632183908,
+        "average_precision": 0.8722568268571981,
+        "accuracy": 0.7966101694915254,
+        "balanced_accuracy": 0.7971264367816092,
+        "sensitivity": 0.7666666666666667,
+        "specificity": 0.8275862068965517,
+        "log_loss": 0.4852723549351917,
+        "confusion_matrix": [
+          [
+            24,
+            5
+          ],
+          [
+            7,
+            23
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7655172413793104,
+        "average_precision": 0.8171263128322588,
+        "accuracy": 0.7288135593220338,
+        "balanced_accuracy": 0.728735632183908,
+        "sensitivity": 0.7333333333333333,
+        "specificity": 0.7241379310344828,
+        "log_loss": 0.5873193736187821,
+        "confusion_matrix": [
+          [
+            21,
+            8
+          ],
+          [
+            8,
+            22
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.65,
+        "average_precision": 0.75,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5885457543324656,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2,
+            1.0
+          ],
+          "ci975": [
+            0.15,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.513888888888889,
+        "average_precision": 0.6603438228438229,
+        "accuracy": 0.4117647058823529,
+        "balanced_accuracy": 0.4236111111111111,
+        "sensitivity": 0.625,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.8322364955165881,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.19444444444444445,
+            0.8055555555555556
+          ],
+          "ci975": [
+            0.1527777777777778,
+            0.8611111111111112
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "random_forest_none_pretrained",
+      "model": "random_forest",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "auroc": 0.9873563218390804,
+        "average_precision": 0.9890081132035154,
+        "accuracy": 0.9491525423728814,
+        "balanced_accuracy": 0.9494252873563218,
+        "sensitivity": 0.9333333333333333,
+        "specificity": 0.9655172413793104,
+        "log_loss": 0.27523334944635325,
+        "confusion_matrix": [
+          [
+            28,
+            1
+          ],
+          [
+            2,
+            28
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7804597701149426,
+        "average_precision": 0.8109386233350243,
+        "accuracy": 0.6610169491525424,
+        "balanced_accuracy": 0.6609195402298851,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 0.6551724137931034,
+        "log_loss": 0.5760228355133824,
+        "confusion_matrix": [
+          [
+            19,
+            10
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.8,
+        "average_precision": 0.8166666666666667,
+        "accuracy": 0.5555555555555556,
+        "balanced_accuracy": 0.55,
+        "sensitivity": 0.5,
+        "specificity": 0.6,
+        "log_loss": 0.5913820606376854,
+        "confusion_matrix": [
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4,
+            1.0
+          ],
+          "ci975": [
+            0.4,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.513888888888889,
+        "average_precision": 0.6326923076923077,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.4861111111111111,
+        "sensitivity": 0.75,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.7223047388714106,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.20833333333333334,
+            0.8055555555555556
+          ],
+          "ci975": [
+            0.125,
+            0.8333333333333334
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "random_forest_none_raw",
+      "model": "random_forest",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "auroc": 0.9816091954022989,
+        "average_precision": 0.9832531756226016,
+        "accuracy": 0.9322033898305084,
+        "balanced_accuracy": 0.9327586206896552,
+        "sensitivity": 0.9,
+        "specificity": 0.9655172413793104,
+        "log_loss": 0.2911234489351478,
+        "confusion_matrix": [
+          [
+            28,
+            1
+          ],
+          [
+            3,
+            27
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7735632183908046,
+        "average_precision": 0.8206613773920949,
+        "accuracy": 0.6949152542372882,
+        "balanced_accuracy": 0.6965517241379311,
+        "sensitivity": 0.6,
+        "specificity": 0.7931034482758621,
+        "log_loss": 0.5841039046148875,
+        "confusion_matrix": [
+          [
+            23,
+            6
+          ],
+          [
+            12,
+            18
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.42014319019103713,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5833333333333333,
+        "average_precision": 0.672275641025641,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.4722222222222222,
+        "sensitivity": 0.5,
+        "specificity": 0.4444444444444444,
+        "log_loss": 0.7423580393372303,
+        "confusion_matrix": [
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2777777777777778,
+            0.8611111111111112
+          ],
+          "ci975": [
+            0.2361111111111111,
+            0.9027777777777778
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "random_forest_smote_pretrained",
+      "model": "random_forest",
+      "augmentation": "smote",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 61,
+      "fit_rows": 120,
+      "training_fit": {
+        "auroc": 0.9873563218390804,
+        "average_precision": 0.9888577897198586,
+        "accuracy": 0.9491525423728814,
+        "balanced_accuracy": 0.9494252873563218,
+        "sensitivity": 0.9333333333333333,
+        "specificity": 0.9655172413793104,
+        "log_loss": 0.23962487365153534,
+        "confusion_matrix": [
+          [
+            28,
+            1
+          ],
+          [
+            2,
+            28
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7114942528735632,
+        "average_precision": 0.7347266537762932,
+        "accuracy": 0.6440677966101694,
+        "balanced_accuracy": 0.6436781609195402,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 0.6206896551724138,
+        "log_loss": 0.7595978017809007,
+        "confusion_matrix": [
+          [
+            18,
+            11
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.8,
+        "average_precision": 0.8166666666666667,
+        "accuracy": 0.6666666666666666,
+        "balanced_accuracy": 0.65,
+        "sensitivity": 0.5,
+        "specificity": 0.8,
+        "log_loss": 0.6590336909888977,
+        "confusion_matrix": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4,
+            1.0
+          ],
+          "ci975": [
+            0.4,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5694444444444444,
+        "average_precision": 0.6444444444444444,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5347222222222222,
+        "sensitivity": 0.625,
+        "specificity": 0.4444444444444444,
+        "log_loss": 0.7490043776554254,
+        "confusion_matrix": [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2777777777777778,
+            0.8472222222222222
+          ],
+          "ci975": [
+            0.2222222222222222,
+            0.875
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "random_forest_smote_raw",
+      "model": "random_forest",
+      "augmentation": "smote",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 61,
+      "fit_rows": 120,
+      "training_fit": {
+        "auroc": 0.9873563218390804,
+        "average_precision": 0.9885371487304598,
+        "accuracy": 0.9322033898305084,
+        "balanced_accuracy": 0.9333333333333333,
+        "sensitivity": 0.8666666666666667,
+        "specificity": 1.0,
+        "log_loss": 0.26218457422961394,
+        "confusion_matrix": [
+          [
+            29,
+            0
+          ],
+          [
+            4,
+            26
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7218390804597701,
+        "average_precision": 0.7614077344216574,
+        "accuracy": 0.5932203389830508,
+        "balanced_accuracy": 0.5913793103448276,
+        "sensitivity": 0.7,
+        "specificity": 0.4827586206896552,
+        "log_loss": 0.6924261047962178,
+        "confusion_matrix": [
+          [
+            14,
+            15
+          ],
+          [
+            9,
+            21
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.39758997410836017,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.6666666666666666,
+        "average_precision": 0.7217970142602497,
+        "accuracy": 0.5882352941176471,
+        "balanced_accuracy": 0.5902777777777778,
+        "sensitivity": 0.625,
+        "specificity": 0.5555555555555556,
+        "log_loss": 0.7672711749813043,
+        "confusion_matrix": [
+          [
+            5,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.375,
+            0.9166666666666666
+          ],
+          "ci975": [
+            0.3333333333333333,
+            0.9444444444444444
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "tabnet_none_pretrained",
+      "model": "tabnet",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "auroc": 0.8563218390804598,
+        "average_precision": 0.9002673910969713,
+        "accuracy": 0.7288135593220338,
+        "balanced_accuracy": 0.7270114942528736,
+        "sensitivity": 0.8333333333333334,
+        "specificity": 0.6206896551724138,
+        "log_loss": 0.5360442004438685,
+        "confusion_matrix": [
+          [
+            18,
+            11
+          ],
+          [
+            5,
+            25
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.725287356321839,
+        "average_precision": 0.7752554991870177,
+        "accuracy": 0.576271186440678,
+        "balanced_accuracy": 0.5718390804597702,
+        "sensitivity": 0.8333333333333334,
+        "specificity": 0.3103448275862069,
+        "log_loss": 0.6439950282850786,
+        "confusion_matrix": [
+          [
+            9,
+            20
+          ],
+          [
+            5,
+            25
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.8,
+        "average_precision": 0.8166666666666667,
+        "accuracy": 0.5555555555555556,
+        "balanced_accuracy": 0.55,
+        "sensitivity": 0.5,
+        "specificity": 0.6,
+        "log_loss": 0.5893818624834557,
+        "confusion_matrix": [
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4,
+            1.0
+          ],
+          "ci975": [
+            0.4,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5138888888888888,
+        "average_precision": 0.5840811965811966,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.4861111111111111,
+        "sensitivity": 0.75,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.8169365556607333,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2222222222222222,
+            0.7916666666666666
+          ],
+          "ci975": [
+            0.16666666666666666,
+            0.8472222222222222
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "tabnet_none_raw",
+      "model": "tabnet",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "auroc": 0.7885057471264367,
+        "average_precision": 0.817387326368857,
+        "accuracy": 0.7457627118644068,
+        "balanced_accuracy": 0.7442528735632183,
+        "sensitivity": 0.8333333333333334,
+        "specificity": 0.6551724137931034,
+        "log_loss": 0.5545093337416168,
+        "confusion_matrix": [
+          [
+            19,
+            10
+          ],
+          [
+            5,
+            25
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7333333333333333,
+        "average_precision": 0.8013369664349832,
+        "accuracy": 0.6779661016949152,
+        "balanced_accuracy": 0.678735632183908,
+        "sensitivity": 0.6333333333333333,
+        "specificity": 0.7241379310344828,
+        "log_loss": 0.5918560521470969,
+        "confusion_matrix": [
+          [
+            21,
+            8
+          ],
+          [
+            11,
+            19
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.65,
+        "average_precision": 0.75,
+        "accuracy": 0.4444444444444444,
+        "balanced_accuracy": 0.45,
+        "sensitivity": 0.5,
+        "specificity": 0.4,
+        "log_loss": 0.667563706361818,
+        "confusion_matrix": [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2,
+            1.0
+          ],
+          "ci975": [
+            0.1,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5694444444444444,
+        "average_precision": 0.726932503770739,
+        "accuracy": 0.4117647058823529,
+        "balanced_accuracy": 0.4305555555555556,
+        "sensitivity": 0.75,
+        "specificity": 0.1111111111111111,
+        "log_loss": 0.9987862445690825,
+        "confusion_matrix": [
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2361111111111111,
+            0.875
+          ],
+          "ci975": [
+            0.18055555555555555,
+            0.9027777777777778
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "tabnet_smote_pretrained",
+      "model": "tabnet",
+      "augmentation": "smote",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 61,
+      "fit_rows": 120,
+      "training_fit": {
+        "auroc": 0.8367816091954025,
+        "average_precision": 0.8856338473268933,
+        "accuracy": 0.7796610169491526,
+        "balanced_accuracy": 0.7821839080459769,
+        "sensitivity": 0.6333333333333333,
+        "specificity": 0.9310344827586207,
+        "log_loss": 0.5110152654178071,
+        "confusion_matrix": [
+          [
+            27,
+            2
+          ],
+          [
+            11,
+            19
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.754022988505747,
+        "average_precision": 0.7725779752259896,
+        "accuracy": 0.6779661016949152,
+        "balanced_accuracy": 0.6752873563218391,
+        "sensitivity": 0.8333333333333334,
+        "specificity": 0.5172413793103449,
+        "log_loss": 0.596249634645961,
+        "confusion_matrix": [
+          [
+            15,
+            14
+          ],
+          [
+            5,
+            25
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.6000000000000001,
+        "average_precision": 0.7361111111111112,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5873097615180518,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.15,
+            1.0
+          ],
+          "ci975": [
+            0.05,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.625,
+        "average_precision": 0.7261446886446887,
+        "accuracy": 0.7058823529411765,
+        "balanced_accuracy": 0.7013888888888888,
+        "sensitivity": 0.625,
+        "specificity": 0.7777777777777778,
+        "log_loss": 0.6937861273495843,
+        "confusion_matrix": [
+          [
+            7,
+            2
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3194444444444444,
+            0.8888888888888888
+          ],
+          "ci975": [
+            0.2638888888888889,
+            0.9305555555555556
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "tabnet_smote_raw",
+      "model": "tabnet",
+      "augmentation": "smote",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 61,
+      "fit_rows": 120,
+      "training_fit": {
+        "auroc": 0.7333333333333334,
+        "average_precision": 0.7709944090827735,
+        "accuracy": 0.6610169491525424,
+        "balanced_accuracy": 0.6643678160919539,
+        "sensitivity": 0.4666666666666667,
+        "specificity": 0.8620689655172413,
+        "log_loss": 0.6055707238885949,
+        "confusion_matrix": [
+          [
+            25,
+            4
+          ],
+          [
+            16,
+            14
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.6666666666666667,
+        "average_precision": 0.6383230641029574,
+        "accuracy": 0.6779661016949152,
+        "balanced_accuracy": 0.6793103448275861,
+        "sensitivity": 0.6,
+        "specificity": 0.7586206896551724,
+        "log_loss": 0.7712165593158984,
+        "confusion_matrix": [
+          [
+            22,
+            7
+          ],
+          [
+            12,
+            18
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.6,
+        "average_precision": 0.7321428571428572,
+        "accuracy": 0.5555555555555556,
+        "balanced_accuracy": 0.55,
+        "sensitivity": 0.5,
+        "specificity": 0.6,
+        "log_loss": 0.8892840728030055,
+        "confusion_matrix": [
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2,
+            1.0
+          ],
+          "ci975": [
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.47222222222222227,
+        "average_precision": 0.5417218810601163,
+        "accuracy": 0.4117647058823529,
+        "balanced_accuracy": 0.41666666666666663,
+        "sensitivity": 0.5,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.9605790796473637,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.16666666666666666,
+            0.7777777777777778
+          ],
+          "ci975": [
+            0.125,
+            0.8057291666666673
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "xgboost_none_pretrained",
+      "model": "xgboost",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "auroc": 0.9080459770114943,
+        "average_precision": 0.9228687900487688,
+        "accuracy": 0.8135593220338984,
+        "balanced_accuracy": 0.8137931034482759,
+        "sensitivity": 0.8,
+        "specificity": 0.8275862068965517,
+        "log_loss": 0.44687092271720297,
+        "confusion_matrix": [
+          [
+            24,
+            5
+          ],
+          [
+            6,
+            24
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7264367816091956,
+        "average_precision": 0.7458329529199383,
+        "accuracy": 0.6101694915254238,
+        "balanced_accuracy": 0.6103448275862069,
+        "sensitivity": 0.6,
+        "specificity": 0.6206896551724138,
+        "log_loss": 0.6352848818959137,
+        "confusion_matrix": [
+          [
+            18,
+            11
+          ],
+          [
+            12,
+            18
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.7,
+        "average_precision": 0.7857142857142857,
+        "accuracy": 0.6666666666666666,
+        "balanced_accuracy": 0.65,
+        "sensitivity": 0.5,
+        "specificity": 0.8,
+        "log_loss": 0.5880277681001393,
+        "confusion_matrix": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.25,
+            1.0
+          ],
+          "ci975": [
+            0.2,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5694444444444445,
+        "average_precision": 0.6790938228438228,
+        "accuracy": 0.4117647058823529,
+        "balanced_accuracy": 0.4236111111111111,
+        "sensitivity": 0.625,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.7594259927145812,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.25,
+            0.8611111111111112
+          ],
+          "ci975": [
+            0.2220486111111111,
+            0.8888888888888888
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "xgboost_none_raw",
+      "model": "xgboost",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "auroc": 0.878735632183908,
+        "average_precision": 0.9108135206946821,
+        "accuracy": 0.7966101694915254,
+        "balanced_accuracy": 0.7977011494252872,
+        "sensitivity": 0.7333333333333333,
+        "specificity": 0.8620689655172413,
+        "log_loss": 0.47236913702190053,
+        "confusion_matrix": [
+          [
+            25,
+            4
+          ],
+          [
+            8,
+            22
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7086206896551724,
+        "average_precision": 0.7202687500783148,
+        "accuracy": 0.6610169491525424,
+        "balanced_accuracy": 0.6609195402298851,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 0.6551724137931034,
+        "log_loss": 0.6344225898371025,
+        "confusion_matrix": [
+          [
+            19,
+            10
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.7,
+        "average_precision": 0.775,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.542742312736396,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.25,
+            1.0
+          ],
+          "ci975": [
+            0.25,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5416666666666666,
+        "average_precision": 0.6441673522555875,
+        "accuracy": 0.4117647058823529,
+        "balanced_accuracy": 0.41666666666666663,
+        "sensitivity": 0.5,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.7879097516033455,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2361111111111111,
+            0.8333333333333334
+          ],
+          "ci975": [
+            0.19444444444444445,
+            0.8611111111111112
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "xgboost_smote_pretrained",
+      "model": "xgboost",
+      "augmentation": "smote",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 61,
+      "fit_rows": 120,
+      "training_fit": {
+        "auroc": 0.9264367816091953,
+        "average_precision": 0.9408488513277371,
+        "accuracy": 0.847457627118644,
+        "balanced_accuracy": 0.8488505747126437,
+        "sensitivity": 0.7666666666666667,
+        "specificity": 0.9310344827586207,
+        "log_loss": 0.3823084441512747,
+        "confusion_matrix": [
+          [
+            27,
+            2
+          ],
+          [
+            7,
+            23
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7017241379310345,
+        "average_precision": 0.6968107903850688,
+        "accuracy": 0.6779661016949152,
+        "balanced_accuracy": 0.6775862068965517,
+        "sensitivity": 0.7,
+        "specificity": 0.6551724137931034,
+        "log_loss": 0.6718589231271728,
+        "confusion_matrix": [
+          [
+            19,
+            10
+          ],
+          [
+            9,
+            21
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.7,
+        "average_precision": 0.7678571428571428,
+        "accuracy": 0.6666666666666666,
+        "balanced_accuracy": 0.65,
+        "sensitivity": 0.5,
+        "specificity": 0.8,
+        "log_loss": 0.6464858816278028,
+        "confusion_matrix": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.25,
+            1.0
+          ],
+          "ci975": [
+            0.2,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.6527777777777778,
+        "average_precision": 0.6881944444444444,
+        "accuracy": 0.5882352941176471,
+        "balanced_accuracy": 0.5902777777777778,
+        "sensitivity": 0.625,
+        "specificity": 0.5555555555555556,
+        "log_loss": 0.6983153460705873,
+        "confusion_matrix": [
+          [
+            5,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3746527777777778,
+            0.9166666666666666
+          ],
+          "ci975": [
+            0.3194444444444444,
+            0.9305555555555556
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "xgboost_smote_raw",
+      "model": "xgboost",
+      "augmentation": "smote",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 61,
+      "fit_rows": 120,
+      "training_fit": {
+        "auroc": 0.9310344827586207,
+        "average_precision": 0.946349205568515,
+        "accuracy": 0.847457627118644,
+        "balanced_accuracy": 0.8494252873563218,
+        "sensitivity": 0.7333333333333333,
+        "specificity": 0.9655172413793104,
+        "log_loss": 0.38487640500823167,
+        "confusion_matrix": [
+          [
+            28,
+            1
+          ],
+          [
+            8,
+            22
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7224137931034482,
+        "average_precision": 0.7239351197455222,
+        "accuracy": 0.6779661016949152,
+        "balanced_accuracy": 0.6775862068965517,
+        "sensitivity": 0.7,
+        "specificity": 0.6551724137931034,
+        "log_loss": 0.6314669074800263,
+        "confusion_matrix": [
+          [
+            19,
+            10
+          ],
+          [
+            9,
+            21
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.5,
+        "average_precision": 0.7222222222222222,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5617182021497626,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.0,
+            1.0
+          ],
+          "ci975": [
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.6111111111111112,
+        "average_precision": 0.6952651515151516,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5277777777777778,
+        "sensitivity": 0.5,
+        "specificity": 0.5555555555555556,
+        "log_loss": 0.7165546285565777,
+        "confusion_matrix": [
+          [
+            5,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3055555555555556,
+            0.8888888888888888
+          ],
+          "ci975": [
+            0.2777777777777778,
+            0.9168402777777783
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_updrs",
+      "kind": "regression",
+      "candidate": "dummy_none_raw",
+      "model": "dummy",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "mae": 9.615914966963516,
+        "rmse": 11.021078105020168,
+        "r2": 0.0
+      },
+      "training_oof": {
+        "mae": 9.617055084745763,
+        "rmse": 11.071442448017535,
+        "r2": -0.009160523227757844
+      },
+      "validation": {
+        "mae": 11.142184557438794,
+        "rmse": 12.156545566685853,
+        "r2": -0.014282594471808574,
+        "uncertainty": {
+          "ci95": [
+            8.20433145009416,
+            14.524482109227872
+          ],
+          "ci975": [
+            7.8708156779661005,
+            15.011646657250472
+          ]
+        }
+      },
+      "test": {
+        "mae": 8.508723828514455,
+        "rmse": 9.33250210974362,
+        "r2": -0.0854086734195203,
+        "uncertainty": {
+          "ci95": [
+            6.541344715852442,
+            10.199987537387836
+          ],
+          "ci975": [
+            6.349984421734796,
+            10.45000623130608
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_updrs",
+      "kind": "regression",
+      "candidate": "node_none_pretrained",
+      "model": "node",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "mae": 7.652553558349609,
+        "rmse": 9.46457085720327,
+        "r2": 0.26251414741760914
+      },
+      "training_oof": {
+        "mae": 7.9668651112055375,
+        "rmse": 9.817086432213777,
+        "r2": 0.20655455932833355
+      },
+      "validation": {
+        "mae": 9.115473694271511,
+        "rmse": 11.267196779504772,
+        "r2": 0.12869467793211187,
+        "uncertainty": {
+          "ci95": [
+            5.24761153989368,
+            13.871848246786326
+          ],
+          "ci975": [
+            4.768015672763188,
+            14.47544884350565
+          ]
+        }
+      },
+      "test": {
+        "mae": 8.726311487310072,
+        "rmse": 9.678946320987068,
+        "r2": -0.16749023478372993,
+        "uncertainty": {
+          "ci95": [
+            6.699593126773834,
+            10.622831973608802
+          ],
+          "ci975": [
+            6.449753793898751,
+            11.03303297232179
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_updrs",
+      "kind": "regression",
+      "candidate": "node_none_raw",
+      "model": "node",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "mae": 6.468877929752156,
+        "rmse": 8.483401614158986,
+        "r2": 0.40749517052267137
+      },
+      "training_oof": {
+        "mae": 7.168273473190049,
+        "rmse": 9.27136413398389,
+        "r2": 0.2923164243090265
+      },
+      "validation": {
+        "mae": 8.389610873328316,
+        "rmse": 11.766283070430205,
+        "r2": 0.04979525911217508,
+        "uncertainty": {
+          "ci95": [
+            3.681746913327111,
+            14.359023184246483
+          ],
+          "ci975": [
+            3.216328014930089,
+            15.167398558722603
+          ]
+        }
+      },
+      "test": {
+        "mae": 8.943773353801054,
+        "rmse": 10.281843116705751,
+        "r2": -0.3174648592635956,
+        "uncertainty": {
+          "ci95": [
+            6.494731496362125,
+            11.355797564983366
+          ],
+          "ci975": [
+            6.1160856874550085,
+            11.770039992122088
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_updrs",
+      "kind": "regression",
+      "candidate": "random_forest_none_pretrained",
+      "model": "random_forest",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "mae": 4.0270893498454186,
+        "rmse": 5.40125242180653,
+        "r2": 0.7598178170389636
+      },
+      "training_oof": {
+        "mae": 6.98916813590349,
+        "rmse": 8.875638363444425,
+        "r2": 0.3514386904387109
+      },
+      "validation": {
+        "mae": 8.917050758738705,
+        "rmse": 12.280451189209744,
+        "r2": -0.035064121359595246,
+        "uncertainty": {
+          "ci95": [
+            4.092551863663787,
+            15.153444464613687
+          ],
+          "ci975": [
+            3.7112039536467147,
+            15.853756271456643
+          ]
+        }
+      },
+      "test": {
+        "mae": 7.924641224077472,
+        "rmse": 9.272368441333041,
+        "r2": -0.07146614799131368,
+        "uncertainty": {
+          "ci95": [
+            5.538604128267887,
+            10.189546146828894
+          ],
+          "ci975": [
+            5.190086132951552,
+            10.424526464875292
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_updrs",
+      "kind": "regression",
+      "candidate": "random_forest_none_raw",
+      "model": "random_forest",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "mae": 4.362726650324117,
+        "rmse": 5.801778897225227,
+        "r2": 0.7228759689063066
+      },
+      "training_oof": {
+        "mae": 7.0893546890783155,
+        "rmse": 9.02653998140636,
+        "r2": 0.32919782844680656
+      },
+      "validation": {
+        "mae": 8.37012844908334,
+        "rmse": 11.706359752724893,
+        "r2": 0.059449018028886025,
+        "uncertainty": {
+          "ci95": [
+            3.886882438164068,
+            14.514091086304669
+          ],
+          "ci975": [
+            3.543221563538619,
+            15.19853280367048
+          ]
+        }
+      },
+      "test": {
+        "mae": 7.732376178370515,
+        "rmse": 9.018243937990286,
+        "r2": -0.01354036897600186,
+        "uncertainty": {
+          "ci95": [
+            5.52565661296576,
+            9.869507236517899
+          ],
+          "ci975": [
+            5.229556936451475,
+            10.189554771072281
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_updrs",
+      "kind": "regression",
+      "candidate": "tabnet_none_pretrained",
+      "model": "tabnet",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "mae": 9.246503296544997,
+        "rmse": 10.596412482619607,
+        "r2": 0.07557953637403536
+      },
+      "training_oof": {
+        "mae": 9.228387848805573,
+        "rmse": 10.65417505883017,
+        "r2": 0.06547376808701155
+      },
+      "validation": {
+        "mae": 11.095847447713217,
+        "rmse": 12.282372833630617,
+        "r2": -0.03538808027359508,
+        "uncertainty": {
+          "ci95": [
+            7.879057269626194,
+            14.76969265407986
+          ],
+          "ci975": [
+            7.530184049076504,
+            15.215136496225993
+          ]
+        }
+      },
+      "test": {
+        "mae": 8.671972611371208,
+        "rmse": 9.537171320414885,
+        "r2": -0.1335384663104302,
+        "uncertainty": {
+          "ci95": [
+            6.6692779526991,
+            10.422393873158624
+          ],
+          "ci975": [
+            6.381337010860443,
+            10.649508471348707
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_updrs",
+      "kind": "regression",
+      "candidate": "tabnet_none_raw",
+      "model": "tabnet",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "mae": 8.606704542192363,
+        "rmse": 10.700019395716565,
+        "r2": 0.0574140337293122
+      },
+      "training_oof": {
+        "mae": 9.12626257589308,
+        "rmse": 10.95991743223036,
+        "r2": 0.01106805865124938
+      },
+      "validation": {
+        "mae": 9.967886447906494,
+        "rmse": 12.531563395730421,
+        "r2": -0.07782715041735777,
+        "uncertainty": {
+          "ci95": [
+            5.342955626381769,
+            15.216711150275337
+          ],
+          "ci975": [
+            4.886215481493208,
+            16.035473593076073
+          ]
+        }
+      },
+      "test": {
+        "mae": 7.868874802308924,
+        "rmse": 8.883121804720195,
+        "r2": 0.016604246818621604,
+        "uncertainty": {
+          "ci95": [
+            5.912244587786057,
+            9.923785287492416
+          ],
+          "ci975": [
+            5.6119509907329785,
+            10.162626938960132
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_updrs",
+      "kind": "regression",
+      "candidate": "xgboost_none_pretrained",
+      "model": "xgboost",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "mae": 4.2773687394998845,
+        "rmse": 5.783281312669851,
+        "r2": 0.7246402393399055
+      },
+      "training_oof": {
+        "mae": 7.071840783297005,
+        "rmse": 8.848822552188764,
+        "r2": 0.35535174420172977
+      },
+      "validation": {
+        "mae": 9.262557029724121,
+        "rmse": 12.692199429605289,
+        "r2": -0.10563653993947475,
+        "uncertainty": {
+          "ci95": [
+            4.285796597268846,
+            15.65026656521691
+          ],
+          "ci975": [
+            3.8721917046440972,
+            16.531326474083794
+          ]
+        }
+      },
+      "test": {
+        "mae": 7.965830550474279,
+        "rmse": 8.878712896870685,
+        "r2": 0.017580170687291563,
+        "uncertainty": {
+          "ci95": [
+            6.060435777551987,
+            9.814287154814776
+          ],
+          "ci975": [
+            5.8480513215064995,
+            10.023884460855934
+          ]
+        }
+      }
+    },
+    {
+      "task": "motor_updrs",
+      "kind": "regression",
+      "candidate": "xgboost_none_raw",
+      "model": "xgboost",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 59,
+      "training_fit": {
+        "mae": 4.767633648241981,
+        "rmse": 6.263970306962511,
+        "r2": 0.6769637795412449
+      },
+      "training_oof": {
+        "mae": 7.257566823797711,
+        "rmse": 9.041270367948059,
+        "r2": 0.32700668148857803
+      },
+      "validation": {
+        "mae": 8.981218258539835,
+        "rmse": 12.431268593143768,
+        "r2": -0.060643679592051525,
+        "uncertainty": {
+          "ci95": [
+            4.085724272992876,
+            15.359214351574579
+          ],
+          "ci975": [
+            3.8299698213736217,
+            16.052805739641194
+          ]
+        }
+      },
+      "test": {
+        "mae": 7.947029927197625,
+        "rmse": 8.892614266357892,
+        "r2": 0.014501419850063701,
+        "uncertainty": {
+          "ci95": [
+            6.0582984138937555,
+            9.917067754969873
+          ],
+          "ci975": [
+            5.834040021896363,
+            10.246023811312282
+          ]
+        }
+      }
+    },
+    {
+      "task": "cognitive_ci",
+      "kind": "classification",
+      "candidate": "dummy_none_raw",
+      "model": "dummy",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 21,
+        "validation": 3,
+        "test": 6
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 21,
+      "training_fit": {
+        "auroc": 0.5,
+        "average_precision": 0.5238095238095238,
+        "accuracy": 0.5238095238095238,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.6920129648318738,
+        "confusion_matrix": [
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.43636363636363634,
+        "average_precision": 0.49783549783549785,
+        "accuracy": 0.5238095238095238,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.7034333015806818,
+        "confusion_matrix": [
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.5,
+        "average_precision": 0.3333333333333333,
+        "accuracy": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.7101672847946023,
+        "confusion_matrix": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5,
+            0.5
+          ],
+          "ci975": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5,
+        "average_precision": 0.5,
+        "accuracy": 0.5,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.6942822548272148,
+        "confusion_matrix": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5,
+            0.5
+          ],
+          "ci975": [
+            0.5,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "task": "cognitive_ci",
+      "kind": "classification",
+      "candidate": "node_none_raw",
+      "model": "node",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 21,
+        "validation": 3,
+        "test": 6
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 21,
+      "training_fit": {
+        "auroc": 0.9818181818181818,
+        "average_precision": 0.9841597796143251,
+        "accuracy": 0.9523809523809523,
+        "balanced_accuracy": 0.95,
+        "sensitivity": 1.0,
+        "specificity": 0.9,
+        "log_loss": 0.31141486114270284,
+        "confusion_matrix": [
+          [
+            9,
+            1
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8545454545454545,
+        "average_precision": 0.8977633477633478,
+        "accuracy": 0.7142857142857143,
+        "balanced_accuracy": 0.7136363636363636,
+        "sensitivity": 0.7272727272727273,
+        "specificity": 0.7,
+        "log_loss": 0.5676804970845455,
+        "confusion_matrix": [
+          [
+            7,
+            3
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "log_loss": 0.3304731944633461,
+        "confusion_matrix": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "log_loss": 0.27180867969478534,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "task": "cognitive_ci",
+      "kind": "classification",
+      "candidate": "node_smote_raw",
+      "model": "node",
+      "augmentation": "smote",
+      "representation": "raw",
+      "counts": {
+        "train": 21,
+        "validation": 3,
+        "test": 6
+      },
+      "synthetic_rows": 23,
+      "fit_rows": 44,
+      "training_fit": {
+        "auroc": 0.9636363636363636,
+        "average_precision": 0.9686586141131597,
+        "accuracy": 0.8571428571428571,
+        "balanced_accuracy": 0.8545454545454545,
+        "sensitivity": 0.9090909090909091,
+        "specificity": 0.8,
+        "log_loss": 0.3179679201434655,
+        "confusion_matrix": [
+          [
+            8,
+            2
+          ],
+          [
+            1,
+            10
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8727272727272728,
+        "average_precision": 0.9047077922077924,
+        "accuracy": 0.7142857142857143,
+        "balanced_accuracy": 0.7136363636363636,
+        "sensitivity": 0.7272727272727273,
+        "specificity": 0.7,
+        "log_loss": 0.5704706201470768,
+        "confusion_matrix": [
+          [
+            7,
+            3
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "log_loss": 0.2946050774628963,
+        "confusion_matrix": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "log_loss": 0.27221684136220187,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "task": "cognitive_ci",
+      "kind": "classification",
+      "candidate": "random_forest_none_raw",
+      "model": "random_forest",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 21,
+        "validation": 3,
+        "test": 6
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 21,
+      "training_fit": {
+        "auroc": 0.9818181818181819,
+        "average_precision": 0.986013986013986,
+        "accuracy": 0.9047619047619048,
+        "balanced_accuracy": 0.9,
+        "sensitivity": 1.0,
+        "specificity": 0.8,
+        "log_loss": 0.21946881133468032,
+        "confusion_matrix": [
+          [
+            8,
+            2
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8090909090909091,
+        "average_precision": 0.8296244159880524,
+        "accuracy": 0.7142857142857143,
+        "balanced_accuracy": 0.7136363636363636,
+        "sensitivity": 0.7272727272727273,
+        "specificity": 0.7,
+        "log_loss": 0.6893502618116496,
+        "confusion_matrix": [
+          [
+            7,
+            3
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "log_loss": 0.15689981972079492,
+        "confusion_matrix": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "log_loss": 0.26206206175240637,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "task": "cognitive_ci",
+      "kind": "classification",
+      "candidate": "random_forest_smote_raw",
+      "model": "random_forest",
+      "augmentation": "smote",
+      "representation": "raw",
+      "counts": {
+        "train": 21,
+        "validation": 3,
+        "test": 6
+      },
+      "synthetic_rows": 23,
+      "fit_rows": 44,
+      "training_fit": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 0.9047619047619048,
+        "balanced_accuracy": 0.9,
+        "sensitivity": 1.0,
+        "specificity": 0.8,
+        "log_loss": 0.18410341369983346,
+        "confusion_matrix": [
+          [
+            8,
+            2
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7545454545454545,
+        "average_precision": 0.6680722055722055,
+        "accuracy": 0.7142857142857143,
+        "balanced_accuracy": 0.7136363636363636,
+        "sensitivity": 0.7272727272727273,
+        "specificity": 0.7,
+        "log_loss": 0.929014993366887,
+        "confusion_matrix": [
+          [
+            7,
+            3
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "log_loss": 0.049740041423870174,
+        "confusion_matrix": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 0.8333333333333334,
+        "balanced_accuracy": 0.8333333333333333,
+        "sensitivity": 1.0,
+        "specificity": 0.6666666666666666,
+        "log_loss": 0.2790823519184095,
+        "confusion_matrix": [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "task": "cognitive_ci",
+      "kind": "classification",
+      "candidate": "tabnet_none_raw",
+      "model": "tabnet",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 21,
+        "validation": 3,
+        "test": 6
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 21,
+      "training_fit": {
+        "auroc": 0.8727272727272727,
+        "average_precision": 0.9089566998657908,
+        "accuracy": 0.8095238095238095,
+        "balanced_accuracy": 0.8181818181818181,
+        "sensitivity": 0.6363636363636364,
+        "specificity": 1.0,
+        "log_loss": 0.5299422271982174,
+        "confusion_matrix": [
+          [
+            10,
+            0
+          ],
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7272727272727273,
+        "average_precision": 0.8129817078346491,
+        "accuracy": 0.7142857142857143,
+        "balanced_accuracy": 0.7181818181818183,
+        "sensitivity": 0.6363636363636364,
+        "specificity": 0.8,
+        "log_loss": 0.6416453596932998,
+        "confusion_matrix": [
+          [
+            8,
+            2
+          ],
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 0.6666666666666666,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 0.0,
+        "specificity": 1.0,
+        "log_loss": 0.472072489773875,
+        "confusion_matrix": [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 0.8333333333333334,
+        "balanced_accuracy": 0.8333333333333333,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 1.0,
+        "log_loss": 0.4642613632827577,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "task": "cognitive_ci",
+      "kind": "classification",
+      "candidate": "tabnet_smote_raw",
+      "model": "tabnet",
+      "augmentation": "smote",
+      "representation": "raw",
+      "counts": {
+        "train": 21,
+        "validation": 3,
+        "test": 6
+      },
+      "synthetic_rows": 23,
+      "fit_rows": 44,
+      "training_fit": {
+        "auroc": 0.9363636363636363,
+        "average_precision": 0.9416994621540078,
+        "accuracy": 0.8571428571428571,
+        "balanced_accuracy": 0.85,
+        "sensitivity": 1.0,
+        "specificity": 0.7,
+        "log_loss": 0.41586857182897885,
+        "confusion_matrix": [
+          [
+            7,
+            3
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7454545454545455,
+        "average_precision": 0.8368896181061956,
+        "accuracy": 0.6666666666666666,
+        "balanced_accuracy": 0.6681818181818182,
+        "sensitivity": 0.6363636363636364,
+        "specificity": 0.7,
+        "log_loss": 0.6632823171709374,
+        "confusion_matrix": [
+          [
+            7,
+            3
+          ],
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "log_loss": 0.4878796421785796,
+        "confusion_matrix": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 0.8333333333333334,
+        "balanced_accuracy": 0.8333333333333333,
+        "sensitivity": 1.0,
+        "specificity": 0.6666666666666666,
+        "log_loss": 0.45228192300457737,
+        "confusion_matrix": [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "task": "cognitive_ci",
+      "kind": "classification",
+      "candidate": "xgboost_none_raw",
+      "model": "xgboost",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 21,
+        "validation": 3,
+        "test": 6
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 21,
+      "training_fit": {
+        "auroc": 0.5,
+        "average_precision": 0.5238095238095238,
+        "accuracy": 0.5238095238095238,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.6920129648318755,
+        "confusion_matrix": [
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.43636363636363634,
+        "average_precision": 0.49783549783549785,
+        "accuracy": 0.5238095238095238,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.7034333065477361,
+        "confusion_matrix": [
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.5,
+        "average_precision": 0.3333333333333333,
+        "accuracy": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.7101673064690205,
+        "confusion_matrix": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5,
+            0.5
+          ],
+          "ci975": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5,
+        "average_precision": 0.5,
+        "accuracy": 0.5,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.6942822575365186,
+        "confusion_matrix": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5,
+            0.5
+          ],
+          "ci975": [
+            0.5,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "task": "cognitive_ci",
+      "kind": "classification",
+      "candidate": "xgboost_smote_raw",
+      "model": "xgboost",
+      "augmentation": "smote",
+      "representation": "raw",
+      "counts": {
+        "train": 21,
+        "validation": 3,
+        "test": 6
+      },
+      "synthetic_rows": 23,
+      "fit_rows": 44,
+      "training_fit": {
+        "auroc": 0.9227272727272726,
+        "average_precision": 0.8890442890442891,
+        "accuracy": 0.9047619047619048,
+        "balanced_accuracy": 0.9,
+        "sensitivity": 1.0,
+        "specificity": 0.8,
+        "log_loss": 0.3334429768011133,
+        "confusion_matrix": [
+          [
+            8,
+            2
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8227272727272728,
+        "average_precision": 0.7506427915518824,
+        "accuracy": 0.8095238095238095,
+        "balanced_accuracy": 0.8090909090909091,
+        "sensitivity": 0.8181818181818182,
+        "specificity": 0.8,
+        "log_loss": 0.515163581895025,
+        "confusion_matrix": [
+          [
+            8,
+            2
+          ],
+          [
+            2,
+            9
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "log_loss": 0.17674575564119344,
+        "confusion_matrix": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "test": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "log_loss": 0.18774337928454146,
+        "confusion_matrix": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "dummy_none_raw",
+      "model": "dummy",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 416,
+      "training_fit": {
+        "auroc": 0.5,
+        "average_precision": 0.7235576923076923,
+        "accuracy": 0.7235576923076923,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.589561739945914,
+        "confusion_matrix": [
+          [
+            0,
+            115
+          ],
+          [
+            0,
+            301
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.4959988444316048,
+        "average_precision": 0.7216742160505791,
+        "accuracy": 0.7235576923076923,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.5895907029908035,
+        "confusion_matrix": [
+          [
+            0,
+            115
+          ],
+          [
+            0,
+            301
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.5,
+        "average_precision": 0.7166666666666667,
+        "accuracy": 0.7166666666666667,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.5961921341549814,
+        "confusion_matrix": [
+          [
+            0,
+            17
+          ],
+          [
+            0,
+            43
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5,
+            0.5
+          ],
+          "ci975": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5,
+        "average_precision": 0.725,
+        "accuracy": 0.725,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.5881739830184346,
+        "confusion_matrix": [
+          [
+            0,
+            33
+          ],
+          [
+            0,
+            87
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5,
+            0.5
+          ],
+          "ci975": [
+            0.5,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "node_none_pretrained",
+      "model": "node",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 416,
+      "training_fit": {
+        "auroc": 0.620511339014878,
+        "average_precision": 0.8101297249522419,
+        "accuracy": 0.7235576923076923,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.5781412799158396,
+        "confusion_matrix": [
+          [
+            0,
+            115
+          ],
+          [
+            0,
+            301
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.5251769464105156,
+        "average_precision": 0.7455376839612898,
+        "accuracy": 0.7235576923076923,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.5889302645299541,
+        "confusion_matrix": [
+          [
+            0,
+            115
+          ],
+          [
+            0,
+            301
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.667578659370725,
+        "average_precision": 0.8273605923996157,
+        "accuracy": 0.7166666666666667,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.5746736803770228,
+        "confusion_matrix": [
+          [
+            0,
+            17
+          ],
+          [
+            0,
+            43
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5034199726402189,
+            0.8126196990424074
+          ],
+          "ci975": [
+            0.4746922024623803,
+            0.8276504787961697
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.6823406478578893,
+        "average_precision": 0.8333118285388503,
+        "accuracy": 0.725,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.5694282755658598,
+        "confusion_matrix": [
+          [
+            0,
+            33
+          ],
+          [
+            0,
+            87
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.569836293974225,
+            0.7816091954022989
+          ],
+          "ci975": [
+            0.5506748519679554,
+            0.7938000696621387
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "node_none_raw",
+      "model": "node",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 416,
+      "training_fit": {
+        "auroc": 0.6307670085223169,
+        "average_precision": 0.8140654583114222,
+        "accuracy": 0.7283653846153846,
+        "balanced_accuracy": 0.508695652173913,
+        "sensitivity": 1.0,
+        "specificity": 0.017391304347826087,
+        "log_loss": 0.571481106970414,
+        "confusion_matrix": [
+          [
+            2,
+            113
+          ],
+          [
+            0,
+            301
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.5708507872309692,
+        "average_precision": 0.7679793642151291,
+        "accuracy": 0.71875,
+        "balanced_accuracy": 0.4993644373826376,
+        "sensitivity": 0.9900332225913622,
+        "specificity": 0.008695652173913044,
+        "log_loss": 0.5816514185913996,
+        "confusion_matrix": [
+          [
+            1,
+            114
+          ],
+          [
+            3,
+            298
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.6005471956224351,
+        "average_precision": 0.7834695383151982,
+        "accuracy": 0.7166666666666667,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.5784145414405836,
+        "confusion_matrix": [
+          [
+            0,
+            17
+          ],
+          [
+            0,
+            43
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4363885088919289,
+            0.7564979480164159
+          ],
+          "ci975": [
+            0.40901162790697676,
+            0.7756497948016415
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.7199582027168234,
+        "average_precision": 0.8557117768550849,
+        "accuracy": 0.7333333333333333,
+        "balanced_accuracy": 0.5151515151515151,
+        "sensitivity": 1.0,
+        "specificity": 0.030303030303030304,
+        "log_loss": 0.5543599212076669,
+        "confusion_matrix": [
+          [
+            1,
+            32
+          ],
+          [
+            0,
+            87
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.6091866945315222,
+            0.8122605363984674
+          ],
+          "ci975": [
+            0.5959508881922675,
+            0.8258664228491815
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "node_smote_pretrained",
+      "model": "node",
+      "augmentation": "smote",
+      "representation": "pretrained",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 788,
+      "fit_rows": 1204,
+      "training_fit": {
+        "auroc": 0.6767297414415716,
+        "average_precision": 0.8414982249908101,
+        "accuracy": 0.6129807692307693,
+        "balanced_accuracy": 0.6143434927054745,
+        "sensitivity": 0.6112956810631229,
+        "specificity": 0.6173913043478261,
+        "log_loss": 0.6502116699062453,
+        "confusion_matrix": [
+          [
+            71,
+            44
+          ],
+          [
+            117,
+            184
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.5623284703163368,
+        "average_precision": 0.781817699419378,
+        "accuracy": 0.5432692307692307,
+        "balanced_accuracy": 0.509750108334537,
+        "sensitivity": 0.584717607973422,
+        "specificity": 0.43478260869565216,
+        "log_loss": 0.6768216662919928,
+        "confusion_matrix": [
+          [
+            50,
+            65
+          ],
+          [
+            125,
+            176
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.6320109439124487,
+        "average_precision": 0.8205303125356833,
+        "accuracy": 0.6333333333333333,
+        "balanced_accuracy": 0.6196990424076607,
+        "sensitivity": 0.6511627906976745,
+        "specificity": 0.5882352941176471,
+        "log_loss": 0.6533796822308976,
+        "confusion_matrix": [
+          [
+            10,
+            7
+          ],
+          [
+            15,
+            28
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4719562243502052,
+            0.7797879616963062
+          ],
+          "ci975": [
+            0.44457934336525307,
+            0.8002906976744187
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.6753744339951236,
+        "average_precision": 0.8429376301263528,
+        "accuracy": 0.6333333333333333,
+        "balanced_accuracy": 0.6530825496342738,
+        "sensitivity": 0.6091954022988506,
+        "specificity": 0.696969696969697,
+        "log_loss": 0.6514644687541706,
+        "confusion_matrix": [
+          [
+            23,
+            10
+          ],
+          [
+            34,
+            53
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5607715081853013,
+            0.7767415534656914
+          ],
+          "ci975": [
+            0.5506792058516197,
+            0.7903300243817485
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "node_smote_raw",
+      "model": "node",
+      "augmentation": "smote",
+      "representation": "raw",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 788,
+      "fit_rows": 1204,
+      "training_fit": {
+        "auroc": 0.6734074823053589,
+        "average_precision": 0.8434953507108708,
+        "accuracy": 0.6153846153846154,
+        "balanced_accuracy": 0.5998844431604795,
+        "sensitivity": 0.6345514950166113,
+        "specificity": 0.5652173913043478,
+        "log_loss": 0.6474483834280073,
+        "confusion_matrix": [
+          [
+            65,
+            50
+          ],
+          [
+            110,
+            191
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.5988444316047956,
+        "average_precision": 0.8058377682965668,
+        "accuracy": 0.5745192307692307,
+        "balanced_accuracy": 0.555525061389571,
+        "sensitivity": 0.5980066445182725,
+        "specificity": 0.5130434782608696,
+        "log_loss": 0.6755380555686282,
+        "confusion_matrix": [
+          [
+            59,
+            56
+          ],
+          [
+            121,
+            180
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.5909712722298222,
+        "average_precision": 0.8041527605525751,
+        "accuracy": 0.5666666666666667,
+        "balanced_accuracy": 0.5376196990424076,
+        "sensitivity": 0.6046511627906976,
+        "specificity": 0.47058823529411764,
+        "log_loss": 0.677171408278645,
+        "confusion_matrix": [
+          [
+            8,
+            9
+          ],
+          [
+            17,
+            26
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.43091655266757867,
+            0.7455540355677155
+          ],
+          "ci975": [
+            0.39808481532147744,
+            0.7647229822161423
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.7300592128178335,
+        "average_precision": 0.8721555867174877,
+        "accuracy": 0.65,
+        "balanced_accuracy": 0.6551724137931034,
+        "sensitivity": 0.6436781609195402,
+        "specificity": 0.6666666666666666,
+        "log_loss": 0.6274344210230645,
+        "confusion_matrix": [
+          [
+            22,
+            11
+          ],
+          [
+            31,
+            56
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.6241727621037966,
+            0.824103099965169
+          ],
+          "ci975": [
+            0.6091954022988506,
+            0.8349137931034483
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "random_forest_none_pretrained",
+      "model": "random_forest",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 416,
+      "training_fit": {
+        "auroc": 0.9106456738408205,
+        "average_precision": 0.9629948738242091,
+        "accuracy": 0.8125,
+        "balanced_accuracy": 0.6608695652173913,
+        "sensitivity": 1.0,
+        "specificity": 0.3217391304347826,
+        "log_loss": 0.43410580880493477,
+        "confusion_matrix": [
+          [
+            37,
+            78
+          ],
+          [
+            0,
+            301
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.614473494149935,
+        "average_precision": 0.8038125367623906,
+        "accuracy": 0.7283653846153846,
+        "balanced_accuracy": 0.5543694929943666,
+        "sensitivity": 0.9435215946843853,
+        "specificity": 0.16521739130434782,
+        "log_loss": 0.574955341012269,
+        "confusion_matrix": [
+          [
+            19,
+            96
+          ],
+          [
+            17,
+            284
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.6456908344733242,
+        "average_precision": 0.8319380351598669,
+        "accuracy": 0.7166666666666667,
+        "balanced_accuracy": 0.5533515731874145,
+        "sensitivity": 0.9302325581395349,
+        "specificity": 0.17647058823529413,
+        "log_loss": 0.5655168322080606,
+        "confusion_matrix": [
+          [
+            3,
+            14
+          ],
+          [
+            3,
+            40
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4746922024623803,
+            0.7866279069767439
+          ],
+          "ci975": [
+            0.4554719562243502,
+            0.8057455540355677
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.64576802507837,
+        "average_precision": 0.8242425445242182,
+        "accuracy": 0.725,
+        "balanced_accuracy": 0.5188087774294671,
+        "sensitivity": 0.9770114942528736,
+        "specificity": 0.06060606060606061,
+        "log_loss": 0.56346813578129,
+        "confusion_matrix": [
+          [
+            2,
+            31
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5266457680250783,
+            0.7526994078718217
+          ],
+          "ci975": [
+            0.5026036224312087,
+            0.7652734238941136
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "random_forest_none_raw",
+      "model": "random_forest",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 416,
+      "training_fit": {
+        "auroc": 0.9083345370504117,
+        "average_precision": 0.9641509876909272,
+        "accuracy": 0.7836538461538461,
+        "balanced_accuracy": 0.6113823486927632,
+        "sensitivity": 0.9966777408637874,
+        "specificity": 0.22608695652173913,
+        "log_loss": 0.45018961914373656,
+        "confusion_matrix": [
+          [
+            26,
+            89
+          ],
+          [
+            1,
+            300
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.5970821898021089,
+        "average_precision": 0.794218102509221,
+        "accuracy": 0.7283653846153846,
+        "balanced_accuracy": 0.546309403437816,
+        "sensitivity": 0.9534883720930233,
+        "specificity": 0.1391304347826087,
+        "log_loss": 0.5851593080646735,
+        "confusion_matrix": [
+          [
+            16,
+            99
+          ],
+          [
+            14,
+            287
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.640218878248974,
+        "average_precision": 0.8375735292735099,
+        "accuracy": 0.7,
+        "balanced_accuracy": 0.5239398084815321,
+        "sensitivity": 0.9302325581395349,
+        "specificity": 0.11764705882352941,
+        "log_loss": 0.5763379889699799,
+        "confusion_matrix": [
+          [
+            2,
+            15
+          ],
+          [
+            3,
+            40
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4829001367989056,
+            0.7729480164158684
+          ],
+          "ci975": [
+            0.45005129958960327,
+            0.7934336525307798
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.6718913270637409,
+        "average_precision": 0.8316929457795874,
+        "accuracy": 0.75,
+        "balanced_accuracy": 0.5642633228840126,
+        "sensitivity": 0.9770114942528736,
+        "specificity": 0.15151515151515152,
+        "log_loss": 0.5524593999821888,
+        "confusion_matrix": [
+          [
+            5,
+            28
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5513671194705678,
+            0.7798763497039358
+          ],
+          "ci975": [
+            0.5367206548241031,
+            0.7938218390804599
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "random_forest_smote_pretrained",
+      "model": "random_forest",
+      "augmentation": "smote",
+      "representation": "pretrained",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 788,
+      "fit_rows": 1204,
+      "training_fit": {
+        "auroc": 0.8496605517839086,
+        "average_precision": 0.9333074115674006,
+        "accuracy": 0.75,
+        "balanced_accuracy": 0.7493283258702874,
+        "sensitivity": 0.7508305647840532,
+        "specificity": 0.7478260869565218,
+        "log_loss": 0.5244212726481987,
+        "confusion_matrix": [
+          [
+            86,
+            29
+          ],
+          [
+            75,
+            226
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.563686263180702,
+        "average_precision": 0.7736344798884242,
+        "accuracy": 0.5673076923076923,
+        "balanced_accuracy": 0.5317347970533006,
+        "sensitivity": 0.6112956810631229,
+        "specificity": 0.45217391304347826,
+        "log_loss": 0.6910879241044601,
+        "confusion_matrix": [
+          [
+            52,
+            63
+          ],
+          [
+            117,
+            184
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.6812585499316006,
+        "average_precision": 0.8442485285722952,
+        "accuracy": 0.7333333333333333,
+        "balanced_accuracy": 0.707250341997264,
+        "sensitivity": 0.7674418604651163,
+        "specificity": 0.6470588235294118,
+        "log_loss": 0.6188145733719637,
+        "confusion_matrix": [
+          [
+            11,
+            6
+          ],
+          [
+            10,
+            33
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5253077975376197,
+            0.8344733242134063
+          ],
+          "ci975": [
+            0.5020519835841313,
+            0.8550102599179208
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.6255660048763497,
+        "average_precision": 0.8087996401606825,
+        "accuracy": 0.575,
+        "balanced_accuracy": 0.5752351097178683,
+        "sensitivity": 0.5747126436781609,
+        "specificity": 0.5757575757575758,
+        "log_loss": 0.6539796588070412,
+        "confusion_matrix": [
+          [
+            19,
+            14
+          ],
+          [
+            37,
+            50
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.49842389411354926,
+            0.737748171368861
+          ],
+          "ci975": [
+            0.4845001741553466,
+            0.749921630094044
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "random_forest_smote_raw",
+      "model": "random_forest",
+      "augmentation": "smote",
+      "representation": "raw",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 788,
+      "fit_rows": 1204,
+      "training_fit": {
+        "auroc": 0.8590784342048244,
+        "average_precision": 0.9391357331760148,
+        "accuracy": 0.7644230769230769,
+        "balanced_accuracy": 0.7888487649862777,
+        "sensitivity": 0.7342192691029901,
+        "specificity": 0.8434782608695652,
+        "log_loss": 0.533449510943033,
+        "confusion_matrix": [
+          [
+            97,
+            18
+          ],
+          [
+            80,
+            221
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.5679040878231981,
+        "average_precision": 0.7774761786577626,
+        "accuracy": 0.5649038461538461,
+        "balanced_accuracy": 0.5488805431171457,
+        "sensitivity": 0.584717607973422,
+        "specificity": 0.5130434782608696,
+        "log_loss": 0.6990030653752898,
+        "confusion_matrix": [
+          [
+            59,
+            56
+          ],
+          [
+            125,
+            176
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.6196990424076607,
+        "average_precision": 0.8159810603448568,
+        "accuracy": 0.6666666666666666,
+        "balanced_accuracy": 0.6251709986320109,
+        "sensitivity": 0.7209302325581395,
+        "specificity": 0.5294117647058824,
+        "log_loss": 0.6380923377845579,
+        "confusion_matrix": [
+          [
+            9,
+            8
+          ],
+          [
+            12,
+            31
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.46101231190150477,
+            0.7729480164158684
+          ],
+          "ci975": [
+            0.44049247606019154,
+            0.7907147742818058
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.6471612678509231,
+        "average_precision": 0.82189277016039,
+        "accuracy": 0.5916666666666667,
+        "balanced_accuracy": 0.5961337513061651,
+        "sensitivity": 0.5862068965517241,
+        "specificity": 0.6060606060606061,
+        "log_loss": 0.6434976416639683,
+        "confusion_matrix": [
+          [
+            20,
+            13
+          ],
+          [
+            36,
+            51
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5294322535701846,
+            0.7593260188087774
+          ],
+          "ci975": [
+            0.516540404040404,
+            0.7694183211424591
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "tabnet_none_pretrained",
+      "model": "tabnet",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 416,
+      "training_fit": {
+        "auroc": 0.5874620829120325,
+        "average_precision": 0.7848954679782808,
+        "accuracy": 0.6754807692307693,
+        "balanced_accuracy": 0.5393182146468294,
+        "sensitivity": 0.8438538205980066,
+        "specificity": 0.23478260869565218,
+        "log_loss": 0.9025297946140811,
+        "confusion_matrix": [
+          [
+            27,
+            88
+          ],
+          [
+            47,
+            254
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.5317925754730608,
+        "average_precision": 0.7523920495623257,
+        "accuracy": 0.6129807692307693,
+        "balanced_accuracy": 0.49612884587606526,
+        "sensitivity": 0.7574750830564784,
+        "specificity": 0.23478260869565218,
+        "log_loss": 1.0603026645809073,
+        "confusion_matrix": [
+          [
+            27,
+            88
+          ],
+          [
+            73,
+            228
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.4733242134062927,
+        "average_precision": 0.7016093662110319,
+        "accuracy": 0.6333333333333333,
+        "balanced_accuracy": 0.53077975376197,
+        "sensitivity": 0.7674418604651163,
+        "specificity": 0.29411764705882354,
+        "log_loss": 1.2907310870964512,
+        "confusion_matrix": [
+          [
+            5,
+            12
+          ],
+          [
+            10,
+            33
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3091655266757866,
+            0.6497948016415869
+          ],
+          "ci975": [
+            0.28862859097127225,
+            0.6744699042407662
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5245559038662487,
+        "average_precision": 0.7356500305618823,
+        "accuracy": 0.6916666666666667,
+        "balanced_accuracy": 0.5240334378265413,
+        "sensitivity": 0.896551724137931,
+        "specificity": 0.15151515151515152,
+        "log_loss": 1.0317033754967107,
+        "confusion_matrix": [
+          [
+            5,
+            28
+          ],
+          [
+            9,
+            78
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4029606408916754,
+            0.6384709160571229
+          ],
+          "ci975": [
+            0.3901079763148729,
+            0.6510013932427726
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "tabnet_none_raw",
+      "model": "tabnet",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 416,
+      "training_fit": {
+        "auroc": 0.6974144157157302,
+        "average_precision": 0.8296133249886446,
+        "accuracy": 0.75,
+        "balanced_accuracy": 0.6338003755597285,
+        "sensitivity": 0.893687707641196,
+        "specificity": 0.3739130434782609,
+        "log_loss": 0.69588464214872,
+        "confusion_matrix": [
+          [
+            43,
+            72
+          ],
+          [
+            32,
+            269
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.5666040733785931,
+        "average_precision": 0.7743435158512249,
+        "accuracy": 0.6586538461538461,
+        "balanced_accuracy": 0.5572439693774376,
+        "sensitivity": 0.7840531561461794,
+        "specificity": 0.33043478260869563,
+        "log_loss": 0.8890519193545029,
+        "confusion_matrix": [
+          [
+            38,
+            77
+          ],
+          [
+            65,
+            236
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.5868673050615596,
+        "average_precision": 0.798200671764409,
+        "accuracy": 0.7166666666666667,
+        "balanced_accuracy": 0.606703146374829,
+        "sensitivity": 0.8604651162790697,
+        "specificity": 0.35294117647058826,
+        "log_loss": 0.9111417442093366,
+        "confusion_matrix": [
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            37
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.43091655266757867,
+            0.7387140902872777
+          ],
+          "ci975": [
+            0.40627564979480163,
+            0.7606019151846786
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.47126436781609193,
+        "average_precision": 0.6887991989133546,
+        "accuracy": 0.6583333333333333,
+        "balanced_accuracy": 0.5198537095088819,
+        "sensitivity": 0.8275862068965517,
+        "specificity": 0.21212121212121213,
+        "log_loss": 1.1829262655968196,
+        "confusion_matrix": [
+          [
+            7,
+            26
+          ],
+          [
+            15,
+            72
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3448188784395681,
+            0.5963601532567047
+          ],
+          "ci975": [
+            0.32322796934865905,
+            0.6158176593521422
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "tabnet_smote_pretrained",
+      "model": "tabnet",
+      "augmentation": "smote",
+      "representation": "pretrained",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 788,
+      "fit_rows": 1204,
+      "training_fit": {
+        "auroc": 0.5818575761952911,
+        "average_precision": 0.7498866263868731,
+        "accuracy": 0.6586538461538461,
+        "balanced_accuracy": 0.5518705763397371,
+        "sensitivity": 0.7906976744186046,
+        "specificity": 0.3130434782608696,
+        "log_loss": 0.7025783487839085,
+        "confusion_matrix": [
+          [
+            36,
+            79
+          ],
+          [
+            63,
+            238
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.5089989888776543,
+        "average_precision": 0.7300731073875182,
+        "accuracy": 0.5336538461538461,
+        "balanced_accuracy": 0.492358803986711,
+        "sensitivity": 0.584717607973422,
+        "specificity": 0.4,
+        "log_loss": 0.8826995947498962,
+        "confusion_matrix": [
+          [
+            46,
+            69
+          ],
+          [
+            125,
+            176
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.5636114911080712,
+        "average_precision": 0.7631532470022745,
+        "accuracy": 0.6666666666666666,
+        "balanced_accuracy": 0.5362517099863201,
+        "sensitivity": 0.8372093023255814,
+        "specificity": 0.23529411764705882,
+        "log_loss": 0.7127487332855629,
+        "confusion_matrix": [
+          [
+            4,
+            13
+          ],
+          [
+            7,
+            36
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.38984268125854993,
+            0.7250341997264022
+          ],
+          "ci975": [
+            0.3720588235294118,
+            0.7483071135430918
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.5377917102055033,
+        "average_precision": 0.7312733873323543,
+        "accuracy": 0.6583333333333333,
+        "balanced_accuracy": 0.5292580982236155,
+        "sensitivity": 0.8160919540229885,
+        "specificity": 0.24242424242424243,
+        "log_loss": 0.743860240991877,
+        "confusion_matrix": [
+          [
+            8,
+            25
+          ],
+          [
+            16,
+            71
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.41552594914663876,
+            0.6590299547196098
+          ],
+          "ci975": [
+            0.400208986415883,
+            0.681648380355277
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "tabnet_smote_raw",
+      "model": "tabnet",
+      "augmentation": "smote",
+      "representation": "raw",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 788,
+      "fit_rows": 1204,
+      "training_fit": {
+        "auroc": 0.6583850931677019,
+        "average_precision": 0.8313643184192747,
+        "accuracy": 0.6442307692307693,
+        "balanced_accuracy": 0.6144446049400549,
+        "sensitivity": 0.6810631229235881,
+        "specificity": 0.5478260869565217,
+        "log_loss": 0.6818529447931094,
+        "confusion_matrix": [
+          [
+            63,
+            52
+          ],
+          [
+            96,
+            205
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.5084789830998122,
+        "average_precision": 0.7001236445503735,
+        "accuracy": 0.5673076923076923,
+        "balanced_accuracy": 0.5290481005344504,
+        "sensitivity": 0.6146179401993356,
+        "specificity": 0.4434782608695652,
+        "log_loss": 0.9592723312915672,
+        "confusion_matrix": [
+          [
+            51,
+            64
+          ],
+          [
+            116,
+            185
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.6470588235294118,
+        "average_precision": 0.818751143177607,
+        "accuracy": 0.6833333333333333,
+        "balanced_accuracy": 0.6367989056087551,
+        "sensitivity": 0.7441860465116279,
+        "specificity": 0.5294117647058824,
+        "log_loss": 0.7202069198920402,
+        "confusion_matrix": [
+          [
+            9,
+            8
+          ],
+          [
+            11,
+            32
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.493844049247606,
+            0.7962038303693568
+          ],
+          "ci975": [
+            0.4719391244870041,
+            0.8126025991792066
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.7203065134099618,
+        "average_precision": 0.8547024422337581,
+        "accuracy": 0.7166666666666667,
+        "balanced_accuracy": 0.6917450365726228,
+        "sensitivity": 0.7471264367816092,
+        "specificity": 0.6363636363636364,
+        "log_loss": 0.6189127058083633,
+        "confusion_matrix": [
+          [
+            21,
+            12
+          ],
+          [
+            22,
+            65
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.6067572274468827,
+            0.8275949146638801
+          ],
+          "ci975": [
+            0.5900339602925809,
+            0.8408220132358063
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "xgboost_none_pretrained",
+      "model": "xgboost",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 416,
+      "training_fit": {
+        "auroc": 0.8469305214502384,
+        "average_precision": 0.9342407841058087,
+        "accuracy": 0.7548076923076923,
+        "balanced_accuracy": 0.572641918243536,
+        "sensitivity": 0.9800664451827242,
+        "specificity": 0.16521739130434782,
+        "log_loss": 0.4918531606436701,
+        "confusion_matrix": [
+          [
+            19,
+            96
+          ],
+          [
+            6,
+            295
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.6003900043333815,
+        "average_precision": 0.7979888737119185,
+        "accuracy": 0.7259615384615384,
+        "balanced_accuracy": 0.5204680052000578,
+        "sensitivity": 0.9800664451827242,
+        "specificity": 0.06086956521739131,
+        "log_loss": 0.5756943014406348,
+        "confusion_matrix": [
+          [
+            7,
+            108
+          ],
+          [
+            6,
+            295
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.6621067031463748,
+        "average_precision": 0.8472790873677126,
+        "accuracy": 0.7666666666666667,
+        "balanced_accuracy": 0.5882352941176471,
+        "sensitivity": 1.0,
+        "specificity": 0.17647058823529413,
+        "log_loss": 0.5515010278573604,
+        "confusion_matrix": [
+          [
+            3,
+            14
+          ],
+          [
+            0,
+            43
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.49658002735978113,
+            0.8037448700410394
+          ],
+          "ci975": [
+            0.47604309165526676,
+            0.822169972640219
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.6283524904214559,
+        "average_precision": 0.8120469246474787,
+        "accuracy": 0.7166666666666667,
+        "balanced_accuracy": 0.5036572622779519,
+        "sensitivity": 0.9770114942528736,
+        "specificity": 0.030303030303030304,
+        "log_loss": 0.5694209678659761,
+        "confusion_matrix": [
+          [
+            1,
+            32
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5128874956461164,
+            0.7338949843260187
+          ],
+          "ci975": [
+            0.49912051549982583,
+            0.7476684952978057
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "xgboost_none_raw",
+      "model": "xgboost",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 0,
+      "fit_rows": 416,
+      "training_fit": {
+        "auroc": 0.8090712119023544,
+        "average_precision": 0.9189148500276965,
+        "accuracy": 0.7548076923076923,
+        "balanced_accuracy": 0.5645818286869855,
+        "sensitivity": 0.9900332225913622,
+        "specificity": 0.1391304347826087,
+        "log_loss": 0.5045517829725582,
+        "confusion_matrix": [
+          [
+            16,
+            99
+          ],
+          [
+            3,
+            298
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.5882709807886755,
+        "average_precision": 0.7953918648408334,
+        "accuracy": 0.7163461538461539,
+        "balanced_accuracy": 0.5057633973710819,
+        "sensitivity": 0.9767441860465116,
+        "specificity": 0.034782608695652174,
+        "log_loss": 0.5792516887566946,
+        "confusion_matrix": [
+          [
+            4,
+            111
+          ],
+          [
+            7,
+            294
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.6361149110807113,
+        "average_precision": 0.8269549756529311,
+        "accuracy": 0.7166666666666667,
+        "balanced_accuracy": 0.5177838577291382,
+        "sensitivity": 0.9767441860465116,
+        "specificity": 0.058823529411764705,
+        "log_loss": 0.56650170700677,
+        "confusion_matrix": [
+          [
+            1,
+            16
+          ],
+          [
+            1,
+            42
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4774281805745554,
+            0.7797879616963062
+          ],
+          "ci975": [
+            0.45143638850889195,
+            0.7961867305061561
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.6492511320097527,
+        "average_precision": 0.8184668685015879,
+        "accuracy": 0.7333333333333333,
+        "balanced_accuracy": 0.5245559038662487,
+        "sensitivity": 0.9885057471264368,
+        "specificity": 0.06060606060606061,
+        "log_loss": 0.5578660826091737,
+        "confusion_matrix": [
+          [
+            2,
+            31
+          ],
+          [
+            1,
+            86
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5339515848136538,
+            0.7551593521421106
+          ],
+          "ci975": [
+            0.5194204980842912,
+            0.7713383838383838
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "xgboost_smote_pretrained",
+      "model": "xgboost",
+      "augmentation": "smote",
+      "representation": "pretrained",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 788,
+      "fit_rows": 1204,
+      "training_fit": {
+        "auroc": 0.7928210313447928,
+        "average_precision": 0.9021853624682963,
+        "accuracy": 0.7043269230769231,
+        "balanced_accuracy": 0.7150801675574172,
+        "sensitivity": 0.6910299003322259,
+        "specificity": 0.7391304347826086,
+        "log_loss": 0.5696655750847321,
+        "confusion_matrix": [
+          [
+            85,
+            30
+          ],
+          [
+            93,
+            208
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.5670374115267948,
+        "average_precision": 0.7761735837078974,
+        "accuracy": 0.5576923076923077,
+        "balanced_accuracy": 0.5224035822620252,
+        "sensitivity": 0.6013289036544851,
+        "specificity": 0.4434782608695652,
+        "log_loss": 0.6779303717399656,
+        "confusion_matrix": [
+          [
+            51,
+            64
+          ],
+          [
+            120,
+            181
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.6730506155950753,
+        "average_precision": 0.8511430019456748,
+        "accuracy": 0.6333333333333333,
+        "balanced_accuracy": 0.5841313269493844,
+        "sensitivity": 0.6976744186046512,
+        "specificity": 0.47058823529411764,
+        "log_loss": 0.6223640934668111,
+        "confusion_matrix": [
+          [
+            8,
+            9
+          ],
+          [
+            13,
+            30
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5184336525307798,
+            0.8085157318741447
+          ],
+          "ci975": [
+            0.4993160054719562,
+            0.8262995896032833
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.6452455590386624,
+        "average_precision": 0.8047351934530211,
+        "accuracy": 0.5916666666666667,
+        "balanced_accuracy": 0.6055381400208986,
+        "sensitivity": 0.5747126436781609,
+        "specificity": 0.6363636363636364,
+        "log_loss": 0.6487193230124079,
+        "confusion_matrix": [
+          [
+            21,
+            12
+          ],
+          [
+            37,
+            50
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5266370602577499,
+            0.7586424590734934
+          ],
+          "ci975": [
+            0.509926854754441,
+            0.7711642284918148
+          ]
+        }
+      }
+    },
+    {
+      "task": "tappy_self_report",
+      "kind": "classification",
+      "candidate": "xgboost_smote_raw",
+      "model": "xgboost",
+      "augmentation": "smote",
+      "representation": "raw",
+      "counts": {
+        "train": 416,
+        "validation": 60,
+        "test": 120
+      },
+      "synthetic_rows": 788,
+      "fit_rows": 1204,
+      "training_fit": {
+        "auroc": 0.7848620540228225,
+        "average_precision": 0.89860789198478,
+        "accuracy": 0.7307692307692307,
+        "balanced_accuracy": 0.7279791997688864,
+        "sensitivity": 0.7342192691029901,
+        "specificity": 0.7217391304347827,
+        "log_loss": 0.5737078956869884,
+        "confusion_matrix": [
+          [
+            83,
+            32
+          ],
+          [
+            80,
+            221
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.5662718474649718,
+        "average_precision": 0.7769828748823082,
+        "accuracy": 0.5721153846153846,
+        "balanced_accuracy": 0.5484905387837643,
+        "sensitivity": 0.6013289036544851,
+        "specificity": 0.4956521739130435,
+        "log_loss": 0.6829719488918482,
+        "confusion_matrix": [
+          [
+            57,
+            58
+          ],
+          [
+            120,
+            181
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.6347469220246238,
+        "average_precision": 0.8231574757807847,
+        "accuracy": 0.6666666666666666,
+        "balanced_accuracy": 0.6429548563611491,
+        "sensitivity": 0.6976744186046512,
+        "specificity": 0.5882352941176471,
+        "log_loss": 0.6444489243046316,
+        "confusion_matrix": [
+          [
+            10,
+            7
+          ],
+          [
+            13,
+            30
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4774281805745554,
+            0.7811217510259918
+          ],
+          "ci975": [
+            0.45143638850889195,
+            0.7975718194254446
+          ]
+        }
+      },
+      "test": {
+        "auroc": 0.6490769766631836,
+        "average_precision": 0.8130188712940394,
+        "accuracy": 0.6166666666666667,
+        "balanced_accuracy": 0.6039707419017764,
+        "sensitivity": 0.632183908045977,
+        "specificity": 0.5757575757575758,
+        "log_loss": 0.641918081173135,
+        "confusion_matrix": [
+          [
+            19,
+            14
+          ],
+          [
+            32,
+            55
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5250609543712992,
+            0.7636711947056775
+          ],
+          "ci975": [
+            0.5078195750609543,
+            0.7727381574364334
+          ]
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "registration.json": "c0d3e4b6520b64f65084fa7bd305ce86e05d897b4c5702e5fb437df760910000",
+    "freeze.json": "63c74805d1024c7f6afe6647a63c10141acbfc2a90224a258208cba50b810a04",
+    "results.json": "3caccd48a40eafb58d42a23829a873cae6724594b5ddd386be14f4cf3eeedc64"
+  }
+}

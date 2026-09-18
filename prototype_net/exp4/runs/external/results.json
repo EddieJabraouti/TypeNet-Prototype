@@ -1,0 +1,1180 @@
+{
+  "counts": {
+    "participants": 232,
+    "pd": 101,
+    "controls": 131,
+    "real_sequences": 9561,
+    "synthetic_sequences": 0
+  },
+  "audit": {
+    "raw_events": 437915,
+    "duplicates": 2,
+    "excluded_nonprinting_keys": 41878,
+    "neutral_symbol_codes": 5318,
+    "retained_events": 396017,
+    "retained_responses": 3399,
+    "invalid_events": 18
+  },
+  "results": [
+    {
+      "index": 1,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold01.joblib",
+      "sha256": "8cbbd5eee8a5764ae44108c4c47c871a67ba5341ce09b0233246a0f09426949b",
+      "participants": {
+        "auroc": 0.6817322953669412,
+        "average_precision": 0.6054727202020178,
+        "accuracy": 0.6422413793103449,
+        "balanced_accuracy": 0.6503287733353488,
+        "sensitivity": 0.7128712871287128,
+        "specificity": 0.5877862595419847,
+        "log_loss": 0.6763474839196623,
+        "confusion_matrix": [
+          [
+            77,
+            54
+          ],
+          [
+            29,
+            72
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6472486043725796,
+        "average_precision": 0.5871441584771137,
+        "accuracy": 0.6032841752954712,
+        "balanced_accuracy": 0.6063900472192716,
+        "sensitivity": 0.632279534109817,
+        "specificity": 0.5805005603287262,
+        "log_loss": 0.8377695136133099,
+        "confusion_matrix": [
+          [
+            3108,
+            2246
+          ],
+          [
+            1547,
+            2660
+          ]
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold02.joblib",
+      "sha256": "1928caa7b37c7a34244e3ad1952d2a1b72fb9ff1da2777eec0d43f2165e37a36",
+      "participants": {
+        "auroc": 0.6150706673720807,
+        "average_precision": 0.5300555474810966,
+        "accuracy": 0.5862068965517241,
+        "balanced_accuracy": 0.58937344116091,
+        "sensitivity": 0.6138613861386139,
+        "specificity": 0.5648854961832062,
+        "log_loss": 0.8009508023222669,
+        "confusion_matrix": [
+          [
+            74,
+            57
+          ],
+          [
+            39,
+            62
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.5896686899353667,
+        "average_precision": 0.515619104305147,
+        "accuracy": 0.5612383641878465,
+        "balanced_accuracy": 0.5617188262371828,
+        "sensitivity": 0.5657237936772047,
+        "specificity": 0.557713858797161,
+        "log_loss": 1.3025092744626687,
+        "confusion_matrix": [
+          [
+            2986,
+            2368
+          ],
+          [
+            1827,
+            2380
+          ]
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold03.joblib",
+      "sha256": "f93d799457d9d03c106d5a526d3c09f6e38673ace796ac3758c88c071b0732cc",
+      "participants": {
+        "auroc": 0.7137782480538131,
+        "average_precision": 0.6735248252096631,
+        "accuracy": 0.6336206896551724,
+        "balanced_accuracy": 0.6426951855490892,
+        "sensitivity": 0.7128712871287128,
+        "specificity": 0.5725190839694656,
+        "log_loss": 0.6371502563821181,
+        "confusion_matrix": [
+          [
+            75,
+            56
+          ],
+          [
+            29,
+            72
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.668290477501654,
+        "average_precision": 0.6381960932422539,
+        "accuracy": 0.6065265139629746,
+        "balanced_accuracy": 0.6118057591013573,
+        "sensitivity": 0.6558117423342049,
+        "specificity": 0.5677997758685095,
+        "log_loss": 0.8154866561572272,
+        "confusion_matrix": [
+          [
+            3040,
+            2314
+          ],
+          [
+            1448,
+            2759
+          ]
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold04.joblib",
+      "sha256": "51cd63aea86a227ae80f0a09641002fefadfe2fff73e3ff62f94d45e07f29c20",
+      "participants": {
+        "auroc": 0.6831683168316832,
+        "average_precision": 0.6320278013738453,
+        "accuracy": 0.5905172413793104,
+        "balanced_accuracy": 0.6090620512432923,
+        "sensitivity": 0.7524752475247525,
+        "specificity": 0.46564885496183206,
+        "log_loss": 0.8509666897658914,
+        "confusion_matrix": [
+          [
+            61,
+            70
+          ],
+          [
+            25,
+            76
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6656230668081792,
+        "average_precision": 0.6279687297500192,
+        "accuracy": 0.5920928773140884,
+        "balanced_accuracy": 0.6073968497458608,
+        "sensitivity": 0.7349655336344189,
+        "specificity": 0.4798281658573029,
+        "log_loss": 1.0361542731113016,
+        "confusion_matrix": [
+          [
+            2569,
+            2785
+          ],
+          [
+            1115,
+            3092
+          ]
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold05.joblib",
+      "sha256": "5209a51d1eaeb21eca12bfc308a3238423372ef5cb4ff291eb6d79651a4a3c0c",
+      "participants": {
+        "auroc": 0.6902728440783009,
+        "average_precision": 0.6428986064542361,
+        "accuracy": 0.5948275862068966,
+        "balanced_accuracy": 0.6083440405109213,
+        "sensitivity": 0.7128712871287128,
+        "specificity": 0.5038167938931297,
+        "log_loss": 0.6695091273049197,
+        "confusion_matrix": [
+          [
+            66,
+            65
+          ],
+          [
+            29,
+            72
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.653801422624956,
+        "average_precision": 0.6234260682027511,
+        "accuracy": 0.5887459470766656,
+        "balanced_accuracy": 0.5947840148305752,
+        "sensitivity": 0.6451152840503922,
+        "specificity": 0.5444527456107583,
+        "log_loss": 0.8441370436423603,
+        "confusion_matrix": [
+          [
+            2915,
+            2439
+          ],
+          [
+            1493,
+            2714
+          ]
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold06.joblib",
+      "sha256": "9f6f762027c2c7f02a77277bbf49cbf87dc7b338144094f844f213e3a32d562f",
+      "participants": {
+        "auroc": 0.6567908699266872,
+        "average_precision": 0.599961339397597,
+        "accuracy": 0.5862068965517241,
+        "balanced_accuracy": 0.5927745446300355,
+        "sensitivity": 0.6435643564356436,
+        "specificity": 0.5419847328244275,
+        "log_loss": 0.7195396353806617,
+        "confusion_matrix": [
+          [
+            71,
+            60
+          ],
+          [
+            36,
+            65
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6245587316938638,
+        "average_precision": 0.5858378663310262,
+        "accuracy": 0.5803786214831085,
+        "balanced_accuracy": 0.5843594409552217,
+        "sensitivity": 0.6175421915854529,
+        "specificity": 0.5511766903249906,
+        "log_loss": 1.1983057892429176,
+        "confusion_matrix": [
+          [
+            2951,
+            2403
+          ],
+          [
+            1609,
+            2598
+          ]
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold07.joblib",
+      "sha256": "49b2f31b1062f15617b7c5991106dd79174664477c016870f08e03e8cf0a565c",
+      "participants": {
+        "auroc": 0.671226664651198,
+        "average_precision": 0.5977969862326984,
+        "accuracy": 0.5905172413793104,
+        "balanced_accuracy": 0.6056609477741667,
+        "sensitivity": 0.7227722772277227,
+        "specificity": 0.48854961832061067,
+        "log_loss": 0.9478162439931864,
+        "confusion_matrix": [
+          [
+            64,
+            67
+          ],
+          [
+            28,
+            73
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6413701029617909,
+        "average_precision": 0.5835041609727208,
+        "accuracy": 0.5929296098734442,
+        "balanced_accuracy": 0.6055468903376171,
+        "sensitivity": 0.71072022819111,
+        "specificity": 0.5003735524841241,
+        "log_loss": 1.4573218554925282,
+        "confusion_matrix": [
+          [
+            2679,
+            2675
+          ],
+          [
+            1217,
+            2990
+          ]
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold08.joblib",
+      "sha256": "07f946c47ab1173f75441af688b29596360a26a1acfacf5e359c67b45f902121",
+      "participants": {
+        "auroc": 0.6410702138916182,
+        "average_precision": 0.5740554965227098,
+        "accuracy": 0.5862068965517241,
+        "balanced_accuracy": 0.5973093492555362,
+        "sensitivity": 0.6831683168316832,
+        "specificity": 0.5114503816793893,
+        "log_loss": 0.7526935889080503,
+        "confusion_matrix": [
+          [
+            67,
+            64
+          ],
+          [
+            32,
+            69
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6178582283525358,
+        "average_precision": 0.5721835266076791,
+        "accuracy": 0.5672000836732559,
+        "balanced_accuracy": 0.5750877564199839,
+        "sensitivity": 0.6408367007368672,
+        "specificity": 0.5093388121031005,
+        "log_loss": 1.2486559060351168,
+        "confusion_matrix": [
+          [
+            2727,
+            2627
+          ],
+          [
+            1511,
+            2696
+          ]
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold09.joblib",
+      "sha256": "cc6d1af235a1d07151a86cfd75880353b5c025aab4492e0c36dc65912669bbe8",
+      "participants": {
+        "auroc": 0.6874008011488172,
+        "average_precision": 0.6226331890390264,
+        "accuracy": 0.603448275862069,
+        "balanced_accuracy": 0.6091754213589298,
+        "sensitivity": 0.6534653465346535,
+        "specificity": 0.5648854961832062,
+        "log_loss": 0.672636641282801,
+        "confusion_matrix": [
+          [
+            74,
+            57
+          ],
+          [
+            35,
+            66
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6518500171237452,
+        "average_precision": 0.5974635147199181,
+        "accuracy": 0.6053760066938605,
+        "balanced_accuracy": 0.6070611231134689,
+        "sensitivity": 0.621107677680057,
+        "specificity": 0.5930145685468808,
+        "log_loss": 0.8468978842756952,
+        "confusion_matrix": [
+          [
+            3175,
+            2179
+          ],
+          [
+            1594,
+            2613
+          ]
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold10.joblib",
+      "sha256": "69bd80209a3b3281cd1a0ba44aeb6652be5aa9f55c1cb6c4b2fe1bfc498490b5",
+      "participants": {
+        "auroc": 0.6717557251908395,
+        "average_precision": 0.5969796010936705,
+        "accuracy": 0.603448275862069,
+        "balanced_accuracy": 0.6148439271408057,
+        "sensitivity": 0.7029702970297029,
+        "specificity": 0.5267175572519084,
+        "log_loss": 0.7052328850634241,
+        "confusion_matrix": [
+          [
+            69,
+            62
+          ],
+          [
+            30,
+            71
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6426318526169852,
+        "average_precision": 0.5879088925053595,
+        "accuracy": 0.5936617508628804,
+        "balanced_accuracy": 0.5983584912244468,
+        "sensitivity": 0.6375089137152365,
+        "specificity": 0.559208068733657,
+        "log_loss": 0.8831677578556376,
+        "confusion_matrix": [
+          [
+            2994,
+            2360
+          ],
+          [
+            1525,
+            2682
+          ]
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold11.joblib",
+      "sha256": "4fe995493cf5f11f17b2b7a97b4a725878e5135a419277c5c3843d404e9ec5cf",
+      "participants": {
+        "auroc": 0.6664651197944221,
+        "average_precision": 0.5952069519833094,
+        "accuracy": 0.5991379310344828,
+        "balanced_accuracy": 0.6053586274658,
+        "sensitivity": 0.6534653465346535,
+        "specificity": 0.5572519083969466,
+        "log_loss": 0.7564647495317551,
+        "confusion_matrix": [
+          [
+            73,
+            58
+          ],
+          [
+            35,
+            66
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6318716852988584,
+        "average_precision": 0.5897170717412719,
+        "accuracy": 0.5925112435937664,
+        "balanced_accuracy": 0.5925953986183263,
+        "sensitivity": 0.593296886142144,
+        "specificity": 0.5918939110945087,
+        "log_loss": 1.237735294091965,
+        "confusion_matrix": [
+          [
+            3169,
+            2185
+          ],
+          [
+            1711,
+            2496
+          ]
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold12.joblib",
+      "sha256": "2abdbaa7766d3651549055bb8e917a8747c213f595e2180214b6f22d116b6591",
+      "participants": {
+        "auroc": 0.6631395964023884,
+        "average_precision": 0.5824860754446977,
+        "accuracy": 0.5905172413793104,
+        "balanced_accuracy": 0.6113294535560426,
+        "sensitivity": 0.7722772277227723,
+        "specificity": 0.45038167938931295,
+        "log_loss": 0.7991730768543129,
+        "confusion_matrix": [
+          [
+            59,
+            72
+          ],
+          [
+            23,
+            78
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6306874520017911,
+        "average_precision": 0.5736054597608664,
+        "accuracy": 0.5786005647944775,
+        "balanced_accuracy": 0.5923962579399882,
+        "sensitivity": 0.7073924411694794,
+        "specificity": 0.47740007471049684,
+        "log_loss": 1.2442835023878664,
+        "confusion_matrix": [
+          [
+            2556,
+            2798
+          ],
+          [
+            1231,
+            2976
+          ]
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold13.joblib",
+      "sha256": "d0abf7a81f29fcb6b50d9ce3a583c4cc24a3dfefcfbafc026a2b8deb1cd14440",
+      "participants": {
+        "auroc": 0.6651802584838636,
+        "average_precision": 0.5657885823673854,
+        "accuracy": 0.5862068965517241,
+        "balanced_accuracy": 0.6052452573501625,
+        "sensitivity": 0.7524752475247525,
+        "specificity": 0.4580152671755725,
+        "log_loss": 0.9855125816517595,
+        "confusion_matrix": [
+          [
+            60,
+            71
+          ],
+          [
+            25,
+            76
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6347425653332817,
+        "average_precision": 0.5465356739613856,
+        "accuracy": 0.5840393264302898,
+        "balanced_accuracy": 0.6008679612283244,
+        "sensitivity": 0.7411457095317329,
+        "specificity": 0.460590212924916,
+        "log_loss": 1.4559806278856586,
+        "confusion_matrix": [
+          [
+            2466,
+            2888
+          ],
+          [
+            1089,
+            3118
+          ]
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold14.joblib",
+      "sha256": "3bd3e342143741f2d8bb9ab711f181ac0b0674a48e9e2b1e00321e4cb7e1b350",
+      "participants": {
+        "auroc": 0.6907263245408509,
+        "average_precision": 0.6236357954122997,
+        "accuracy": 0.6293103448275862,
+        "balanced_accuracy": 0.6298087824049581,
+        "sensitivity": 0.6336633663366337,
+        "specificity": 0.6259541984732825,
+        "log_loss": 0.6508052557353858,
+        "confusion_matrix": [
+          [
+            82,
+            49
+          ],
+          [
+            37,
+            64
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6500685837743612,
+        "average_precision": 0.6084304957778823,
+        "accuracy": 0.6011923438970819,
+        "balanced_accuracy": 0.5999137686011511,
+        "sensitivity": 0.5892560019015926,
+        "specificity": 0.6105715353007097,
+        "log_loss": 0.8409526403504872,
+        "confusion_matrix": [
+          [
+            3269,
+            2085
+          ],
+          [
+            1728,
+            2479
+          ]
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold15.joblib",
+      "sha256": "cd137f7078c08801259ca126ba0021c3f1094636eed125aa92637e31f7ed6880",
+      "participants": {
+        "auroc": 0.656866450003779,
+        "average_precision": 0.5805614891219193,
+        "accuracy": 0.5905172413793104,
+        "balanced_accuracy": 0.5920565338976645,
+        "sensitivity": 0.6039603960396039,
+        "specificity": 0.5801526717557252,
+        "log_loss": 0.694825067412049,
+        "confusion_matrix": [
+          [
+            76,
+            55
+          ],
+          [
+            40,
+            61
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6246239946070635,
+        "average_precision": 0.5582607155788636,
+        "accuracy": 0.5875954398075515,
+        "balanced_accuracy": 0.5886899238235295,
+        "sensitivity": 0.5978131685286427,
+        "specificity": 0.5795666791184161,
+        "log_loss": 0.8702151095117847,
+        "confusion_matrix": [
+          [
+            3103,
+            2251
+          ],
+          [
+            1692,
+            2515
+          ]
+        ]
+      }
+    },
+    {
+      "index": 16,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold16.joblib",
+      "sha256": "9b97ec8a1e1dc6d57d5c4a99eafb4a15d58092f94649f8aa59b1dd9aba3030c2",
+      "participants": {
+        "auroc": 0.6991912931751191,
+        "average_precision": 0.6383450295369777,
+        "accuracy": 0.6206896551724138,
+        "balanced_accuracy": 0.6233088957750736,
+        "sensitivity": 0.6435643564356436,
+        "specificity": 0.6030534351145038,
+        "log_loss": 0.6585548472680383,
+        "confusion_matrix": [
+          [
+            79,
+            52
+          ],
+          [
+            36,
+            65
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6646629472429705,
+        "average_precision": 0.6242308383955095,
+        "accuracy": 0.6107101767597531,
+        "balanced_accuracy": 0.6095578513104838,
+        "sensitivity": 0.5999524601854053,
+        "specificity": 0.6191632424355622,
+        "log_loss": 0.850510927984981,
+        "confusion_matrix": [
+          [
+            3315,
+            2039
+          ],
+          [
+            1683,
+            2524
+          ]
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold17.joblib",
+      "sha256": "e33af2b64d9abdb8980e47f0ed28abd706ab3e530ce6604da9459af728b62e92",
+      "participants": {
+        "auroc": 0.6332854659511752,
+        "average_precision": 0.5493301470664558,
+        "accuracy": 0.6163793103448276,
+        "balanced_accuracy": 0.626294308820195,
+        "sensitivity": 0.7029702970297029,
+        "specificity": 0.549618320610687,
+        "log_loss": 0.924342208331974,
+        "confusion_matrix": [
+          [
+            72,
+            59
+          ],
+          [
+            30,
+            71
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6139022746922232,
+        "average_precision": 0.5518293219721263,
+        "accuracy": 0.5774500575253635,
+        "balanced_accuracy": 0.5863021669329422,
+        "sensitivity": 0.66009032564773,
+        "specificity": 0.5125140082181546,
+        "log_loss": 1.4913877023832334,
+        "confusion_matrix": [
+          [
+            2744,
+            2610
+          ],
+          [
+            1430,
+            2777
+          ]
+        ]
+      }
+    },
+    {
+      "index": 18,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold18.joblib",
+      "sha256": "4f336cb28c02469634ba2d2e78f58bfde9fc635c076884de56164bda29f08db1",
+      "participants": {
+        "auroc": 0.6460584989796689,
+        "average_precision": 0.5798393437881028,
+        "accuracy": 0.5818965517241379,
+        "balanced_accuracy": 0.6070969692389087,
+        "sensitivity": 0.801980198019802,
+        "specificity": 0.4122137404580153,
+        "log_loss": 0.7918848367128121,
+        "confusion_matrix": [
+          [
+            54,
+            77
+          ],
+          [
+            20,
+            81
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6296500824576929,
+        "average_precision": 0.5834485326477289,
+        "accuracy": 0.5645852944252693,
+        "balanced_accuracy": 0.5800350182145684,
+        "sensitivity": 0.7088186356073212,
+        "specificity": 0.4512514008218155,
+        "log_loss": 1.2464202790090284,
+        "confusion_matrix": [
+          [
+            2416,
+            2938
+          ],
+          [
+            1225,
+            2982
+          ]
+        ]
+      }
+    },
+    {
+      "index": 19,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold19.joblib",
+      "sha256": "45f69dd4ceda35f84699290717b2580ee7522ec702ac75433afb70bd48574ef3",
+      "participants": {
+        "auroc": 0.6768951704330738,
+        "average_precision": 0.6198918823370136,
+        "accuracy": 0.5948275862068966,
+        "balanced_accuracy": 0.607210339354546,
+        "sensitivity": 0.7029702970297029,
+        "specificity": 0.5114503816793893,
+        "log_loss": 0.6857519376558372,
+        "confusion_matrix": [
+          [
+            67,
+            64
+          ],
+          [
+            30,
+            71
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6435433135748014,
+        "average_precision": 0.5926784566042416,
+        "accuracy": 0.5974270473799812,
+        "balanced_accuracy": 0.6015167722579166,
+        "sensitivity": 0.6356073211314476,
+        "specificity": 0.5674262233843855,
+        "log_loss": 0.8665611732842113,
+        "confusion_matrix": [
+          [
+            3038,
+            2316
+          ],
+          [
+            1533,
+            2674
+          ]
+        ]
+      }
+    },
+    {
+      "index": 20,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold20.joblib",
+      "sha256": "78e6fe0cdac3c168ce241e781a53e8d8b5760c8fbe5cccc364fb8d9905e23fca",
+      "participants": {
+        "auroc": 0.6809009145189329,
+        "average_precision": 0.6188542484331485,
+        "accuracy": 0.625,
+        "balanced_accuracy": 0.6214571838863275,
+        "sensitivity": 0.594059405940594,
+        "specificity": 0.648854961832061,
+        "log_loss": 0.6556159516757313,
+        "confusion_matrix": [
+          [
+            85,
+            46
+          ],
+          [
+            41,
+            60
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6383298057322859,
+        "average_precision": 0.5951409859100008,
+        "accuracy": 0.5989959209287732,
+        "balanced_accuracy": 0.595762936330301,
+        "sensitivity": 0.5688138816258617,
+        "specificity": 0.6227119910347404,
+        "log_loss": 0.8243319876569264,
+        "confusion_matrix": [
+          [
+            3334,
+            2020
+          ],
+          [
+            1814,
+            2393
+          ]
+        ]
+      }
+    },
+    {
+      "index": 21,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold21.joblib",
+      "sha256": "f3de7481f79007580346de4509f2692ab991a43c718c02600b52f8305e48d4b7",
+      "participants": {
+        "auroc": 0.6802962739021994,
+        "average_precision": 0.623805521466405,
+        "accuracy": 0.5862068965517241,
+        "balanced_accuracy": 0.6063789585065377,
+        "sensitivity": 0.7623762376237624,
+        "specificity": 0.45038167938931295,
+        "log_loss": 0.8524607945842604,
+        "confusion_matrix": [
+          [
+            59,
+            72
+          ],
+          [
+            24,
+            77
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6566696388670039,
+        "average_precision": 0.5949884997956199,
+        "accuracy": 0.5865495241083568,
+        "balanced_accuracy": 0.6042805012440354,
+        "sensitivity": 0.7520798668885191,
+        "specificity": 0.4564811355995517,
+        "log_loss": 1.0263667193540098,
+        "confusion_matrix": [
+          [
+            2444,
+            2910
+          ],
+          [
+            1043,
+            3164
+          ]
+        ]
+      }
+    },
+    {
+      "index": 22,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold22.joblib",
+      "sha256": "1606091c14dd4e7f4066aff6c4ce621c91a6ba7f5262a1b4a47600d5ce5dfc22",
+      "participants": {
+        "auroc": 0.7137782480538131,
+        "average_precision": 0.6614105876563211,
+        "accuracy": 0.6767241379310345,
+        "balanced_accuracy": 0.6615902048220089,
+        "sensitivity": 0.5445544554455446,
+        "specificity": 0.7786259541984732,
+        "log_loss": 0.6186401231914231,
+        "confusion_matrix": [
+          [
+            102,
+            29
+          ],
+          [
+            46,
+            55
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6651609432275698,
+        "average_precision": 0.6252723720813342,
+        "accuracy": 0.6208555590419412,
+        "balanced_accuracy": 0.6112326885683084,
+        "sensitivity": 0.5310197290230568,
+        "specificity": 0.6914456481135599,
+        "log_loss": 0.8032330893907824,
+        "confusion_matrix": [
+          [
+            3702,
+            1652
+          ],
+          [
+            1973,
+            2234
+          ]
+        ]
+      }
+    },
+    {
+      "index": 23,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold23.joblib",
+      "sha256": "79830eb6a9eda3ea4cfbe80949264a7b7d1fa004e1f9f746546c7fef95372a0a",
+      "participants": {
+        "auroc": 0.6449247978232938,
+        "average_precision": 0.5848584459959789,
+        "accuracy": 0.5948275862068966,
+        "balanced_accuracy": 0.5947396266344191,
+        "sensitivity": 0.594059405940594,
+        "specificity": 0.5954198473282443,
+        "log_loss": 0.7174083428206963,
+        "confusion_matrix": [
+          [
+            78,
+            53
+          ],
+          [
+            41,
+            60
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6182903176741115,
+        "average_precision": 0.5675007012237496,
+        "accuracy": 0.5794372973538333,
+        "balanced_accuracy": 0.5778919750502103,
+        "sensitivity": 0.5650106964582838,
+        "specificity": 0.5907732536421367,
+        "log_loss": 0.9274904937847352,
+        "confusion_matrix": [
+          [
+            3163,
+            2191
+          ],
+          [
+            1830,
+            2377
+          ]
+        ]
+      }
+    },
+    {
+      "index": 24,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold24.joblib",
+      "sha256": "a27eb0fd5a80664416505ddb1d88bc54d9184d9f3683974f459f3a648c50d557",
+      "participants": {
+        "auroc": 0.6464363993651273,
+        "average_precision": 0.567442228815114,
+        "accuracy": 0.5905172413793104,
+        "balanced_accuracy": 0.6124631547124179,
+        "sensitivity": 0.7821782178217822,
+        "specificity": 0.44274809160305345,
+        "log_loss": 0.7227879538510451,
+        "confusion_matrix": [
+          [
+            58,
+            73
+          ],
+          [
+            22,
+            79
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6229130185660113,
+        "average_precision": 0.5453143986508622,
+        "accuracy": 0.5681414078025311,
+        "balanced_accuracy": 0.5799511531512797,
+        "sensitivity": 0.6783931542666983,
+        "specificity": 0.48150915203586103,
+        "log_loss": 0.9271856186110526,
+        "confusion_matrix": [
+          [
+            2578,
+            2776
+          ],
+          [
+            1353,
+            2854
+          ]
+        ]
+      }
+    },
+    {
+      "index": 25,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold25.joblib",
+      "sha256": "313340022dba71e4aa26db95489d7e5b20027324e1c6b294c97ef44a54e2ed33",
+      "participants": {
+        "auroc": 0.6577734109288792,
+        "average_precision": 0.5803420246530401,
+        "accuracy": 0.603448275862069,
+        "balanced_accuracy": 0.6080417202025545,
+        "sensitivity": 0.6435643564356436,
+        "specificity": 0.5725190839694656,
+        "log_loss": 0.7157588782872405,
+        "confusion_matrix": [
+          [
+            75,
+            56
+          ],
+          [
+            36,
+            65
+          ]
+        ]
+      },
+      "sequences": {
+        "auroc": 0.6239045486829812,
+        "average_precision": 0.5624492526788951,
+        "accuracy": 0.5820520866018198,
+        "balanced_accuracy": 0.5852171155053227,
+        "sensitivity": 0.6115997147611124,
+        "specificity": 0.5588345162495331,
+        "log_loss": 1.1594272526603413,
+        "confusion_matrix": [
+          [
+            2992,
+            2362
+          ],
+          [
+            1634,
+            2573
+          ]
+        ]
+      }
+    }
+  ],
+  "aggregate": {
+    "accuracy": {
+      "mean": 0.6041379310344828,
+      "sd": 0.022729321962887242
+    },
+    "balanced_accuracy": {
+      "mean": 0.6132779079434661,
+      "sd": 0.017823683064292106
+    },
+    "auroc": {
+      "mean": 0.6693673947547425,
+      "sd": 0.024104940224874544
+    },
+    "sensitivity": {
+      "mean": 0.683960396039604,
+      "sd": 0.06714691576366133
+    },
+    "specificity": {
+      "mean": 0.5425954198473283,
+      "sd": 0.07920560070935989
+    }
+  },
+  "ensemble": {
+    "auroc": 0.6791625727458243,
+    "average_precision": 0.6149301272000447,
+    "accuracy": 0.625,
+    "balanced_accuracy": 0.6384627012319553,
+    "sensitivity": 0.7425742574257426,
+    "specificity": 0.5343511450381679,
+    "log_loss": 0.6885312769053932,
+    "confusion_matrix": [
+      [
+        70,
+        61
+      ],
+      [
+        26,
+        75
+      ]
+    ]
+  },
+  "ensemble_ci95": {
+    "accuracy": [
+      0.5646551724137931,
+      0.6853448275862069
+    ],
+    "auroc": [
+      0.6134041266722093,
+      0.7448473282442749
+    ]
+  },
+  "source_overlap": {
+    "id_namespace_overlap": 0,
+    "exact_full_sequence_overlap": 0,
+    "note": "Different studies and ID namespaces; no cross-study identity linkage is available."
+  },
+  "unchanged_checkpoints": true,
+  "registration_sha256": "9bcc7a7131bf6e9f92b0f014f01aa675ce57ba72bdf0fc840103b64d82fe703e",
+  "dataset_sha256": "c80227514d11ab559cec8184f4890ba0fb7a0bffebadac702bc8efc04c727078",
+  "predictions_sha256": "83e95739c76516abdc9dfa58d0a31caa6d0f008ab9bdceff01a8acbfd270f753"
+}

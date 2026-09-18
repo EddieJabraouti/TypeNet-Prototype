@@ -1,0 +1,35 @@
+{
+  "seed": 9172026,
+  "epochs": 100,
+  "models": [
+    "xgboost",
+    "random_forest",
+    "tabnet",
+    "node"
+  ],
+  "augmentations": [
+    "none",
+    "smote"
+  ],
+  "threshold": 0.5,
+  "folds": 3,
+  "selection": "training OOF AUROC; regression minimum MAE; lexical tie break",
+  "source_hashes": {
+    "prototype_net/exp4/model.py": "7a1a37a2ae011cef97ef028e0f463ba12f8fb493f2de8fcd9e6566c26105fd2c",
+    "prototype_net/failed/exp3/node.py": "50bd349274857387542c9a31f9615e934b99cf40277f5a440a5cdb278cb2110d",
+    "prototype_net/failed/exp3/tabnet.py": "41ec16ae6f18307ed13491cf7cc363784e494b5605db967a60344bcbaaaa9fcc"
+  },
+  "manifest_sha256": "76c59e80cffb1a771fdde21a5acef5024f12e079e21b42b1c333f2f3ba740c8b",
+  "protocol_sha256": "43f6b0aba46bedffc3f7e0f6868a6c726abd524282ae2f72916d2ecdf91edf6f",
+  "aalto_sha256": "8bd2ba26b55cef0cd2a6dc79c7f5f1255726d2ab445a4fd00746ff36694195ee",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "sklearn": "1.7.1",
+    "torch": "2.8.0",
+    "xgboost": "3.2.0",
+    "joblib": "1.5.1"
+  },
+  "gate": "Training-selected primary classifier: test AUROC 97.5% bootstrap lower bound > 0.5 and one-sided label-permutation p <= .025. Two primary endpoints; exploratory only."
+}

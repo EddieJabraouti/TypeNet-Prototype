@@ -1,0 +1,6428 @@
+{
+  "tasks": {
+    "motor_pd": {
+      "validation": {
+        "dummy_none_raw": {
+          "auroc": 0.5,
+          "average_precision": 0.4444444444444444,
+          "accuracy": 0.4444444444444444,
+          "balanced_accuracy": 0.5,
+          "sensitivity": 1.0,
+          "specificity": 0.0,
+          "log_loss": 0.6951742572778872,
+          "confusion_matrix": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "ci975": [
+              0.5,
+              0.5
+            ]
+          }
+        },
+        "node_none_pretrained": {
+          "auroc": 0.85,
+          "average_precision": 0.8541666666666666,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.4652584265908979,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              1.0
+            ],
+            "ci975": [
+              0.4,
+              1.0
+            ]
+          }
+        },
+        "node_none_raw": {
+          "auroc": 0.75,
+          "average_precision": 0.7928571428571429,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.5147941637753984,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.35,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        },
+        "node_smote128_pretrained": {
+          "auroc": 0.9500000000000001,
+          "average_precision": 0.95,
+          "accuracy": 0.8888888888888888,
+          "balanced_accuracy": 0.875,
+          "sensitivity": 0.75,
+          "specificity": 1.0,
+          "log_loss": 0.3172987481761357,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.7975000000000002,
+              1.0
+            ],
+            "ci975": [
+              0.7,
+              1.0
+            ]
+          }
+        },
+        "node_smote128_raw": {
+          "auroc": 0.9,
+          "average_precision": 0.9166666666666666,
+          "accuracy": 0.8888888888888888,
+          "balanced_accuracy": 0.875,
+          "sensitivity": 0.75,
+          "specificity": 1.0,
+          "log_loss": 0.36614590059744995,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.6,
+              1.0
+            ],
+            "ci975": [
+              0.55,
+              1.0
+            ]
+          }
+        },
+        "node_smote2_pretrained": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 0.8888888888888888,
+          "balanced_accuracy": 0.875,
+          "sensitivity": 0.75,
+          "specificity": 1.0,
+          "log_loss": 0.35011441384902536,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "node_smote2_raw": {
+          "auroc": 0.75,
+          "average_precision": 0.7928571428571429,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.4623949781546788,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.35,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        },
+        "node_smote32_pretrained": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.30914979623078837,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "node_smote32_raw": {
+          "auroc": 0.9,
+          "average_precision": 0.9166666666666666,
+          "accuracy": 0.8888888888888888,
+          "balanced_accuracy": 0.875,
+          "sensitivity": 0.75,
+          "specificity": 1.0,
+          "log_loss": 0.33809532986279417,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.6,
+              1.0
+            ],
+            "ci975": [
+              0.55,
+              1.0
+            ]
+          }
+        },
+        "node_smote8_pretrained": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.24958214136075815,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "node_smote8_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 0.8888888888888888,
+          "balanced_accuracy": 0.875,
+          "sensitivity": 0.75,
+          "specificity": 1.0,
+          "log_loss": 0.28397369300398245,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "random_forest_none_pretrained": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.39291870025180503,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "random_forest_none_raw": {
+          "auroc": 0.9500000000000001,
+          "average_precision": 0.95,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.3897317651265326,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.7975000000000002,
+              1.0
+            ],
+            "ci975": [
+              0.7,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote128_pretrained": {
+          "auroc": 0.9500000000000001,
+          "average_precision": 0.95,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.3920200139393689,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.7975000000000002,
+              1.0
+            ],
+            "ci975": [
+              0.7,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote128_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.4045084249390511,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote2_pretrained": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.3846795547411627,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote2_raw": {
+          "auroc": 0.9500000000000001,
+          "average_precision": 0.95,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.39104915100791654,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.7975000000000002,
+              1.0
+            ],
+            "ci975": [
+              0.7,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote32_pretrained": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.3852827408494337,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote32_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.38653013387055024,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote8_pretrained": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.37895654571071913,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote8_raw": {
+          "auroc": 0.9500000000000001,
+          "average_precision": 0.95,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.37696758469869207,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.7975000000000002,
+              1.0
+            ],
+            "ci975": [
+              0.7,
+              1.0
+            ]
+          }
+        },
+        "tabnet_none_pretrained": {
+          "auroc": 0.9500000000000001,
+          "average_precision": 0.95,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.36952784668605493,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.7975000000000002,
+              1.0
+            ],
+            "ci975": [
+              0.7,
+              1.0
+            ]
+          }
+        },
+        "tabnet_none_raw": {
+          "auroc": 0.85,
+          "average_precision": 0.8928571428571428,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.4357107928944693,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              1.0
+            ],
+            "ci975": [
+              0.4,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote128_pretrained": {
+          "auroc": 0.9,
+          "average_precision": 0.9166666666666666,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.775,
+          "sensitivity": 0.75,
+          "specificity": 0.8,
+          "log_loss": 0.43080440425015454,
+          "confusion_matrix": [
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.6,
+              1.0
+            ],
+            "ci975": [
+              0.55,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote128_raw": {
+          "auroc": 0.9500000000000001,
+          "average_precision": 0.95,
+          "accuracy": 0.8888888888888888,
+          "balanced_accuracy": 0.9,
+          "sensitivity": 1.0,
+          "specificity": 0.8,
+          "log_loss": 0.3715535838983845,
+          "confusion_matrix": [
+            [
+              4,
+              1
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.7975000000000002,
+              1.0
+            ],
+            "ci975": [
+              0.7,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote2_pretrained": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.31880155419334727,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote2_raw": {
+          "auroc": 0.9,
+          "average_precision": 0.9166666666666666,
+          "accuracy": 0.8888888888888888,
+          "balanced_accuracy": 0.875,
+          "sensitivity": 0.75,
+          "specificity": 1.0,
+          "log_loss": 0.36699279804951046,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.6,
+              1.0
+            ],
+            "ci975": [
+              0.55,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote32_pretrained": {
+          "auroc": 0.85,
+          "average_precision": 0.8928571428571428,
+          "accuracy": 0.8888888888888888,
+          "balanced_accuracy": 0.875,
+          "sensitivity": 0.75,
+          "specificity": 1.0,
+          "log_loss": 0.4237352632322919,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              1.0
+            ],
+            "ci975": [
+              0.4,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote32_raw": {
+          "auroc": 0.85,
+          "average_precision": 0.8928571428571428,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.775,
+          "sensitivity": 0.75,
+          "specificity": 0.8,
+          "log_loss": 0.4107814731346602,
+          "confusion_matrix": [
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              1.0
+            ],
+            "ci975": [
+              0.4,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote8_pretrained": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.35857996338374193,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote8_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.31619216774452746,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "xgboost_none_pretrained": {
+          "auroc": 0.9500000000000001,
+          "average_precision": 0.95,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.4315746861608869,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.7975000000000002,
+              1.0
+            ],
+            "ci975": [
+              0.7,
+              1.0
+            ]
+          }
+        },
+        "xgboost_none_raw": {
+          "auroc": 0.85,
+          "average_precision": 0.8541666666666666,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.4523769228464135,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.55,
+              1.0
+            ],
+            "ci975": [
+              0.4,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote128_pretrained": {
+          "auroc": 0.9,
+          "average_precision": 0.8875,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.40876834682937013,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.6,
+              1.0
+            ],
+            "ci975": [
+              0.55,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote128_raw": {
+          "auroc": 0.9500000000000001,
+          "average_precision": 0.95,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.410609280449605,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.7975000000000002,
+              1.0
+            ],
+            "ci975": [
+              0.7,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote2_pretrained": {
+          "auroc": 0.85,
+          "average_precision": 0.8541666666666666,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.43395647707331436,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.55,
+              1.0
+            ],
+            "ci975": [
+              0.4,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote2_raw": {
+          "auroc": 0.85,
+          "average_precision": 0.8541666666666666,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.4419870993792937,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.55,
+              1.0
+            ],
+            "ci975": [
+              0.4,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote32_pretrained": {
+          "auroc": 0.9,
+          "average_precision": 0.8875,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.40924130925765184,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.6,
+              1.0
+            ],
+            "ci975": [
+              0.55,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote32_raw": {
+          "auroc": 0.85,
+          "average_precision": 0.8541666666666666,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.4168870971134544,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.55,
+              1.0
+            ],
+            "ci975": [
+              0.4,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote8_pretrained": {
+          "auroc": 0.9500000000000001,
+          "average_precision": 0.95,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.4091750568394317,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.7975000000000002,
+              1.0
+            ],
+            "ci975": [
+              0.7,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote8_raw": {
+          "auroc": 0.9500000000000001,
+          "average_precision": 0.95,
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.41048786932845555,
+          "confusion_matrix": [
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.7975000000000002,
+              1.0
+            ],
+            "ci975": [
+              0.7,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "dummy_none_raw": {
+          "auroc": 0.5,
+          "average_precision": 0.47058823529411764,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.5,
+          "sensitivity": 1.0,
+          "specificity": 0.0,
+          "log_loss": 0.6942879423406532,
+          "confusion_matrix": [
+            [
+              0,
+              9
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "ci975": [
+              0.5,
+              0.5
+            ]
+          }
+        },
+        "node_none_pretrained": {
+          "auroc": 0.5277777777777778,
+          "average_precision": 0.6382478632478632,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.4861111111111111,
+          "sensitivity": 0.75,
+          "specificity": 0.2222222222222222,
+          "log_loss": 0.7854090078245755,
+          "confusion_matrix": [
+            [
+              2,
+              7
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.20833333333333334,
+              0.8055555555555556
+            ],
+            "ci975": [
+              0.1527777777777778,
+              0.8472222222222222
+            ]
+          }
+        },
+        "node_none_raw": {
+          "auroc": 0.6111111111111112,
+          "average_precision": 0.69375,
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "sensitivity": 0.75,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7548934018296997,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3055555555555556,
+              0.8888888888888888
+            ],
+            "ci975": [
+              0.2638888888888889,
+              0.9166666666666666
+            ]
+          }
+        },
+        "node_smote128_pretrained": {
+          "auroc": 0.6666666666666667,
+          "average_precision": 0.7167929292929294,
+          "accuracy": 0.5882352941176471,
+          "balanced_accuracy": 0.5972222222222222,
+          "sensitivity": 0.75,
+          "specificity": 0.4444444444444444,
+          "log_loss": 0.7535465451923745,
+          "confusion_matrix": [
+            [
+              4,
+              5
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3611111111111111,
+              0.9027777777777778
+            ],
+            "ci975": [
+              0.3333333333333333,
+              0.9305555555555556
+            ]
+          }
+        },
+        "node_smote128_raw": {
+          "auroc": 0.6944444444444444,
+          "average_precision": 0.643452380952381,
+          "accuracy": 0.5882352941176471,
+          "balanced_accuracy": 0.6041666666666666,
+          "sensitivity": 0.875,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.8791731279401046,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              1,
+              7
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4166666666666667,
+              0.9305555555555556
+            ],
+            "ci975": [
+              0.375,
+              0.9583333333333334
+            ]
+          }
+        },
+        "node_smote2_pretrained": {
+          "auroc": 0.5694444444444444,
+          "average_precision": 0.679040404040404,
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "sensitivity": 0.75,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7504507137205005,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.25,
+              0.8472222222222222
+            ],
+            "ci975": [
+              0.2222222222222222,
+              0.875
+            ]
+          }
+        },
+        "node_smote2_raw": {
+          "auroc": 0.625,
+          "average_precision": 0.7282679738562091,
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "sensitivity": 0.75,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7455647076997236,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3194444444444444,
+              0.9027777777777778
+            ],
+            "ci975": [
+              0.2777777777777778,
+              0.9305555555555556
+            ]
+          }
+        },
+        "node_smote32_pretrained": {
+          "auroc": 0.6666666666666666,
+          "average_precision": 0.7329326923076923,
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "sensitivity": 0.75,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7632212121027083,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.375,
+              0.9027777777777778
+            ],
+            "ci975": [
+              0.3333333333333333,
+              0.9305555555555556
+            ]
+          }
+        },
+        "node_smote32_raw": {
+          "auroc": 0.638888888888889,
+          "average_precision": 0.6899267399267399,
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "sensitivity": 0.75,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.831358660779003,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3472222222222222,
+              0.8888888888888888
+            ],
+            "ci975": [
+              0.3055555555555556,
+              0.9305555555555556
+            ]
+          }
+        },
+        "node_smote8_pretrained": {
+          "auroc": 0.5972222222222222,
+          "average_precision": 0.6639617327117326,
+          "accuracy": 0.5882352941176471,
+          "balanced_accuracy": 0.6041666666666666,
+          "sensitivity": 0.875,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7986770322275598,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              1,
+              7
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.2916666666666667,
+              0.8472222222222222
+            ],
+            "ci975": [
+              0.2361111111111111,
+              0.8888888888888888
+            ]
+          }
+        },
+        "node_smote8_raw": {
+          "auroc": 0.6388888888888888,
+          "average_precision": 0.7194444444444444,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7811312851825982,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3333333333333333,
+              0.8888888888888888
+            ],
+            "ci975": [
+              0.2916666666666667,
+              0.9166666666666666
+            ]
+          }
+        },
+        "random_forest_none_pretrained": {
+          "auroc": 0.6527777777777777,
+          "average_precision": 0.734478021978022,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7053038247263796,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3333333333333333,
+              0.9166666666666666
+            ],
+            "ci975": [
+              0.2916666666666667,
+              0.9305555555555556
+            ]
+          }
+        },
+        "random_forest_none_raw": {
+          "auroc": 0.6527777777777777,
+          "average_precision": 0.734478021978022,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7043968331003971,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3333333333333333,
+              0.9166666666666666
+            ],
+            "ci975": [
+              0.2916666666666667,
+              0.9305555555555556
+            ]
+          }
+        },
+        "random_forest_smote128_pretrained": {
+          "auroc": 0.6250000000000001,
+          "average_precision": 0.684775641025641,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.825247263593994,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3194444444444444,
+              0.9027777777777778
+            ],
+            "ci975": [
+              0.2777777777777778,
+              0.9305555555555556
+            ]
+          }
+        },
+        "random_forest_smote128_raw": {
+          "auroc": 0.625,
+          "average_precision": 0.6740613553113552,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.8580274679311863,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3194444444444444,
+              0.9027777777777778
+            ],
+            "ci975": [
+              0.2777777777777778,
+              0.9168402777777783
+            ]
+          }
+        },
+        "random_forest_smote2_pretrained": {
+          "auroc": 0.6805555555555556,
+          "average_precision": 0.7761446886446887,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.6969878335166383,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3607638888888889,
+              0.9170138888888869
+            ],
+            "ci975": [
+              0.3194444444444444,
+              0.9722222222222222
+            ]
+          }
+        },
+        "random_forest_smote2_raw": {
+          "auroc": 0.6805555555555556,
+          "average_precision": 0.7761446886446887,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7094324347531573,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3607638888888889,
+              0.9170138888888869
+            ],
+            "ci975": [
+              0.3194444444444444,
+              0.9722222222222222
+            ]
+          }
+        },
+        "random_forest_smote32_pretrained": {
+          "auroc": 0.6250000000000001,
+          "average_precision": 0.684775641025641,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7627330465381847,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3194444444444444,
+              0.9027777777777778
+            ],
+            "ci975": [
+              0.2777777777777778,
+              0.9305555555555556
+            ]
+          }
+        },
+        "random_forest_smote32_raw": {
+          "auroc": 0.6250000000000001,
+          "average_precision": 0.684775641025641,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.8329048884542175,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3194444444444444,
+              0.9027777777777778
+            ],
+            "ci975": [
+              0.2777777777777778,
+              0.9305555555555556
+            ]
+          }
+        },
+        "random_forest_smote8_pretrained": {
+          "auroc": 0.6388888888888888,
+          "average_precision": 0.6895833333333333,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7570652353940938,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3333333333333333,
+              0.9166666666666666
+            ],
+            "ci975": [
+              0.2777777777777778,
+              0.9305555555555556
+            ]
+          }
+        },
+        "random_forest_smote8_raw": {
+          "auroc": 0.625,
+          "average_precision": 0.6677083333333333,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.8009946643932162,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3333333333333333,
+              0.8888888888888888
+            ],
+            "ci975": [
+              0.2777777777777778,
+              0.9166666666666666
+            ]
+          }
+        },
+        "tabnet_none_pretrained": {
+          "auroc": 0.638888888888889,
+          "average_precision": 0.7055021367521368,
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "sensitivity": 0.75,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7504817473228652,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3333333333333333,
+              0.8888888888888888
+            ],
+            "ci975": [
+              0.3055555555555556,
+              0.9166666666666666
+            ]
+          }
+        },
+        "tabnet_none_raw": {
+          "auroc": 0.6111111111111112,
+          "average_precision": 0.7068181818181818,
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "sensitivity": 0.75,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7465844591245223,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3055555555555556,
+              0.875
+            ],
+            "ci975": [
+              0.25,
+              0.9027777777777778
+            ]
+          }
+        },
+        "tabnet_smote128_pretrained": {
+          "auroc": 0.5972222222222223,
+          "average_precision": 0.5631944444444444,
+          "accuracy": 0.6470588235294118,
+          "balanced_accuracy": 0.6527777777777778,
+          "sensitivity": 0.75,
+          "specificity": 0.5555555555555556,
+          "log_loss": 0.9391319624075061,
+          "confusion_matrix": [
+            [
+              5,
+              4
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3055555555555556,
+              0.8611111111111112
+            ],
+            "ci975": [
+              0.2638888888888889,
+              0.8888888888888888
+            ]
+          }
+        },
+        "tabnet_smote128_raw": {
+          "auroc": 0.7083333333333334,
+          "average_precision": 0.7690934065934066,
+          "accuracy": 0.5882352941176471,
+          "balanced_accuracy": 0.5972222222222222,
+          "sensitivity": 0.75,
+          "specificity": 0.4444444444444444,
+          "log_loss": 0.7867044664137042,
+          "confusion_matrix": [
+            [
+              4,
+              5
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4305555555555556,
+              0.9305555555555556
+            ],
+            "ci975": [
+              0.3888888888888889,
+              0.9583333333333334
+            ]
+          }
+        },
+        "tabnet_smote2_pretrained": {
+          "auroc": 0.5972222222222223,
+          "average_precision": 0.6762092074592074,
+          "accuracy": 0.5882352941176471,
+          "balanced_accuracy": 0.6041666666666666,
+          "sensitivity": 0.875,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7504141282622665,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              1,
+              7
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3055555555555556,
+              0.8611111111111112
+            ],
+            "ci975": [
+              0.25,
+              0.8888888888888888
+            ]
+          }
+        },
+        "tabnet_smote2_raw": {
+          "auroc": 0.5972222222222222,
+          "average_precision": 0.6766369047619047,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.8501120168679611,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3055555555555556,
+              0.875
+            ],
+            "ci975": [
+              0.2638888888888889,
+              0.9027777777777778
+            ]
+          }
+        },
+        "tabnet_smote32_pretrained": {
+          "auroc": 0.638888888888889,
+          "average_precision": 0.6027777777777779,
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5277777777777778,
+          "sensitivity": 0.5,
+          "specificity": 0.5555555555555556,
+          "log_loss": 0.9971629742073763,
+          "confusion_matrix": [
+            [
+              5,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.346875,
+              0.8888888888888888
+            ],
+            "ci975": [
+              0.3055555555555556,
+              0.9166666666666666
+            ]
+          }
+        },
+        "tabnet_smote32_raw": {
+          "auroc": 0.7083333333333334,
+          "average_precision": 0.7829326923076922,
+          "accuracy": 0.6470588235294118,
+          "balanced_accuracy": 0.6527777777777778,
+          "sensitivity": 0.75,
+          "specificity": 0.5555555555555556,
+          "log_loss": 0.6501029977659663,
+          "confusion_matrix": [
+            [
+              5,
+              4
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.43020833333333336,
+              0.9444444444444444
+            ],
+            "ci975": [
+              0.3888888888888889,
+              0.9583333333333334
+            ]
+          }
+        },
+        "tabnet_smote8_pretrained": {
+          "auroc": 0.5972222222222222,
+          "average_precision": 0.6798611111111111,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.8735853389997157,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.2916666666666667,
+              0.8475694444444425
+            ],
+            "ci975": [
+              0.25,
+              0.8888888888888888
+            ]
+          }
+        },
+        "tabnet_smote8_raw": {
+          "auroc": 0.7083333333333334,
+          "average_precision": 0.7537660256410256,
+          "accuracy": 0.7058823529411765,
+          "balanced_accuracy": 0.7083333333333333,
+          "sensitivity": 0.75,
+          "specificity": 0.6666666666666666,
+          "log_loss": 0.6064335006768625,
+          "confusion_matrix": [
+            [
+              6,
+              3
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4305555555555556,
+              0.9305555555555556
+            ],
+            "ci975": [
+              0.3888888888888889,
+              0.9583333333333334
+            ]
+          }
+        },
+        "xgboost_none_pretrained": {
+          "auroc": 0.6111111111111112,
+          "average_precision": 0.7027319902319903,
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "sensitivity": 0.625,
+          "specificity": 0.2222222222222222,
+          "log_loss": 0.713131052895478,
+          "confusion_matrix": [
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.2916666666666667,
+              0.875
+            ],
+            "ci975": [
+              0.25,
+              0.9027777777777778
+            ]
+          }
+        },
+        "xgboost_none_raw": {
+          "auroc": 0.6388888888888888,
+          "average_precision": 0.7233173076923076,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7155132752490256,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3333333333333333,
+              0.8892361111111091
+            ],
+            "ci975": [
+              0.2916666666666667,
+              0.9168402777777783
+            ]
+          }
+        },
+        "xgboost_smote128_pretrained": {
+          "auroc": 0.5833333333333334,
+          "average_precision": 0.6673153235653235,
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "sensitivity": 0.625,
+          "specificity": 0.2222222222222222,
+          "log_loss": 0.7558763562738732,
+          "confusion_matrix": [
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.2777777777777778,
+              0.8611111111111112
+            ],
+            "ci975": [
+              0.2361111111111111,
+              0.8888888888888888
+            ]
+          }
+        },
+        "xgboost_smote128_raw": {
+          "auroc": 0.5972222222222222,
+          "average_precision": 0.6759958791208791,
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "sensitivity": 0.625,
+          "specificity": 0.2222222222222222,
+          "log_loss": 0.7659060147698743,
+          "confusion_matrix": [
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.2916666666666667,
+              0.875
+            ],
+            "ci975": [
+              0.25,
+              0.9027777777777778
+            ]
+          }
+        },
+        "xgboost_smote2_pretrained": {
+          "auroc": 0.5972222222222222,
+          "average_precision": 0.7020104895104895,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.6989632705457959,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.27743055555555557,
+              0.875
+            ],
+            "ci975": [
+              0.2361111111111111,
+              0.9027777777777778
+            ]
+          }
+        },
+        "xgboost_smote2_raw": {
+          "auroc": 0.6388888888888888,
+          "average_precision": 0.7233173076923076,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7053910073175558,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3333333333333333,
+              0.8892361111111091
+            ],
+            "ci975": [
+              0.2916666666666667,
+              0.9168402777777783
+            ]
+          }
+        },
+        "xgboost_smote32_pretrained": {
+          "auroc": 0.5694444444444444,
+          "average_precision": 0.6603708791208791,
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "sensitivity": 0.625,
+          "specificity": 0.2222222222222222,
+          "log_loss": 0.7607682424962521,
+          "confusion_matrix": [
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.2638888888888889,
+              0.8472222222222222
+            ],
+            "ci975": [
+              0.2222222222222222,
+              0.8888888888888888
+            ]
+          }
+        },
+        "xgboost_smote32_raw": {
+          "auroc": 0.5972222222222222,
+          "average_precision": 0.6759958791208791,
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "sensitivity": 0.625,
+          "specificity": 0.2222222222222222,
+          "log_loss": 0.764735337579106,
+          "confusion_matrix": [
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.2916666666666667,
+              0.875
+            ],
+            "ci975": [
+              0.25,
+              0.9027777777777778
+            ]
+          }
+        },
+        "xgboost_smote8_pretrained": {
+          "auroc": 0.5972222222222223,
+          "average_precision": 0.6714819902319903,
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "sensitivity": 0.625,
+          "specificity": 0.2222222222222222,
+          "log_loss": 0.7380779927408687,
+          "confusion_matrix": [
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.29131944444444446,
+              0.8611111111111112
+            ],
+            "ci975": [
+              0.2361111111111111,
+              0.8888888888888888
+            ]
+          }
+        },
+        "xgboost_smote8_raw": {
+          "auroc": 0.5972222222222222,
+          "average_precision": 0.6759958791208791,
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "sensitivity": 0.625,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7575455393762706,
+          "confusion_matrix": [
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.2916666666666667,
+              0.875
+            ],
+            "ci975": [
+              0.25,
+              0.9027777777777778
+            ]
+          }
+        }
+      }
+    },
+    "motor_updrs": {
+      "validation": {
+        "dummy_none_raw": {
+          "mae": 11.142184555546791,
+          "rmse": 12.156545568706493,
+          "r2": -0.014282594808992854,
+          "uncertainty": {
+            "ci95": [
+              8.204331444418152,
+              14.524482111119873
+            ],
+            "ci975": [
+              7.870815672195491,
+              15.01164666671049
+            ]
+          }
+        },
+        "node_none_pretrained": {
+          "mae": 8.17954134941101,
+          "rmse": 11.345452762038539,
+          "r2": 0.11654939577372181,
+          "uncertainty": {
+            "ci95": [
+              3.8372058411439256,
+              13.963081016143162
+            ],
+            "ci975": [
+              3.6131792323456873,
+              14.895798036124972
+            ]
+          }
+        },
+        "node_none_raw": {
+          "mae": 8.212010701497396,
+          "rmse": 11.414004746961195,
+          "r2": 0.10584109530740204,
+          "uncertainty": {
+            "ci95": [
+              3.6885012851821055,
+              14.130023719204795
+            ],
+            "ci975": [
+              3.354291347662608,
+              14.849040038055845
+            ]
+          }
+        },
+        "random_forest_none_pretrained": {
+          "mae": 8.30062153174569,
+          "rmse": 11.185066156960447,
+          "r2": 0.14135089289451674,
+          "uncertainty": {
+            "ci95": [
+              4.2040105644895505,
+              13.909250199415752
+            ],
+            "ci975": [
+              3.9407768923874205,
+              14.688973688456068
+            ]
+          }
+        },
+        "random_forest_none_raw": {
+          "mae": 8.145842188915205,
+          "rmse": 11.11288732174814,
+          "r2": 0.15239710765814274,
+          "uncertainty": {
+            "ci95": [
+              4.002752211992463,
+              13.80727893327085
+            ],
+            "ci975": [
+              3.756248800469471,
+              14.698518371966852
+            ]
+          }
+        },
+        "tabnet_none_pretrained": {
+          "mae": 8.34897189670139,
+          "rmse": 11.604938333072985,
+          "r2": 0.07567588782438439,
+          "uncertainty": {
+            "ci95": [
+              3.7422373255093895,
+              14.243012875980783
+            ],
+            "ci975": [
+              3.419704386923048,
+              15.42858846584956
+            ]
+          }
+        },
+        "tabnet_none_raw": {
+          "mae": 8.0342325369517,
+          "rmse": 10.843930951776379,
+          "r2": 0.19292834389489744,
+          "uncertainty": {
+            "ci95": [
+              4.152327954106861,
+              13.473258453607556
+            ],
+            "ci975": [
+              3.8855463945203357,
+              14.350254959530302
+            ]
+          }
+        },
+        "xgboost_none_pretrained": {
+          "mae": 8.332907464769152,
+          "rmse": 11.478005076682967,
+          "r2": 0.09578557046462133,
+          "uncertainty": {
+            "ci95": [
+              3.9494068450397917,
+              14.213230837715995
+            ],
+            "ci975": [
+              3.6152504987186855,
+              15.103272649976942
+            ]
+          }
+        },
+        "xgboost_none_raw": {
+          "mae": 8.509687158796522,
+          "rmse": 11.663250217000458,
+          "r2": 0.06636356001667043,
+          "uncertainty": {
+            "ci95": [
+              4.01876024140252,
+              14.463522831598915
+            ],
+            "ci975": [
+              3.7588019053141273,
+              15.429616226090326
+            ]
+          }
+        }
+      },
+      "test": {
+        "dummy_none_raw": {
+          "mae": 8.508723823506212,
+          "rmse": 9.332502104967022,
+          "r2": -0.08540867230844396,
+          "uncertainty": {
+            "ci95": [
+              6.541344708790818,
+              10.199987532329509
+            ],
+            "ci975": [
+              6.3499844146731705,
+              10.450006226448085
+            ]
+          }
+        },
+        "node_none_pretrained": {
+          "mae": 8.569906865849214,
+          "rmse": 9.783132998441602,
+          "r2": -0.19275984371030286,
+          "uncertainty": {
+            "ci95": [
+              6.224561082615573,
+              10.746136190610773
+            ],
+            "ci975": [
+              6.0093435005230065,
+              11.12624129179646
+            ]
+          }
+        },
+        "node_none_raw": {
+          "mae": 8.634489003349753,
+          "rmse": 9.792729354604692,
+          "r2": -0.19510096737486138,
+          "uncertainty": {
+            "ci95": [
+              6.347114925524768,
+              10.823354563993565
+            ],
+            "ci975": [
+              6.0875004964716295,
+              11.202835571415283
+            ]
+          }
+        },
+        "random_forest_none_pretrained": {
+          "mae": 8.031255087402423,
+          "rmse": 9.491719257079472,
+          "r2": -0.12275982136941099,
+          "uncertainty": {
+            "ci95": [
+              5.664305072768751,
+              10.281524830321407
+            ],
+            "ci975": [
+              5.366670653010107,
+              10.622237762435827
+            ]
+          }
+        },
+        "random_forest_none_raw": {
+          "mae": 8.009655054706233,
+          "rmse": 9.474274786176903,
+          "r2": -0.11863665835413362,
+          "uncertainty": {
+            "ci95": [
+              5.622209217905179,
+              10.312382226113982
+            ],
+            "ci975": [
+              5.337177576075916,
+              10.578986721672187
+            ]
+          }
+        },
+        "tabnet_none_pretrained": {
+          "mae": 8.02595994051765,
+          "rmse": 9.31100404821176,
+          "r2": -0.08041380575682489,
+          "uncertainty": {
+            "ci95": [
+              5.7087560499415675,
+              10.11709468715331
+            ],
+            "ci975": [
+              5.434899646394393,
+              10.429398822433807
+            ]
+          }
+        },
+        "tabnet_none_raw": {
+          "mae": 7.772544005337884,
+          "rmse": 9.329675304276789,
+          "r2": -0.08475123462070311,
+          "uncertainty": {
+            "ci95": [
+              5.314842937623753,
+              10.126789276038899
+            ],
+            "ci975": [
+              5.02936750562752,
+              10.483355266907637
+            ]
+          }
+        },
+        "xgboost_none_pretrained": {
+          "mae": 8.0450480966007,
+          "rmse": 9.337422940533276,
+          "r2": -0.08655360121797173,
+          "uncertainty": {
+            "ci95": [
+              5.729588815745186,
+              10.213664812200209
+            ],
+            "ci975": [
+              5.4890706665375655,
+              10.510099309332231
+            ]
+          }
+        },
+        "xgboost_none_raw": {
+          "mae": 8.076346215079813,
+          "rmse": 9.406841387283247,
+          "r2": -0.10276947614967447,
+          "uncertainty": {
+            "ci95": [
+              5.707578197296928,
+              10.311188291100894
+            ],
+            "ci975": [
+              5.4141391564817996,
+              10.575363169522848
+            ]
+          }
+        }
+      }
+    },
+    "touchscreen_pd": {
+      "validation": {
+        "dummy_none_raw": {
+          "auroc": 0.5,
+          "average_precision": 0.5,
+          "accuracy": 0.5,
+          "balanced_accuracy": 0.5,
+          "sensitivity": 1.0,
+          "specificity": 0.0,
+          "log_loss": 0.6972965815842912,
+          "confusion_matrix": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "ci975": [
+              0.5,
+              0.5
+            ]
+          }
+        },
+        "node_none_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.26129376766755225,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "node_smote128_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.0015814280058251927,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "node_smote2_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.20309928771661412,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "node_smote32_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.008901549111495249,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "node_smote8_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.0837932418213563,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "random_forest_none_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.03908759856307446,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote128_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.0006149712140012773,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote2_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.01634699516375212,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote32_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.0020319688331888837,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote8_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.002358306357456554,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "tabnet_none_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.1021552274346158,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote128_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 1.2218972687048103e-06,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote2_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.0027921155742799113,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote32_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.010916196915057484,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote8_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.0012590101167468761,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "xgboost_none_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.16324869459018995,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote128_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.04986445189068567,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote2_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.1313604735064763,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote32_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.05159823601909762,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote8_raw": {
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "sensitivity": 1.0,
+          "specificity": 1.0,
+          "log_loss": 0.0705008640996605,
+          "confusion_matrix": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "dummy_none_raw": {
+          "auroc": 0.5,
+          "average_precision": 0.5714285714285714,
+          "accuracy": 0.5714285714285714,
+          "balanced_accuracy": 0.5,
+          "sensitivity": 1.0,
+          "specificity": 0.0,
+          "log_loss": 0.6842736138437256,
+          "confusion_matrix": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "ci975": [
+              0.5,
+              0.5
+            ]
+          }
+        },
+        "node_none_raw": {
+          "auroc": 0.6666666666666666,
+          "average_precision": 0.8303571428571428,
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.5810407517039639,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.16666666666666666,
+              1.0
+            ]
+          }
+        },
+        "node_smote128_raw": {
+          "auroc": 0.5833333333333333,
+          "average_precision": 0.7928571428571428,
+          "accuracy": 0.5714285714285714,
+          "balanced_accuracy": 0.5416666666666666,
+          "sensitivity": 0.75,
+          "specificity": 0.3333333333333333,
+          "log_loss": 0.7515665220343409,
+          "confusion_matrix": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.08333333333333333,
+              1.0
+            ],
+            "ci975": [
+              0.0,
+              1.0
+            ]
+          }
+        },
+        "node_smote2_raw": {
+          "auroc": 0.8333333333333334,
+          "average_precision": 0.8875,
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.5630344266786876,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3333333333333333,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        },
+        "node_smote32_raw": {
+          "auroc": 0.75,
+          "average_precision": 0.8928571428571428,
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.7083333333333333,
+          "sensitivity": 0.75,
+          "specificity": 0.6666666666666666,
+          "log_loss": 0.724830323274493,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        },
+        "node_smote8_raw": {
+          "auroc": 0.6666666666666666,
+          "average_precision": 0.8303571428571428,
+          "accuracy": 0.5714285714285714,
+          "balanced_accuracy": 0.5833333333333333,
+          "sensitivity": 0.5,
+          "specificity": 0.6666666666666666,
+          "log_loss": 0.6056479865525922,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.16666666666666666,
+              1.0
+            ]
+          }
+        },
+        "random_forest_none_raw": {
+          "auroc": 0.6666666666666666,
+          "average_precision": 0.8303571428571428,
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.6265364476988899,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.16666666666666666,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote128_raw": {
+          "auroc": 0.8333333333333334,
+          "average_precision": 0.9166666666666666,
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.7083333333333333,
+          "sensitivity": 0.75,
+          "specificity": 0.6666666666666666,
+          "log_loss": 0.5633151044873468,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote2_raw": {
+          "auroc": 0.6666666666666666,
+          "average_precision": 0.8303571428571428,
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.6386199942776329,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.16666666666666666,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote32_raw": {
+          "auroc": 0.75,
+          "average_precision": 0.8541666666666666,
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.5931985343122,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3333333333333333,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        },
+        "random_forest_smote8_raw": {
+          "auroc": 0.6666666666666666,
+          "average_precision": 0.8303571428571428,
+          "accuracy": 0.5714285714285714,
+          "balanced_accuracy": 0.5833333333333333,
+          "sensitivity": 0.5,
+          "specificity": 0.6666666666666666,
+          "log_loss": 0.6012301970505919,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.16666666666666666,
+              1.0
+            ]
+          }
+        },
+        "tabnet_none_raw": {
+          "auroc": 0.6666666666666667,
+          "average_precision": 0.7708333333333333,
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.7083333333333333,
+          "sensitivity": 0.75,
+          "specificity": 0.6666666666666666,
+          "log_loss": 0.5891550819174355,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.16666666666666666,
+              1.0
+            ],
+            "ci975": [
+              0.0,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote128_raw": {
+          "auroc": 0.5833333333333333,
+          "average_precision": 0.7928571428571428,
+          "accuracy": 0.5714285714285714,
+          "balanced_accuracy": 0.5833333333333333,
+          "sensitivity": 0.5,
+          "specificity": 0.6666666666666666,
+          "log_loss": 0.9033156424222398,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.08333333333333333,
+              1.0
+            ],
+            "ci975": [
+              0.0,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote2_raw": {
+          "auroc": 0.75,
+          "average_precision": 0.8928571428571428,
+          "accuracy": 0.8571428571428571,
+          "balanced_accuracy": 0.875,
+          "sensitivity": 0.75,
+          "specificity": 1.0,
+          "log_loss": 0.6703020505518157,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote32_raw": {
+          "auroc": 0.5833333333333333,
+          "average_precision": 0.7928571428571428,
+          "accuracy": 0.5714285714285714,
+          "balanced_accuracy": 0.5833333333333333,
+          "sensitivity": 0.5,
+          "specificity": 0.6666666666666666,
+          "log_loss": 0.9351016780514787,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.08333333333333333,
+              1.0
+            ],
+            "ci975": [
+              0.0,
+              1.0
+            ]
+          }
+        },
+        "tabnet_smote8_raw": {
+          "auroc": 0.6666666666666666,
+          "average_precision": 0.8303571428571428,
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.7083333333333333,
+          "sensitivity": 0.75,
+          "specificity": 0.6666666666666666,
+          "log_loss": 0.696236621892984,
+          "confusion_matrix": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.16666666666666666,
+              1.0
+            ]
+          }
+        },
+        "xgboost_none_raw": {
+          "auroc": 0.8333333333333334,
+          "average_precision": 0.9166666666666666,
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.5424026883752053,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote128_raw": {
+          "auroc": 0.75,
+          "average_precision": 0.8541666666666666,
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.5633093993669523,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3333333333333333,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote2_raw": {
+          "auroc": 0.8333333333333334,
+          "average_precision": 0.9166666666666666,
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.5509986702822175,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote32_raw": {
+          "auroc": 0.75,
+          "average_precision": 0.8541666666666666,
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.5474796810713735,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3333333333333333,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        },
+        "xgboost_smote8_raw": {
+          "auroc": 0.75,
+          "average_precision": 0.8541666666666666,
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "sensitivity": 0.5,
+          "specificity": 1.0,
+          "log_loss": 0.5563231121519732,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3333333333333333,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        }
+      }
+    },
+    "touchscreen_updrs": {
+      "validation": {
+        "dummy_none_raw": {
+          "mae": 7.75,
+          "rmse": 8.166020094953131,
+          "r2": -0.007499666722241116,
+          "uncertainty": {
+            "ci95": [
+              4.772727310461646,
+              10.022727310461647
+            ],
+            "ci975": [
+              4.772727310461646,
+              10.022727310461647
+            ]
+          }
+        },
+        "node_none_raw": {
+          "mae": 3.443139970302582,
+          "rmse": 3.77495059299592,
+          "r2": 0.7846987425184476,
+          "uncertainty": {
+            "ci95": [
+              2.082952558994293,
+              5.203360915184021
+            ],
+            "ci975": [
+              2.0352293252944946,
+              5.25108414888382
+            ]
+          }
+        },
+        "random_forest_none_raw": {
+          "mae": 3.2889357133800305,
+          "rmse": 3.4380142246126755,
+          "r2": 0.8214173097844896,
+          "uncertainty": {
+            "ci95": [
+              2.205871044520694,
+              4.070705857218757
+            ],
+            "ci975": [
+              2.0713772735927827,
+              4.1477001632531385
+            ]
+          }
+        },
+        "tabnet_none_raw": {
+          "mae": 2.344164915382862,
+          "rmse": 3.1312324130861624,
+          "r2": 0.8518660407968062,
+          "uncertainty": {
+            "ci95": [
+              0.6951246410608292,
+              4.553788185119629
+            ],
+            "ci975": [
+              0.5759463533759117,
+              4.876881182193756
+            ]
+          }
+        },
+        "xgboost_none_raw": {
+          "mae": 3.500927448272705,
+          "rmse": 3.9113712560179725,
+          "r2": 0.7688562779617962,
+          "uncertainty": {
+            "ci95": [
+              1.4668527841567993,
+              4.897501826286316
+            ],
+            "ci975": [
+              1.4536527395248413,
+              4.910701870918274
+            ]
+          }
+        }
+      },
+      "test": {
+        "dummy_none_raw": {
+          "mae": 11.22077923156047,
+          "rmse": 12.388153713520742,
+          "r2": -0.11471261029663071,
+          "uncertainty": {
+            "ci95": [
+              7.636363625582386,
+              15.103896157802353
+            ],
+            "ci975": [
+              7.0519480196043025,
+              15.547077997277146
+            ]
+          }
+        },
+        "node_none_raw": {
+          "mae": 9.859466552734375,
+          "rmse": 12.393456595560727,
+          "r2": -0.11566714392474609,
+          "uncertainty": {
+            "ci95": [
+              5.108934538705008,
+              15.595586027417864
+            ],
+            "ci975": [
+              4.398705001814025,
+              16.4059727954013
+            ]
+          }
+        },
+        "random_forest_none_raw": {
+          "mae": 8.748134231655131,
+          "rmse": 12.341455926893499,
+          "r2": -0.10632451606541338,
+          "uncertainty": {
+            "ci95": [
+              2.8973483211463704,
+              15.427375929602306
+            ],
+            "ci975": [
+              2.315915919490045,
+              16.607004014426384
+            ]
+          }
+        },
+        "tabnet_none_raw": {
+          "mae": 10.893309967858452,
+          "rmse": 13.373899971938311,
+          "r2": -0.2991697039002621,
+          "uncertainty": {
+            "ci95": [
+              5.490802696772984,
+              16.67069119640758
+            ],
+            "ci975": [
+              4.93032375744411,
+              17.668937165822307
+            ]
+          }
+        },
+        "xgboost_none_raw": {
+          "mae": 8.939864260809761,
+          "rmse": 12.128152316122435,
+          "r2": -0.06841266699529114,
+          "uncertainty": {
+            "ci95": [
+              3.4210527394499097,
+              15.177478963136664
+            ],
+            "ci975": [
+              3.1625302493572236,
+              16.441713872977665
+            ]
+          }
+        }
+      }
+    },
+    "online_pd": {
+      "validation": {
+        "dummy_none_raw": {
+          "auroc": 0.5,
+          "average_precision": 0.4583333333333333,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.5,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "log_loss": 0.6907951463691934,
+          "confusion_matrix": [
+            [
+              13,
+              0
+            ],
+            [
+              11,
+              0
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "ci975": [
+              0.5,
+              0.5
+            ]
+          }
+        },
+        "node_none_pretrained": {
+          "auroc": 0.6643356643356644,
+          "average_precision": 0.6471239544768956,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.5419580419580419,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.5384615384615384,
+          "log_loss": 0.6650515747162807,
+          "confusion_matrix": [
+            [
+              7,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4195804195804196,
+              0.8741258741258742
+            ],
+            "ci975": [
+              0.38452797202797206,
+              0.8951048951048951
+            ]
+          }
+        },
+        "node_none_raw": {
+          "auroc": 0.6853146853146853,
+          "average_precision": 0.6578382401911814,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.5419580419580419,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.5384615384615384,
+          "log_loss": 0.6459338672308301,
+          "confusion_matrix": [
+            [
+              7,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4473776223776224,
+              0.8881118881118881
+            ],
+            "ci975": [
+              0.405506993006993,
+              0.9090909090909091
+            ]
+          }
+        },
+        "node_smote128_pretrained": {
+          "auroc": 0.6433566433566433,
+          "average_precision": 0.6658051099227569,
+          "accuracy": 0.625,
+          "balanced_accuracy": 0.6188811188811189,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.7299504672112359,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3986013986013986,
+              0.8531468531468531
+            ],
+            "ci975": [
+              0.36363636363636365,
+              0.8811188811188811
+            ]
+          }
+        },
+        "node_smote128_raw": {
+          "auroc": 0.6503496503496503,
+          "average_precision": 0.6547246944974218,
+          "accuracy": 0.5833333333333334,
+          "balanced_accuracy": 0.5804195804195804,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.6153846153846154,
+          "log_loss": 0.730932923096198,
+          "confusion_matrix": [
+            [
+              8,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.41241258741258746,
+              0.8601398601398601
+            ],
+            "ci975": [
+              0.3635489510489511,
+              0.8811188811188811
+            ]
+          }
+        },
+        "node_smote2_pretrained": {
+          "auroc": 0.6503496503496503,
+          "average_precision": 0.646445473718201,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.5419580419580419,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.5384615384615384,
+          "log_loss": 0.7030574530823924,
+          "confusion_matrix": [
+            [
+              7,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.40559440559440557,
+              0.8531468531468531
+            ],
+            "ci975": [
+              0.3635489510489511,
+              0.8811188811188811
+            ]
+          }
+        },
+        "node_smote2_raw": {
+          "auroc": 0.6503496503496504,
+          "average_precision": 0.6436283413556141,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.5419580419580419,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.5384615384615384,
+          "log_loss": 0.6949186652179847,
+          "confusion_matrix": [
+            [
+              7,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3986013986013986,
+              0.8601398601398601
+            ],
+            "ci975": [
+              0.3706293706293706,
+              0.8881118881118881
+            ]
+          }
+        },
+        "node_smote32_pretrained": {
+          "auroc": 0.6013986013986014,
+          "average_precision": 0.6183417545646648,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.5419580419580419,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.5384615384615384,
+          "log_loss": 0.7388324076972083,
+          "confusion_matrix": [
+            [
+              7,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.35664335664335667,
+              0.8251748251748252
+            ],
+            "ci975": [
+              0.32167832167832167,
+              0.8462412587412591
+            ]
+          }
+        },
+        "node_smote32_raw": {
+          "auroc": 0.6643356643356644,
+          "average_precision": 0.6734457395342562,
+          "accuracy": 0.5833333333333334,
+          "balanced_accuracy": 0.5734265734265734,
+          "sensitivity": 0.45454545454545453,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.6800005240327645,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4125874125874126,
+              0.8671328671328671
+            ],
+            "ci975": [
+              0.37753496503496503,
+              0.8881118881118881
+            ]
+          }
+        },
+        "node_smote8_pretrained": {
+          "auroc": 0.6293706293706294,
+          "average_precision": 0.6253818967722711,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.5419580419580419,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.5384615384615384,
+          "log_loss": 0.705955253647312,
+          "confusion_matrix": [
+            [
+              7,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.38461538461538464,
+              0.8461538461538461
+            ],
+            "ci975": [
+              0.34956293706293706,
+              0.86722027972028
+            ]
+          }
+        },
+        "node_smote8_raw": {
+          "auroc": 0.6293706293706294,
+          "average_precision": 0.6334772039106404,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.5419580419580419,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.5384615384615384,
+          "log_loss": 0.7205826315340887,
+          "confusion_matrix": [
+            [
+              7,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3776223776223776,
+              0.8391608391608392
+            ],
+            "ci975": [
+              0.3356643356643357,
+              0.8671328671328671
+            ]
+          }
+        },
+        "random_forest_none_pretrained": {
+          "auroc": 0.6993006993006994,
+          "average_precision": 0.6672679518936203,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.534965034965035,
+          "sensitivity": 0.45454545454545453,
+          "specificity": 0.6153846153846154,
+          "log_loss": 0.6589201137403594,
+          "confusion_matrix": [
+            [
+              8,
+              5
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.46153846153846156,
+              0.8951048951048951
+            ],
+            "ci975": [
+              0.42657342657342656,
+              0.916083916083916
+            ]
+          }
+        },
+        "random_forest_none_raw": {
+          "auroc": 0.7132867132867133,
+          "average_precision": 0.6761227334756748,
+          "accuracy": 0.625,
+          "balanced_accuracy": 0.6188811188811189,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.6620924917318077,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4825174825174825,
+              0.9090909090909091
+            ],
+            "ci975": [
+              0.43356643356643354,
+              0.9300699300699301
+            ]
+          }
+        },
+        "random_forest_smote128_pretrained": {
+          "auroc": 0.6503496503496503,
+          "average_precision": 0.6087942286471698,
+          "accuracy": 0.5833333333333334,
+          "balanced_accuracy": 0.5734265734265734,
+          "sensitivity": 0.45454545454545453,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.6849212533440916,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3986013986013986,
+              0.8671328671328671
+            ],
+            "ci975": [
+              0.34965034965034963,
+              0.8881993006993011
+            ]
+          }
+        },
+        "random_forest_smote128_raw": {
+          "auroc": 0.6503496503496503,
+          "average_precision": 0.6064294150981457,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.5279720279720279,
+          "sensitivity": 0.36363636363636365,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.6883612336884327,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              7,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3986013986013986,
+              0.8601398601398601
+            ],
+            "ci975": [
+              0.35664335664335667,
+              0.8881993006993011
+            ]
+          }
+        },
+        "random_forest_smote2_pretrained": {
+          "auroc": 0.6363636363636364,
+          "average_precision": 0.629180275349006,
+          "accuracy": 0.5833333333333334,
+          "balanced_accuracy": 0.5734265734265734,
+          "sensitivity": 0.45454545454545453,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.6900325605034613,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3706293706293706,
+              0.8461538461538461
+            ],
+            "ci975": [
+              0.3356643356643357,
+              0.8811188811188811
+            ]
+          }
+        },
+        "random_forest_smote2_raw": {
+          "auroc": 0.6503496503496503,
+          "average_precision": 0.6339923824338403,
+          "accuracy": 0.5833333333333334,
+          "balanced_accuracy": 0.5734265734265734,
+          "sensitivity": 0.45454545454545453,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.6951945819588937,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4054195804195804,
+              0.8601398601398601
+            ],
+            "ci975": [
+              0.35664335664335667,
+              0.8811188811188811
+            ]
+          }
+        },
+        "random_forest_smote32_pretrained": {
+          "auroc": 0.6293706293706294,
+          "average_precision": 0.5988772450459757,
+          "accuracy": 0.5833333333333334,
+          "balanced_accuracy": 0.5734265734265734,
+          "sensitivity": 0.45454545454545453,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.7218851415429173,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3706293706293706,
+              0.8461538461538461
+            ],
+            "ci975": [
+              0.33548951048951053,
+              0.8811188811188811
+            ]
+          }
+        },
+        "random_forest_smote32_raw": {
+          "auroc": 0.6433566433566433,
+          "average_precision": 0.6030203241890548,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.5279720279720279,
+          "sensitivity": 0.36363636363636365,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.7283522688000129,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              7,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.39842657342657345,
+              0.8601398601398601
+            ],
+            "ci975": [
+              0.34956293706293706,
+              0.8811188811188811
+            ]
+          }
+        },
+        "random_forest_smote8_pretrained": {
+          "auroc": 0.6293706293706294,
+          "average_precision": 0.5988772450459757,
+          "accuracy": 0.5833333333333334,
+          "balanced_accuracy": 0.5734265734265734,
+          "sensitivity": 0.45454545454545453,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.7092296891171895,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3706293706293706,
+              0.8461538461538461
+            ],
+            "ci975": [
+              0.33548951048951053,
+              0.8811188811188811
+            ]
+          }
+        },
+        "random_forest_smote8_raw": {
+          "auroc": 0.6083916083916083,
+          "average_precision": 0.5833813772773807,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.5279720279720279,
+          "sensitivity": 0.36363636363636365,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.7216268271578268,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              7,
+              4
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.34265734265734266,
+              0.8253496503496495
+            ],
+            "ci975": [
+              0.30760489510489514,
+              0.8601398601398601
+            ]
+          }
+        },
+        "tabnet_none_pretrained": {
+          "auroc": 0.6573426573426573,
+          "average_precision": 0.6574969621022253,
+          "accuracy": 0.625,
+          "balanced_accuracy": 0.6258741258741258,
+          "sensitivity": 0.6363636363636364,
+          "specificity": 0.6153846153846154,
+          "log_loss": 0.6689218154017978,
+          "confusion_matrix": [
+            [
+              8,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4195804195804196,
+              0.8601398601398601
+            ],
+            "ci975": [
+              0.38452797202797206,
+              0.8812062937062941
+            ]
+          }
+        },
+        "tabnet_none_raw": {
+          "auroc": 0.6573426573426573,
+          "average_precision": 0.6415484627171933,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.5419580419580419,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.5384615384615384,
+          "log_loss": 0.7110260386160187,
+          "confusion_matrix": [
+            [
+              7,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.40559440559440557,
+              0.8671328671328671
+            ],
+            "ci975": [
+              0.37054195804195805,
+              0.8812062937062941
+            ]
+          }
+        },
+        "tabnet_smote128_pretrained": {
+          "auroc": 0.6713286713286712,
+          "average_precision": 0.6622792099853737,
+          "accuracy": 0.625,
+          "balanced_accuracy": 0.6258741258741258,
+          "sensitivity": 0.6363636363636364,
+          "specificity": 0.6153846153846154,
+          "log_loss": 0.697025739410154,
+          "confusion_matrix": [
+            [
+              8,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4263986013986014,
+              0.8741258741258742
+            ],
+            "ci975": [
+              0.3916083916083916,
+              0.8951048951048951
+            ]
+          }
+        },
+        "tabnet_smote128_raw": {
+          "auroc": 0.6573426573426573,
+          "average_precision": 0.7204560145736617,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.5419580419580419,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.5384615384615384,
+          "log_loss": 0.7178396928195981,
+          "confusion_matrix": [
+            [
+              7,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4125874125874126,
+              0.8671328671328671
+            ],
+            "ci975": [
+              0.3706293706293706,
+              0.8881118881118881
+            ]
+          }
+        },
+        "tabnet_smote2_pretrained": {
+          "auroc": 0.6223776223776224,
+          "average_precision": 0.6193492512272416,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.534965034965035,
+          "sensitivity": 0.45454545454545453,
+          "specificity": 0.6153846153846154,
+          "log_loss": 0.729724891676919,
+          "confusion_matrix": [
+            [
+              8,
+              5
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.3706293706293706,
+              0.8323426573426564
+            ],
+            "ci975": [
+              0.3494755244755245,
+              0.8602272727272731
+            ]
+          }
+        },
+        "tabnet_smote2_raw": {
+          "auroc": 0.6503496503496503,
+          "average_precision": 0.6337615600773495,
+          "accuracy": 0.5,
+          "balanced_accuracy": 0.49650349650349646,
+          "sensitivity": 0.45454545454545453,
+          "specificity": 0.5384615384615384,
+          "log_loss": 0.6747062967204845,
+          "confusion_matrix": [
+            [
+              7,
+              6
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.40559440559440557,
+              0.8601398601398601
+            ],
+            "ci975": [
+              0.36363636363636365,
+              0.8811188811188811
+            ]
+          }
+        },
+        "tabnet_smote32_pretrained": {
+          "auroc": 0.6923076923076923,
+          "average_precision": 0.7061052982105613,
+          "accuracy": 0.5833333333333334,
+          "balanced_accuracy": 0.5804195804195804,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.6153846153846154,
+          "log_loss": 0.6919105423584099,
+          "confusion_matrix": [
+            [
+              8,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.45454545454545453,
+              0.8881118881118881
+            ],
+            "ci975": [
+              0.42657342657342656,
+              0.9020979020979021
+            ]
+          }
+        },
+        "tabnet_smote32_raw": {
+          "auroc": 0.6503496503496503,
+          "average_precision": 0.6751184819964724,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.5419580419580419,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.5384615384615384,
+          "log_loss": 0.673661812370387,
+          "confusion_matrix": [
+            [
+              7,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4195804195804196,
+              0.8601398601398601
+            ],
+            "ci975": [
+              0.37753496503496503,
+              0.8741258741258742
+            ]
+          }
+        },
+        "tabnet_smote8_pretrained": {
+          "auroc": 0.6643356643356643,
+          "average_precision": 0.652951467724195,
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy": 0.6713286713286714,
+          "sensitivity": 0.7272727272727273,
+          "specificity": 0.6153846153846154,
+          "log_loss": 0.792035816549819,
+          "confusion_matrix": [
+            [
+              8,
+              5
+            ],
+            [
+              3,
+              8
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4195804195804196,
+              0.8671328671328671
+            ],
+            "ci975": [
+              0.38452797202797206,
+              0.8881118881118881
+            ]
+          }
+        },
+        "tabnet_smote8_raw": {
+          "auroc": 0.6433566433566433,
+          "average_precision": 0.653620535498526,
+          "accuracy": 0.5833333333333334,
+          "balanced_accuracy": 0.5804195804195804,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.6153846153846154,
+          "log_loss": 0.6909513256975153,
+          "confusion_matrix": [
+            [
+              8,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.40559440559440557,
+              0.8531468531468531
+            ],
+            "ci975": [
+              0.3635489510489511,
+              0.8741258741258742
+            ]
+          }
+        },
+        "xgboost_none_pretrained": {
+          "auroc": 0.7272727272727273,
+          "average_precision": 0.689311565627355,
+          "accuracy": 0.7083333333333334,
+          "balanced_accuracy": 0.7027972027972028,
+          "sensitivity": 0.6363636363636364,
+          "specificity": 0.7692307692307693,
+          "log_loss": 0.6339268302664575,
+          "confusion_matrix": [
+            [
+              10,
+              3
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.49632867132867137,
+              0.916083916083916
+            ],
+            "ci975": [
+              0.46153846153846156,
+              0.9370629370629371
+            ]
+          }
+        },
+        "xgboost_none_raw": {
+          "auroc": 0.7342657342657343,
+          "average_precision": 0.6961409661733332,
+          "accuracy": 0.7083333333333334,
+          "balanced_accuracy": 0.7027972027972028,
+          "sensitivity": 0.6363636363636364,
+          "specificity": 0.7692307692307693,
+          "log_loss": 0.6378587895550459,
+          "confusion_matrix": [
+            [
+              10,
+              3
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5103146853146854,
+              0.9230769230769231
+            ],
+            "ci975": [
+              0.4755244755244755,
+              0.9440559440559441
+            ]
+          }
+        },
+        "xgboost_smote128_pretrained": {
+          "auroc": 0.6993006993006993,
+          "average_precision": 0.667686221274738,
+          "accuracy": 0.5416666666666666,
+          "balanced_accuracy": 0.534965034965035,
+          "sensitivity": 0.45454545454545453,
+          "specificity": 0.6153846153846154,
+          "log_loss": 0.6461612100062522,
+          "confusion_matrix": [
+            [
+              8,
+              5
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.46153846153846156,
+              0.8951048951048951
+            ],
+            "ci975": [
+              0.42657342657342656,
+              0.916083916083916
+            ]
+          }
+        },
+        "xgboost_smote128_raw": {
+          "auroc": 0.7272727272727273,
+          "average_precision": 0.6906313243000549,
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy": 0.6573426573426573,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.7692307692307693,
+          "log_loss": 0.6472929144493201,
+          "confusion_matrix": [
+            [
+              10,
+              3
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5033216783216784,
+              0.916083916083916
+            ],
+            "ci975": [
+              0.46844405594405597,
+              0.9370629370629371
+            ]
+          }
+        },
+        "xgboost_smote2_pretrained": {
+          "auroc": 0.7202797202797203,
+          "average_precision": 0.6821278402618115,
+          "accuracy": 0.5833333333333334,
+          "balanced_accuracy": 0.5734265734265734,
+          "sensitivity": 0.45454545454545453,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.6402397315792588,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.48951048951048953,
+              0.916083916083916
+            ],
+            "ci975": [
+              0.44755244755244755,
+              0.9300699300699301
+            ]
+          }
+        },
+        "xgboost_smote2_raw": {
+          "auroc": 0.7132867132867133,
+          "average_precision": 0.6787855942725067,
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy": 0.6643356643356644,
+          "sensitivity": 0.6363636363636364,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.6429990041989461,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4825174825174825,
+              0.9090909090909091
+            ],
+            "ci975": [
+              0.440472027972028,
+              0.9230769230769231
+            ]
+          }
+        },
+        "xgboost_smote32_pretrained": {
+          "auroc": 0.6993006993006993,
+          "average_precision": 0.667686221274738,
+          "accuracy": 0.5833333333333334,
+          "balanced_accuracy": 0.5734265734265734,
+          "sensitivity": 0.45454545454545453,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.6444973333374717,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.46153846153846156,
+              0.8951048951048951
+            ],
+            "ci975": [
+              0.42657342657342656,
+              0.916083916083916
+            ]
+          }
+        },
+        "xgboost_smote32_raw": {
+          "auroc": 0.7132867132867133,
+          "average_precision": 0.6801841956711081,
+          "accuracy": 0.625,
+          "balanced_accuracy": 0.6188811188811189,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.6479112656198701,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4825174825174825,
+              0.9090909090909091
+            ],
+            "ci975": [
+              0.44755244755244755,
+              0.9300699300699301
+            ]
+          }
+        },
+        "xgboost_smote8_pretrained": {
+          "auroc": 0.6853146853146853,
+          "average_precision": 0.6626736899464172,
+          "accuracy": 0.5833333333333334,
+          "balanced_accuracy": 0.5734265734265734,
+          "sensitivity": 0.45454545454545453,
+          "specificity": 0.6923076923076923,
+          "log_loss": 0.6475251815007224,
+          "confusion_matrix": [
+            [
+              9,
+              4
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.44755244755244755,
+              0.8881118881118881
+            ],
+            "ci975": [
+              0.4125874125874126,
+              0.9090909090909091
+            ]
+          }
+        },
+        "xgboost_smote8_raw": {
+          "auroc": 0.7342657342657343,
+          "average_precision": 0.6945274281961589,
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy": 0.6573426573426573,
+          "sensitivity": 0.5454545454545454,
+          "specificity": 0.7692307692307693,
+          "log_loss": 0.645870020605211,
+          "confusion_matrix": [
+            [
+              10,
+              3
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5104895104895105,
+              0.9230769230769231
+            ],
+            "ci975": [
+              0.46853146853146854,
+              0.9440559440559441
+            ]
+          }
+        }
+      },
+      "test": {
+        "dummy_none_raw": {
+          "auroc": 0.5,
+          "average_precision": 0.425531914893617,
+          "accuracy": 0.574468085106383,
+          "balanced_accuracy": 0.5,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "log_loss": 0.6821892263180097,
+          "confusion_matrix": [
+            [
+              27,
+              0
+            ],
+            [
+              20,
+              0
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "ci975": [
+              0.5,
+              0.5
+            ]
+          }
+        },
+        "node_none_pretrained": {
+          "auroc": 0.6648148148148149,
+          "average_precision": 0.6747652755362235,
+          "accuracy": 0.6170212765957447,
+          "balanced_accuracy": 0.6018518518518519,
+          "sensitivity": 0.5,
+          "specificity": 0.7037037037037037,
+          "log_loss": 0.6334876284294554,
+          "confusion_matrix": [
+            [
+              19,
+              8
+            ],
+            [
+              10,
+              10
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              0.8203703703703704
+            ],
+            "ci975": [
+              0.47775462962962967,
+              0.8370601851851852
+            ]
+          }
+        },
+        "node_none_raw": {
+          "auroc": 0.6722222222222223,
+          "average_precision": 0.6962710461367752,
+          "accuracy": 0.6382978723404256,
+          "balanced_accuracy": 0.6203703703703703,
+          "sensitivity": 0.5,
+          "specificity": 0.7407407407407407,
+          "log_loss": 0.6216748011719547,
+          "confusion_matrix": [
+            [
+              20,
+              7
+            ],
+            [
+              10,
+              10
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5055555555555555,
+              0.825925925925926
+            ],
+            "ci975": [
+              0.48333333333333334,
+              0.8426157407407407
+            ]
+          }
+        },
+        "node_smote128_pretrained": {
+          "auroc": 0.6388888888888888,
+          "average_precision": 0.6177815144141401,
+          "accuracy": 0.574468085106383,
+          "balanced_accuracy": 0.5712962962962963,
+          "sensitivity": 0.55,
+          "specificity": 0.5925925925925926,
+          "log_loss": 0.69012046266581,
+          "confusion_matrix": [
+            [
+              16,
+              11
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.47032407407407406,
+              0.7907870370370368
+            ],
+            "ci975": [
+              0.45,
+              0.8092592592592592
+            ]
+          }
+        },
+        "node_smote128_raw": {
+          "auroc": 0.6851851851851852,
+          "average_precision": 0.6684102497734465,
+          "accuracy": 0.6595744680851063,
+          "balanced_accuracy": 0.6583333333333333,
+          "sensitivity": 0.65,
+          "specificity": 0.6666666666666666,
+          "log_loss": 0.6326382011046101,
+          "confusion_matrix": [
+            [
+              18,
+              9
+            ],
+            [
+              7,
+              13
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5259259259259259,
+              0.8278240740740738
+            ],
+            "ci975": [
+              0.4981481481481482,
+              0.8518518518518519
+            ]
+          }
+        },
+        "node_smote2_pretrained": {
+          "auroc": 0.6703703703703705,
+          "average_precision": 0.6604489775842097,
+          "accuracy": 0.5957446808510638,
+          "balanced_accuracy": 0.5898148148148148,
+          "sensitivity": 0.55,
+          "specificity": 0.6296296296296297,
+          "log_loss": 0.6680141101191112,
+          "confusion_matrix": [
+            [
+              17,
+              10
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5037037037037037,
+              0.8277777777777777
+            ],
+            "ci975": [
+              0.48148148148148145,
+              0.851875
+            ]
+          }
+        },
+        "node_smote2_raw": {
+          "auroc": 0.6685185185185186,
+          "average_precision": 0.6917149159731197,
+          "accuracy": 0.5957446808510638,
+          "balanced_accuracy": 0.5962962962962963,
+          "sensitivity": 0.6,
+          "specificity": 0.5925925925925926,
+          "log_loss": 0.64499540262939,
+          "confusion_matrix": [
+            [
+              16,
+              11
+            ],
+            [
+              8,
+              12
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              0.8296296296296296
+            ],
+            "ci975": [
+              0.47405092592592596,
+              0.8518518518518519
+            ]
+          }
+        },
+        "node_smote32_pretrained": {
+          "auroc": 0.638888888888889,
+          "average_precision": 0.6256435804334564,
+          "accuracy": 0.574468085106383,
+          "balanced_accuracy": 0.5712962962962963,
+          "sensitivity": 0.55,
+          "specificity": 0.5925925925925926,
+          "log_loss": 0.6965710466401823,
+          "confusion_matrix": [
+            [
+              16,
+              11
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.47032407407407406,
+              0.7944907407407404
+            ],
+            "ci975": [
+              0.44814814814814813,
+              0.8240740740740741
+            ]
+          }
+        },
+        "node_smote32_raw": {
+          "auroc": 0.6777777777777778,
+          "average_precision": 0.6400877881966217,
+          "accuracy": 0.6170212765957447,
+          "balanced_accuracy": 0.6148148148148148,
+          "sensitivity": 0.6,
+          "specificity": 0.6296296296296297,
+          "log_loss": 0.6790534572689554,
+          "confusion_matrix": [
+            [
+              17,
+              10
+            ],
+            [
+              8,
+              12
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5185185185185185,
+              0.8240740740740741
+            ],
+            "ci975": [
+              0.49256944444444445,
+              0.8425925925925926
+            ]
+          }
+        },
+        "node_smote8_pretrained": {
+          "auroc": 0.6703703703703704,
+          "average_precision": 0.6631861378159414,
+          "accuracy": 0.5957446808510638,
+          "balanced_accuracy": 0.5962962962962963,
+          "sensitivity": 0.6,
+          "specificity": 0.5925925925925926,
+          "log_loss": 0.6853525917212501,
+          "confusion_matrix": [
+            [
+              16,
+              11
+            ],
+            [
+              8,
+              12
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5055555555555555,
+              0.8222222222222222
+            ],
+            "ci975": [
+              0.47962962962962963,
+              0.8500231481481482
+            ]
+          }
+        },
+        "node_smote8_raw": {
+          "auroc": 0.7203703703703703,
+          "average_precision": 0.7027387991553655,
+          "accuracy": 0.6170212765957447,
+          "balanced_accuracy": 0.6212962962962962,
+          "sensitivity": 0.65,
+          "specificity": 0.5925925925925926,
+          "log_loss": 0.6261357428603365,
+          "confusion_matrix": [
+            [
+              16,
+              11
+            ],
+            [
+              7,
+              13
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5647685185185185,
+              0.8611111111111112
+            ],
+            "ci975": [
+              0.5388888888888889,
+              0.8870601851851853
+            ]
+          }
+        },
+        "random_forest_none_pretrained": {
+          "auroc": 0.6703703703703704,
+          "average_precision": 0.6885614033263028,
+          "accuracy": 0.6595744680851063,
+          "balanced_accuracy": 0.6453703703703704,
+          "sensitivity": 0.55,
+          "specificity": 0.7407407407407407,
+          "log_loss": 0.6272534015461027,
+          "confusion_matrix": [
+            [
+              20,
+              7
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5,
+              0.8277777777777777
+            ],
+            "ci975": [
+              0.4777777777777778,
+              0.8463194444444445
+            ]
+          }
+        },
+        "random_forest_none_raw": {
+          "auroc": 0.6851851851851853,
+          "average_precision": 0.6933681426400222,
+          "accuracy": 0.7021276595744681,
+          "balanced_accuracy": 0.6824074074074074,
+          "sensitivity": 0.55,
+          "specificity": 0.8148148148148148,
+          "log_loss": 0.6151125678155979,
+          "confusion_matrix": [
+            [
+              22,
+              5
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5222222222222223,
+              0.8333333333333334
+            ],
+            "ci975": [
+              0.5018287037037037,
+              0.8518518518518519
+            ]
+          }
+        },
+        "random_forest_smote128_pretrained": {
+          "auroc": 0.6453703703703704,
+          "average_precision": 0.6891303706677561,
+          "accuracy": 0.6595744680851063,
+          "balanced_accuracy": 0.6453703703703704,
+          "sensitivity": 0.55,
+          "specificity": 0.7407407407407407,
+          "log_loss": 0.6333816019858416,
+          "confusion_matrix": [
+            [
+              20,
+              7
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4703703703703704,
+              0.812962962962963
+            ],
+            "ci975": [
+              0.45275462962962965,
+              0.8333449074074075
+            ]
+          }
+        },
+        "random_forest_smote128_raw": {
+          "auroc": 0.6324074074074074,
+          "average_precision": 0.6618253412798523,
+          "accuracy": 0.6808510638297872,
+          "balanced_accuracy": 0.6574074074074074,
+          "sensitivity": 0.5,
+          "specificity": 0.8148148148148148,
+          "log_loss": 0.6428935010720511,
+          "confusion_matrix": [
+            [
+              22,
+              5
+            ],
+            [
+              10,
+              10
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.46111111111111114,
+              0.7907870370370368
+            ],
+            "ci975": [
+              0.4425462962962963,
+              0.8166898148148148
+            ]
+          }
+        },
+        "random_forest_smote2_pretrained": {
+          "auroc": 0.648148148148148,
+          "average_precision": 0.6619264763661317,
+          "accuracy": 0.6595744680851063,
+          "balanced_accuracy": 0.6453703703703704,
+          "sensitivity": 0.55,
+          "specificity": 0.7407407407407407,
+          "log_loss": 0.6433899455573923,
+          "confusion_matrix": [
+            [
+              20,
+              7
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.47958333333333336,
+              0.8055555555555556
+            ],
+            "ci975": [
+              0.459212962962963,
+              0.831527777777778
+            ]
+          }
+        },
+        "random_forest_smote2_raw": {
+          "auroc": 0.6648148148148149,
+          "average_precision": 0.6582160307931633,
+          "accuracy": 0.6382978723404256,
+          "balanced_accuracy": 0.6268518518518519,
+          "sensitivity": 0.55,
+          "specificity": 0.7037037037037037,
+          "log_loss": 0.629958525865606,
+          "confusion_matrix": [
+            [
+              19,
+              8
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5017592592592593,
+              0.8167129629629627
+            ],
+            "ci975": [
+              0.4814583333333333,
+              0.8388888888888889
+            ]
+          }
+        },
+        "random_forest_smote32_pretrained": {
+          "auroc": 0.6398148148148148,
+          "average_precision": 0.6791822493698161,
+          "accuracy": 0.6595744680851063,
+          "balanced_accuracy": 0.6453703703703704,
+          "sensitivity": 0.55,
+          "specificity": 0.7407407407407407,
+          "log_loss": 0.6435881903230062,
+          "confusion_matrix": [
+            [
+              20,
+              7
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4638657407407408,
+              0.8074074074074075
+            ],
+            "ci975": [
+              0.4462847222222222,
+              0.8277777777777777
+            ]
+          }
+        },
+        "random_forest_smote32_raw": {
+          "auroc": 0.6250000000000001,
+          "average_precision": 0.649011400878861,
+          "accuracy": 0.6808510638297872,
+          "balanced_accuracy": 0.6574074074074074,
+          "sensitivity": 0.5,
+          "specificity": 0.8148148148148148,
+          "log_loss": 0.6444884094559736,
+          "confusion_matrix": [
+            [
+              22,
+              5
+            ],
+            [
+              10,
+              10
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.45180555555555557,
+              0.7870370370370371
+            ],
+            "ci975": [
+              0.42962962962962964,
+              0.8092824074074074
+            ]
+          }
+        },
+        "random_forest_smote8_pretrained": {
+          "auroc": 0.6425925925925926,
+          "average_precision": 0.646249507800573,
+          "accuracy": 0.6595744680851063,
+          "balanced_accuracy": 0.6453703703703704,
+          "sensitivity": 0.55,
+          "specificity": 0.7407407407407407,
+          "log_loss": 0.6453324087729977,
+          "confusion_matrix": [
+            [
+              20,
+              7
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4722222222222222,
+              0.8037037037037037
+            ],
+            "ci975": [
+              0.4536805555555556,
+              0.8314814814814815
+            ]
+          }
+        },
+        "random_forest_smote8_raw": {
+          "auroc": 0.6481481481481481,
+          "average_precision": 0.6316168209915809,
+          "accuracy": 0.6170212765957447,
+          "balanced_accuracy": 0.6018518518518519,
+          "sensitivity": 0.5,
+          "specificity": 0.7037037037037037,
+          "log_loss": 0.6411059504911826,
+          "confusion_matrix": [
+            [
+              19,
+              8
+            ],
+            [
+              10,
+              10
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.48518518518518516,
+              0.8055555555555556
+            ],
+            "ci975": [
+              0.46293981481481483,
+              0.8314814814814815
+            ]
+          }
+        },
+        "tabnet_none_pretrained": {
+          "auroc": 0.6888888888888889,
+          "average_precision": 0.6815943672548392,
+          "accuracy": 0.6170212765957447,
+          "balanced_accuracy": 0.6018518518518519,
+          "sensitivity": 0.5,
+          "specificity": 0.7037037037037037,
+          "log_loss": 0.6285524424661673,
+          "confusion_matrix": [
+            [
+              19,
+              8
+            ],
+            [
+              10,
+              10
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5203703703703704,
+              0.8425925925925926
+            ],
+            "ci975": [
+              0.49625,
+              0.8518518518518519
+            ]
+          }
+        },
+        "tabnet_none_raw": {
+          "auroc": 0.6925925925925926,
+          "average_precision": 0.6657608677036696,
+          "accuracy": 0.5957446808510638,
+          "balanced_accuracy": 0.5898148148148148,
+          "sensitivity": 0.55,
+          "specificity": 0.6296296296296297,
+          "log_loss": 0.6563775836211581,
+          "confusion_matrix": [
+            [
+              17,
+              10
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5351851851851852,
+              0.8388888888888889
+            ],
+            "ci975": [
+              0.5110879629629629,
+              0.8537268518518519
+            ]
+          }
+        },
+        "tabnet_smote128_pretrained": {
+          "auroc": 0.6537037037037037,
+          "average_precision": 0.6203243472511984,
+          "accuracy": 0.5531914893617021,
+          "balanced_accuracy": 0.5527777777777778,
+          "sensitivity": 0.55,
+          "specificity": 0.5555555555555556,
+          "log_loss": 0.6831937096627405,
+          "confusion_matrix": [
+            [
+              15,
+              12
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.48703703703703705,
+              0.8037499999999997
+            ],
+            "ci975": [
+              0.47034722222222225,
+              0.8222222222222222
+            ]
+          }
+        },
+        "tabnet_smote128_raw": {
+          "auroc": 0.6925925925925925,
+          "average_precision": 0.7002070308918136,
+          "accuracy": 0.5957446808510638,
+          "balanced_accuracy": 0.5962962962962963,
+          "sensitivity": 0.6,
+          "specificity": 0.5925925925925926,
+          "log_loss": 0.6411090828176446,
+          "confusion_matrix": [
+            [
+              16,
+              11
+            ],
+            [
+              8,
+              12
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5314814814814814,
+              0.8333333333333334
+            ],
+            "ci975": [
+              0.5037037037037037,
+              0.8518981481481483
+            ]
+          }
+        },
+        "tabnet_smote2_pretrained": {
+          "auroc": 0.6592592592592593,
+          "average_precision": 0.6552919261848102,
+          "accuracy": 0.6382978723404256,
+          "balanced_accuracy": 0.6268518518518519,
+          "sensitivity": 0.55,
+          "specificity": 0.7037037037037037,
+          "log_loss": 0.6596130505622647,
+          "confusion_matrix": [
+            [
+              19,
+              8
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4869907407407407,
+              0.8185185185185185
+            ],
+            "ci975": [
+              0.47034722222222225,
+              0.8351851851851851
+            ]
+          }
+        },
+        "tabnet_smote2_raw": {
+          "auroc": 0.6648148148148147,
+          "average_precision": 0.6419963830829079,
+          "accuracy": 0.574468085106383,
+          "balanced_accuracy": 0.5712962962962963,
+          "sensitivity": 0.55,
+          "specificity": 0.5925925925925926,
+          "log_loss": 0.6722642511517632,
+          "confusion_matrix": [
+            [
+              16,
+              11
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4981481481481482,
+              0.8185648148148146
+            ],
+            "ci975": [
+              0.4759259259259259,
+              0.8481481481481481
+            ]
+          }
+        },
+        "tabnet_smote32_pretrained": {
+          "auroc": 0.5851851851851851,
+          "average_precision": 0.5483232356654396,
+          "accuracy": 0.48936170212765956,
+          "balanced_accuracy": 0.4842592592592593,
+          "sensitivity": 0.45,
+          "specificity": 0.5185185185185185,
+          "log_loss": 0.7422079439542675,
+          "confusion_matrix": [
+            [
+              14,
+              13
+            ],
+            [
+              11,
+              9
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.4148148148148148,
+              0.7481944444444442
+            ],
+            "ci975": [
+              0.3999768518518519,
+              0.7703935185185186
+            ]
+          }
+        },
+        "tabnet_smote32_raw": {
+          "auroc": 0.6185185185185186,
+          "average_precision": 0.6065281949194008,
+          "accuracy": 0.574468085106383,
+          "balanced_accuracy": 0.5907407407407407,
+          "sensitivity": 0.7,
+          "specificity": 0.48148148148148145,
+          "log_loss": 0.7159288029483829,
+          "confusion_matrix": [
+            [
+              13,
+              14
+            ],
+            [
+              6,
+              14
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.45,
+              0.7703703703703704
+            ],
+            "ci975": [
+              0.42034722222222226,
+              0.7926388888888891
+            ]
+          }
+        },
+        "tabnet_smote8_pretrained": {
+          "auroc": 0.6444444444444444,
+          "average_precision": 0.6175247554354091,
+          "accuracy": 0.574468085106383,
+          "balanced_accuracy": 0.5842592592592593,
+          "sensitivity": 0.65,
+          "specificity": 0.5185185185185185,
+          "log_loss": 0.7149007123500983,
+          "confusion_matrix": [
+            [
+              14,
+              13
+            ],
+            [
+              7,
+              13
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.47958333333333336,
+              0.8037037037037037
+            ],
+            "ci975": [
+              0.46111111111111114,
+              0.8240740740740741
+            ]
+          }
+        },
+        "tabnet_smote8_raw": {
+          "auroc": 0.65,
+          "average_precision": 0.6004271065978761,
+          "accuracy": 0.5531914893617021,
+          "balanced_accuracy": 0.5462962962962963,
+          "sensitivity": 0.5,
+          "specificity": 0.5925925925925926,
+          "log_loss": 0.7071815155184175,
+          "confusion_matrix": [
+            [
+              16,
+              11
+            ],
+            [
+              10,
+              10
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.48703703703703705,
+              0.8018518518518518
+            ],
+            "ci975": [
+              0.46296296296296297,
+              0.8222222222222222
+            ]
+          }
+        },
+        "xgboost_none_pretrained": {
+          "auroc": 0.6870370370370371,
+          "average_precision": 0.694583308096772,
+          "accuracy": 0.6808510638297872,
+          "balanced_accuracy": 0.6574074074074074,
+          "sensitivity": 0.5,
+          "specificity": 0.8148148148148148,
+          "log_loss": 0.5995790774682118,
+          "confusion_matrix": [
+            [
+              22,
+              5
+            ],
+            [
+              10,
+              10
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.524074074074074,
+              0.8296759259259257
+            ],
+            "ci975": [
+              0.5110879629629629,
+              0.85
+            ]
+          }
+        },
+        "xgboost_none_raw": {
+          "auroc": 0.7000000000000001,
+          "average_precision": 0.7106586532180419,
+          "accuracy": 0.6595744680851063,
+          "balanced_accuracy": 0.6388888888888888,
+          "sensitivity": 0.5,
+          "specificity": 0.7777777777777778,
+          "log_loss": 0.5910385675860944,
+          "confusion_matrix": [
+            [
+              21,
+              6
+            ],
+            [
+              10,
+              10
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5370370370370371,
+              0.8462962962962963
+            ],
+            "ci975": [
+              0.5185185185185185,
+              0.8592824074074075
+            ]
+          }
+        },
+        "xgboost_smote128_pretrained": {
+          "auroc": 0.6833333333333333,
+          "average_precision": 0.6926950246244523,
+          "accuracy": 0.6382978723404256,
+          "balanced_accuracy": 0.6203703703703703,
+          "sensitivity": 0.5,
+          "specificity": 0.7407407407407407,
+          "log_loss": 0.5995730325148467,
+          "confusion_matrix": [
+            [
+              20,
+              7
+            ],
+            [
+              10,
+              10
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5222222222222223,
+              0.8278240740740738
+            ],
+            "ci975": [
+              0.5055555555555555,
+              0.8444675925925926
+            ]
+          }
+        },
+        "xgboost_smote128_raw": {
+          "auroc": 0.6870370370370371,
+          "average_precision": 0.7112186097551954,
+          "accuracy": 0.7021276595744681,
+          "balanced_accuracy": 0.6824074074074074,
+          "sensitivity": 0.55,
+          "specificity": 0.8148148148148148,
+          "log_loss": 0.5922417660309436,
+          "confusion_matrix": [
+            [
+              22,
+              5
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5222222222222223,
+              0.8388888888888889
+            ],
+            "ci975": [
+              0.4981481481481482,
+              0.8537268518518519
+            ]
+          }
+        },
+        "xgboost_smote2_pretrained": {
+          "auroc": 0.6796296296296296,
+          "average_precision": 0.6942716167743097,
+          "accuracy": 0.6382978723404256,
+          "balanced_accuracy": 0.6203703703703703,
+          "sensitivity": 0.5,
+          "specificity": 0.7407407407407407,
+          "log_loss": 0.6055517349695648,
+          "confusion_matrix": [
+            [
+              20,
+              7
+            ],
+            [
+              10,
+              10
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5203240740740741,
+              0.8278240740740738
+            ],
+            "ci975": [
+              0.5018287037037037,
+              0.8462962962962963
+            ]
+          }
+        },
+        "xgboost_smote2_raw": {
+          "auroc": 0.7000000000000001,
+          "average_precision": 0.7141869246889299,
+          "accuracy": 0.7021276595744681,
+          "balanced_accuracy": 0.6824074074074074,
+          "sensitivity": 0.55,
+          "specificity": 0.8148148148148148,
+          "log_loss": 0.5893477713703004,
+          "confusion_matrix": [
+            [
+              22,
+              5
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5388888888888889,
+              0.8462962962962963
+            ],
+            "ci975": [
+              0.5184953703703703,
+              0.8592592592592593
+            ]
+          }
+        },
+        "xgboost_smote32_pretrained": {
+          "auroc": 0.6851851851851851,
+          "average_precision": 0.6996443333802127,
+          "accuracy": 0.6382978723404256,
+          "balanced_accuracy": 0.6203703703703703,
+          "sensitivity": 0.5,
+          "specificity": 0.7407407407407407,
+          "log_loss": 0.5985219275347118,
+          "confusion_matrix": [
+            [
+              20,
+              7
+            ],
+            [
+              10,
+              10
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.522175925925926,
+              0.8314814814814815
+            ],
+            "ci975": [
+              0.5055555555555555,
+              0.8462962962962963
+            ]
+          }
+        },
+        "xgboost_smote32_raw": {
+          "auroc": 0.6944444444444445,
+          "average_precision": 0.7143518457687674,
+          "accuracy": 0.6808510638297872,
+          "balanced_accuracy": 0.663888888888889,
+          "sensitivity": 0.55,
+          "specificity": 0.7777777777777778,
+          "log_loss": 0.5897049025338261,
+          "confusion_matrix": [
+            [
+              21,
+              6
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5333333333333333,
+              0.8425925925925926
+            ],
+            "ci975": [
+              0.5129398148148148,
+              0.8574305555555556
+            ]
+          }
+        },
+        "xgboost_smote8_pretrained": {
+          "auroc": 0.6888888888888889,
+          "average_precision": 0.6965678785477094,
+          "accuracy": 0.6808510638297872,
+          "balanced_accuracy": 0.6574074074074074,
+          "sensitivity": 0.5,
+          "specificity": 0.8148148148148148,
+          "log_loss": 0.5968094173224266,
+          "confusion_matrix": [
+            [
+              22,
+              5
+            ],
+            [
+              10,
+              10
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5277777777777778,
+              0.8333333333333334
+            ],
+            "ci975": [
+              0.5092592592592593,
+              0.8463194444444445
+            ]
+          }
+        },
+        "xgboost_smote8_raw": {
+          "auroc": 0.6981481481481482,
+          "average_precision": 0.7157388908789246,
+          "accuracy": 0.7021276595744681,
+          "balanced_accuracy": 0.6824074074074074,
+          "sensitivity": 0.55,
+          "specificity": 0.8148148148148148,
+          "log_loss": 0.5878384113253442,
+          "confusion_matrix": [
+            [
+              22,
+              5
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "uncertainty": {
+            "ci95": [
+              0.5332870370370371,
+              0.8462962962962963
+            ],
+            "ci975": [
+              0.512962962962963,
+              0.8629629629629629
+            ]
+          }
+        }
+      }
+    }
+  }
+}

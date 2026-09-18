@@ -1,0 +1,464 @@
+{
+  "baseline_batches": 1,
+  "control_followup_batches": 1,
+  "pd_followup_batches": 8,
+  "pd_classified_pd": 6,
+  "pd_classified_control": 2,
+  "synthetic_keystrokes": 0,
+  "interpretation": "Cross-person functional demonstration, not observed within-person onset or independent clinical accuracy",
+  "results": [
+    {
+      "status": "baseline_ready",
+      "participant_id": "demo:control_to_pd",
+      "batch_id": "baseline:nq:95",
+      "timestamp_ms": 0.0,
+      "windows": 50,
+      "keystrokes": 2500,
+      "embedding_shape": [
+        50,
+        128
+      ],
+      "classifier_input_shape": [
+        50,
+        135
+      ],
+      "family": "xgboost",
+      "model_count": 25,
+      "pd_score": 0.37020596861839294,
+      "predicted_class": 0,
+      "model_score_sd": 0.03177054226398468,
+      "source_participant": "nq:95",
+      "source_label": 0,
+      "scenario_role": "baseline",
+      "recordings": [
+        {
+          "file": "1410448218.095_001_014.csv",
+          "windows": 50,
+          "source_timestamp_ms": 1410448218000
+        }
+      ],
+      "source_split": "validation",
+      "same_person_as_baseline": true
+    },
+    {
+      "status": "scored",
+      "participant_id": "demo:control_to_pd",
+      "batch_id": "control_followup:nq:95",
+      "timestamp_ms": 1.0,
+      "windows": 50,
+      "keystrokes": 2500,
+      "embedding_shape": [
+        50,
+        128
+      ],
+      "classifier_input_shape": [
+        50,
+        135
+      ],
+      "family": "xgboost",
+      "model_count": 25,
+      "pd_score": 0.40687379240989685,
+      "predicted_class": 0,
+      "model_score_sd": 0.03109791688621044,
+      "baseline_batch_id": "baseline:nq:95",
+      "baseline_pd_score": 0.37020596861839294,
+      "pd_score_change": 0.036667823791503906,
+      "embedding_distance": 1.2782694620336936,
+      "baseline_within_distance": 1.1643498369916143,
+      "embedding_distance_ratio": 1.0978396882301447,
+      "mmd2": 0.12830811677051424,
+      "kernel_bandwidth_squared": 0.6825108509050573,
+      "change_interpretation": "Descriptive typing change; no clinical change threshold fitted",
+      "source_participant": "nq:95",
+      "source_label": 0,
+      "scenario_role": "control_followup",
+      "recordings": [
+        {
+          "file": "1411657572.095_003_014.csv",
+          "windows": 50,
+          "source_timestamp_ms": 1411657572000
+        }
+      ],
+      "source_split": "validation",
+      "same_person_as_baseline": true
+    },
+    {
+      "status": "scored",
+      "participant_id": "demo:control_to_pd",
+      "batch_id": "pd_followup:nq:11",
+      "timestamp_ms": 2.0,
+      "windows": 50,
+      "keystrokes": 2500,
+      "embedding_shape": [
+        50,
+        128
+      ],
+      "classifier_input_shape": [
+        50,
+        135
+      ],
+      "family": "xgboost",
+      "model_count": 25,
+      "pd_score": 0.560357391834259,
+      "predicted_class": 1,
+      "model_score_sd": 0.02692437544465065,
+      "baseline_batch_id": "baseline:nq:95",
+      "baseline_pd_score": 0.37020596861839294,
+      "pd_score_change": 0.1901514232158661,
+      "embedding_distance": 1.4678869590181327,
+      "baseline_within_distance": 1.1643498369916143,
+      "embedding_distance_ratio": 1.2606923730163277,
+      "mmd2": 0.3408513406362992,
+      "kernel_bandwidth_squared": 0.6825108509050573,
+      "change_interpretation": "Descriptive typing change; no clinical change threshold fitted",
+      "source_participant": "nq:11",
+      "source_label": 1,
+      "scenario_role": "pd_followup",
+      "recordings": [
+        {
+          "file": "1402930351.011_001_014.csv",
+          "windows": 47,
+          "source_timestamp_ms": 1402930351000
+        },
+        {
+          "file": "1403706430.011_003_014.csv",
+          "windows": 3,
+          "source_timestamp_ms": 1403706430000
+        }
+      ],
+      "source_split": "test",
+      "same_person_as_baseline": false
+    },
+    {
+      "status": "scored",
+      "participant_id": "demo:control_to_pd",
+      "batch_id": "pd_followup:nq:71",
+      "timestamp_ms": 3.0,
+      "windows": 50,
+      "keystrokes": 2500,
+      "embedding_shape": [
+        50,
+        128
+      ],
+      "classifier_input_shape": [
+        50,
+        135
+      ],
+      "family": "xgboost",
+      "model_count": 25,
+      "pd_score": 0.5962588787078857,
+      "predicted_class": 1,
+      "model_score_sd": 0.03102131001651287,
+      "baseline_batch_id": "baseline:nq:95",
+      "baseline_pd_score": 0.37020596861839294,
+      "pd_score_change": 0.2260529100894928,
+      "embedding_distance": 3.1537032113452166,
+      "baseline_within_distance": 1.1643498369916143,
+      "embedding_distance_ratio": 2.7085529719260224,
+      "mmd2": 1.0068958602764257,
+      "kernel_bandwidth_squared": 0.6825108509050573,
+      "change_interpretation": "Descriptive typing change; no clinical change threshold fitted",
+      "source_participant": "nq:71",
+      "source_label": 1,
+      "scenario_role": "pd_followup",
+      "recordings": [
+        {
+          "file": "1410446321.071_001_014.csv",
+          "windows": 23,
+          "source_timestamp_ms": 1410446321000
+        },
+        {
+          "file": "1411655869.071_003_014.csv",
+          "windows": 27,
+          "source_timestamp_ms": 1411655869000
+        }
+      ],
+      "source_split": "train",
+      "same_person_as_baseline": false
+    },
+    {
+      "status": "scored",
+      "participant_id": "demo:control_to_pd",
+      "batch_id": "pd_followup:nq:73",
+      "timestamp_ms": 4.0,
+      "windows": 50,
+      "keystrokes": 2500,
+      "embedding_shape": [
+        50,
+        128
+      ],
+      "classifier_input_shape": [
+        50,
+        135
+      ],
+      "family": "xgboost",
+      "model_count": 25,
+      "pd_score": 0.5586708784103394,
+      "predicted_class": 1,
+      "model_score_sd": 0.04851192981004715,
+      "baseline_batch_id": "baseline:nq:95",
+      "baseline_pd_score": 0.37020596861839294,
+      "pd_score_change": 0.1884649097919464,
+      "embedding_distance": 1.9704644143708523,
+      "baseline_within_distance": 1.1643498369916143,
+      "embedding_distance_ratio": 1.6923302187786056,
+      "mmd2": 0.8415026406388678,
+      "kernel_bandwidth_squared": 0.6825108509050573,
+      "change_interpretation": "Descriptive typing change; no clinical change threshold fitted",
+      "source_participant": "nq:73",
+      "source_label": 1,
+      "scenario_role": "pd_followup",
+      "recordings": [
+        {
+          "file": "1418748996.073_001_014.csv",
+          "windows": 28,
+          "source_timestamp_ms": 1418748996000
+        },
+        {
+          "file": "1419870664.073_003_014.csv",
+          "windows": 22,
+          "source_timestamp_ms": 1419870664000
+        }
+      ],
+      "source_split": "train",
+      "same_person_as_baseline": false
+    },
+    {
+      "status": "scored",
+      "participant_id": "demo:control_to_pd",
+      "batch_id": "pd_followup:nq:74",
+      "timestamp_ms": 5.0,
+      "windows": 50,
+      "keystrokes": 2500,
+      "embedding_shape": [
+        50,
+        128
+      ],
+      "classifier_input_shape": [
+        50,
+        135
+      ],
+      "family": "xgboost",
+      "model_count": 25,
+      "pd_score": 0.5333265662193298,
+      "predicted_class": 1,
+      "model_score_sd": 0.03569246828556061,
+      "baseline_batch_id": "baseline:nq:95",
+      "baseline_pd_score": 0.37020596861839294,
+      "pd_score_change": 0.1631205976009369,
+      "embedding_distance": 2.174264578980452,
+      "baseline_within_distance": 1.1643498369916143,
+      "embedding_distance_ratio": 1.8673636650288903,
+      "mmd2": 0.6087388782586307,
+      "kernel_bandwidth_squared": 0.6825108509050573,
+      "change_interpretation": "Descriptive typing change; no clinical change threshold fitted",
+      "source_participant": "nq:74",
+      "source_label": 1,
+      "scenario_role": "pd_followup",
+      "recordings": [
+        {
+          "file": "1403792224.074_001_014.csv",
+          "windows": 43,
+          "source_timestamp_ms": 1403792224000
+        },
+        {
+          "file": "1404747197.074_003_014.csv",
+          "windows": 7,
+          "source_timestamp_ms": 1404747197000
+        }
+      ],
+      "source_split": "validation",
+      "same_person_as_baseline": false
+    },
+    {
+      "status": "scored",
+      "participant_id": "demo:control_to_pd",
+      "batch_id": "pd_followup:nq:75",
+      "timestamp_ms": 6.0,
+      "windows": 50,
+      "keystrokes": 2500,
+      "embedding_shape": [
+        50,
+        128
+      ],
+      "classifier_input_shape": [
+        50,
+        135
+      ],
+      "family": "xgboost",
+      "model_count": 25,
+      "pd_score": 0.5142887830734253,
+      "predicted_class": 1,
+      "model_score_sd": 0.03250191733241081,
+      "baseline_batch_id": "baseline:nq:95",
+      "baseline_pd_score": 0.37020596861839294,
+      "pd_score_change": 0.14408281445503235,
+      "embedding_distance": 2.979785501364387,
+      "baseline_within_distance": 1.1643498369916143,
+      "embedding_distance_ratio": 2.559184024161844,
+      "mmd2": 0.9959313324908972,
+      "kernel_bandwidth_squared": 0.6825108509050573,
+      "change_interpretation": "Descriptive typing change; no clinical change threshold fitted",
+      "source_participant": "nq:75",
+      "source_label": 1,
+      "scenario_role": "pd_followup",
+      "recordings": [
+        {
+          "file": "1407421738.075_001_014.csv",
+          "windows": 46,
+          "source_timestamp_ms": 1407421738000
+        },
+        {
+          "file": "1409756763.075_003_014.csv",
+          "windows": 4,
+          "source_timestamp_ms": 1409756763000
+        }
+      ],
+      "source_split": "test",
+      "same_person_as_baseline": false
+    },
+    {
+      "status": "scored",
+      "participant_id": "demo:control_to_pd",
+      "batch_id": "pd_followup:nq:84",
+      "timestamp_ms": 7.0,
+      "windows": 50,
+      "keystrokes": 2500,
+      "embedding_shape": [
+        50,
+        128
+      ],
+      "classifier_input_shape": [
+        50,
+        135
+      ],
+      "family": "xgboost",
+      "model_count": 25,
+      "pd_score": 0.4160059690475464,
+      "predicted_class": 0,
+      "model_score_sd": 0.08731044083833694,
+      "baseline_batch_id": "baseline:nq:95",
+      "baseline_pd_score": 0.37020596861839294,
+      "pd_score_change": 0.04580000042915344,
+      "embedding_distance": 1.8841764175917335,
+      "baseline_within_distance": 1.1643498369916143,
+      "embedding_distance_ratio": 1.6182219104010604,
+      "mmd2": 0.9005017488702969,
+      "kernel_bandwidth_squared": 0.6825108509050573,
+      "change_interpretation": "Descriptive typing change; no clinical change threshold fitted",
+      "source_participant": "nq:84",
+      "source_label": 1,
+      "scenario_role": "pd_followup",
+      "recordings": [
+        {
+          "file": "1407163319.084_001_014.csv",
+          "windows": 23,
+          "source_timestamp_ms": 1407163319000
+        },
+        {
+          "file": "1408982860.084_003_014.csv",
+          "windows": 27,
+          "source_timestamp_ms": 1408982860000
+        }
+      ],
+      "source_split": "train",
+      "same_person_as_baseline": false
+    },
+    {
+      "status": "scored",
+      "participant_id": "demo:control_to_pd",
+      "batch_id": "pd_followup:nq:86",
+      "timestamp_ms": 8.0,
+      "windows": 50,
+      "keystrokes": 2500,
+      "embedding_shape": [
+        50,
+        128
+      ],
+      "classifier_input_shape": [
+        50,
+        135
+      ],
+      "family": "xgboost",
+      "model_count": 25,
+      "pd_score": 0.3570345640182495,
+      "predicted_class": 0,
+      "model_score_sd": 0.04198390245437622,
+      "baseline_batch_id": "baseline:nq:95",
+      "baseline_pd_score": 0.37020596861839294,
+      "pd_score_change": -0.013171404600143433,
+      "embedding_distance": 2.4470259076371184,
+      "baseline_within_distance": 1.1643498369916143,
+      "embedding_distance_ratio": 2.1016242970064862,
+      "mmd2": 0.9827569999809223,
+      "kernel_bandwidth_squared": 0.6825108509050573,
+      "change_interpretation": "Descriptive typing change; no clinical change threshold fitted",
+      "source_participant": "nq:86",
+      "source_label": 1,
+      "scenario_role": "pd_followup",
+      "recordings": [
+        {
+          "file": "1408976968.086_001_014.csv",
+          "windows": 28,
+          "source_timestamp_ms": 1408976968000
+        },
+        {
+          "file": "1410274781.086_003_014.csv",
+          "windows": 22,
+          "source_timestamp_ms": 1410274781000
+        }
+      ],
+      "source_split": "train",
+      "same_person_as_baseline": false
+    },
+    {
+      "status": "scored",
+      "participant_id": "demo:control_to_pd",
+      "batch_id": "pd_followup:nq:88",
+      "timestamp_ms": 9.0,
+      "windows": 50,
+      "keystrokes": 2500,
+      "embedding_shape": [
+        50,
+        128
+      ],
+      "classifier_input_shape": [
+        50,
+        135
+      ],
+      "family": "xgboost",
+      "model_count": 25,
+      "pd_score": 0.5765567421913147,
+      "predicted_class": 1,
+      "model_score_sd": 0.03506728261709213,
+      "baseline_batch_id": "baseline:nq:95",
+      "baseline_pd_score": 0.37020596861839294,
+      "pd_score_change": 0.20635077357292175,
+      "embedding_distance": 2.7665408861783285,
+      "baseline_within_distance": 1.1643498369916143,
+      "embedding_distance_ratio": 2.376039226600805,
+      "mmd2": 0.8084797020141103,
+      "kernel_bandwidth_squared": 0.6825108509050573,
+      "change_interpretation": "Descriptive typing change; no clinical change threshold fitted",
+      "source_participant": "nq:88",
+      "source_label": 1,
+      "scenario_role": "pd_followup",
+      "recordings": [
+        {
+          "file": "1408372533.088_001_014.csv",
+          "windows": 20,
+          "source_timestamp_ms": 1408372533000
+        },
+        {
+          "file": "1409235978.088_003_014.csv",
+          "windows": 30,
+          "source_timestamp_ms": 1409235978000
+        }
+      ],
+      "source_split": "train",
+      "same_person_as_baseline": false
+    }
+  ],
+  "matrices_sha256": "c1058a2211490b580f253c18df90191c314c0f349904790018757d913e57d737",
+  "replay_sha256": "806fe7808ace7b80ef1eda16249616d9018a3e4f6bc4092365de9c820dedb5bd"
+}

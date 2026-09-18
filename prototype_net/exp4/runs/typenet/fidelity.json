@@ -1,0 +1,32 @@
+{
+  "method": "Train-only, source-disjoint five-fold classifier discriminating real versus synthetic 50-stroke embeddings and summaries; equal source and origin weights; .5 AUROC is indistinguishable to this classifier.",
+  "folds": [
+    {
+      "fold": 1,
+      "auroc": 0.4987940357226598,
+      "balanced_accuracy": 0.5103977105017011
+    },
+    {
+      "fold": 2,
+      "auroc": 0.5134417989104947,
+      "balanced_accuracy": 0.5087578183563713
+    },
+    {
+      "fold": 3,
+      "auroc": 0.529905514728559,
+      "balanced_accuracy": 0.5060349008408177
+    },
+    {
+      "fold": 4,
+      "auroc": 0.49830148156442045,
+      "balanced_accuracy": 0.5116801919369748
+    },
+    {
+      "fold": 5,
+      "auroc": 0.48276228635828705,
+      "balanced_accuracy": 0.48808387830820166
+    }
+  ],
+  "mean_auroc": 0.5046410234568841,
+  "sd_auroc": 0.017810140101929346
+}

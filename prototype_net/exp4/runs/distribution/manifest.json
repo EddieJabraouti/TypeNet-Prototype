@@ -1,0 +1,155 @@
+{
+  "seed": 9172026,
+  "target_fractions": [
+    0.7,
+    0.1,
+    0.2
+  ],
+  "workers": 4,
+  "cohorts": {
+    "motor_pd": {
+      "splits": {
+        "train": [
+          "nq:11",
+          "nq:60",
+          "nq:70",
+          "nq:71",
+          "nq:72",
+          "nq:74",
+          "nq:77",
+          "nq:78",
+          "nq:79",
+          "nq:80",
+          "nq:83",
+          "nq:85",
+          "nq:86",
+          "nq:87",
+          "nq:88",
+          "nq:92",
+          "nq:93",
+          "nq:94",
+          "nq:95",
+          "nq:97",
+          "nq:99",
+          "nq:1000",
+          "nq:1001",
+          "nq:1002",
+          "nq:1004",
+          "nq:1006",
+          "nq:1008",
+          "nq:1009",
+          "nq:1010",
+          "nq:1012",
+          "nq:1014",
+          "nq:1015",
+          "nq:1017",
+          "nq:1021",
+          "nq:1022",
+          "nq:1024",
+          "nq:1029",
+          "nq:1030",
+          "nq:1032",
+          "nq:1033",
+          "nq:1034",
+          "nq:1037",
+          "nq:1039",
+          "nq:1041",
+          "nq:1043",
+          "nq:1045",
+          "nq:1047",
+          "nq:1051",
+          "nq:1052",
+          "nq:1053",
+          "nq:1056",
+          "nq:1057",
+          "nq:1059",
+          "nq:1061",
+          "nq:1063",
+          "nq:1064",
+          "nq:1066",
+          "nq:1068",
+          "nq:1070"
+        ],
+        "validation": [
+          "nq:73",
+          "nq:82",
+          "nq:98",
+          "nq:1016",
+          "nq:1025",
+          "nq:1031",
+          "nq:1035",
+          "nq:1049",
+          "nq:1050"
+        ],
+        "test": [
+          "nq:67",
+          "nq:68",
+          "nq:75",
+          "nq:76",
+          "nq:81",
+          "nq:84",
+          "nq:89",
+          "nq:1005",
+          "nq:1011",
+          "nq:1013",
+          "nq:1019",
+          "nq:1020",
+          "nq:1023",
+          "nq:1028",
+          "nq:1042",
+          "nq:1055",
+          "nq:1062"
+        ]
+      },
+      "audit": {
+        "recordings": 116,
+        "raw_records": 177513,
+        "invalid_records": 820,
+        "mouse_records": 820,
+        "window_records": 175007,
+        "retained_records": 175873
+      },
+      "features": [
+        "hold_seconds_mean",
+        "hold_seconds_sd",
+        "hold_seconds_q10",
+        "hold_seconds_median",
+        "hold_seconds_q90",
+        "hold_seconds_iqr",
+        "hold_seconds_skew"
+      ],
+      "clinical_ground_truth": true
+    }
+  },
+  "tasks": {
+    "motor_pd": {
+      "kind": "classification",
+      "cohort": "motor_pd",
+      "cache_sha256": {
+        "train": "dd192b2a3abc668302cfb19a1b4cab39ab44910a0f6926df5d7468118c06e6af",
+        "validation": "c17461443e40281183c68029ecc59b392b33f214e221ad57a98cc60b58527a7f",
+        "test": "dc60dc57b2e1bfda03a1bd3c5893afd27d65014580a49e85f7e1d49c059c0305"
+      },
+      "real_rows": {
+        "train": 812,
+        "validation": 134,
+        "test": 231
+      },
+      "use_encoder": true
+    }
+  },
+  "augmentations": [
+    "none",
+    "rose700",
+    "rose7000"
+  ],
+  "frozen_encoder_sha256": "3c1c86c93732f3bbe14e557dc9d8c7a5089376cf6d562a72f61a06004b77d86c",
+  "baseline_manifest_sha256": "df100ac9259a6c865e4015bbdcafaa6a9fd2fb5be913ef3b2c3ded9e26062eb4",
+  "synthetic_evaluation": {
+    "validation": 1000,
+    "test": 2000
+  },
+  "generation": "Class-conditional Gaussian smoothed bootstrap around pooled participant profiles; kernel uses between-person and within-person covariance. Bandwidth multiplier .25 fixed before fitting.",
+  "evaluation": "Synthetic held-out profiles use held-out anchors and their labels with a training-only kernel. They measure label-conditioned perturbation robustness, not new independent people. Real participant metrics remain separate.",
+  "prior_evaluation_exposure": true
+}

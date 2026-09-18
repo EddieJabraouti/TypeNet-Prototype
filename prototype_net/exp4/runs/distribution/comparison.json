@@ -1,0 +1,5411 @@
+{
+  "seed": 9172026,
+  "selection": "none",
+  "rows": [
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "dummy_none_raw",
+      "model": "dummy",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "real_rows": 812,
+      "fit_rows": 812,
+      "training_fit": {
+        "auroc": 0.5,
+        "average_precision": 0.5084745762711864,
+        "accuracy": 0.5084745762711864,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.6930035367960177,
+        "confusion_matrix": [
+          [
+            0,
+            29
+          ],
+          [
+            0,
+            30
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.48850574712643674,
+        "average_precision": 0.5028248587570622,
+        "accuracy": 0.5084745762711864,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.6933701223968846,
+        "confusion_matrix": [
+          [
+            0,
+            29
+          ],
+          [
+            0,
+            30
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.5,
+        "average_precision": 0.4444444444444444,
+        "accuracy": 0.4444444444444444,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.6951742572778872,
+        "confusion_matrix": [
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5,
+            0.5
+          ],
+          "ci975": [
+            0.5,
+            0.5
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.5,
+            "average_precision": 0.5,
+            "accuracy": 0.5,
+            "balanced_accuracy": 0.5,
+            "sensitivity": 1.0,
+            "specificity": 0.0,
+            "log_loss": 0.693290838036265,
+            "confusion_matrix": [
+              [
+                0,
+                500
+              ],
+              [
+                0,
+                500
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5,
+            "average_precision": 0.4444444444444444,
+            "accuracy": 0.4444444444444444,
+            "balanced_accuracy": 0.5,
+            "sensitivity": 1.0,
+            "specificity": 0.0,
+            "log_loss": 0.6951742572778872,
+            "confusion_matrix": [
+              [
+                0,
+                5
+              ],
+              [
+                0,
+                4
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "ci975": [
+              0.5,
+              0.5
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.5,
+        "average_precision": 0.47058823529411764,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.6942879423406532,
+        "confusion_matrix": [
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            8
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5,
+            0.5
+          ],
+          "ci975": [
+            0.5,
+            0.5
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.5,
+            "average_precision": 0.5,
+            "accuracy": 0.5,
+            "balanced_accuracy": 0.5,
+            "sensitivity": 1.0,
+            "specificity": 0.0,
+            "log_loss": 0.693290838036265,
+            "confusion_matrix": [
+              [
+                0,
+                1000
+              ],
+              [
+                0,
+                1000
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5,
+            "average_precision": 0.47058823529411764,
+            "accuracy": 0.47058823529411764,
+            "balanced_accuracy": 0.5,
+            "sensitivity": 1.0,
+            "specificity": 0.0,
+            "log_loss": 0.6942879423406532,
+            "confusion_matrix": [
+              [
+                0,
+                9
+              ],
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "ci975": [
+              0.5,
+              0.5
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "node_none_pretrained",
+      "model": "node",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "real_rows": 812,
+      "fit_rows": 812,
+      "training_fit": {
+        "auroc": 0.896551724137931,
+        "average_precision": 0.9119433954201317,
+        "accuracy": 0.7966101694915254,
+        "balanced_accuracy": 0.7971264367816092,
+        "sensitivity": 0.7666666666666667,
+        "specificity": 0.8275862068965517,
+        "log_loss": 0.4376743732548934,
+        "confusion_matrix": [
+          [
+            24,
+            5
+          ],
+          [
+            7,
+            23
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7781609195402298,
+        "average_precision": 0.8142061390803493,
+        "accuracy": 0.6949152542372882,
+        "balanced_accuracy": 0.6954022988505747,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 0.7241379310344828,
+        "log_loss": 0.5680249887187412,
+        "confusion_matrix": [
+          [
+            21,
+            8
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.85,
+        "average_precision": 0.8541666666666666,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.4652584265908979,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5,
+            1.0
+          ],
+          "ci975": [
+            0.4,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.666972,
+            "average_precision": 0.7665696618937865,
+            "accuracy": 0.565,
+            "balanced_accuracy": 0.565,
+            "sensitivity": 0.506,
+            "specificity": 0.624,
+            "log_loss": 0.6481917446366917,
+            "confusion_matrix": [
+              [
+                312,
+                188
+              ],
+              [
+                247,
+                253
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.65,
+            "average_precision": 0.75,
+            "accuracy": 0.5555555555555556,
+            "balanced_accuracy": 0.55,
+            "sensitivity": 0.5,
+            "specificity": 0.6,
+            "log_loss": 0.6290074533433941,
+            "confusion_matrix": [
+              [
+                3,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2,
+              1.0
+            ],
+            "ci975": [
+              0.15,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.5277777777777778,
+        "average_precision": 0.6382478632478632,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.4861111111111111,
+        "sensitivity": 0.75,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.7854090078245755,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.20833333333333334,
+            0.8055555555555556
+          ],
+          "ci975": [
+            0.1527777777777778,
+            0.8472222222222222
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.49823500000000004,
+            "average_precision": 0.577731896009257,
+            "accuracy": 0.4565,
+            "balanced_accuracy": 0.4565,
+            "sensitivity": 0.684,
+            "specificity": 0.229,
+            "log_loss": 0.8575883085752407,
+            "confusion_matrix": [
+              [
+                229,
+                771
+              ],
+              [
+                316,
+                684
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.4861111111111111,
+            "average_precision": 0.572275641025641,
+            "accuracy": 0.47058823529411764,
+            "balanced_accuracy": 0.4861111111111111,
+            "sensitivity": 0.75,
+            "specificity": 0.2222222222222222,
+            "log_loss": 0.8654883571850658,
+            "confusion_matrix": [
+              [
+                2,
+                7
+              ],
+              [
+                2,
+                6
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.16666666666666666,
+              0.7777777777777778
+            ],
+            "ci975": [
+              0.125,
+              0.8194444444444444
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "node_none_raw",
+      "model": "node",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "real_rows": 812,
+      "fit_rows": 812,
+      "training_fit": {
+        "auroc": 0.8563218390804598,
+        "average_precision": 0.8876463175983554,
+        "accuracy": 0.8135593220338984,
+        "balanced_accuracy": 0.8143678160919541,
+        "sensitivity": 0.7666666666666667,
+        "specificity": 0.8620689655172413,
+        "log_loss": 0.46585199374780856,
+        "confusion_matrix": [
+          [
+            25,
+            4
+          ],
+          [
+            7,
+            23
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8011494252873563,
+        "average_precision": 0.8437595938829169,
+        "accuracy": 0.7457627118644068,
+        "balanced_accuracy": 0.7459770114942528,
+        "sensitivity": 0.7333333333333333,
+        "specificity": 0.7586206896551724,
+        "log_loss": 0.534199517110204,
+        "confusion_matrix": [
+          [
+            22,
+            7
+          ],
+          [
+            8,
+            22
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.75,
+        "average_precision": 0.7928571428571429,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5147941637753984,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.35,
+            1.0
+          ],
+          "ci975": [
+            0.25,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.606436,
+            "average_precision": 0.7424433865437811,
+            "accuracy": 0.552,
+            "balanced_accuracy": 0.552,
+            "sensitivity": 0.5,
+            "specificity": 0.604,
+            "log_loss": 0.7027583774630206,
+            "confusion_matrix": [
+              [
+                302,
+                198
+              ],
+              [
+                250,
+                250
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.6,
+            "average_precision": 0.7321428571428572,
+            "accuracy": 0.5555555555555556,
+            "balanced_accuracy": 0.55,
+            "sensitivity": 0.5,
+            "specificity": 0.6,
+            "log_loss": 0.6927075524277088,
+            "confusion_matrix": [
+              [
+                3,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2,
+              1.0
+            ],
+            "ci975": [
+              0.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.6111111111111112,
+        "average_precision": 0.69375,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5416666666666666,
+        "sensitivity": 0.75,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.7548934018296997,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3055555555555556,
+            0.8888888888888888
+          ],
+          "ci975": [
+            0.2638888888888889,
+            0.9166666666666666
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.518651,
+            "average_precision": 0.635821889578536,
+            "accuracy": 0.458,
+            "balanced_accuracy": 0.45799999999999996,
+            "sensitivity": 0.692,
+            "specificity": 0.224,
+            "log_loss": 0.9321394238388239,
+            "confusion_matrix": [
+              [
+                224,
+                776
+              ],
+              [
+                308,
+                692
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.48611111111111116,
+            "average_precision": 0.6248491704374057,
+            "accuracy": 0.47058823529411764,
+            "balanced_accuracy": 0.4861111111111111,
+            "sensitivity": 0.75,
+            "specificity": 0.2222222222222222,
+            "log_loss": 0.946401984021904,
+            "confusion_matrix": [
+              [
+                2,
+                7
+              ],
+              [
+                2,
+                6
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.16666666666666666,
+              0.7916666666666666
+            ],
+            "ci975": [
+              0.125,
+              0.8333333333333334
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "node_rose7000_pretrained",
+      "model": "node",
+      "augmentation": "rose7000",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 7000,
+      "real_rows": 812,
+      "fit_rows": 7812,
+      "training_fit": {
+        "auroc": 0.9839080459770114,
+        "average_precision": 0.9857875153611156,
+        "accuracy": 0.8983050847457628,
+        "balanced_accuracy": 0.9,
+        "sensitivity": 0.8,
+        "specificity": 1.0,
+        "log_loss": 0.2662453048356238,
+        "confusion_matrix": [
+          [
+            29,
+            0
+          ],
+          [
+            6,
+            24
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.786206896551724,
+        "average_precision": 0.8269576647415441,
+        "accuracy": 0.6949152542372882,
+        "balanced_accuracy": 0.6954022988505747,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 0.7241379310344828,
+        "log_loss": 0.5382006979041356,
+        "confusion_matrix": [
+          [
+            21,
+            8
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 0.8888888888888888,
+        "balanced_accuracy": 0.875,
+        "sensitivity": 0.75,
+        "specificity": 1.0,
+        "log_loss": 0.241627748730908,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.911804,
+            "average_precision": 0.9347799223669255,
+            "accuracy": 0.844,
+            "balanced_accuracy": 0.844,
+            "sensitivity": 0.832,
+            "specificity": 0.856,
+            "log_loss": 0.3737928205065849,
+            "confusion_matrix": [
+              [
+                428,
+                72
+              ],
+              [
+                84,
+                416
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.9500000000000001,
+            "average_precision": 0.95,
+            "accuracy": 0.8888888888888888,
+            "balanced_accuracy": 0.9,
+            "sensitivity": 1.0,
+            "specificity": 0.8,
+            "log_loss": 0.2623936738557919,
+            "confusion_matrix": [
+              [
+                4,
+                1
+              ],
+              [
+                0,
+                4
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.7975000000000002,
+              1.0
+            ],
+            "ci975": [
+              0.7,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.5972222222222222,
+        "average_precision": 0.6194444444444445,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5416666666666666,
+        "sensitivity": 0.75,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.878637904151044,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3055555555555556,
+            0.8611111111111112
+          ],
+          "ci975": [
+            0.2637152777777778,
+            0.9027777777777778
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.532158,
+            "average_precision": 0.6023031180903665,
+            "accuracy": 0.4815,
+            "balanced_accuracy": 0.48150000000000004,
+            "sensitivity": 0.627,
+            "specificity": 0.336,
+            "log_loss": 1.3193307645210857,
+            "confusion_matrix": [
+              [
+                336,
+                664
+              ],
+              [
+                373,
+                627
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5277777777777778,
+            "average_precision": 0.5788877788877789,
+            "accuracy": 0.47058823529411764,
+            "balanced_accuracy": 0.47916666666666663,
+            "sensitivity": 0.625,
+            "specificity": 0.3333333333333333,
+            "log_loss": 1.1675794977111398,
+            "confusion_matrix": [
+              [
+                3,
+                6
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2222222222222222,
+              0.8055555555555556
+            ],
+            "ci975": [
+              0.19444444444444445,
+              0.8333333333333334
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "node_rose7000_raw",
+      "model": "node",
+      "augmentation": "rose7000",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 7000,
+      "real_rows": 812,
+      "fit_rows": 7812,
+      "training_fit": {
+        "auroc": 0.9770114942528736,
+        "average_precision": 0.9785381532633272,
+        "accuracy": 0.864406779661017,
+        "balanced_accuracy": 0.8660919540229886,
+        "sensitivity": 0.7666666666666667,
+        "specificity": 0.9655172413793104,
+        "log_loss": 0.28587186304051687,
+        "confusion_matrix": [
+          [
+            28,
+            1
+          ],
+          [
+            7,
+            23
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8080459770114943,
+        "average_precision": 0.8375456351504134,
+        "accuracy": 0.6949152542372882,
+        "balanced_accuracy": 0.6965517241379311,
+        "sensitivity": 0.6,
+        "specificity": 0.7931034482758621,
+        "log_loss": 0.5163424541583919,
+        "confusion_matrix": [
+          [
+            23,
+            6
+          ],
+          [
+            12,
+            18
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.9500000000000001,
+        "average_precision": 0.95,
+        "accuracy": 0.8888888888888888,
+        "balanced_accuracy": 0.875,
+        "sensitivity": 0.75,
+        "specificity": 1.0,
+        "log_loss": 0.26542837418075904,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.7975000000000002,
+            1.0
+          ],
+          "ci975": [
+            0.7,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.948792,
+            "average_precision": 0.9534610539979239,
+            "accuracy": 0.859,
+            "balanced_accuracy": 0.859,
+            "sensitivity": 0.814,
+            "specificity": 0.904,
+            "log_loss": 0.2873724815313279,
+            "confusion_matrix": [
+              [
+                452,
+                48
+              ],
+              [
+                93,
+                407
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 1.0,
+            "average_precision": 1.0,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "log_loss": 0.23642054248960948,
+            "confusion_matrix": [
+              [
+                5,
+                0
+              ],
+              [
+                0,
+                4
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "ci975": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.6388888888888888,
+        "average_precision": 0.6900735294117647,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5347222222222222,
+        "sensitivity": 0.625,
+        "specificity": 0.4444444444444444,
+        "log_loss": 0.9035125885111573,
+        "confusion_matrix": [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3333333333333333,
+            0.9166666666666666
+          ],
+          "ci975": [
+            0.3053819444444445,
+            0.9444444444444444
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.598845,
+            "average_precision": 0.6993001002625984,
+            "accuracy": 0.5355,
+            "balanced_accuracy": 0.5355,
+            "sensitivity": 0.645,
+            "specificity": 0.426,
+            "log_loss": 1.1060305188245994,
+            "confusion_matrix": [
+              [
+                426,
+                574
+              ],
+              [
+                355,
+                645
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5694444444444444,
+            "average_precision": 0.6444444444444444,
+            "accuracy": 0.5294117647058824,
+            "balanced_accuracy": 0.5347222222222222,
+            "sensitivity": 0.625,
+            "specificity": 0.4444444444444444,
+            "log_loss": 0.989963880845549,
+            "confusion_matrix": [
+              [
+                4,
+                5
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2638888888888889,
+              0.8333333333333334
+            ],
+            "ci975": [
+              0.2222222222222222,
+              0.875
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "node_rose700_pretrained",
+      "model": "node",
+      "augmentation": "rose700",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 700,
+      "real_rows": 812,
+      "fit_rows": 1512,
+      "training_fit": {
+        "auroc": 0.9241379310344827,
+        "average_precision": 0.9298939030201226,
+        "accuracy": 0.8305084745762712,
+        "balanced_accuracy": 0.832183908045977,
+        "sensitivity": 0.7333333333333333,
+        "specificity": 0.9310344827586207,
+        "log_loss": 0.41711852660514015,
+        "confusion_matrix": [
+          [
+            27,
+            2
+          ],
+          [
+            8,
+            22
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7735632183908047,
+        "average_precision": 0.8255691970317961,
+        "accuracy": 0.711864406779661,
+        "balanced_accuracy": 0.7126436781609196,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 0.7586206896551724,
+        "log_loss": 0.5485912836232274,
+        "confusion_matrix": [
+          [
+            22,
+            7
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.4241666143361169,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.8108279999999999,
+            "average_precision": 0.8400480102911283,
+            "accuracy": 0.721,
+            "balanced_accuracy": 0.721,
+            "sensitivity": 0.5,
+            "specificity": 0.942,
+            "log_loss": 0.4981068976497878,
+            "confusion_matrix": [
+              [
+                471,
+                29
+              ],
+              [
+                250,
+                250
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.75,
+            "average_precision": 0.7928571428571429,
+            "accuracy": 0.7777777777777778,
+            "balanced_accuracy": 0.75,
+            "sensitivity": 0.5,
+            "specificity": 1.0,
+            "log_loss": 0.4695806343277811,
+            "confusion_matrix": [
+              [
+                5,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.35,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.5833333333333334,
+        "average_precision": 0.648406862745098,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5347222222222222,
+        "sensitivity": 0.625,
+        "specificity": 0.4444444444444444,
+        "log_loss": 0.7397624433286653,
+        "confusion_matrix": [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2777777777777778,
+            0.875
+          ],
+          "ci975": [
+            0.2361111111111111,
+            0.9029513888888895
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.578033,
+            "average_precision": 0.6405912432598593,
+            "accuracy": 0.4675,
+            "balanced_accuracy": 0.4675,
+            "sensitivity": 0.623,
+            "specificity": 0.312,
+            "log_loss": 0.868713565616403,
+            "confusion_matrix": [
+              [
+                312,
+                688
+              ],
+              [
+                377,
+                623
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5416666666666667,
+            "average_precision": 0.6069978632478632,
+            "accuracy": 0.47058823529411764,
+            "balanced_accuracy": 0.47916666666666663,
+            "sensitivity": 0.625,
+            "specificity": 0.3333333333333333,
+            "log_loss": 0.8679610883155405,
+            "confusion_matrix": [
+              [
+                3,
+                6
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2361111111111111,
+              0.8194444444444444
+            ],
+            "ci975": [
+              0.18055555555555555,
+              0.8611111111111112
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "node_rose700_raw",
+      "model": "node",
+      "augmentation": "rose700",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 700,
+      "real_rows": 812,
+      "fit_rows": 1512,
+      "training_fit": {
+        "auroc": 0.8942528735632185,
+        "average_precision": 0.909020277762908,
+        "accuracy": 0.8305084745762712,
+        "balanced_accuracy": 0.832183908045977,
+        "sensitivity": 0.7333333333333333,
+        "specificity": 0.9310344827586207,
+        "log_loss": 0.44064052543265264,
+        "confusion_matrix": [
+          [
+            27,
+            2
+          ],
+          [
+            8,
+            22
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7977011494252874,
+        "average_precision": 0.8385662755345673,
+        "accuracy": 0.711864406779661,
+        "balanced_accuracy": 0.7120689655172414,
+        "sensitivity": 0.7,
+        "specificity": 0.7241379310344828,
+        "log_loss": 0.5289735399030808,
+        "confusion_matrix": [
+          [
+            21,
+            8
+          ],
+          [
+            9,
+            21
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.8,
+        "average_precision": 0.8166666666666667,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.4795053146883195,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4,
+            1.0
+          ],
+          "ci975": [
+            0.4,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.7576879999999999,
+            "average_precision": 0.8044297532703863,
+            "accuracy": 0.711,
+            "balanced_accuracy": 0.7110000000000001,
+            "sensitivity": 0.5,
+            "specificity": 0.922,
+            "log_loss": 0.5471801671240587,
+            "confusion_matrix": [
+              [
+                461,
+                39
+              ],
+              [
+                250,
+                250
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.75,
+            "average_precision": 0.7928571428571429,
+            "accuracy": 0.7777777777777778,
+            "balanced_accuracy": 0.75,
+            "sensitivity": 0.5,
+            "specificity": 1.0,
+            "log_loss": 0.5175002799590804,
+            "confusion_matrix": [
+              [
+                5,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.35,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.638888888888889,
+        "average_precision": 0.704861111111111,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5347222222222222,
+        "sensitivity": 0.625,
+        "specificity": 0.4444444444444444,
+        "log_loss": 0.7038717227891106,
+        "confusion_matrix": [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3333333333333333,
+            0.8888888888888888
+          ],
+          "ci975": [
+            0.3053819444444445,
+            0.9166666666666666
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.5943809999999999,
+            "average_precision": 0.6826685456384707,
+            "accuracy": 0.4365,
+            "balanced_accuracy": 0.4365,
+            "sensitivity": 0.629,
+            "specificity": 0.244,
+            "log_loss": 0.8754362349277731,
+            "confusion_matrix": [
+              [
+                244,
+                756
+              ],
+              [
+                371,
+                629
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5555555555555556,
+            "average_precision": 0.6486645299145299,
+            "accuracy": 0.4117647058823529,
+            "balanced_accuracy": 0.4236111111111111,
+            "sensitivity": 0.625,
+            "specificity": 0.2222222222222222,
+            "log_loss": 0.87841884733406,
+            "confusion_matrix": [
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.25,
+              0.8333333333333334
+            ],
+            "ci975": [
+              0.18055555555555555,
+              0.8611111111111112
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "random_forest_none_pretrained",
+      "model": "random_forest",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "real_rows": 812,
+      "fit_rows": 812,
+      "training_fit": {
+        "auroc": 0.9781609195402299,
+        "average_precision": 0.9810300735875449,
+        "accuracy": 0.8983050847457628,
+        "balanced_accuracy": 0.8988505747126436,
+        "sensitivity": 0.8666666666666667,
+        "specificity": 0.9310344827586207,
+        "log_loss": 0.2889804661977697,
+        "confusion_matrix": [
+          [
+            27,
+            2
+          ],
+          [
+            4,
+            26
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8379310344827586,
+        "average_precision": 0.8737765589573862,
+        "accuracy": 0.7627118644067796,
+        "balanced_accuracy": 0.7626436781609196,
+        "sensitivity": 0.7666666666666667,
+        "specificity": 0.7586206896551724,
+        "log_loss": 0.4855752373318261,
+        "confusion_matrix": [
+          [
+            22,
+            7
+          ],
+          [
+            7,
+            23
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.39291870025180503,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.7451840000000001,
+            "average_precision": 0.8122870317229731,
+            "accuracy": 0.704,
+            "balanced_accuracy": 0.704,
+            "sensitivity": 0.54,
+            "specificity": 0.868,
+            "log_loss": 0.535149366744073,
+            "confusion_matrix": [
+              [
+                434,
+                66
+              ],
+              [
+                230,
+                270
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.8,
+            "average_precision": 0.8166666666666667,
+            "accuracy": 0.6666666666666666,
+            "balanced_accuracy": 0.65,
+            "sensitivity": 0.5,
+            "specificity": 0.8,
+            "log_loss": 0.4967033572494256,
+            "confusion_matrix": [
+              [
+                4,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.4,
+              1.0
+            ],
+            "ci975": [
+              0.4,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.6527777777777777,
+        "average_precision": 0.734478021978022,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.7053038247263796,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3333333333333333,
+            0.9166666666666666
+          ],
+          "ci975": [
+            0.2916666666666667,
+            0.9305555555555556
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.598568,
+            "average_precision": 0.6527652331755107,
+            "accuracy": 0.5035,
+            "balanced_accuracy": 0.5035000000000001,
+            "sensitivity": 0.644,
+            "specificity": 0.363,
+            "log_loss": 0.9044802433042348,
+            "confusion_matrix": [
+              [
+                363,
+                637
+              ],
+              [
+                356,
+                644
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5833333333333334,
+            "average_precision": 0.6298153235653237,
+            "accuracy": 0.4117647058823529,
+            "balanced_accuracy": 0.4236111111111111,
+            "sensitivity": 0.625,
+            "specificity": 0.2222222222222222,
+            "log_loss": 0.8553320299992349,
+            "confusion_matrix": [
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2777777777777778,
+              0.8611111111111112
+            ],
+            "ci975": [
+              0.25,
+              0.8888888888888888
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "random_forest_none_raw",
+      "model": "random_forest",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "real_rows": 812,
+      "fit_rows": 812,
+      "training_fit": {
+        "auroc": 0.974712643678161,
+        "average_precision": 0.9795205774617539,
+        "accuracy": 0.9152542372881356,
+        "balanced_accuracy": 0.9160919540229886,
+        "sensitivity": 0.8666666666666667,
+        "specificity": 0.9655172413793104,
+        "log_loss": 0.30437208257994297,
+        "confusion_matrix": [
+          [
+            28,
+            1
+          ],
+          [
+            4,
+            26
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8229885057471265,
+        "average_precision": 0.8709827956863815,
+        "accuracy": 0.7288135593220338,
+        "balanced_accuracy": 0.728735632183908,
+        "sensitivity": 0.7333333333333333,
+        "specificity": 0.7241379310344828,
+        "log_loss": 0.4927967337026384,
+        "confusion_matrix": [
+          [
+            21,
+            8
+          ],
+          [
+            8,
+            22
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.9500000000000001,
+        "average_precision": 0.95,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.3897317651265326,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.7975000000000002,
+            1.0
+          ],
+          "ci975": [
+            0.7,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.777184,
+            "average_precision": 0.8255824635832747,
+            "accuracy": 0.689,
+            "balanced_accuracy": 0.6890000000000001,
+            "sensitivity": 0.532,
+            "specificity": 0.846,
+            "log_loss": 0.4955228020598787,
+            "confusion_matrix": [
+              [
+                423,
+                77
+              ],
+              [
+                234,
+                266
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.8,
+            "average_precision": 0.8166666666666667,
+            "accuracy": 0.6666666666666666,
+            "balanced_accuracy": 0.65,
+            "sensitivity": 0.5,
+            "specificity": 0.8,
+            "log_loss": 0.4810816040114735,
+            "confusion_matrix": [
+              [
+                4,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.4,
+              1.0
+            ],
+            "ci975": [
+              0.4,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.6527777777777777,
+        "average_precision": 0.734478021978022,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.7043968331003971,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3333333333333333,
+            0.9166666666666666
+          ],
+          "ci975": [
+            0.2916666666666667,
+            0.9305555555555556
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.615343,
+            "average_precision": 0.6742911719128036,
+            "accuracy": 0.482,
+            "balanced_accuracy": 0.482,
+            "sensitivity": 0.653,
+            "specificity": 0.311,
+            "log_loss": 0.8535535888965007,
+            "confusion_matrix": [
+              [
+                311,
+                689
+              ],
+              [
+                347,
+                653
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.6111111111111112,
+            "average_precision": 0.650400641025641,
+            "accuracy": 0.4117647058823529,
+            "balanced_accuracy": 0.4236111111111111,
+            "sensitivity": 0.625,
+            "specificity": 0.2222222222222222,
+            "log_loss": 0.8085520496205484,
+            "confusion_matrix": [
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.3055555555555556,
+              0.875
+            ],
+            "ci975": [
+              0.2638888888888889,
+              0.9027777777777778
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "random_forest_rose7000_pretrained",
+      "model": "random_forest",
+      "augmentation": "rose7000",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 7000,
+      "real_rows": 812,
+      "fit_rows": 7812,
+      "training_fit": {
+        "auroc": 0.9563218390804599,
+        "average_precision": 0.9599153967384653,
+        "accuracy": 0.847457627118644,
+        "balanced_accuracy": 0.8494252873563218,
+        "sensitivity": 0.7333333333333333,
+        "specificity": 0.9655172413793104,
+        "log_loss": 0.3599800460971325,
+        "confusion_matrix": [
+          [
+            28,
+            1
+          ],
+          [
+            8,
+            22
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7919540229885057,
+        "average_precision": 0.8294444919118055,
+        "accuracy": 0.7288135593220338,
+        "balanced_accuracy": 0.7298850574712643,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 0.7931034482758621,
+        "log_loss": 0.5438547995736432,
+        "confusion_matrix": [
+          [
+            23,
+            6
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.9,
+        "average_precision": 0.8875,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.4056621140892698,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.6,
+            1.0
+          ],
+          "ci975": [
+            0.55,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.8271660000000001,
+            "average_precision": 0.8685362618439848,
+            "accuracy": 0.77,
+            "balanced_accuracy": 0.77,
+            "sensitivity": 0.542,
+            "specificity": 0.998,
+            "log_loss": 0.4372971131126087,
+            "confusion_matrix": [
+              [
+                499,
+                1
+              ],
+              [
+                229,
+                271
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.9,
+            "average_precision": 0.8875,
+            "accuracy": 0.7777777777777778,
+            "balanced_accuracy": 0.75,
+            "sensitivity": 0.5,
+            "specificity": 1.0,
+            "log_loss": 0.39806265792405915,
+            "confusion_matrix": [
+              [
+                5,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.6,
+              1.0
+            ],
+            "ci975": [
+              0.55,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.6527777777777778,
+        "average_precision": 0.7614583333333333,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.701956674166097,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3333333333333333,
+            0.9166666666666666
+          ],
+          "ci975": [
+            0.2916666666666667,
+            0.9444444444444444
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.6232770000000001,
+            "average_precision": 0.6800346565082607,
+            "accuracy": 0.5475,
+            "balanced_accuracy": 0.5475,
+            "sensitivity": 0.673,
+            "specificity": 0.422,
+            "log_loss": 0.8614857950402545,
+            "confusion_matrix": [
+              [
+                422,
+                578
+              ],
+              [
+                327,
+                673
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.6111111111111112,
+            "average_precision": 0.6465277777777778,
+            "accuracy": 0.47058823529411764,
+            "balanced_accuracy": 0.47916666666666663,
+            "sensitivity": 0.625,
+            "specificity": 0.3333333333333333,
+            "log_loss": 0.8027345329544902,
+            "confusion_matrix": [
+              [
+                3,
+                6
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.3190972222222222,
+              0.875
+            ],
+            "ci975": [
+              0.2637152777777778,
+              0.9166666666666666
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "random_forest_rose7000_raw",
+      "model": "random_forest",
+      "augmentation": "rose7000",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 7000,
+      "real_rows": 812,
+      "fit_rows": 7812,
+      "training_fit": {
+        "auroc": 0.9298850574712644,
+        "average_precision": 0.9395989276063832,
+        "accuracy": 0.8305084745762712,
+        "balanced_accuracy": 0.8327586206896551,
+        "sensitivity": 0.7,
+        "specificity": 0.9655172413793104,
+        "log_loss": 0.38942127389746334,
+        "confusion_matrix": [
+          [
+            28,
+            1
+          ],
+          [
+            9,
+            21
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7942528735632185,
+        "average_precision": 0.8370862177213235,
+        "accuracy": 0.6949152542372882,
+        "balanced_accuracy": 0.6954022988505747,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 0.7241379310344828,
+        "log_loss": 0.5363662865108164,
+        "confusion_matrix": [
+          [
+            21,
+            8
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.4402334399576418,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.699172,
+            "average_precision": 0.799326795932074,
+            "accuracy": 0.729,
+            "balanced_accuracy": 0.729,
+            "sensitivity": 0.516,
+            "specificity": 0.942,
+            "log_loss": 0.6063443097136528,
+            "confusion_matrix": [
+              [
+                471,
+                29
+              ],
+              [
+                242,
+                258
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.7,
+            "average_precision": 0.775,
+            "accuracy": 0.7777777777777778,
+            "balanced_accuracy": 0.75,
+            "sensitivity": 0.5,
+            "specificity": 1.0,
+            "log_loss": 0.5237415396004397,
+            "confusion_matrix": [
+              [
+                5,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.6944444444444445,
+        "average_precision": 0.7910256410256411,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5347222222222222,
+        "sensitivity": 0.625,
+        "specificity": 0.4444444444444444,
+        "log_loss": 0.6907172913703774,
+        "confusion_matrix": [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.375,
+            0.9305555555555556
+          ],
+          "ci975": [
+            0.33315972222222223,
+            0.9861111111111112
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.6034444999999999,
+            "average_precision": 0.6853700228374598,
+            "accuracy": 0.454,
+            "balanced_accuracy": 0.45399999999999996,
+            "sensitivity": 0.57,
+            "specificity": 0.338,
+            "log_loss": 0.8430532573755538,
+            "confusion_matrix": [
+              [
+                338,
+                662
+              ],
+              [
+                430,
+                570
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.6111111111111112,
+            "average_precision": 0.6931089743589743,
+            "accuracy": 0.4117647058823529,
+            "balanced_accuracy": 0.4236111111111111,
+            "sensitivity": 0.625,
+            "specificity": 0.2222222222222222,
+            "log_loss": 0.8140229207362394,
+            "confusion_matrix": [
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2916666666666667,
+              0.8888888888888888
+            ],
+            "ci975": [
+              0.25,
+              0.9166666666666666
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "random_forest_rose700_pretrained",
+      "model": "random_forest",
+      "augmentation": "rose700",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 700,
+      "real_rows": 812,
+      "fit_rows": 1512,
+      "training_fit": {
+        "auroc": 0.971264367816092,
+        "average_precision": 0.9751315523556903,
+        "accuracy": 0.8983050847457628,
+        "balanced_accuracy": 0.8994252873563219,
+        "sensitivity": 0.8333333333333334,
+        "specificity": 0.9655172413793104,
+        "log_loss": 0.3189565610760633,
+        "confusion_matrix": [
+          [
+            28,
+            1
+          ],
+          [
+            5,
+            25
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7827586206896551,
+        "average_precision": 0.8382887415912569,
+        "accuracy": 0.7457627118644068,
+        "balanced_accuracy": 0.7454022988505747,
+        "sensitivity": 0.7666666666666667,
+        "specificity": 0.7241379310344828,
+        "log_loss": 0.5278060488722445,
+        "confusion_matrix": [
+          [
+            21,
+            8
+          ],
+          [
+            7,
+            23
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.9,
+        "average_precision": 0.8875,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.44182587804845885,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.6,
+            1.0
+          ],
+          "ci975": [
+            0.55,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.7464879999999999,
+            "average_precision": 0.8121593628594557,
+            "accuracy": 0.73,
+            "balanced_accuracy": 0.73,
+            "sensitivity": 0.52,
+            "specificity": 0.94,
+            "log_loss": 0.5066221535820963,
+            "confusion_matrix": [
+              [
+                470,
+                30
+              ],
+              [
+                240,
+                260
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.7,
+            "average_precision": 0.7678571428571428,
+            "accuracy": 0.7777777777777778,
+            "balanced_accuracy": 0.75,
+            "sensitivity": 0.5,
+            "specificity": 1.0,
+            "log_loss": 0.47527408093247786,
+            "confusion_matrix": [
+              [
+                5,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.2,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.6666666666666667,
+        "average_precision": 0.7454326923076924,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.6764386395572355,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3746527777777778,
+            0.9166666666666666
+          ],
+          "ci975": [
+            0.33315972222222223,
+            0.9444444444444444
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.6693070000000001,
+            "average_precision": 0.7004461090292695,
+            "accuracy": 0.5415,
+            "balanced_accuracy": 0.5415,
+            "sensitivity": 0.638,
+            "specificity": 0.445,
+            "log_loss": 0.7795339520176005,
+            "confusion_matrix": [
+              [
+                445,
+                555
+              ],
+              [
+                362,
+                638
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.6527777777777778,
+            "average_precision": 0.6647779304029304,
+            "accuracy": 0.47058823529411764,
+            "balanced_accuracy": 0.47916666666666663,
+            "sensitivity": 0.625,
+            "specificity": 0.3333333333333333,
+            "log_loss": 0.7451056270092433,
+            "confusion_matrix": [
+              [
+                3,
+                6
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.3746527777777778,
+              0.8888888888888888
+            ],
+            "ci975": [
+              0.3194444444444444,
+              0.9305555555555556
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "random_forest_rose700_raw",
+      "model": "random_forest",
+      "augmentation": "rose700",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 700,
+      "real_rows": 812,
+      "fit_rows": 1512,
+      "training_fit": {
+        "auroc": 0.9655172413793104,
+        "average_precision": 0.97059105072238,
+        "accuracy": 0.8813559322033898,
+        "balanced_accuracy": 0.882183908045977,
+        "sensitivity": 0.8333333333333334,
+        "specificity": 0.9310344827586207,
+        "log_loss": 0.3346889300187519,
+        "confusion_matrix": [
+          [
+            27,
+            2
+          ],
+          [
+            5,
+            25
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7988505747126436,
+        "average_precision": 0.8446873795920035,
+        "accuracy": 0.7288135593220338,
+        "balanced_accuracy": 0.728735632183908,
+        "sensitivity": 0.7333333333333333,
+        "specificity": 0.7241379310344828,
+        "log_loss": 0.5205641969025954,
+        "confusion_matrix": [
+          [
+            21,
+            8
+          ],
+          [
+            8,
+            22
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.4251634326346758,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "ci975": [
+            1.0,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.7910759999999999,
+            "average_precision": 0.8308906896801912,
+            "accuracy": 0.697,
+            "balanced_accuracy": 0.6970000000000001,
+            "sensitivity": 0.504,
+            "specificity": 0.89,
+            "log_loss": 0.49757062624935805,
+            "confusion_matrix": [
+              [
+                445,
+                55
+              ],
+              [
+                248,
+                252
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.75,
+            "average_precision": 0.7928571428571429,
+            "accuracy": 0.7777777777777778,
+            "balanced_accuracy": 0.75,
+            "sensitivity": 0.5,
+            "specificity": 1.0,
+            "log_loss": 0.4660828214280064,
+            "confusion_matrix": [
+              [
+                5,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.35,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.6805555555555556,
+        "average_precision": 0.7779169360051713,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.6713878715053047,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.375,
+            0.9305555555555556
+          ],
+          "ci975": [
+            0.33315972222222223,
+            0.9722222222222222
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.655774,
+            "average_precision": 0.690789220577255,
+            "accuracy": 0.5355,
+            "balanced_accuracy": 0.5355,
+            "sensitivity": 0.617,
+            "specificity": 0.454,
+            "log_loss": 0.7825256069570673,
+            "confusion_matrix": [
+              [
+                454,
+                546
+              ],
+              [
+                383,
+                617
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.6666666666666667,
+            "average_precision": 0.681444597069597,
+            "accuracy": 0.47058823529411764,
+            "balanced_accuracy": 0.47916666666666663,
+            "sensitivity": 0.625,
+            "specificity": 0.3333333333333333,
+            "log_loss": 0.751960544167708,
+            "confusion_matrix": [
+              [
+                3,
+                6
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.3885416666666667,
+              0.9027777777777778
+            ],
+            "ci975": [
+              0.3333333333333333,
+              0.9305555555555556
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "tabnet_none_pretrained",
+      "model": "tabnet",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "real_rows": 812,
+      "fit_rows": 812,
+      "training_fit": {
+        "auroc": 0.9793103448275862,
+        "average_precision": 0.9820091502745719,
+        "accuracy": 0.8983050847457628,
+        "balanced_accuracy": 0.8982758620689655,
+        "sensitivity": 0.9,
+        "specificity": 0.896551724137931,
+        "log_loss": 0.2693013758139281,
+        "confusion_matrix": [
+          [
+            26,
+            3
+          ],
+          [
+            3,
+            27
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8022988505747127,
+        "average_precision": 0.8406658037035035,
+        "accuracy": 0.711864406779661,
+        "balanced_accuracy": 0.7114942528735633,
+        "sensitivity": 0.7333333333333333,
+        "specificity": 0.6896551724137931,
+        "log_loss": 0.5356597200321982,
+        "confusion_matrix": [
+          [
+            20,
+            9
+          ],
+          [
+            8,
+            22
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.9500000000000001,
+        "average_precision": 0.95,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.36952784668605493,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.7975000000000002,
+            1.0
+          ],
+          "ci975": [
+            0.7,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.674364,
+            "average_precision": 0.773413374598136,
+            "accuracy": 0.579,
+            "balanced_accuracy": 0.579,
+            "sensitivity": 0.572,
+            "specificity": 0.586,
+            "log_loss": 1.013624318133369,
+            "confusion_matrix": [
+              [
+                293,
+                207
+              ],
+              [
+                214,
+                286
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.7,
+            "average_precision": 0.7678571428571428,
+            "accuracy": 0.5555555555555556,
+            "balanced_accuracy": 0.55,
+            "sensitivity": 0.5,
+            "specificity": 0.6,
+            "log_loss": 0.6386549318977083,
+            "confusion_matrix": [
+              [
+                3,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.2,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.638888888888889,
+        "average_precision": 0.7055021367521368,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5416666666666666,
+        "sensitivity": 0.75,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.7504817473228652,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3333333333333333,
+            0.8888888888888888
+          ],
+          "ci975": [
+            0.3055555555555556,
+            0.9166666666666666
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.4733625,
+            "average_precision": 0.5908191934977904,
+            "accuracy": 0.468,
+            "balanced_accuracy": 0.46799999999999997,
+            "sensitivity": 0.688,
+            "specificity": 0.248,
+            "log_loss": 1.4612318831597302,
+            "confusion_matrix": [
+              [
+                248,
+                752
+              ],
+              [
+                312,
+                688
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.4583333333333333,
+            "average_precision": 0.5858173076923077,
+            "accuracy": 0.47058823529411764,
+            "balanced_accuracy": 0.4861111111111111,
+            "sensitivity": 0.75,
+            "specificity": 0.2222222222222222,
+            "log_loss": 1.2791604248248127,
+            "confusion_matrix": [
+              [
+                2,
+                7
+              ],
+              [
+                2,
+                6
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.1385416666666667,
+              0.7638888888888888
+            ],
+            "ci975": [
+              0.1111111111111111,
+              0.7916666666666666
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "tabnet_none_raw",
+      "model": "tabnet",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "real_rows": 812,
+      "fit_rows": 812,
+      "training_fit": {
+        "auroc": 0.9747126436781609,
+        "average_precision": 0.976601552943338,
+        "accuracy": 0.8983050847457628,
+        "balanced_accuracy": 0.8982758620689655,
+        "sensitivity": 0.9,
+        "specificity": 0.896551724137931,
+        "log_loss": 0.267190868587709,
+        "confusion_matrix": [
+          [
+            26,
+            3
+          ],
+          [
+            3,
+            27
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8149425287356322,
+        "average_precision": 0.8523283042406136,
+        "accuracy": 0.7627118644067796,
+        "balanced_accuracy": 0.7620689655172415,
+        "sensitivity": 0.8,
+        "specificity": 0.7241379310344828,
+        "log_loss": 0.5182654079683848,
+        "confusion_matrix": [
+          [
+            21,
+            8
+          ],
+          [
+            6,
+            24
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.85,
+        "average_precision": 0.8928571428571428,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.4357107928944693,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.5,
+            1.0
+          ],
+          "ci975": [
+            0.4,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.7386,
+            "average_precision": 0.7789970586104814,
+            "accuracy": 0.616,
+            "balanced_accuracy": 0.616,
+            "sensitivity": 0.608,
+            "specificity": 0.624,
+            "log_loss": 0.8936437133938223,
+            "confusion_matrix": [
+              [
+                312,
+                188
+              ],
+              [
+                196,
+                304
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.8,
+            "average_precision": 0.8166666666666667,
+            "accuracy": 0.5555555555555556,
+            "balanced_accuracy": 0.55,
+            "sensitivity": 0.5,
+            "specificity": 0.6,
+            "log_loss": 0.7088201067805108,
+            "confusion_matrix": [
+              [
+                3,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.4,
+              1.0
+            ],
+            "ci975": [
+              0.4,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.6111111111111112,
+        "average_precision": 0.7068181818181818,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5416666666666666,
+        "sensitivity": 0.75,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.7465844591245223,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3055555555555556,
+            0.875
+          ],
+          "ci975": [
+            0.25,
+            0.9027777777777778
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.594838,
+            "average_precision": 0.6360633373052657,
+            "accuracy": 0.5585,
+            "balanced_accuracy": 0.5585,
+            "sensitivity": 0.686,
+            "specificity": 0.431,
+            "log_loss": 0.9847150246078253,
+            "confusion_matrix": [
+              [
+                431,
+                569
+              ],
+              [
+                314,
+                686
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5555555555555556,
+            "average_precision": 0.6218486374736374,
+            "accuracy": 0.5882352941176471,
+            "balanced_accuracy": 0.5972222222222222,
+            "sensitivity": 0.75,
+            "specificity": 0.4444444444444444,
+            "log_loss": 0.8775377656893915,
+            "confusion_matrix": [
+              [
+                4,
+                5
+              ],
+              [
+                2,
+                6
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2222222222222222,
+              0.8333333333333334
+            ],
+            "ci975": [
+              0.2220486111111111,
+              0.8473958333333339
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "tabnet_rose7000_pretrained",
+      "model": "tabnet",
+      "augmentation": "rose7000",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 7000,
+      "real_rows": 812,
+      "fit_rows": 7812,
+      "training_fit": {
+        "auroc": 0.9942528735632183,
+        "average_precision": 0.9952380952380953,
+        "accuracy": 0.9152542372881356,
+        "balanced_accuracy": 0.9166666666666667,
+        "sensitivity": 0.8333333333333334,
+        "specificity": 1.0,
+        "log_loss": 0.23743566577066486,
+        "confusion_matrix": [
+          [
+            29,
+            0
+          ],
+          [
+            5,
+            25
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8241379310344829,
+        "average_precision": 0.8683847693154069,
+        "accuracy": 0.7288135593220338,
+        "balanced_accuracy": 0.7298850574712643,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 0.7931034482758621,
+        "log_loss": 0.5155090575985171,
+        "confusion_matrix": [
+          [
+            23,
+            6
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.9,
+        "average_precision": 0.8875,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.775,
+        "sensitivity": 0.75,
+        "specificity": 0.8,
+        "log_loss": 0.3852040169103679,
+        "confusion_matrix": [
+          [
+            4,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.6,
+            1.0
+          ],
+          "ci975": [
+            0.55,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.860784,
+            "average_precision": 0.8791508352191892,
+            "accuracy": 0.753,
+            "balanced_accuracy": 0.753,
+            "sensitivity": 0.694,
+            "specificity": 0.812,
+            "log_loss": 0.6256869577892119,
+            "confusion_matrix": [
+              [
+                406,
+                94
+              ],
+              [
+                153,
+                347
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.9,
+            "average_precision": 0.9166666666666666,
+            "accuracy": 0.8888888888888888,
+            "balanced_accuracy": 0.875,
+            "sensitivity": 0.75,
+            "specificity": 1.0,
+            "log_loss": 0.37039845134959,
+            "confusion_matrix": [
+              [
+                5,
+                0
+              ],
+              [
+                1,
+                3
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.6,
+              1.0
+            ],
+            "ci975": [
+              0.55,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.5833333333333334,
+        "average_precision": 0.6574592074592074,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5277777777777778,
+        "sensitivity": 0.5,
+        "specificity": 0.5555555555555556,
+        "log_loss": 0.9418298791234354,
+        "confusion_matrix": [
+          [
+            5,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2638888888888889,
+            0.8475694444444425
+          ],
+          "ci975": [
+            0.2222222222222222,
+            0.8888888888888888
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.4808715,
+            "average_precision": 0.5670363402498396,
+            "accuracy": 0.4675,
+            "balanced_accuracy": 0.4675,
+            "sensitivity": 0.497,
+            "specificity": 0.438,
+            "log_loss": 3.1419879118669574,
+            "confusion_matrix": [
+              [
+                438,
+                562
+              ],
+              [
+                503,
+                497
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.4444444444444445,
+            "average_precision": 0.5364750445632799,
+            "accuracy": 0.35294117647058826,
+            "balanced_accuracy": 0.35416666666666663,
+            "sensitivity": 0.375,
+            "specificity": 0.3333333333333333,
+            "log_loss": 1.6010215835712645,
+            "confusion_matrix": [
+              [
+                3,
+                6
+              ],
+              [
+                5,
+                3
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.16666666666666666,
+              0.7361111111111112
+            ],
+            "ci975": [
+              0.125,
+              0.7777777777777778
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "tabnet_rose7000_raw",
+      "model": "tabnet",
+      "augmentation": "rose7000",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 7000,
+      "real_rows": 812,
+      "fit_rows": 7812,
+      "training_fit": {
+        "auroc": 0.9977011494252873,
+        "average_precision": 0.9979166666666667,
+        "accuracy": 0.8983050847457628,
+        "balanced_accuracy": 0.9,
+        "sensitivity": 0.8,
+        "specificity": 1.0,
+        "log_loss": 0.24238938471951024,
+        "confusion_matrix": [
+          [
+            29,
+            0
+          ],
+          [
+            6,
+            24
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7482758620689655,
+        "average_precision": 0.8010085053572279,
+        "accuracy": 0.6779661016949152,
+        "balanced_accuracy": 0.6781609195402298,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 0.6896551724137931,
+        "log_loss": 0.620592287130174,
+        "confusion_matrix": [
+          [
+            20,
+            9
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.8,
+        "average_precision": 0.8303571428571428,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.453948957962463,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4,
+            1.0
+          ],
+          "ci975": [
+            0.4,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.86646,
+            "average_precision": 0.8737682290503355,
+            "accuracy": 0.764,
+            "balanced_accuracy": 0.764,
+            "sensitivity": 0.77,
+            "specificity": 0.758,
+            "log_loss": 0.6293522392952573,
+            "confusion_matrix": [
+              [
+                379,
+                121
+              ],
+              [
+                115,
+                385
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.85,
+            "average_precision": 0.8541666666666666,
+            "accuracy": 0.7777777777777778,
+            "balanced_accuracy": 0.775,
+            "sensitivity": 0.75,
+            "specificity": 0.8,
+            "log_loss": 0.3586921270109402,
+            "confusion_matrix": [
+              [
+                4,
+                1
+              ],
+              [
+                1,
+                3
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.55,
+              1.0
+            ],
+            "ci975": [
+              0.45,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.5277777777777778,
+        "average_precision": 0.538116458704694,
+        "accuracy": 0.5882352941176471,
+        "balanced_accuracy": 0.5902777777777778,
+        "sensitivity": 0.625,
+        "specificity": 0.5555555555555556,
+        "log_loss": 1.1574891456151075,
+        "confusion_matrix": [
+          [
+            5,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2361111111111111,
+            0.8194444444444444
+          ],
+          "ci975": [
+            0.20833333333333334,
+            0.8611111111111112
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.486459,
+            "average_precision": 0.4745064012288571,
+            "accuracy": 0.4885,
+            "balanced_accuracy": 0.48850000000000005,
+            "sensitivity": 0.553,
+            "specificity": 0.424,
+            "log_loss": 2.7085599242763916,
+            "confusion_matrix": [
+              [
+                424,
+                576
+              ],
+              [
+                447,
+                553
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5138888888888888,
+            "average_precision": 0.5571164946164946,
+            "accuracy": 0.5294117647058824,
+            "balanced_accuracy": 0.5347222222222222,
+            "sensitivity": 0.625,
+            "specificity": 0.4444444444444444,
+            "log_loss": 1.6797497405779775,
+            "confusion_matrix": [
+              [
+                4,
+                5
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2222222222222222,
+              0.8055555555555556
+            ],
+            "ci975": [
+              0.19444444444444445,
+              0.8333333333333334
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "tabnet_rose700_pretrained",
+      "model": "tabnet",
+      "augmentation": "rose700",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 700,
+      "real_rows": 812,
+      "fit_rows": 1512,
+      "training_fit": {
+        "auroc": 0.9781609195402299,
+        "average_precision": 0.9818550693550694,
+        "accuracy": 0.9322033898305084,
+        "balanced_accuracy": 0.9333333333333333,
+        "sensitivity": 0.8666666666666667,
+        "specificity": 1.0,
+        "log_loss": 0.27051740684820424,
+        "confusion_matrix": [
+          [
+            29,
+            0
+          ],
+          [
+            4,
+            26
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7850574712643679,
+        "average_precision": 0.8232868925788658,
+        "accuracy": 0.711864406779661,
+        "balanced_accuracy": 0.7114942528735633,
+        "sensitivity": 0.7333333333333333,
+        "specificity": 0.6896551724137931,
+        "log_loss": 0.5628181158285988,
+        "confusion_matrix": [
+          [
+            20,
+            9
+          ],
+          [
+            8,
+            22
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.9,
+        "average_precision": 0.8875,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.775,
+        "sensitivity": 0.75,
+        "specificity": 0.8,
+        "log_loss": 0.43406798693656806,
+        "confusion_matrix": [
+          [
+            4,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.6,
+            1.0
+          ],
+          "ci975": [
+            0.55,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.874136,
+            "average_precision": 0.8964107893111285,
+            "accuracy": 0.75,
+            "balanced_accuracy": 0.75,
+            "sensitivity": 0.76,
+            "specificity": 0.74,
+            "log_loss": 0.5436616125863702,
+            "confusion_matrix": [
+              [
+                370,
+                130
+              ],
+              [
+                120,
+                380
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.9,
+            "average_precision": 0.8875,
+            "accuracy": 0.7777777777777778,
+            "balanced_accuracy": 0.775,
+            "sensitivity": 0.75,
+            "specificity": 0.8,
+            "log_loss": 0.3869049329654892,
+            "confusion_matrix": [
+              [
+                4,
+                1
+              ],
+              [
+                1,
+                3
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.6,
+              1.0
+            ],
+            "ci975": [
+              0.55,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.75,
+        "average_precision": 0.8333333333333333,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5416666666666666,
+        "sensitivity": 0.75,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.7231373610061018,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4583333333333333,
+            0.9861111111111112
+          ],
+          "ci975": [
+            0.4166666666666667,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.6207035000000001,
+            "average_precision": 0.6970208688754349,
+            "accuracy": 0.517,
+            "balanced_accuracy": 0.517,
+            "sensitivity": 0.677,
+            "specificity": 0.357,
+            "log_loss": 1.297817166406392,
+            "confusion_matrix": [
+              [
+                357,
+                643
+              ],
+              [
+                323,
+                677
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5972222222222222,
+            "average_precision": 0.6798611111111111,
+            "accuracy": 0.5294117647058824,
+            "balanced_accuracy": 0.5416666666666666,
+            "sensitivity": 0.75,
+            "specificity": 0.3333333333333333,
+            "log_loss": 0.964084921125395,
+            "confusion_matrix": [
+              [
+                3,
+                6
+              ],
+              [
+                2,
+                6
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2916666666666667,
+              0.8611111111111112
+            ],
+            "ci975": [
+              0.2361111111111111,
+              0.9027777777777778
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "tabnet_rose700_raw",
+      "model": "tabnet",
+      "augmentation": "rose700",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 700,
+      "real_rows": 812,
+      "fit_rows": 1512,
+      "training_fit": {
+        "auroc": 0.9850574712643678,
+        "average_precision": 0.9874310674310675,
+        "accuracy": 0.9322033898305084,
+        "balanced_accuracy": 0.9327586206896552,
+        "sensitivity": 0.9,
+        "specificity": 0.9655172413793104,
+        "log_loss": 0.24690994693393079,
+        "confusion_matrix": [
+          [
+            28,
+            1
+          ],
+          [
+            3,
+            27
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8528735632183908,
+        "average_precision": 0.8707360555419953,
+        "accuracy": 0.7457627118644068,
+        "balanced_accuracy": 0.7471264367816092,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 0.8275862068965517,
+        "log_loss": 0.4645141444082237,
+        "confusion_matrix": [
+          [
+            24,
+            5
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.8,
+        "average_precision": 0.8303571428571428,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5077145763949833,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4,
+            1.0
+          ],
+          "ci975": [
+            0.35,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.724232,
+            "average_precision": 0.7986661805251846,
+            "accuracy": 0.637,
+            "balanced_accuracy": 0.637,
+            "sensitivity": 0.584,
+            "specificity": 0.69,
+            "log_loss": 0.9154027472763637,
+            "confusion_matrix": [
+              [
+                345,
+                155
+              ],
+              [
+                208,
+                292
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.7,
+            "average_precision": 0.775,
+            "accuracy": 0.6666666666666666,
+            "balanced_accuracy": 0.65,
+            "sensitivity": 0.5,
+            "specificity": 0.8,
+            "log_loss": 0.6185290141905878,
+            "confusion_matrix": [
+              [
+                4,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.2,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.5,
+        "average_precision": 0.5640564296814297,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.7956414686169446,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.20798611111111115,
+            0.7777777777777778
+          ],
+          "ci975": [
+            0.1527777777777778,
+            0.8055555555555556
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.6305354999999999,
+            "average_precision": 0.6887265879567732,
+            "accuracy": 0.554,
+            "balanced_accuracy": 0.554,
+            "sensitivity": 0.575,
+            "specificity": 0.533,
+            "log_loss": 1.2179429913695725,
+            "confusion_matrix": [
+              [
+                533,
+                467
+              ],
+              [
+                425,
+                575
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.625,
+            "average_precision": 0.6756680819180819,
+            "accuracy": 0.47058823529411764,
+            "balanced_accuracy": 0.4722222222222222,
+            "sensitivity": 0.5,
+            "specificity": 0.4444444444444444,
+            "log_loss": 0.8607799671834468,
+            "confusion_matrix": [
+              [
+                4,
+                5
+              ],
+              [
+                4,
+                4
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.3333333333333333,
+              0.875
+            ],
+            "ci975": [
+              0.2777777777777778,
+              0.8888888888888888
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "xgboost_none_pretrained",
+      "model": "xgboost",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "real_rows": 812,
+      "fit_rows": 812,
+      "training_fit": {
+        "auroc": 0.9551724137931035,
+        "average_precision": 0.9601122418070415,
+        "accuracy": 0.8813559322033898,
+        "balanced_accuracy": 0.8816091954022989,
+        "sensitivity": 0.8666666666666667,
+        "specificity": 0.896551724137931,
+        "log_loss": 0.3628692107439865,
+        "confusion_matrix": [
+          [
+            26,
+            3
+          ],
+          [
+            4,
+            26
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8275862068965518,
+        "average_precision": 0.8694638856725956,
+        "accuracy": 0.7627118644067796,
+        "balanced_accuracy": 0.7626436781609196,
+        "sensitivity": 0.7666666666666667,
+        "specificity": 0.7586206896551724,
+        "log_loss": 0.4969534437654071,
+        "confusion_matrix": [
+          [
+            22,
+            7
+          ],
+          [
+            7,
+            23
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.9500000000000001,
+        "average_precision": 0.95,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.4315746861608869,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.7975000000000002,
+            1.0
+          ],
+          "ci975": [
+            0.7,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.724662,
+            "average_precision": 0.7982017373131727,
+            "accuracy": 0.678,
+            "balanced_accuracy": 0.6779999999999999,
+            "sensitivity": 0.512,
+            "specificity": 0.844,
+            "log_loss": 0.54876287432899,
+            "confusion_matrix": [
+              [
+                422,
+                78
+              ],
+              [
+                244,
+                256
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.7,
+            "average_precision": 0.775,
+            "accuracy": 0.6666666666666666,
+            "balanced_accuracy": 0.65,
+            "sensitivity": 0.5,
+            "specificity": 0.8,
+            "log_loss": 0.5223153306349194,
+            "confusion_matrix": [
+              [
+                4,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.2,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.6111111111111112,
+        "average_precision": 0.7027319902319903,
+        "accuracy": 0.4117647058823529,
+        "balanced_accuracy": 0.4236111111111111,
+        "sensitivity": 0.625,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.713131052895478,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2916666666666667,
+            0.875
+          ],
+          "ci975": [
+            0.25,
+            0.9027777777777778
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.5513454999999999,
+            "average_precision": 0.6197427731925841,
+            "accuracy": 0.4585,
+            "balanced_accuracy": 0.4585,
+            "sensitivity": 0.632,
+            "specificity": 0.285,
+            "log_loss": 0.8306951547118667,
+            "confusion_matrix": [
+              [
+                285,
+                715
+              ],
+              [
+                368,
+                632
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5555555555555556,
+            "average_precision": 0.6401057276057276,
+            "accuracy": 0.4117647058823529,
+            "balanced_accuracy": 0.4236111111111111,
+            "sensitivity": 0.625,
+            "specificity": 0.2222222222222222,
+            "log_loss": 0.823760180826821,
+            "confusion_matrix": [
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2361111111111111,
+              0.8333333333333334
+            ],
+            "ci975": [
+              0.19444444444444445,
+              0.875
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "xgboost_none_raw",
+      "model": "xgboost",
+      "augmentation": "none",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 0,
+      "real_rows": 812,
+      "fit_rows": 812,
+      "training_fit": {
+        "auroc": 0.9390804597701149,
+        "average_precision": 0.951545248582753,
+        "accuracy": 0.864406779661017,
+        "balanced_accuracy": 0.8649425287356323,
+        "sensitivity": 0.8333333333333334,
+        "specificity": 0.896551724137931,
+        "log_loss": 0.37345234196010996,
+        "confusion_matrix": [
+          [
+            26,
+            3
+          ],
+          [
+            5,
+            25
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8379310344827586,
+        "average_precision": 0.8803944053560437,
+        "accuracy": 0.7627118644067796,
+        "balanced_accuracy": 0.7626436781609196,
+        "sensitivity": 0.7666666666666667,
+        "specificity": 0.7586206896551724,
+        "log_loss": 0.4897959379067443,
+        "confusion_matrix": [
+          [
+            22,
+            7
+          ],
+          [
+            7,
+            23
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.85,
+        "average_precision": 0.8541666666666666,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.4523769228464135,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.55,
+            1.0
+          ],
+          "ci975": [
+            0.4,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.722626,
+            "average_precision": 0.7997523040676197,
+            "accuracy": 0.677,
+            "balanced_accuracy": 0.677,
+            "sensitivity": 0.552,
+            "specificity": 0.802,
+            "log_loss": 0.5403533206123573,
+            "confusion_matrix": [
+              [
+                401,
+                99
+              ],
+              [
+                224,
+                276
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.7,
+            "average_precision": 0.775,
+            "accuracy": 0.6666666666666666,
+            "balanced_accuracy": 0.65,
+            "sensitivity": 0.5,
+            "specificity": 0.8,
+            "log_loss": 0.5239518404685047,
+            "confusion_matrix": [
+              [
+                4,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.6388888888888888,
+        "average_precision": 0.7233173076923076,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.7155132752490256,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.3333333333333333,
+            0.8892361111111091
+          ],
+          "ci975": [
+            0.2916666666666667,
+            0.9168402777777783
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.5674405,
+            "average_precision": 0.6200829798832126,
+            "accuracy": 0.4655,
+            "balanced_accuracy": 0.4655,
+            "sensitivity": 0.647,
+            "specificity": 0.284,
+            "log_loss": 0.8166989651214894,
+            "confusion_matrix": [
+              [
+                284,
+                716
+              ],
+              [
+                353,
+                647
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5694444444444444,
+            "average_precision": 0.6457875457875457,
+            "accuracy": 0.4117647058823529,
+            "balanced_accuracy": 0.4236111111111111,
+            "sensitivity": 0.625,
+            "specificity": 0.2222222222222222,
+            "log_loss": 0.8081511933388587,
+            "confusion_matrix": [
+              [
+                2,
+                7
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2638888888888889,
+              0.8472222222222222
+            ],
+            "ci975": [
+              0.2222222222222222,
+              0.875
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "xgboost_rose7000_pretrained",
+      "model": "xgboost",
+      "augmentation": "rose7000",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 7000,
+      "real_rows": 812,
+      "fit_rows": 7812,
+      "training_fit": {
+        "auroc": 0.9310344827586207,
+        "average_precision": 0.941457761579043,
+        "accuracy": 0.8135593220338984,
+        "balanced_accuracy": 0.8160919540229885,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 0.9655172413793104,
+        "log_loss": 0.4136434413387359,
+        "confusion_matrix": [
+          [
+            28,
+            1
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.764367816091954,
+        "average_precision": 0.8213839105609396,
+        "accuracy": 0.6949152542372882,
+        "balanced_accuracy": 0.6965517241379311,
+        "sensitivity": 0.6,
+        "specificity": 0.7931034482758621,
+        "log_loss": 0.5386882905104078,
+        "confusion_matrix": [
+          [
+            23,
+            6
+          ],
+          [
+            12,
+            18
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.7,
+        "average_precision": 0.7678571428571428,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5170612429776438,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.25,
+            1.0
+          ],
+          "ci975": [
+            0.2,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.669286,
+            "average_precision": 0.7741113156963066,
+            "accuracy": 0.749,
+            "balanced_accuracy": 0.749,
+            "sensitivity": 0.5,
+            "specificity": 0.998,
+            "log_loss": 0.5568122659414594,
+            "confusion_matrix": [
+              [
+                499,
+                1
+              ],
+              [
+                250,
+                250
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.7,
+            "average_precision": 0.7678571428571428,
+            "accuracy": 0.7777777777777778,
+            "balanced_accuracy": 0.75,
+            "sensitivity": 0.5,
+            "specificity": 1.0,
+            "log_loss": 0.5213959077014312,
+            "confusion_matrix": [
+              [
+                5,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.2,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.5972222222222222,
+        "average_precision": 0.6916666666666667,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.4652777777777778,
+        "sensitivity": 0.375,
+        "specificity": 0.5555555555555556,
+        "log_loss": 0.6619717354852687,
+        "confusion_matrix": [
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2916666666666667,
+            0.8611111111111112
+          ],
+          "ci975": [
+            0.25,
+            0.8888888888888888
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.6081540000000001,
+            "average_precision": 0.6780628371630595,
+            "accuracy": 0.509,
+            "balanced_accuracy": 0.509,
+            "sensitivity": 0.546,
+            "specificity": 0.472,
+            "log_loss": 0.7211327909738163,
+            "confusion_matrix": [
+              [
+                472,
+                528
+              ],
+              [
+                454,
+                546
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.625,
+            "average_precision": 0.7034188034188034,
+            "accuracy": 0.5294117647058824,
+            "balanced_accuracy": 0.5347222222222222,
+            "sensitivity": 0.625,
+            "specificity": 0.4444444444444444,
+            "log_loss": 0.6966993805511809,
+            "confusion_matrix": [
+              [
+                4,
+                5
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.3194444444444444,
+              0.8888888888888888
+            ],
+            "ci975": [
+              0.2777777777777778,
+              0.9027777777777778
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "xgboost_rose7000_raw",
+      "model": "xgboost",
+      "augmentation": "rose7000",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 7000,
+      "real_rows": 812,
+      "fit_rows": 7812,
+      "training_fit": {
+        "auroc": 0.9149425287356322,
+        "average_precision": 0.9347790522259768,
+        "accuracy": 0.7796610169491526,
+        "balanced_accuracy": 0.7821839080459769,
+        "sensitivity": 0.6333333333333333,
+        "specificity": 0.9310344827586207,
+        "log_loss": 0.4212315256676104,
+        "confusion_matrix": [
+          [
+            27,
+            2
+          ],
+          [
+            11,
+            19
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7942528735632184,
+        "average_precision": 0.8392423339743468,
+        "accuracy": 0.6949152542372882,
+        "balanced_accuracy": 0.6959770114942528,
+        "sensitivity": 0.6333333333333333,
+        "specificity": 0.7586206896551724,
+        "log_loss": 0.5247226884855641,
+        "confusion_matrix": [
+          [
+            22,
+            7
+          ],
+          [
+            11,
+            19
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.7,
+        "average_precision": 0.7678571428571428,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5190390020564757,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.25,
+            1.0
+          ],
+          "ci975": [
+            0.2,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.642592,
+            "average_precision": 0.7666467717479496,
+            "accuracy": 0.75,
+            "balanced_accuracy": 0.75,
+            "sensitivity": 0.5,
+            "specificity": 1.0,
+            "log_loss": 0.5805872143226208,
+            "confusion_matrix": [
+              [
+                500,
+                0
+              ],
+              [
+                250,
+                250
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.65,
+            "average_precision": 0.75,
+            "accuracy": 0.7777777777777778,
+            "balanced_accuracy": 0.75,
+            "sensitivity": 0.5,
+            "specificity": 1.0,
+            "log_loss": 0.5418722751028171,
+            "confusion_matrix": [
+              [
+                5,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2,
+              1.0
+            ],
+            "ci975": [
+              0.15,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.5555555555555556,
+        "average_precision": 0.6768790849673203,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.4652777777777778,
+        "sensitivity": 0.375,
+        "specificity": 0.5555555555555556,
+        "log_loss": 0.6902031057063674,
+        "confusion_matrix": [
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.25,
+            0.8333333333333334
+          ],
+          "ci975": [
+            0.20833333333333334,
+            0.875
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.578135,
+            "average_precision": 0.6544160672863402,
+            "accuracy": 0.5005,
+            "balanced_accuracy": 0.5005,
+            "sensitivity": 0.511,
+            "specificity": 0.49,
+            "log_loss": 0.7514081846536345,
+            "confusion_matrix": [
+              [
+                490,
+                510
+              ],
+              [
+                489,
+                511
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5833333333333334,
+            "average_precision": 0.6868589743589744,
+            "accuracy": 0.5294117647058824,
+            "balanced_accuracy": 0.5347222222222222,
+            "sensitivity": 0.625,
+            "specificity": 0.4444444444444444,
+            "log_loss": 0.7267885160245839,
+            "confusion_matrix": [
+              [
+                4,
+                5
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2777777777777778,
+              0.8611111111111112
+            ],
+            "ci975": [
+              0.2222222222222222,
+              0.8888888888888888
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "xgboost_rose700_pretrained",
+      "model": "xgboost",
+      "augmentation": "rose700",
+      "representation": "pretrained",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 700,
+      "real_rows": 812,
+      "fit_rows": 1512,
+      "training_fit": {
+        "auroc": 0.9413793103448276,
+        "average_precision": 0.9501154928548339,
+        "accuracy": 0.864406779661017,
+        "balanced_accuracy": 0.8655172413793104,
+        "sensitivity": 0.8,
+        "specificity": 0.9310344827586207,
+        "log_loss": 0.3891203210122113,
+        "confusion_matrix": [
+          [
+            27,
+            2
+          ],
+          [
+            6,
+            24
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.7885057471264368,
+        "average_precision": 0.8361721135991199,
+        "accuracy": 0.7457627118644068,
+        "balanced_accuracy": 0.746551724137931,
+        "sensitivity": 0.7,
+        "specificity": 0.7931034482758621,
+        "log_loss": 0.5274561758983125,
+        "confusion_matrix": [
+          [
+            23,
+            6
+          ],
+          [
+            9,
+            21
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.85,
+        "average_precision": 0.8541666666666666,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.44598142272806957,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.55,
+            1.0
+          ],
+          "ci975": [
+            0.4,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.74336,
+            "average_precision": 0.8184818256358765,
+            "accuracy": 0.747,
+            "balanced_accuracy": 0.747,
+            "sensitivity": 0.502,
+            "specificity": 0.992,
+            "log_loss": 0.5056674799661415,
+            "confusion_matrix": [
+              [
+                496,
+                4
+              ],
+              [
+                249,
+                251
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.7,
+            "average_precision": 0.7678571428571428,
+            "accuracy": 0.7777777777777778,
+            "balanced_accuracy": 0.75,
+            "sensitivity": 0.5,
+            "specificity": 1.0,
+            "log_loss": 0.48099090508134107,
+            "confusion_matrix": [
+              [
+                5,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.2,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.5694444444444444,
+        "average_precision": 0.679040404040404,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.6879427396944559,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.25,
+            0.8472222222222222
+          ],
+          "ci975": [
+            0.2222222222222222,
+            0.875
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.58898,
+            "average_precision": 0.6615001291458411,
+            "accuracy": 0.487,
+            "balanced_accuracy": 0.487,
+            "sensitivity": 0.548,
+            "specificity": 0.426,
+            "log_loss": 0.7404630260982731,
+            "confusion_matrix": [
+              [
+                426,
+                574
+              ],
+              [
+                452,
+                548
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5972222222222223,
+            "average_precision": 0.669345238095238,
+            "accuracy": 0.5294117647058824,
+            "balanced_accuracy": 0.5347222222222222,
+            "sensitivity": 0.625,
+            "specificity": 0.4444444444444444,
+            "log_loss": 0.7260890316757641,
+            "confusion_matrix": [
+              [
+                4,
+                5
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2916666666666667,
+              0.8611111111111112
+            ],
+            "ci975": [
+              0.25,
+              0.9027777777777778
+            ]
+          }
+        }
+      }
+    },
+    {
+      "task": "motor_pd",
+      "kind": "classification",
+      "candidate": "xgboost_rose700_raw",
+      "model": "xgboost",
+      "augmentation": "rose700",
+      "representation": "raw",
+      "counts": {
+        "train": 59,
+        "validation": 9,
+        "test": 17
+      },
+      "synthetic_rows": 700,
+      "real_rows": 812,
+      "fit_rows": 1512,
+      "training_fit": {
+        "auroc": 0.9252873563218391,
+        "average_precision": 0.9418200262257165,
+        "accuracy": 0.847457627118644,
+        "balanced_accuracy": 0.8488505747126437,
+        "sensitivity": 0.7666666666666667,
+        "specificity": 0.9310344827586207,
+        "log_loss": 0.3945471052569445,
+        "confusion_matrix": [
+          [
+            27,
+            2
+          ],
+          [
+            7,
+            23
+          ]
+        ]
+      },
+      "training_oof": {
+        "auroc": 0.8126436781609195,
+        "average_precision": 0.850182468667925,
+        "accuracy": 0.711864406779661,
+        "balanced_accuracy": 0.7120689655172414,
+        "sensitivity": 0.7,
+        "specificity": 0.7241379310344828,
+        "log_loss": 0.5132380625235652,
+        "confusion_matrix": [
+          [
+            21,
+            8
+          ],
+          [
+            9,
+            21
+          ]
+        ]
+      },
+      "validation": {
+        "auroc": 0.8,
+        "average_precision": 0.8303571428571428,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.4579190302195463,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.4,
+            1.0
+          ],
+          "ci975": [
+            0.35,
+            1.0
+          ]
+        },
+        "synthetic": {
+          "rows": 1000,
+          "source_people": 9,
+          "row_metrics": {
+            "auroc": 0.730502,
+            "average_precision": 0.8069910854639314,
+            "accuracy": 0.701,
+            "balanced_accuracy": 0.7010000000000001,
+            "sensitivity": 0.502,
+            "specificity": 0.9,
+            "log_loss": 0.5285192834415994,
+            "confusion_matrix": [
+              [
+                450,
+                50
+              ],
+              [
+                249,
+                251
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.7,
+            "average_precision": 0.775,
+            "accuracy": 0.7777777777777778,
+            "balanced_accuracy": 0.75,
+            "sensitivity": 0.5,
+            "specificity": 1.0,
+            "log_loss": 0.5007260382184149,
+            "confusion_matrix": [
+              [
+                5,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.25,
+              1.0
+            ],
+            "ci975": [
+              0.25,
+              1.0
+            ]
+          }
+        }
+      },
+      "test": {
+        "auroc": 0.5694444444444444,
+        "average_precision": 0.6805555555555556,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.6993548929865402,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "uncertainty": {
+          "ci95": [
+            0.2638888888888889,
+            0.8472222222222222
+          ],
+          "ci975": [
+            0.2222222222222222,
+            0.8751736111111117
+          ]
+        },
+        "synthetic": {
+          "rows": 2000,
+          "source_people": 17,
+          "row_metrics": {
+            "auroc": 0.5900955000000001,
+            "average_precision": 0.6494796809487952,
+            "accuracy": 0.494,
+            "balanced_accuracy": 0.494,
+            "sensitivity": 0.589,
+            "specificity": 0.399,
+            "log_loss": 0.7553953056055646,
+            "confusion_matrix": [
+              [
+                399,
+                601
+              ],
+              [
+                411,
+                589
+              ]
+            ]
+          },
+          "participant_metrics": {
+            "auroc": 0.5972222222222223,
+            "average_precision": 0.6714819902319903,
+            "accuracy": 0.5294117647058824,
+            "balanced_accuracy": 0.5347222222222222,
+            "sensitivity": 0.625,
+            "specificity": 0.4444444444444444,
+            "log_loss": 0.7400942581549346,
+            "confusion_matrix": [
+              [
+                4,
+                5
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          },
+          "participant_uncertainty": {
+            "ci95": [
+              0.2916666666666667,
+              0.8611111111111112
+            ],
+            "ci975": [
+              0.2361111111111111,
+              0.8890625000000005
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "registration.json": "9fa00ae7f1843e12d79e0abe1468c0f214c5f0ae47aecb3740693a91669faa77",
+    "freeze.json": "a539732d0d9d9c53310d911935eaa23036cd1cebb32a6486ca1013f39988186d",
+    "results.json": "f2216164f24f330fa64b53a1dc53e71e4b6d1536c3a9a88d25051b905ba7b5f0"
+  }
+}

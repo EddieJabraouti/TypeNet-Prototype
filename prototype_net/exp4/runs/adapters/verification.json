@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "classifier_fits": 225,
+  "fresh_tree_adapter_fits": 100,
+  "preprocessing_states": 325,
+  "keys": 300,
+  "checks": [
+    "same original real data, earlier baseline matrices and participant-disjoint repeated folds",
+    "all prior functions unchanged; no checkpoint reads in the classifier training worker",
+    "mechanism test proves four fresh independent adapter training calls per fold with checkpoint loading blocked",
+    "no shared adapter objects between tree families; all fit preprocessing states are training-fold-only",
+    "all fresh population controls reproduce previous saved predictions",
+    "TabNet attention/correction/head jointly trained with original penalty; all neural fits use 100 epochs",
+    "tree classifiers fit independently after their own adapters are trained and frozen",
+    "all 225 classifier predictions reproduced and all checkpoint/encoder/data hashes verified",
+    "all accuracy/AUROC/sample SD and ensemble metrics independently reproduced"
+  ],
+  "audit_sha256": "50b679cf3b43c35779038deafe1a6fea60cf56d04882fd19909fd6043a7896d3"
+}

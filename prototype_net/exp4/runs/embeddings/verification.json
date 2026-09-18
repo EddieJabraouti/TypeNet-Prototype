@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "fits": 100,
+  "features": 128,
+  "synthetic_rows": 0,
+  "checks": [
+    "exact original embedding columns; all observations and metadata retained",
+    "identical participant splits and five complete participant-disjoint CV repeats",
+    "original model definitions, training and evaluation functions unchanged",
+    "100 fold-only scalers and imputers; 128 inputs on every checkpoint",
+    "same tree hyperparameters, neural epochs, optimizer updates and batch sizes as original",
+    "all saved participant predictions reproduced from all 100 checkpoints",
+    "all model, input and encoder hashes unchanged",
+    "all participant accuracy, AUROC, sample SD and ensemble metrics reproduce"
+  ],
+  "audit_sha256": "2f5f96812bb6a5080d0226b6c564ad6e0d6029e9ecfc1546cff9b93715801eca"
+}

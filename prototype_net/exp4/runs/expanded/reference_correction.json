@@ -1,0 +1,44 @@
+{
+  "reason": "Avoid floating-point ranking of identical dummy probabilities when averaging different numbers of views. Return one exact constant per participant; report training dummy priors directly from participant labels in the existing folds.",
+  "changed": "Dummy-reference predictions and metrics only. All 112 learned candidates, split assignments, model checkpoints, settings, and learned-model predictions remain identical. No retraining or tuning.",
+  "created_at": 1789682373.915009,
+  "source_hashes_before": {
+    "prototype_net/exp4/model.py": "c80eba3ade9a1f0f4ac830e084c9147a98b7db594da7bbf3285c325a95fa44e5",
+    "prototype_net/failed/exp3/node.py": "50bd349274857387542c9a31f9615e934b99cf40277f5a440a5cdb278cb2110d",
+    "prototype_net/failed/exp3/tabnet.py": "41ec16ae6f18307ed13491cf7cc363784e494b5605db967a60344bcbaaaa9fcc"
+  },
+  "source_hashes_after": {
+    "prototype_net/exp4/model.py": "1cddeb8d5b380952d2e2c506be5e1723e67f1aaab5e6878b074794144e741008",
+    "prototype_net/failed/exp3/node.py": "50bd349274857387542c9a31f9615e934b99cf40277f5a440a5cdb278cb2110d",
+    "prototype_net/failed/exp3/tabnet.py": "41ec16ae6f18307ed13491cf7cc363784e494b5605db967a60344bcbaaaa9fcc"
+  },
+  "archive_sha256": "7347671dd7d57bc9a401fb1c631f27979c7460eba45f72374f0a2281449221a6",
+  "original_files": {
+    "results.json": "b555771301e6e0eeb920b55dabe337328a92d412552ccab5825bf20d718e5a86",
+    "comparison.json": "569c30b995c43bcc5149cf2682a5a2bb1513a168a560c5f2371f07b0ac0fa8ec",
+    "motor_pd/validation_predictions.npz": "9fd390e45c8a8c9ff98f8b04219223d994258c504bc78718deb762d269a8acc5",
+    "motor_pd/test_predictions.npz": "186ea6256816efaf8f7994f2785c1ef40ddb81bc29bd77dbf9939b864fde9cd8",
+    "motor_updrs/validation_predictions.npz": "e1ec1d3b83ed5653b1d880001d969b4f81f55f4b99808aa6bc052464fc2fb4af",
+    "motor_updrs/test_predictions.npz": "bc96b5c99cf7630b040074c809b58caa39feb69924156894a2163fdd0c44b9b8",
+    "touchscreen_pd/validation_predictions.npz": "dff0305f346953de307a641e8b7b4930fb338eaef9693661033c22d80d52770d",
+    "touchscreen_pd/test_predictions.npz": "46ba2a51ba58cc83d3578b6383e5ebdba522981176e99cf5f3776f52f2892243",
+    "touchscreen_updrs/validation_predictions.npz": "56091862f0c4a34eb01fff225ba811caf8165b41d965b6edd6ac35fa1de28c36",
+    "touchscreen_updrs/test_predictions.npz": "1c9c314b3a13ff6a3f9b4103298efe108371f6af6b1d47ec04e9ba529998c564",
+    "online_pd/validation_predictions.npz": "34262a0eb6dcaa45365a3e39e06b29ae57983b946cec7f6cf0f18fc4450a434e",
+    "online_pd/test_predictions.npz": "ce481ed60e6143c1f7232580abb401e74d6fa05044f0dd0d3f6e35a27bd1046b"
+  },
+  "corrected_files": {
+    "results.json": "b7e212323a950685f7dfb9ad6a8d0a238b4eb369677a261e1491ab360da59d2c",
+    "comparison.json": "f5631bcb58c241833d777c23276d5003283ea103ce9f0c890c533637c8b23e63",
+    "motor_pd/validation_predictions.npz": "3f046848b3d9c217d7248e400dc94c66bd8728114096937706bc20c1c230eaff",
+    "motor_pd/test_predictions.npz": "2669b05da34c0641afa5d281f5a51dc077f6129966b85917f883e5f6fc247136",
+    "motor_updrs/validation_predictions.npz": "29d254f1082ba5cb2b04a90d408fb3f01f9352633762754572e5d912c03d352b",
+    "motor_updrs/test_predictions.npz": "2d7b3836767c41c577591e520d288d1c411751c60e1441e7e2b59e04e2420457",
+    "touchscreen_pd/validation_predictions.npz": "a806cfe26071d8575a3c690284863b756eb76431f53ce8c17085302ec7cf8926",
+    "touchscreen_pd/test_predictions.npz": "7aa7b4845471c7bd4f542fcfd2ff60cbf45514579ef3c0eb83569cba04fcb57c",
+    "touchscreen_updrs/validation_predictions.npz": "56091862f0c4a34eb01fff225ba811caf8165b41d965b6edd6ac35fa1de28c36",
+    "touchscreen_updrs/test_predictions.npz": "1c9c314b3a13ff6a3f9b4103298efe108371f6af6b1d47ec04e9ba529998c564",
+    "online_pd/validation_predictions.npz": "8cb23602d263eaa9776430e623c507e9444a76e398066bdf4f72da3fd0fe4c61",
+    "online_pd/test_predictions.npz": "df5da5e1114abf34cd9656566a98ae3b35cbae7f17df904814e34d1ff7939798"
+  }
+}

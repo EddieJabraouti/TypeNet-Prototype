@@ -1,0 +1,452 @@
+{
+  "batch_size": 50,
+  "keys_per_sequence": 50,
+  "family": "xgboost",
+  "model_count": 25,
+  "baseline_policy": "First eligible visit, first 2500 valid keys; reference remains fixed",
+  "followup_policy": "First 2500 valid keys from each later eligible visit; chronological; no reuse",
+  "clinical_labels_used_by_monitor": false,
+  "synthetic_rows": 0,
+  "eligible_participants": [
+    "nq:95"
+  ],
+  "excluded": [
+    {
+      "participant_id": "nq:1000",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1001",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1002",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1004",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1005",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1006",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1008",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1009",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1010",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1011",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1012",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1013",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1014",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1015",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1016",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1017",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1019",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1020",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1021",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1022",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1023",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1024",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1025",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1028",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1029",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1030",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1031",
+      "heldout": false,
+      "recordings_with_2500_keys": 1
+    },
+    {
+      "participant_id": "nq:1032",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1033",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1034",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1035",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1037",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1039",
+      "heldout": true,
+      "recordings_with_2500_keys": 1
+    },
+    {
+      "participant_id": "nq:1041",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1042",
+      "heldout": false,
+      "recordings_with_2500_keys": 1
+    },
+    {
+      "participant_id": "nq:1043",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1045",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1047",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1049",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1050",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1051",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1052",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1053",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1055",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1056",
+      "heldout": false,
+      "recordings_with_2500_keys": 1
+    },
+    {
+      "participant_id": "nq:1057",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1059",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1061",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1062",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1063",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1064",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1066",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1068",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:1070",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:11",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:60",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:67",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:68",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:70",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:71",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:72",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:73",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:74",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:75",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:76",
+      "heldout": false,
+      "recordings_with_2500_keys": 2
+    },
+    {
+      "participant_id": "nq:77",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:78",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:79",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:80",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:81",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:82",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:83",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:84",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:85",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:86",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:87",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:88",
+      "heldout": false,
+      "recordings_with_2500_keys": 1
+    },
+    {
+      "participant_id": "nq:89",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:92",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:93",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:94",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:97",
+      "heldout": true,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:98",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    },
+    {
+      "participant_id": "nq:99",
+      "heldout": false,
+      "recordings_with_2500_keys": 0
+    }
+  ],
+  "source_audit": {
+    "raw_events": 177513,
+    "excluded_nonprinting_or_unmapped_keys": 11667,
+    "invalid_events": 817,
+    "neutral_symbol_codes": 3348,
+    "retained_events": 165029
+  },
+  "clinical_day_claim": "Recorded visits, not complete days of passive typing",
+  "checkpoint_freeze_sha256": "9ac03510eeeecddc14f8101ee652b20b45a7d1c9fce5d39ea1effe2096954ead",
+  "encoder_sha256": "04b7c11aa4a91fcf8f19027b09527c9962f31a1f4ec68913a0359b18e75696b7",
+  "input_sha256": "c13c920c6d728cfdc04d548ff166ca16145e1c0db2c7a53fbe6717d589fc883d",
+  "source_hashes": {
+    "prototype_net/exp4/model.py": "dbe8e1521b272a2cd840cd47877b52d499a3ff1dc0856e9364f8244ef0ef26ef",
+    "prototype_net/failed/exp3/node.py": "50bd349274857387542c9a31f9615e934b99cf40277f5a440a5cdb278cb2110d",
+    "prototype_net/failed/exp3/tabnet.py": "41ec16ae6f18307ed13491cf7cc363784e494b5605db967a60344bcbaaaa9fcc",
+    "paper_typenet/nn.py": "e186c4fb737f58636130ede3b5f87c54f95fc4edc5dca9746c9b4c98291fd17c"
+  }
+}

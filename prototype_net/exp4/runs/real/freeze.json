@@ -1,0 +1,280 @@
+{
+  "registration_sha256": "bd7c832026226576ae49c6b346a9598b99a745550712d6f72eb07376d886bdb9",
+  "models": [
+    {
+      "index": 1,
+      "sha256": "b52ed9a982bd34f4bb0659d0a5b042d69b71e419b68e0658d3c0046f2e73cd8e",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "random_forest_0"
+    },
+    {
+      "index": 2,
+      "sha256": "6db0849e0a4a73f87788e34ebb07546f0f5ede6c974a3d7a39cea16409df71a7",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "random_forest_0"
+    },
+    {
+      "index": 3,
+      "sha256": "d6870ded6f227bfdb5dcedecbee9494576ffcb0b95ad8a78a676f463fba2de3e",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "random_forest_0"
+    },
+    {
+      "index": 4,
+      "sha256": "1ea1a2d69b63fadf7076de1bbb81c578482abf6533f2b8a9b379ca85106ae73e",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    },
+    {
+      "index": 5,
+      "sha256": "8d0858af08fe580e5c29b0e74d647564b03c320ac935de82ccfe2d6894bccf24",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    },
+    {
+      "index": 6,
+      "sha256": "0df6d56966d057bac68735f26e6f05f23c1c6f11a5f055c3d68c124653990211",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    },
+    {
+      "index": 7,
+      "sha256": "317dcf87023daeb38300695f40a53185d21684454836b86871e7a10d89ca1526",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    },
+    {
+      "index": 8,
+      "sha256": "908af9f9f87d24055cb0e241d3aa5f45e0d9a61c03349baf2519b2d6573eb3b5",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    },
+    {
+      "index": 9,
+      "sha256": "ddb251b49a2f96896c9cd4ead666ad4e81cb7e94227ed14e3973fb31fb9c775b",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    },
+    {
+      "index": 10,
+      "sha256": "a01dcbaf945aeb045db14bd368b4a02f1b335beac01f3b0199fa65f6e890eb6d",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "random_forest_0"
+    },
+    {
+      "index": 11,
+      "sha256": "e88eb79337ed20d322ff6751794c0be8afce34f6c330520ed0d14fba005dbf0d",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    },
+    {
+      "index": 12,
+      "sha256": "85881546e2225ba7f7ea27cc075b426b7b6cdd2d11e57d7f5491180cbec4e8f2",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "random_forest_0"
+    },
+    {
+      "index": 13,
+      "sha256": "3cac8a5fbf395347843b5b770df46b8c6e2215ec6753563bd1b549a3acf97221",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "random_forest_0"
+    },
+    {
+      "index": 14,
+      "sha256": "c3f4b70f3809bec9aad5bc6fbafce29a640993685714d98427c261596894e2a6",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    },
+    {
+      "index": 15,
+      "sha256": "8185f9e41310eb48111bbeaa8a9ff415a97ffef68963a830ebc53ede43380ba8",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    },
+    {
+      "index": 16,
+      "sha256": "257eb0d537c6a37407d8dde6954684c3ac2acc08288ef006ba33f66ea562af83",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    },
+    {
+      "index": 17,
+      "sha256": "c2ab9ab0cd81f3ab09bfd4f9573367cef7cfed634bc32d13b5207623ee7cad5a",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    },
+    {
+      "index": 18,
+      "sha256": "83fc4052059cb1d5b935fcbf1bb2b6b87150d9c6ba1de73b042588f6f8a87a08",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    },
+    {
+      "index": 19,
+      "sha256": "3702894dda96925224428a860921583c4d88d428b6a2c9504cdecfe0257a6010",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "random_forest_0"
+    },
+    {
+      "index": 20,
+      "sha256": "a7ba2ad68a15658155f85de9dfaaf984f8d80240868674e61786fd819dc39134",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "random_forest_0"
+    },
+    {
+      "index": 21,
+      "sha256": "bec1fa6a3e6f80e7069829ee699a69cf8d7d775a966d2932e3738dadfd79c180",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    },
+    {
+      "index": 22,
+      "sha256": "e99c4148e21673d5f074b2924764153039b956137e163964b786abe248dc7191",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "random_forest_0"
+    },
+    {
+      "index": 23,
+      "sha256": "a09d9fc9154daf0d0c20ef9959d37d4915808ea30225bd3f7b3feb2264968b6d",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "random_forest_0"
+    },
+    {
+      "index": 24,
+      "sha256": "952de338ea40ff3baa9786ca121ef4e9bda779c2061edaad4a6dc1f5a2320d16",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    },
+    {
+      "index": 25,
+      "sha256": "f10b6d7dabd7bc96a63d910ca36fca7d262c9f06975ebf108064c2c1774b7d0b",
+      "selected": {
+        "xgboost": "xgboost_0",
+        "random_forest": "random_forest_0",
+        "tabnet": "tabnet_0",
+        "node": "node_0"
+      },
+      "overall": "xgboost_0"
+    }
+  ]
+}

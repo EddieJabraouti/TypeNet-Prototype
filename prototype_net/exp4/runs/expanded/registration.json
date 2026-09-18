@@ -1,0 +1,38 @@
+{
+  "seed": 9172026,
+  "epochs": 100,
+  "models": [
+    "xgboost",
+    "random_forest",
+    "tabnet",
+    "node"
+  ],
+  "augmentations": [
+    "none",
+    "smote2",
+    "smote8",
+    "smote32",
+    "smote128"
+  ],
+  "threshold": 0.5,
+  "folds": 3,
+  "selection": "none; evaluate and report every fixed candidate equally",
+  "source_hashes": {
+    "prototype_net/exp4/model.py": "c80eba3ade9a1f0f4ac830e084c9147a98b7db594da7bbf3285c325a95fa44e5",
+    "prototype_net/failed/exp3/node.py": "50bd349274857387542c9a31f9615e934b99cf40277f5a440a5cdb278cb2110d",
+    "prototype_net/failed/exp3/tabnet.py": "41ec16ae6f18307ed13491cf7cc363784e494b5605db967a60344bcbaaaa9fcc"
+  },
+  "manifest_sha256": "df100ac9259a6c865e4015bbdcafaa6a9fd2fb5be913ef3b2c3ded9e26062eb4",
+  "protocol_sha256": "33a86cf5f6baa16361d912b4f61623bc8e75516d4aea31decd40fdf3635e6b16",
+  "aalto_sha256": "c9348000051f591f5b9d0bd0b05a93119a6f6ed94232e47cdff73df313fd4b27",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "sklearn": "1.7.1",
+    "torch": "2.8.0",
+    "xgboost": "3.2.0",
+    "joblib": "1.5.1"
+  },
+  "inference": "Descriptive per-candidate results; no winner selection or automatic credibility gate."
+}

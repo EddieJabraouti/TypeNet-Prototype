@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "fits": 200,
+  "checks": [
+    "real event provenance and no reuse within either scenario",
+    "baseline precedes follow-up; separate visits for 400 keys",
+    "no cross-batch successor timing in baseline",
+    "personal features use only that participant earlier baseline statistics",
+    "participant assignments retained; identical folds across arms",
+    "200 preprocessing states fit only their CV training follow-up rows",
+    "all checkpoint and encoder hashes unchanged",
+    "all accuracy/AUROC/sample SD and ensembles reproduce",
+    "prior training and inference functions unchanged"
+  ],
+  "audit_sha256": "5bfb63dfa1568aacfe1a9f1cc98f1c55db8c2059235bbac5ba74c75139ef22b3"
+}

@@ -1,0 +1,25 @@
+{
+  "source_files": 168593,
+  "eligible_people": 168592,
+  "excluded_people": [
+    "127969"
+  ],
+  "recovered_from_secondary": [],
+  "unreadable_header": [],
+  "raw_records": 123108193,
+  "retained_records": 123097240,
+  "sha256": "8bd2ba26b55cef0cd2a6dc79c7f5f1255726d2ab445a4fd00746ff36694195ee",
+  "labels": "none",
+  "source_priority": [
+    "Keystrokes",
+    "keystrokes_f"
+  ],
+  "ignored_resource_forks": 28208,
+  "overlap_audit": {
+    "shared_files": 28208,
+    "byte_identical": 28207,
+    "different": [
+      "176473_keystrokes.txt"
+    ]
+  }
+}

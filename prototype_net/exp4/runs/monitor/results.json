@@ -1,0 +1,69 @@
+{
+  "participants": 1,
+  "batches": 2,
+  "baseline_batches": 1,
+  "followup_batches": 1,
+  "synthetic_rows": 0,
+  "results": [
+    {
+      "status": "baseline_ready",
+      "participant_id": "nq:95",
+      "batch_id": "1410448218.095_001_014.csv",
+      "timestamp_ms": 1410448218000.0,
+      "windows": 50,
+      "keystrokes": 2500,
+      "embedding_shape": [
+        50,
+        128
+      ],
+      "classifier_input_shape": [
+        50,
+        135
+      ],
+      "family": "xgboost",
+      "model_count": 25,
+      "pd_score": 0.37020596861839294,
+      "predicted_class": 0,
+      "model_score_sd": 0.03177054226398468,
+      "recorded_date_utc": "2014-09-11T15:10:18+00:00",
+      "source_split": "validation",
+      "source_label": 0
+    },
+    {
+      "status": "scored",
+      "participant_id": "nq:95",
+      "batch_id": "1411657572.095_003_014.csv",
+      "timestamp_ms": 1411657572000.0,
+      "windows": 50,
+      "keystrokes": 2500,
+      "embedding_shape": [
+        50,
+        128
+      ],
+      "classifier_input_shape": [
+        50,
+        135
+      ],
+      "family": "xgboost",
+      "model_count": 25,
+      "pd_score": 0.40687379240989685,
+      "predicted_class": 0,
+      "model_score_sd": 0.03109791688621044,
+      "baseline_batch_id": "1410448218.095_001_014.csv",
+      "baseline_pd_score": 0.37020596861839294,
+      "pd_score_change": 0.036667823791503906,
+      "embedding_distance": 1.2782694620336936,
+      "baseline_within_distance": 1.1643498369916143,
+      "embedding_distance_ratio": 1.0978396882301447,
+      "mmd2": 0.12830811677051424,
+      "kernel_bandwidth_squared": 0.6825108509050573,
+      "change_interpretation": "Descriptive typing change; no clinical change threshold fitted",
+      "recorded_date_utc": "2014-09-25T15:06:12+00:00",
+      "source_split": "validation",
+      "source_label": 0
+    }
+  ],
+  "interpretation": "Functional baseline/follow-up simulation; no longitudinal clinical outcome labels or new accuracy estimate",
+  "matrices_sha256": "77411340b4ef4a98c64c73183867c0fd44c5b48afbad7ef493a2d30e3fe185b0",
+  "replay_sha256": "32f602438e4cb5d9575e94197715b44e56b5e8ddcee26f28d7867a25b7496c7e"
+}

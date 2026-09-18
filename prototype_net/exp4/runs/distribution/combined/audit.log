@@ -1,0 +1,1 @@
+PASS: unified 11177-row dataset; exact combined training rows for all eight maximum-generation models; all 25 candidates on combined validation and test; disjoint source participants; equal source weights; archive, input, model and metric hashes verified.

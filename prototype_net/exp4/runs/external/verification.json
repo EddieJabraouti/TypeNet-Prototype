@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "model_count": 25,
+  "checks": [
+    "prior inference functions unchanged",
+    "frozen checkpoint hashes checked before and after inference",
+    "no shared full sequences with original dataset",
+    "25 per-model participant accuracies and AUROC reproduce",
+    "ensemble is equal-weight probability mean",
+    "reported sample SD reproduces"
+  ]
+}

@@ -1,0 +1,3710 @@
+{
+  "scope": "All exp4 saved clinical model comparisons: 184 earlier learned configurations plus four repeated-CV TypeNet classifier families. Dummy controls and CV-selected-family procedure are separate.",
+  "ranking": "Classification: real-participant test accuracy descending, AUROC breaks ties. Regression: test MAE ascending. All original, expanded, distribution and TypeNet results included; unrelated endpoints are not pooled.",
+  "limitations": [
+    "Retrospective test-score ranking, not a new validation exercise.",
+    "TypeNet numbers average 25 CV-selected fold models; preceding runs are single fitted configurations.",
+    "Clinical motor PD uses the same 17 test participants across runs, but representations and aggregation differ.",
+    "Combined-row rankings are separated by synthetic dataset; their test sets differ.",
+    "Earlier experiments outside exp4 are not included."
+  ],
+  "real_participant_rankings": {
+    "motor_pd": [
+      {
+        "experiment": "typenet",
+        "candidate": "node",
+        "model": "node",
+        "protocol": "mean of 25 CV-selected fold models",
+        "kind": "classification",
+        "test_participants": 17,
+        "test": {
+          "accuracy": 0.7411764705882353,
+          "balanced_accuracy": 0.7425,
+          "auroc": 0.7383333333333333,
+          "sensitivity": 0.765,
+          "specificity": 0.7199999999999999
+        },
+        "test_sd": {
+          "accuracy": 0.07401798465951713,
+          "balanced_accuracy": 0.0725830108708518,
+          "auroc": 0.07884111098844944,
+          "sensitivity": 0.08322910148099241,
+          "specificity": 0.11618064549154164
+        },
+        "source": "prototype_net/exp4/runs/typenet/results.json",
+        "rank": 1
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote8_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 6960,
+        "synthetic_training_rows": 6148,
+        "test": {
+          "accuracy": 0.7058823529411765,
+          "balanced_accuracy": 0.7083333333333333,
+          "auroc": 0.7083333333333334
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 2
+      },
+      {
+        "experiment": "original",
+        "candidate": "tabnet_smote_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 120,
+        "synthetic_training_rows": 61,
+        "test": {
+          "accuracy": 0.7058823529411765,
+          "balanced_accuracy": 0.7013888888888888,
+          "auroc": 0.625
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 3
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote32_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 27840,
+        "synthetic_training_rows": 27028,
+        "test": {
+          "accuracy": 0.6470588235294118,
+          "balanced_accuracy": 0.6527777777777778,
+          "auroc": 0.7083333333333334
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 4
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote128_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 111360,
+        "synthetic_training_rows": 110548,
+        "test": {
+          "accuracy": 0.6470588235294118,
+          "balanced_accuracy": 0.6527777777777778,
+          "auroc": 0.5972222222222223
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 5
+      },
+      {
+        "experiment": "typenet",
+        "candidate": "tabnet",
+        "model": "tabnet",
+        "protocol": "mean of 25 CV-selected fold models",
+        "kind": "classification",
+        "test_participants": 17,
+        "test": {
+          "accuracy": 0.6141176470588235,
+          "balanced_accuracy": 0.6186111111111111,
+          "auroc": 0.6833333333333332,
+          "sensitivity": 0.695,
+          "specificity": 0.5422222222222222
+        },
+        "test_sd": {
+          "accuracy": 0.06809315825170721,
+          "balanced_accuracy": 0.06768369684739481,
+          "auroc": 0.05796288900717087,
+          "sensitivity": 0.10257111354242643,
+          "specificity": 0.10791705395802567
+        },
+        "source": "prototype_net/exp4/runs/typenet/results.json",
+        "rank": 6
+      },
+      {
+        "experiment": "typenet",
+        "candidate": "xgboost",
+        "model": "xgboost",
+        "protocol": "mean of 25 CV-selected fold models",
+        "kind": "classification",
+        "test_participants": 17,
+        "test": {
+          "accuracy": 0.5929411764705882,
+          "balanced_accuracy": 0.5997222222222223,
+          "auroc": 0.6794444444444444,
+          "sensitivity": 0.715,
+          "specificity": 0.48444444444444434
+        },
+        "test_sd": {
+          "accuracy": 0.0847684953773227,
+          "balanced_accuracy": 0.08383529376987643,
+          "auroc": 0.04809915598619546,
+          "sensitivity": 0.08477912478906585,
+          "specificity": 0.11055415967851334
+        },
+        "source": "prototype_net/exp4/runs/typenet/results.json",
+        "rank": 7
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote128_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 111360,
+        "synthetic_training_rows": 110548,
+        "test": {
+          "accuracy": 0.5882352941176471,
+          "balanced_accuracy": 0.5972222222222222,
+          "auroc": 0.7083333333333334
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 8
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote128_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 111360,
+        "synthetic_training_rows": 110548,
+        "test": {
+          "accuracy": 0.5882352941176471,
+          "balanced_accuracy": 0.6041666666666666,
+          "auroc": 0.6944444444444444
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 9
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote128_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 111360,
+        "synthetic_training_rows": 110548,
+        "test": {
+          "accuracy": 0.5882352941176471,
+          "balanced_accuracy": 0.5972222222222222,
+          "auroc": 0.6666666666666667
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 10
+      },
+      {
+        "experiment": "original",
+        "candidate": "random_forest_smote_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 120,
+        "synthetic_training_rows": 61,
+        "test": {
+          "accuracy": 0.5882352941176471,
+          "balanced_accuracy": 0.5902777777777778,
+          "auroc": 0.6666666666666666
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 11
+      },
+      {
+        "experiment": "original",
+        "candidate": "xgboost_smote_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 120,
+        "synthetic_training_rows": 61,
+        "test": {
+          "accuracy": 0.5882352941176471,
+          "balanced_accuracy": 0.5902777777777778,
+          "auroc": 0.6527777777777778
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 12
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote2_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1740,
+        "synthetic_training_rows": 928,
+        "test": {
+          "accuracy": 0.5882352941176471,
+          "balanced_accuracy": 0.6041666666666666,
+          "auroc": 0.5972222222222223
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 13
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote8_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 6960,
+        "synthetic_training_rows": 6148,
+        "test": {
+          "accuracy": 0.5882352941176471,
+          "balanced_accuracy": 0.6041666666666666,
+          "auroc": 0.5972222222222222
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 14
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "tabnet_rose7000_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 7812,
+        "synthetic_training_rows": 7000,
+        "test": {
+          "accuracy": 0.5882352941176471,
+          "balanced_accuracy": 0.5902777777777778,
+          "auroc": 0.5277777777777778
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 15
+      },
+      {
+        "experiment": "typenet",
+        "candidate": "random_forest",
+        "model": "random_forest",
+        "protocol": "mean of 25 CV-selected fold models",
+        "kind": "classification",
+        "test_participants": 17,
+        "test": {
+          "accuracy": 0.5811764705882353,
+          "balanced_accuracy": 0.5875,
+          "auroc": 0.665,
+          "sensitivity": 0.695,
+          "specificity": 0.4799999999999999
+        },
+        "test_sd": {
+          "accuracy": 0.07840685891424397,
+          "balanced_accuracy": 0.0770697769193819,
+          "auroc": 0.055457088664368,
+          "sensitivity": 0.07288689868556626,
+          "specificity": 0.10980716355832291
+        },
+        "source": "prototype_net/exp4/runs/typenet/results.json",
+        "rank": 16
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "tabnet_rose700_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1512,
+        "synthetic_training_rows": 700,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "auroc": 0.75
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "random_forest_rose7000_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 7812,
+        "synthetic_training_rows": 7000,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5347222222222222,
+          "auroc": 0.6944444444444445
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 18
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote32_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 27840,
+        "synthetic_training_rows": 27028,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "auroc": 0.6666666666666666
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 19
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote32_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 27840,
+        "synthetic_training_rows": 27028,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "auroc": 0.638888888888889
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 20
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_none_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "auroc": 0.638888888888889
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 21
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote32_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 27840,
+        "synthetic_training_rows": 27028,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5277777777777778,
+          "auroc": 0.638888888888889
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 22
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "node_rose700_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1512,
+        "synthetic_training_rows": 700,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5347222222222222,
+          "auroc": 0.638888888888889
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 23
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "tabnet_none_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "auroc": 0.638888888888889
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 24
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "node_rose7000_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 7812,
+        "synthetic_training_rows": 7000,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5347222222222222,
+          "auroc": 0.6388888888888888
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 25
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote2_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1740,
+        "synthetic_training_rows": 928,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "auroc": 0.625
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 26
+      },
+      {
+        "experiment": "original",
+        "candidate": "xgboost_smote_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 120,
+        "synthetic_training_rows": 61,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5277777777777778,
+          "auroc": 0.6111111111111112
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 27
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_none_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "auroc": 0.6111111111111112
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 28
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_none_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "auroc": 0.6111111111111112
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 29
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "node_none_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "auroc": 0.6111111111111112
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 30
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "tabnet_none_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "auroc": 0.6111111111111112
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 31
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "node_rose7000_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 7812,
+        "synthetic_training_rows": 7000,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "auroc": 0.5972222222222222
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 32
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "node_rose700_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1512,
+        "synthetic_training_rows": 700,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5347222222222222,
+          "auroc": 0.5833333333333334
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 33
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "tabnet_rose7000_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 7812,
+        "synthetic_training_rows": 7000,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5277777777777778,
+          "auroc": 0.5833333333333334
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 34
+      },
+      {
+        "experiment": "original",
+        "candidate": "random_forest_smote_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 120,
+        "synthetic_training_rows": 61,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5347222222222222,
+          "auroc": 0.5694444444444444
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 35
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote2_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1740,
+        "synthetic_training_rows": 928,
+        "test": {
+          "accuracy": 0.5294117647058824,
+          "balanced_accuracy": 0.5416666666666666,
+          "auroc": 0.5694444444444444
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 36
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote2_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1740,
+        "synthetic_training_rows": 928,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6805555555555556
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 37
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote2_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1740,
+        "synthetic_training_rows": 928,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6805555555555556
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 38
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "random_forest_rose700_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1512,
+        "synthetic_training_rows": 700,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6805555555555556
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 39
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "random_forest_rose700_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1512,
+        "synthetic_training_rows": 700,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6666666666666667
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 40
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "random_forest_rose7000_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 7812,
+        "synthetic_training_rows": 7000,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6527777777777778
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 41
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_none_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6527777777777777
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 42
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_none_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6527777777777777
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 43
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "random_forest_none_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6527777777777777
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 44
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "random_forest_none_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6527777777777777
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 45
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote8_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 6960,
+        "synthetic_training_rows": 6148,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6388888888888888
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 46
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote8_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 6960,
+        "synthetic_training_rows": 6148,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6388888888888888
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 47
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_none_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6388888888888888
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 48
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote2_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1740,
+        "synthetic_training_rows": 928,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6388888888888888
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 49
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "xgboost_none_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6388888888888888
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 50
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote128_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 111360,
+        "synthetic_training_rows": 110548,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6250000000000001
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 51
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote32_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 27840,
+        "synthetic_training_rows": 27028,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6250000000000001
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 52
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote32_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 27840,
+        "synthetic_training_rows": 27028,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.6250000000000001
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 53
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote128_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 111360,
+        "synthetic_training_rows": 110548,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.625
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 54
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote8_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 6960,
+        "synthetic_training_rows": 6148,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.625
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 55
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote2_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1740,
+        "synthetic_training_rows": 928,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.5972222222222222
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 56
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote8_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 6960,
+        "synthetic_training_rows": 6148,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.5972222222222222
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 57
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote2_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1740,
+        "synthetic_training_rows": 928,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.5972222222222222
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 58
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote8_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 6960,
+        "synthetic_training_rows": 6148,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.5972222222222222
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 59
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "xgboost_rose7000_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 7812,
+        "synthetic_training_rows": 7000,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.4652777777777778,
+          "auroc": 0.5972222222222222
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 60
+      },
+      {
+        "experiment": "original",
+        "candidate": "random_forest_none_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.4722222222222222,
+          "auroc": 0.5833333333333333
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 61
+      },
+      {
+        "experiment": "original",
+        "candidate": "node_none_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.4722222222222222,
+          "auroc": 0.5694444444444444
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 62
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "xgboost_rose700_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1512,
+        "synthetic_training_rows": 700,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.5694444444444444
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 63
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "xgboost_rose700_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1512,
+        "synthetic_training_rows": 700,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.5694444444444444
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 64
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "xgboost_rose7000_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 7812,
+        "synthetic_training_rows": 7000,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.4652777777777778,
+          "auroc": 0.5555555555555556
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 65
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_none_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.4861111111111111,
+          "auroc": 0.5277777777777778
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 66
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "node_none_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.4861111111111111,
+          "auroc": 0.5277777777777778
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 67
+      },
+      {
+        "experiment": "original",
+        "candidate": "random_forest_none_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.4861111111111111,
+          "auroc": 0.513888888888889
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 68
+      },
+      {
+        "experiment": "original",
+        "candidate": "tabnet_none_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.4861111111111111,
+          "auroc": 0.5138888888888888
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 69
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "tabnet_rose700_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 1512,
+        "synthetic_training_rows": 700,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.47916666666666663,
+          "auroc": 0.5
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 70
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_none_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "auroc": 0.6111111111111112
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 71
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "xgboost_none_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "auroc": 0.6111111111111112
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json",
+        "rank": 72
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote8_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 6960,
+        "synthetic_training_rows": 6148,
+        "test": {
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "auroc": 0.5972222222222223
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 73
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote128_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 111360,
+        "synthetic_training_rows": 110548,
+        "test": {
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "auroc": 0.5972222222222222
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 74
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote32_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 27840,
+        "synthetic_training_rows": 27028,
+        "test": {
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "auroc": 0.5972222222222222
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 75
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote128_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 111360,
+        "synthetic_training_rows": 110548,
+        "test": {
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "auroc": 0.5833333333333334
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 76
+      },
+      {
+        "experiment": "original",
+        "candidate": "xgboost_none_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "auroc": 0.5694444444444445
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 77
+      },
+      {
+        "experiment": "original",
+        "candidate": "tabnet_none_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4305555555555556,
+          "auroc": 0.5694444444444444
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 78
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote32_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 27840,
+        "synthetic_training_rows": 27028,
+        "test": {
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "auroc": 0.5694444444444444
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 79
+      },
+      {
+        "experiment": "original",
+        "candidate": "node_none_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "auroc": 0.5416666666666667
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 80
+      },
+      {
+        "experiment": "original",
+        "candidate": "node_smote_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 120,
+        "synthetic_training_rows": 61,
+        "test": {
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.41666666666666663,
+          "auroc": 0.5416666666666667
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 81
+      },
+      {
+        "experiment": "original",
+        "candidate": "xgboost_none_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.41666666666666663,
+          "auroc": 0.5416666666666666
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 82
+      },
+      {
+        "experiment": "original",
+        "candidate": "node_smote_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 120,
+        "synthetic_training_rows": 61,
+        "test": {
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.4236111111111111,
+          "auroc": 0.513888888888889
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 83
+      },
+      {
+        "experiment": "original",
+        "candidate": "tabnet_smote_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 120,
+        "synthetic_training_rows": 61,
+        "test": {
+          "accuracy": 0.4117647058823529,
+          "balanced_accuracy": 0.41666666666666663,
+          "auroc": 0.47222222222222227
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 84
+      }
+    ],
+    "motor_updrs": [
+      {
+        "experiment": "original",
+        "candidate": "random_forest_none_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 7.732376178370515,
+          "rmse": 9.018243937990286,
+          "r2": -0.01354036897600186
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 1
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_none_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 7.772544005337884,
+          "rmse": 9.329675304276789,
+          "r2": -0.08475123462070311
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 2
+      },
+      {
+        "experiment": "original",
+        "candidate": "tabnet_none_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 7.868874802308924,
+          "rmse": 8.883121804720195,
+          "r2": 0.016604246818621604
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 3
+      },
+      {
+        "experiment": "original",
+        "candidate": "random_forest_none_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 7.924641224077472,
+          "rmse": 9.272368441333041,
+          "r2": -0.07146614799131368
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 4
+      },
+      {
+        "experiment": "original",
+        "candidate": "xgboost_none_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 7.947029927197625,
+          "rmse": 8.892614266357892,
+          "r2": 0.014501419850063701
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 5
+      },
+      {
+        "experiment": "original",
+        "candidate": "xgboost_none_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 7.965830550474279,
+          "rmse": 8.878712896870685,
+          "r2": 0.017580170687291563
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 6
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_none_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 8.009655054706233,
+          "rmse": 9.474274786176903,
+          "r2": -0.11863665835413362
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 7
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_none_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 8.02595994051765,
+          "rmse": 9.31100404821176,
+          "r2": -0.08041380575682489
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 8
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_none_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 8.031255087402423,
+          "rmse": 9.491719257079472,
+          "r2": -0.12275982136941099
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 9
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_none_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 8.0450480966007,
+          "rmse": 9.337422940533276,
+          "r2": -0.08655360121797173
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 10
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_none_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 8.076346215079813,
+          "rmse": 9.406841387283247,
+          "r2": -0.10276947614967447
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 11
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_none_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 8.569906865849214,
+          "rmse": 9.783132998441602,
+          "r2": -0.19275984371030286
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 12
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_none_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 8.634489003349753,
+          "rmse": 9.792729354604692,
+          "r2": -0.19510096737486138
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 13
+      },
+      {
+        "experiment": "original",
+        "candidate": "tabnet_none_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 8.671972611371208,
+          "rmse": 9.537171320414885,
+          "r2": -0.1335384663104302
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 14
+      },
+      {
+        "experiment": "original",
+        "candidate": "node_none_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 8.726311487310072,
+          "rmse": 9.678946320987068,
+          "r2": -0.16749023478372993
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 15
+      },
+      {
+        "experiment": "original",
+        "candidate": "node_none_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 8.943773353801054,
+          "rmse": 10.281843116705751,
+          "r2": -0.3174648592635956
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 16
+      }
+    ],
+    "cognitive_ci": [
+      {
+        "experiment": "original",
+        "candidate": "node_none_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 6,
+        "fit_rows": 21,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "auroc": 1.0
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 1
+      },
+      {
+        "experiment": "original",
+        "candidate": "node_smote_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 6,
+        "fit_rows": 44,
+        "synthetic_training_rows": 23,
+        "test": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "auroc": 1.0
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 2
+      },
+      {
+        "experiment": "original",
+        "candidate": "random_forest_none_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 6,
+        "fit_rows": 21,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "auroc": 1.0
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 3
+      },
+      {
+        "experiment": "original",
+        "candidate": "xgboost_smote_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 6,
+        "fit_rows": 44,
+        "synthetic_training_rows": 23,
+        "test": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "auroc": 1.0
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 4
+      },
+      {
+        "experiment": "original",
+        "candidate": "random_forest_smote_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 6,
+        "fit_rows": 44,
+        "synthetic_training_rows": 23,
+        "test": {
+          "accuracy": 0.8333333333333334,
+          "balanced_accuracy": 0.8333333333333333,
+          "auroc": 1.0
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 5
+      },
+      {
+        "experiment": "original",
+        "candidate": "tabnet_none_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 6,
+        "fit_rows": 21,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.8333333333333334,
+          "balanced_accuracy": 0.8333333333333333,
+          "auroc": 1.0
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 6
+      },
+      {
+        "experiment": "original",
+        "candidate": "tabnet_smote_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 6,
+        "fit_rows": 44,
+        "synthetic_training_rows": 23,
+        "test": {
+          "accuracy": 0.8333333333333334,
+          "balanced_accuracy": 0.8333333333333333,
+          "auroc": 1.0
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 7
+      },
+      {
+        "experiment": "original",
+        "candidate": "xgboost_none_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 6,
+        "fit_rows": 21,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.5,
+          "balanced_accuracy": 0.5,
+          "auroc": 0.5
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 8
+      }
+    ],
+    "tappy_self_report": [
+      {
+        "experiment": "original",
+        "candidate": "random_forest_none_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 416,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5642633228840126,
+          "auroc": 0.6718913270637409
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 1
+      },
+      {
+        "experiment": "original",
+        "candidate": "node_none_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 416,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.7333333333333333,
+          "balanced_accuracy": 0.5151515151515151,
+          "auroc": 0.7199582027168234
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 2
+      },
+      {
+        "experiment": "original",
+        "candidate": "xgboost_none_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 416,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.7333333333333333,
+          "balanced_accuracy": 0.5245559038662487,
+          "auroc": 0.6492511320097527
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 3
+      },
+      {
+        "experiment": "original",
+        "candidate": "node_none_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 416,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.725,
+          "balanced_accuracy": 0.5,
+          "auroc": 0.6823406478578893
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 4
+      },
+      {
+        "experiment": "original",
+        "candidate": "random_forest_none_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 416,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.725,
+          "balanced_accuracy": 0.5188087774294671,
+          "auroc": 0.64576802507837
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 5
+      },
+      {
+        "experiment": "original",
+        "candidate": "tabnet_smote_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 1204,
+        "synthetic_training_rows": 788,
+        "test": {
+          "accuracy": 0.7166666666666667,
+          "balanced_accuracy": 0.6917450365726228,
+          "auroc": 0.7203065134099618
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 6
+      },
+      {
+        "experiment": "original",
+        "candidate": "xgboost_none_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 416,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.7166666666666667,
+          "balanced_accuracy": 0.5036572622779519,
+          "auroc": 0.6283524904214559
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 7
+      },
+      {
+        "experiment": "original",
+        "candidate": "tabnet_none_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 416,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.6916666666666667,
+          "balanced_accuracy": 0.5240334378265413,
+          "auroc": 0.5245559038662487
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 8
+      },
+      {
+        "experiment": "original",
+        "candidate": "tabnet_smote_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 1204,
+        "synthetic_training_rows": 788,
+        "test": {
+          "accuracy": 0.6583333333333333,
+          "balanced_accuracy": 0.5292580982236155,
+          "auroc": 0.5377917102055033
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 9
+      },
+      {
+        "experiment": "original",
+        "candidate": "tabnet_none_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 416,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.6583333333333333,
+          "balanced_accuracy": 0.5198537095088819,
+          "auroc": 0.47126436781609193
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 10
+      },
+      {
+        "experiment": "original",
+        "candidate": "node_smote_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 1204,
+        "synthetic_training_rows": 788,
+        "test": {
+          "accuracy": 0.65,
+          "balanced_accuracy": 0.6551724137931034,
+          "auroc": 0.7300592128178335
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 11
+      },
+      {
+        "experiment": "original",
+        "candidate": "node_smote_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 1204,
+        "synthetic_training_rows": 788,
+        "test": {
+          "accuracy": 0.6333333333333333,
+          "balanced_accuracy": 0.6530825496342738,
+          "auroc": 0.6753744339951236
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 12
+      },
+      {
+        "experiment": "original",
+        "candidate": "xgboost_smote_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 1204,
+        "synthetic_training_rows": 788,
+        "test": {
+          "accuracy": 0.6166666666666667,
+          "balanced_accuracy": 0.6039707419017764,
+          "auroc": 0.6490769766631836
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 13
+      },
+      {
+        "experiment": "original",
+        "candidate": "random_forest_smote_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 1204,
+        "synthetic_training_rows": 788,
+        "test": {
+          "accuracy": 0.5916666666666667,
+          "balanced_accuracy": 0.5961337513061651,
+          "auroc": 0.6471612678509231
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 14
+      },
+      {
+        "experiment": "original",
+        "candidate": "xgboost_smote_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 1204,
+        "synthetic_training_rows": 788,
+        "test": {
+          "accuracy": 0.5916666666666667,
+          "balanced_accuracy": 0.6055381400208986,
+          "auroc": 0.6452455590386624
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 15
+      },
+      {
+        "experiment": "original",
+        "candidate": "random_forest_smote_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 1204,
+        "synthetic_training_rows": 788,
+        "test": {
+          "accuracy": 0.575,
+          "balanced_accuracy": 0.5752351097178683,
+          "auroc": 0.6255660048763497
+        },
+        "source": "prototype_net/exp4/runs/comparison.json",
+        "rank": 16
+      }
+    ],
+    "touchscreen_pd": [
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote2_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 536,
+        "synthetic_training_rows": 287,
+        "test": {
+          "accuracy": 0.8571428571428571,
+          "balanced_accuracy": 0.875,
+          "auroc": 0.75
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 1
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote2_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 536,
+        "synthetic_training_rows": 287,
+        "test": {
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "auroc": 0.8333333333333334
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 2
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote128_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 34304,
+        "synthetic_training_rows": 34055,
+        "test": {
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.7083333333333333,
+          "auroc": 0.8333333333333334
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 3
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_none_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 249,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "auroc": 0.8333333333333334
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 4
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote2_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 536,
+        "synthetic_training_rows": 287,
+        "test": {
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "auroc": 0.8333333333333334
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 5
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote32_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 8576,
+        "synthetic_training_rows": 8327,
+        "test": {
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.7083333333333333,
+          "auroc": 0.75
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 6
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote32_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 8576,
+        "synthetic_training_rows": 8327,
+        "test": {
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "auroc": 0.75
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 7
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote128_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 34304,
+        "synthetic_training_rows": 34055,
+        "test": {
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "auroc": 0.75
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 8
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote32_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 8576,
+        "synthetic_training_rows": 8327,
+        "test": {
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "auroc": 0.75
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 9
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote8_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 2144,
+        "synthetic_training_rows": 1895,
+        "test": {
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "auroc": 0.75
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 10
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_none_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 249,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.7083333333333333,
+          "auroc": 0.6666666666666667
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 11
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_none_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 249,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "auroc": 0.6666666666666666
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 12
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_none_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 249,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "auroc": 0.6666666666666666
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 13
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote2_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 536,
+        "synthetic_training_rows": 287,
+        "test": {
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.75,
+          "auroc": 0.6666666666666666
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 14
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote8_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 2144,
+        "synthetic_training_rows": 1895,
+        "test": {
+          "accuracy": 0.7142857142857143,
+          "balanced_accuracy": 0.7083333333333333,
+          "auroc": 0.6666666666666666
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 15
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote8_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 2144,
+        "synthetic_training_rows": 1895,
+        "test": {
+          "accuracy": 0.5714285714285714,
+          "balanced_accuracy": 0.5833333333333333,
+          "auroc": 0.6666666666666666
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 16
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote8_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 2144,
+        "synthetic_training_rows": 1895,
+        "test": {
+          "accuracy": 0.5714285714285714,
+          "balanced_accuracy": 0.5833333333333333,
+          "auroc": 0.6666666666666666
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 17
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote128_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 34304,
+        "synthetic_training_rows": 34055,
+        "test": {
+          "accuracy": 0.5714285714285714,
+          "balanced_accuracy": 0.5416666666666666,
+          "auroc": 0.5833333333333333
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 18
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote128_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 34304,
+        "synthetic_training_rows": 34055,
+        "test": {
+          "accuracy": 0.5714285714285714,
+          "balanced_accuracy": 0.5833333333333333,
+          "auroc": 0.5833333333333333
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 19
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote32_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 8576,
+        "synthetic_training_rows": 8327,
+        "test": {
+          "accuracy": 0.5714285714285714,
+          "balanced_accuracy": 0.5833333333333333,
+          "auroc": 0.5833333333333333
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 20
+      }
+    ],
+    "touchscreen_updrs": [
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_none_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 7,
+        "fit_rows": 249,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 8.748134231655131,
+          "rmse": 12.341455926893499,
+          "r2": -0.10632451606541338
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 1
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_none_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 7,
+        "fit_rows": 249,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 8.939864260809761,
+          "rmse": 12.128152316122435,
+          "r2": -0.06841266699529114
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 2
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_none_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 7,
+        "fit_rows": 249,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 9.859466552734375,
+          "rmse": 12.393456595560727,
+          "r2": -0.11566714392474609
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 3
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_none_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 7,
+        "fit_rows": 249,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 10.893309967858452,
+          "rmse": 13.373899971938311,
+          "r2": -0.2991697039002621
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 4
+      }
+    ],
+    "online_pd": [
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote2_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 5724,
+        "synthetic_training_rows": 3186,
+        "test": {
+          "accuracy": 0.7021276595744681,
+          "balanced_accuracy": 0.6824074074074074,
+          "auroc": 0.7000000000000001
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 1
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote8_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 22896,
+        "synthetic_training_rows": 20358,
+        "test": {
+          "accuracy": 0.7021276595744681,
+          "balanced_accuracy": 0.6824074074074074,
+          "auroc": 0.6981481481481482
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 2
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote128_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 366336,
+        "synthetic_training_rows": 363798,
+        "test": {
+          "accuracy": 0.7021276595744681,
+          "balanced_accuracy": 0.6824074074074074,
+          "auroc": 0.6870370370370371
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 3
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_none_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 2538,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.7021276595744681,
+          "balanced_accuracy": 0.6824074074074074,
+          "auroc": 0.6851851851851853
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 4
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote32_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 91584,
+        "synthetic_training_rows": 89046,
+        "test": {
+          "accuracy": 0.6808510638297872,
+          "balanced_accuracy": 0.663888888888889,
+          "auroc": 0.6944444444444445
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 5
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote8_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 22896,
+        "synthetic_training_rows": 20358,
+        "test": {
+          "accuracy": 0.6808510638297872,
+          "balanced_accuracy": 0.6574074074074074,
+          "auroc": 0.6888888888888889
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 6
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_none_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 2538,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.6808510638297872,
+          "balanced_accuracy": 0.6574074074074074,
+          "auroc": 0.6870370370370371
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 7
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote128_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 366336,
+        "synthetic_training_rows": 363798,
+        "test": {
+          "accuracy": 0.6808510638297872,
+          "balanced_accuracy": 0.6574074074074074,
+          "auroc": 0.6324074074074074
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 8
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote32_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 91584,
+        "synthetic_training_rows": 89046,
+        "test": {
+          "accuracy": 0.6808510638297872,
+          "balanced_accuracy": 0.6574074074074074,
+          "auroc": 0.6250000000000001
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 9
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_none_raw",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 2538,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.6595744680851063,
+          "balanced_accuracy": 0.6388888888888888,
+          "auroc": 0.7000000000000001
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 10
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote128_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 366336,
+        "synthetic_training_rows": 363798,
+        "test": {
+          "accuracy": 0.6595744680851063,
+          "balanced_accuracy": 0.6583333333333333,
+          "auroc": 0.6851851851851852
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 11
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_none_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 2538,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.6595744680851063,
+          "balanced_accuracy": 0.6453703703703704,
+          "auroc": 0.6703703703703704
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 12
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote2_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 5724,
+        "synthetic_training_rows": 3186,
+        "test": {
+          "accuracy": 0.6595744680851063,
+          "balanced_accuracy": 0.6453703703703704,
+          "auroc": 0.648148148148148
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 13
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote128_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 366336,
+        "synthetic_training_rows": 363798,
+        "test": {
+          "accuracy": 0.6595744680851063,
+          "balanced_accuracy": 0.6453703703703704,
+          "auroc": 0.6453703703703704
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 14
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote8_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 22896,
+        "synthetic_training_rows": 20358,
+        "test": {
+          "accuracy": 0.6595744680851063,
+          "balanced_accuracy": 0.6453703703703704,
+          "auroc": 0.6425925925925926
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 15
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote32_pretrained",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 91584,
+        "synthetic_training_rows": 89046,
+        "test": {
+          "accuracy": 0.6595744680851063,
+          "balanced_accuracy": 0.6453703703703704,
+          "auroc": 0.6398148148148148
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 16
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote32_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 91584,
+        "synthetic_training_rows": 89046,
+        "test": {
+          "accuracy": 0.6382978723404256,
+          "balanced_accuracy": 0.6203703703703703,
+          "auroc": 0.6851851851851851
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 17
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote128_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 366336,
+        "synthetic_training_rows": 363798,
+        "test": {
+          "accuracy": 0.6382978723404256,
+          "balanced_accuracy": 0.6203703703703703,
+          "auroc": 0.6833333333333333
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 18
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "xgboost_smote2_pretrained",
+        "model": "xgboost",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 5724,
+        "synthetic_training_rows": 3186,
+        "test": {
+          "accuracy": 0.6382978723404256,
+          "balanced_accuracy": 0.6203703703703703,
+          "auroc": 0.6796296296296296
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 19
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_none_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 2538,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.6382978723404256,
+          "balanced_accuracy": 0.6203703703703703,
+          "auroc": 0.6722222222222223
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 20
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote2_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 5724,
+        "synthetic_training_rows": 3186,
+        "test": {
+          "accuracy": 0.6382978723404256,
+          "balanced_accuracy": 0.6268518518518519,
+          "auroc": 0.6648148148148149
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 21
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote2_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 5724,
+        "synthetic_training_rows": 3186,
+        "test": {
+          "accuracy": 0.6382978723404256,
+          "balanced_accuracy": 0.6268518518518519,
+          "auroc": 0.6592592592592593
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 22
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote8_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 22896,
+        "synthetic_training_rows": 20358,
+        "test": {
+          "accuracy": 0.6170212765957447,
+          "balanced_accuracy": 0.6212962962962962,
+          "auroc": 0.7203703703703703
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 23
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_none_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 2538,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.6170212765957447,
+          "balanced_accuracy": 0.6018518518518519,
+          "auroc": 0.6888888888888889
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 24
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote32_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 91584,
+        "synthetic_training_rows": 89046,
+        "test": {
+          "accuracy": 0.6170212765957447,
+          "balanced_accuracy": 0.6148148148148148,
+          "auroc": 0.6777777777777778
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 25
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_none_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 2538,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.6170212765957447,
+          "balanced_accuracy": 0.6018518518518519,
+          "auroc": 0.6648148148148149
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 26
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "random_forest_smote8_raw",
+        "model": "random_forest",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 22896,
+        "synthetic_training_rows": 20358,
+        "test": {
+          "accuracy": 0.6170212765957447,
+          "balanced_accuracy": 0.6018518518518519,
+          "auroc": 0.6481481481481481
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 27
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_none_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 2538,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.5957446808510638,
+          "balanced_accuracy": 0.5898148148148148,
+          "auroc": 0.6925925925925926
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 28
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote128_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 366336,
+        "synthetic_training_rows": 363798,
+        "test": {
+          "accuracy": 0.5957446808510638,
+          "balanced_accuracy": 0.5962962962962963,
+          "auroc": 0.6925925925925925
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 29
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote2_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 5724,
+        "synthetic_training_rows": 3186,
+        "test": {
+          "accuracy": 0.5957446808510638,
+          "balanced_accuracy": 0.5898148148148148,
+          "auroc": 0.6703703703703705
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 30
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote8_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 22896,
+        "synthetic_training_rows": 20358,
+        "test": {
+          "accuracy": 0.5957446808510638,
+          "balanced_accuracy": 0.5962962962962963,
+          "auroc": 0.6703703703703704
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 31
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote2_raw",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 5724,
+        "synthetic_training_rows": 3186,
+        "test": {
+          "accuracy": 0.5957446808510638,
+          "balanced_accuracy": 0.5962962962962963,
+          "auroc": 0.6685185185185186
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 32
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote2_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 5724,
+        "synthetic_training_rows": 3186,
+        "test": {
+          "accuracy": 0.574468085106383,
+          "balanced_accuracy": 0.5712962962962963,
+          "auroc": 0.6648148148148147
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 33
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote8_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 22896,
+        "synthetic_training_rows": 20358,
+        "test": {
+          "accuracy": 0.574468085106383,
+          "balanced_accuracy": 0.5842592592592593,
+          "auroc": 0.6444444444444444
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 34
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote32_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 91584,
+        "synthetic_training_rows": 89046,
+        "test": {
+          "accuracy": 0.574468085106383,
+          "balanced_accuracy": 0.5712962962962963,
+          "auroc": 0.638888888888889
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 35
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "node_smote128_pretrained",
+        "model": "node",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 366336,
+        "synthetic_training_rows": 363798,
+        "test": {
+          "accuracy": 0.574468085106383,
+          "balanced_accuracy": 0.5712962962962963,
+          "auroc": 0.6388888888888888
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 36
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote32_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 91584,
+        "synthetic_training_rows": 89046,
+        "test": {
+          "accuracy": 0.574468085106383,
+          "balanced_accuracy": 0.5907407407407407,
+          "auroc": 0.6185185185185186
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 37
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote128_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 366336,
+        "synthetic_training_rows": 363798,
+        "test": {
+          "accuracy": 0.5531914893617021,
+          "balanced_accuracy": 0.5527777777777778,
+          "auroc": 0.6537037037037037
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 38
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote8_raw",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 22896,
+        "synthetic_training_rows": 20358,
+        "test": {
+          "accuracy": 0.5531914893617021,
+          "balanced_accuracy": 0.5462962962962963,
+          "auroc": 0.65
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 39
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "tabnet_smote32_pretrained",
+        "model": "tabnet",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 91584,
+        "synthetic_training_rows": 89046,
+        "test": {
+          "accuracy": 0.48936170212765956,
+          "balanced_accuracy": 0.4842592592592593,
+          "auroc": 0.5851851851851851
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json",
+        "rank": 40
+      }
+    ]
+  },
+  "dummy_controls": {
+    "motor_pd": [
+      {
+        "experiment": "original",
+        "candidate": "dummy_none_raw",
+        "model": "dummy",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.5,
+          "auroc": 0.5
+        },
+        "source": "prototype_net/exp4/runs/comparison.json"
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "dummy_none_raw",
+        "model": "dummy",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.5,
+          "auroc": 0.5
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json"
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "dummy_none_raw",
+        "model": "dummy",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.47058823529411764,
+          "balanced_accuracy": 0.5,
+          "auroc": 0.5
+        },
+        "source": "prototype_net/exp4/runs/distribution/comparison.json"
+      }
+    ],
+    "motor_updrs": [
+      {
+        "experiment": "original",
+        "candidate": "dummy_none_raw",
+        "model": "dummy",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 59,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 8.508723828514455,
+          "rmse": 9.33250210974362,
+          "r2": -0.0854086734195203
+        },
+        "source": "prototype_net/exp4/runs/comparison.json"
+      },
+      {
+        "experiment": "expanded",
+        "candidate": "dummy_none_raw",
+        "model": "dummy",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 17,
+        "fit_rows": 812,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 8.508723823506212,
+          "rmse": 9.332502104967022,
+          "r2": -0.08540867230844396
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json"
+      }
+    ],
+    "cognitive_ci": [
+      {
+        "experiment": "original",
+        "candidate": "dummy_none_raw",
+        "model": "dummy",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 6,
+        "fit_rows": 21,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.5,
+          "balanced_accuracy": 0.5,
+          "auroc": 0.5
+        },
+        "source": "prototype_net/exp4/runs/comparison.json"
+      }
+    ],
+    "tappy_self_report": [
+      {
+        "experiment": "original",
+        "candidate": "dummy_none_raw",
+        "model": "dummy",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 120,
+        "fit_rows": 416,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.725,
+          "balanced_accuracy": 0.5,
+          "auroc": 0.5
+        },
+        "source": "prototype_net/exp4/runs/comparison.json"
+      }
+    ],
+    "touchscreen_pd": [
+      {
+        "experiment": "expanded",
+        "candidate": "dummy_none_raw",
+        "model": "dummy",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 7,
+        "fit_rows": 249,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.5714285714285714,
+          "balanced_accuracy": 0.5,
+          "auroc": 0.5
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json"
+      }
+    ],
+    "touchscreen_updrs": [
+      {
+        "experiment": "expanded",
+        "candidate": "dummy_none_raw",
+        "model": "dummy",
+        "protocol": "single fitted configuration",
+        "kind": "regression",
+        "test_participants": 7,
+        "fit_rows": 249,
+        "synthetic_training_rows": 0,
+        "test": {
+          "mae": 11.22077923156047,
+          "rmse": 12.388153713520742,
+          "r2": -0.11471261029663071
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json"
+      }
+    ],
+    "online_pd": [
+      {
+        "experiment": "expanded",
+        "candidate": "dummy_none_raw",
+        "model": "dummy",
+        "protocol": "single fitted configuration",
+        "kind": "classification",
+        "test_participants": 47,
+        "fit_rows": 2538,
+        "synthetic_training_rows": 0,
+        "test": {
+          "accuracy": 0.574468085106383,
+          "balanced_accuracy": 0.5,
+          "auroc": 0.5
+        },
+        "source": "prototype_net/exp4/runs/expanded/comparison.json"
+      }
+    ]
+  },
+  "selection_procedures": [
+    {
+      "experiment": "typenet",
+      "candidate": "cv_selected",
+      "model": "cv_selected",
+      "protocol": "mean of 25 CV-selected fold models",
+      "kind": "classification",
+      "test_participants": 17,
+      "test": {
+        "accuracy": 0.6423529411764707,
+        "balanced_accuracy": 0.6474999999999999,
+        "auroc": 0.7033333333333333,
+        "sensitivity": 0.735,
+        "specificity": 0.5599999999999999
+      },
+      "test_sd": {
+        "accuracy": 0.08972597010703962,
+        "balanced_accuracy": 0.08702010522857213,
+        "auroc": 0.06400954789890505,
+        "sensitivity": 0.06574889099191458,
+        "specificity": 0.14156677669345474
+      },
+      "source": "prototype_net/exp4/runs/typenet/results.json"
+    }
+  ],
+  "combined_rankings": {
+    "older_synthetic_dataset": [
+      {
+        "experiment": "original checkpoint",
+        "candidate": "tabnet_smote_pretrained",
+        "accuracy": 0.5750784401613627,
+        "auroc": 0.5931467414191616,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "tabnet_none_raw",
+        "accuracy": 0.5575974899148364,
+        "auroc": 0.5955955392820289,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "tabnet_rose700_raw",
+        "accuracy": 0.551322277005827,
+        "auroc": 0.623623304647492,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "random_forest_rose7000_pretrained",
+        "accuracy": 0.5477364410578216,
+        "auroc": 0.6289408205843683,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "random_forest_rose700_pretrained",
+        "accuracy": 0.5454952935903182,
+        "auroc": 0.6700154466343697,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "node_rose7000_raw",
+        "accuracy": 0.5396683101748095,
+        "auroc": 0.5999036393620749,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "random_forest_rose700_raw",
+        "accuracy": 0.5392200806813088,
+        "auroc": 0.6570184138026367,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "tabnet_rose700_pretrained",
+        "accuracy": 0.523980277902286,
+        "auroc": 0.6228847272809102,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "xgboost_rose7000_pretrained",
+        "accuracy": 0.5159121470192739,
+        "auroc": 0.6120471692957555,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "xgboost_rose7000_raw",
+        "accuracy": 0.5078440161362617,
+        "auroc": 0.5809939692224605,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "random_forest_none_pretrained",
+        "accuracy": 0.5060510981622591,
+        "auroc": 0.6034566867371114,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "xgboost_rose700_raw",
+        "accuracy": 0.4961900493052443,
+        "auroc": 0.5926022515760068,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "tabnet_rose7000_raw",
+        "accuracy": 0.4957418198117436,
+        "auroc": 0.4919861542863205,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "xgboost_rose700_pretrained",
+        "accuracy": 0.49170775437023756,
+        "auroc": 0.5929269362942865,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "node_rose7000_pretrained",
+        "accuracy": 0.4894666069027342,
+        "auroc": 0.5399563122245403,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "random_forest_none_raw",
+        "accuracy": 0.4818467055132228,
+        "auroc": 0.6182836876468716,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "tabnet_rose7000_pretrained",
+        "accuracy": 0.47736441057821605,
+        "auroc": 0.49075934432975105,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "node_rose700_pretrained",
+        "accuracy": 0.4764679515912147,
+        "auroc": 0.5816718691231262,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "tabnet_none_pretrained",
+        "accuracy": 0.47557149260421333,
+        "auroc": 0.49231164267964544,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "random_forest_rose7000_raw",
+        "accuracy": 0.46615867324069926,
+        "auroc": 0.6109686373850343,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "xgboost_none_raw",
+        "accuracy": 0.4652622142536979,
+        "auroc": 0.5729925804719823,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "node_none_raw",
+        "accuracy": 0.4639175257731959,
+        "auroc": 0.5243151884939451,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "xgboost_none_pretrained",
+        "accuracy": 0.4625728372926939,
+        "auroc": 0.5575310781139997,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "node_none_pretrained",
+        "accuracy": 0.4571940833706858,
+        "auroc": 0.5042562630396276,
+        "test_rows": 2231,
+        "test_source_people": 17
+      },
+      {
+        "experiment": "distribution",
+        "candidate": "node_rose700_raw",
+        "accuracy": 0.4495741819811744,
+        "auroc": 0.5971008226417763,
+        "test_rows": 2231,
+        "test_source_people": 17
+      }
+    ],
+    "typenet_block_dataset": [
+      {
+        "candidate": "node",
+        "accuracy": {
+          "mean": 0.6481277607883112,
+          "sd": 0.046475127948877475
+        },
+        "auroc": {
+          "mean": 0.6867476549213373,
+          "sd": 0.047149812676094034
+        },
+        "test_rows": 2943,
+        "test_source_people": 17
+      },
+      {
+        "candidate": "tabnet",
+        "accuracy": {
+          "mean": 0.5873598369011214,
+          "sd": 0.03815941594662985
+        },
+        "auroc": {
+          "mean": 0.649481713645812,
+          "sd": 0.04187580805050864
+        },
+        "test_rows": 2943,
+        "test_source_people": 17
+      },
+      {
+        "candidate": "xgboost",
+        "accuracy": {
+          "mean": 0.5694053686714237,
+          "sd": 0.04835458860410714
+        },
+        "auroc": {
+          "mean": 0.6577694920555427,
+          "sd": 0.03739159125312297
+        },
+        "test_rows": 2943,
+        "test_source_people": 17
+      },
+      {
+        "candidate": "random_forest",
+        "accuracy": {
+          "mean": 0.566061841658172,
+          "sd": 0.05281419357866123
+        },
+        "auroc": {
+          "mean": 0.6483239983207217,
+          "sd": 0.0401332839791278
+        },
+        "test_rows": 2943,
+        "test_source_people": 17
+      }
+    ]
+  }
+}

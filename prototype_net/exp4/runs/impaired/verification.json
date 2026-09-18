@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    "all eight eligible PD participants included",
+    "25000 unique real events across ten disjoint batches",
+    "all matrices freshly reproduce from replay events",
+    "all scores reproduce from frozen classifiers",
+    "baseline unchanged after nine follow-ups",
+    "source labels agree with clinical data",
+    "control results match prior simulation",
+    "monitor implementation unchanged"
+  ],
+  "audit_sha256": "3ed917cd2e85f2a3e879d0f7bd058661cacdd1f9a4d716133cf1170762f563a9"
+}

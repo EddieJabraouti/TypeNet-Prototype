@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "fits": 100,
+  "synthetic_rows": 0,
+  "checks": [
+    "fresh reproducible participant split",
+    "five complete participant-disjoint CV repeats",
+    "cached features exactly match real-only source observations",
+    "prior training functions unchanged",
+    "100 scalers and imputers fit only corresponding CV training rows",
+    "all model and encoder hashes unchanged",
+    "all participant accuracy, AUROC and sample SD reproduce",
+    "all ensemble accuracy and AUROC reproduce"
+  ],
+  "audit_sha256": "84476625fab3a32e6a5e65712ac65f27e0aad24959a536868f3f3ee93eb7a225"
+}

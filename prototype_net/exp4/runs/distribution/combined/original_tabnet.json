@@ -1,0 +1,234 @@
+{
+  "checkpoint": "prototype_net/exp4/runs/motor_pd/tabnet_smote_pretrained.joblib",
+  "checkpoint_sha256": "03b9f891e9f73e5613a789966e3804c1a5d06a570141df34a6656b4775fe59fe",
+  "threshold": 0.5,
+  "training": "Original fitted checkpoint: 59 real participant summaries plus 61 SMOTE profiles, 120 total fitting rows. No retraining, fine-tuning, encoder replacement, or threshold changes.",
+  "dataset_sha256": "14dd4ef2529bb6a4901c971e4371c99af165757fc894a041e1058964a6d192d2",
+  "inference_source_hashes": {
+    "prototype_net/exp4/model.py": "f5c4b23fddf8b1d1af91a3eb2a0a06c0f9459b0d7372da703543b251ac4daa5c",
+    "prototype_net/failed/exp3/node.py": "50bd349274857387542c9a31f9615e934b99cf40277f5a440a5cdb278cb2110d",
+    "prototype_net/failed/exp3/tabnet.py": "41ec16ae6f18307ed13491cf7cc363784e494b5605db967a60344bcbaaaa9fcc"
+  },
+  "inference_source_archive_sha256": "38eb835513f2fd0a53019f143b4cb8ef631fc2aa68a4f2d08a167482d6ad5602",
+  "original_real": {
+    "train": {
+      "people": 59,
+      "auroc": 0.8367816091954025,
+      "average_precision": 0.8856338473268933,
+      "accuracy": 0.7796610169491526,
+      "balanced_accuracy": 0.7821839080459769,
+      "sensitivity": 0.6333333333333333,
+      "specificity": 0.9310344827586207,
+      "log_loss": 0.5110152654178071,
+      "confusion_matrix": [
+        [
+          27,
+          2
+        ],
+        [
+          11,
+          19
+        ]
+      ]
+    },
+    "validation": {
+      "people": 9,
+      "auroc": 0.6000000000000001,
+      "average_precision": 0.7361111111111112,
+      "accuracy": 0.7777777777777778,
+      "balanced_accuracy": 0.75,
+      "sensitivity": 0.5,
+      "specificity": 1.0,
+      "log_loss": 0.5873097615180518,
+      "confusion_matrix": [
+        [
+          5,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    "test": {
+      "people": 17,
+      "auroc": 0.625,
+      "average_precision": 0.7261446886446887,
+      "accuracy": 0.7058823529411765,
+      "balanced_accuracy": 0.7013888888888888,
+      "sensitivity": 0.625,
+      "specificity": 0.7777777777777778,
+      "log_loss": 0.6937861273495843,
+      "confusion_matrix": [
+        [
+          7,
+          2
+        ],
+        [
+          3,
+          5
+        ]
+      ]
+    }
+  },
+  "combined": {
+    "train": {
+      "real_rows": 812,
+      "synthetic_rows": 7000,
+      "rows": 7812,
+      "source_people": 59,
+      "auroc": 0.8373479736982085,
+      "average_precision": 0.8725437922739491,
+      "accuracy": 0.7831541218637993,
+      "balanced_accuracy": 0.784206667608373,
+      "sensitivity": 0.6424396442185515,
+      "specificity": 0.9259736909981945,
+      "log_loss": 0.5140838003289078,
+      "confusion_matrix": [
+        [
+          3590,
+          287
+        ],
+        [
+          1407,
+          2528
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.839080459770115,
+        "average_precision": 0.8829285637696208,
+        "accuracy": 0.7966101694915254,
+        "balanced_accuracy": 0.7988505747126436,
+        "sensitivity": 0.6666666666666666,
+        "specificity": 0.9310344827586207,
+        "log_loss": 0.5133027821814753,
+        "confusion_matrix": [
+          [
+            27,
+            2
+          ],
+          [
+            10,
+            20
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.7229885057471265,
+          0.9379310344827586
+        ],
+        "ci975": [
+          0.7068821839080459,
+          0.9505890804597702
+        ]
+      }
+    },
+    "validation": {
+      "real_rows": 134,
+      "synthetic_rows": 1000,
+      "rows": 1134,
+      "source_people": 9,
+      "auroc": 0.6495800149328024,
+      "average_precision": 0.7643970335861645,
+      "accuracy": 0.7442680776014109,
+      "balanced_accuracy": 0.747343205574913,
+      "sensitivity": 0.49825783972125437,
+      "specificity": 0.9964285714285714,
+      "log_loss": 0.610809470892021,
+      "confusion_matrix": [
+        [
+          558,
+          2
+        ],
+        [
+          288,
+          286
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.65,
+        "average_precision": 0.75,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5630172360618619,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2,
+          1.0
+        ],
+        "ci975": [
+          0.15,
+          1.0
+        ]
+      }
+    },
+    "test": {
+      "real_rows": 231,
+      "synthetic_rows": 2000,
+      "rows": 2231,
+      "source_people": 17,
+      "auroc": 0.5931467414191616,
+      "average_precision": 0.6860827769965858,
+      "accuracy": 0.5750784401613627,
+      "balanced_accuracy": 0.574601136075044,
+      "sensitivity": 0.5036101083032491,
+      "specificity": 0.6455921638468388,
+      "log_loss": 0.7346800389410942,
+      "confusion_matrix": [
+        [
+          725,
+          398
+        ],
+        [
+          550,
+          558
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.5972222222222222,
+        "average_precision": 0.7030792124542125,
+        "accuracy": 0.5882352941176471,
+        "balanced_accuracy": 0.5833333333333333,
+        "sensitivity": 0.5,
+        "specificity": 0.6666666666666666,
+        "log_loss": 0.7146685551835312,
+        "confusion_matrix": [
+          [
+            6,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2916666666666667,
+          0.875
+        ],
+        "ci975": [
+          0.2361111111111111,
+          0.9166666666666666
+        ]
+      }
+    }
+  },
+  "predictions_sha256": "5b27b4613bcfc6f831e979f61d3ffacc9d202bcbb99aa3762316ee3350690b4e"
+}

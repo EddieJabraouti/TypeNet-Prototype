@@ -1,0 +1,217 @@
+Aalto pretraining 1/100: masked MSE 1.12937
+Aalto pretraining 2/100: masked MSE 0.30492
+Aalto pretraining 3/100: masked MSE 1.11044
+Aalto pretraining 4/100: masked MSE 0.90105
+Aalto pretraining 5/100: masked MSE 0.22082
+Aalto pretraining 6/100: masked MSE 0.97377
+Aalto pretraining 7/100: masked MSE 0.29784
+Aalto pretraining 8/100: masked MSE 0.31288
+Aalto pretraining 9/100: masked MSE 0.21023
+Aalto pretraining 10/100: masked MSE 0.23075
+Aalto pretraining 11/100: masked MSE 0.22208
+Aalto pretraining 12/100: masked MSE 0.72059
+Aalto pretraining 13/100: masked MSE 1.58031
+Aalto pretraining 14/100: masked MSE 0.20831
+Aalto pretraining 15/100: masked MSE 0.96475
+Aalto pretraining 16/100: masked MSE 0.20820
+Aalto pretraining 17/100: masked MSE 0.79019
+Aalto pretraining 18/100: masked MSE 0.62619
+Aalto pretraining 19/100: masked MSE 0.20842
+Aalto pretraining 20/100: masked MSE 0.21963
+Aalto pretraining 21/100: masked MSE 0.65285
+Aalto pretraining 22/100: masked MSE 0.26349
+Aalto pretraining 23/100: masked MSE 0.63999
+Aalto pretraining 24/100: masked MSE 1.02091
+Aalto pretraining 25/100: masked MSE 0.87280
+Aalto pretraining 26/100: masked MSE 0.20201
+Aalto pretraining 27/100: masked MSE 0.73293
+Aalto pretraining 28/100: masked MSE 0.24150
+Aalto pretraining 29/100: masked MSE 0.67170
+Aalto pretraining 30/100: masked MSE 1.01807
+Aalto pretraining 31/100: masked MSE 0.62634
+Aalto pretraining 32/100: masked MSE 0.21550
+Aalto pretraining 33/100: masked MSE 0.18630
+Aalto pretraining 34/100: masked MSE 0.33829
+Aalto pretraining 35/100: masked MSE 0.91976
+Aalto pretraining 36/100: masked MSE 2.28997
+Aalto pretraining 37/100: masked MSE 0.21090
+Aalto pretraining 38/100: masked MSE 1.63762
+Aalto pretraining 39/100: masked MSE 0.22095
+Aalto pretraining 40/100: masked MSE 1.59904
+Aalto pretraining 41/100: masked MSE 0.20256
+Aalto pretraining 42/100: masked MSE 0.16116
+Aalto pretraining 43/100: masked MSE 0.35840
+Aalto pretraining 44/100: masked MSE 0.99207
+Aalto pretraining 45/100: masked MSE 1.02113
+Aalto pretraining 46/100: masked MSE 0.19486
+Aalto pretraining 47/100: masked MSE 1.34404
+Aalto pretraining 48/100: masked MSE 0.91009
+Aalto pretraining 49/100: masked MSE 0.17267
+Aalto pretraining 50/100: masked MSE 0.17602
+Aalto pretraining 51/100: masked MSE 0.18982
+Aalto pretraining 52/100: masked MSE 0.35739
+Aalto pretraining 53/100: masked MSE 0.30813
+Aalto pretraining 54/100: masked MSE 1.35296
+Aalto pretraining 55/100: masked MSE 0.26469
+Aalto pretraining 56/100: masked MSE 0.18072
+Aalto pretraining 57/100: masked MSE 0.81988
+Aalto pretraining 58/100: masked MSE 0.16423
+Aalto pretraining 59/100: masked MSE 0.91140
+Aalto pretraining 60/100: masked MSE 0.15860
+Aalto pretraining 61/100: masked MSE 0.90812
+Aalto pretraining 62/100: masked MSE 1.04342
+Aalto pretraining 63/100: masked MSE 0.57767
+Aalto pretraining 64/100: masked MSE 0.32698
+Aalto pretraining 65/100: masked MSE 0.33976
+Aalto pretraining 66/100: masked MSE 1.30774
+Aalto pretraining 67/100: masked MSE 0.22996
+Aalto pretraining 68/100: masked MSE 0.25393
+Aalto pretraining 69/100: masked MSE 0.92070
+Aalto pretraining 70/100: masked MSE 0.93838
+Aalto pretraining 71/100: masked MSE 0.25258
+Aalto pretraining 72/100: masked MSE 0.19005
+Aalto pretraining 73/100: masked MSE 0.91494
+Aalto pretraining 74/100: masked MSE 0.66692
+Aalto pretraining 75/100: masked MSE 0.24832
+Aalto pretraining 76/100: masked MSE 0.88627
+Aalto pretraining 77/100: masked MSE 0.23455
+Aalto pretraining 78/100: masked MSE 0.86153
+Aalto pretraining 79/100: masked MSE 0.64914
+Aalto pretraining 80/100: masked MSE 0.72353
+Aalto pretraining 81/100: masked MSE 0.17798
+Aalto pretraining 82/100: masked MSE 0.14885
+Aalto pretraining 83/100: masked MSE 0.16796
+Aalto pretraining 84/100: masked MSE 0.18433
+Aalto pretraining 85/100: masked MSE 0.16477
+Aalto pretraining 86/100: masked MSE 0.88064
+Aalto pretraining 87/100: masked MSE 0.18871
+Aalto pretraining 88/100: masked MSE 0.21578
+Aalto pretraining 89/100: masked MSE 0.88080
+Aalto pretraining 90/100: masked MSE 0.93686
+Aalto pretraining 91/100: masked MSE 1.38184
+Aalto pretraining 92/100: masked MSE 0.91658
+Aalto pretraining 93/100: masked MSE 0.90730
+Aalto pretraining 94/100: masked MSE 0.16785
+Aalto pretraining 95/100: masked MSE 0.21890
+Aalto pretraining 96/100: masked MSE 0.17491
+Aalto pretraining 97/100: masked MSE 1.49958
+Aalto pretraining 98/100: masked MSE 0.20651
+Aalto pretraining 99/100: masked MSE 0.19732
+Aalto pretraining 100/100: masked MSE 0.33228
+motor_pd dummy_none_raw {'auroc': 0.503448275862069, 'average_precision': 0.514991335429533, 'accuracy': 0.4915254237288136, 'balanced_accuracy': 0.4885057471264368, 'sensitivity': 0.6666666666666666, 'specificity': 0.3103448275862069, 'log_loss': 0.6933701223357039, 'confusion_matrix': [[9, 20], [10, 20]]}
+motor_pd xgboost_none_raw {'auroc': 0.8379310344827586, 'average_precision': 0.8803944053560437, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7626436781609196, 'sensitivity': 0.7666666666666667, 'specificity': 0.7586206896551724, 'log_loss': 0.4897959379067443, 'confusion_matrix': [[22, 7], [7, 23]]}
+motor_pd xgboost_none_pretrained {'auroc': 0.8275862068965518, 'average_precision': 0.8694638856725956, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7626436781609196, 'sensitivity': 0.7666666666666667, 'specificity': 0.7586206896551724, 'log_loss': 0.4969534437654071, 'confusion_matrix': [[22, 7], [7, 23]]}
+motor_pd xgboost_smote2_raw {'auroc': 0.8310344827586208, 'average_precision': 0.87503491021358, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7632183908045977, 'sensitivity': 0.7333333333333333, 'specificity': 0.7931034482758621, 'log_loss': 0.4939121030378786, 'confusion_matrix': [[23, 6], [8, 22]]}
+motor_pd xgboost_smote2_pretrained {'auroc': 0.8229885057471265, 'average_precision': 0.8614261875531354, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7626436781609196, 'sensitivity': 0.7666666666666667, 'specificity': 0.7586206896551724, 'log_loss': 0.49084407740441194, 'confusion_matrix': [[22, 7], [7, 23]]}
+motor_pd xgboost_smote8_raw {'auroc': 0.8321839080459771, 'average_precision': 0.8700307518971017, 'accuracy': 0.7288135593220338, 'balanced_accuracy': 0.728735632183908, 'sensitivity': 0.7333333333333333, 'specificity': 0.7241379310344828, 'log_loss': 0.49483885420807777, 'confusion_matrix': [[21, 8], [8, 22]]}
+motor_pd xgboost_smote8_pretrained {'auroc': 0.8287356321839081, 'average_precision': 0.8630589914803767, 'accuracy': 0.7457627118644068, 'balanced_accuracy': 0.7454022988505747, 'sensitivity': 0.7666666666666667, 'specificity': 0.7241379310344828, 'log_loss': 0.4910430143342661, 'confusion_matrix': [[21, 8], [7, 23]]}
+motor_pd xgboost_smote32_raw {'auroc': 0.8310344827586207, 'average_precision': 0.8718143019114617, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7626436781609196, 'sensitivity': 0.7666666666666667, 'specificity': 0.7586206896551724, 'log_loss': 0.4936647527593119, 'confusion_matrix': [[22, 7], [7, 23]]}
+motor_pd xgboost_smote32_pretrained {'auroc': 0.8252873563218391, 'average_precision': 0.8642368001218065, 'accuracy': 0.7457627118644068, 'balanced_accuracy': 0.7454022988505747, 'sensitivity': 0.7666666666666667, 'specificity': 0.7241379310344828, 'log_loss': 0.4871487487552727, 'confusion_matrix': [[21, 8], [7, 23]]}
+motor_pd random_forest_none_raw {'auroc': 0.8229885057471265, 'average_precision': 0.8709827956863815, 'accuracy': 0.7288135593220338, 'balanced_accuracy': 0.728735632183908, 'sensitivity': 0.7333333333333333, 'specificity': 0.7241379310344828, 'log_loss': 0.4927967337026384, 'confusion_matrix': [[21, 8], [8, 22]]}
+motor_pd random_forest_none_pretrained {'auroc': 0.8379310344827586, 'average_precision': 0.8737765589573862, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7626436781609196, 'sensitivity': 0.7666666666666667, 'specificity': 0.7586206896551724, 'log_loss': 0.4855752373318261, 'confusion_matrix': [[22, 7], [7, 23]]}
+motor_pd xgboost_smote128_raw {'auroc': 0.8333333333333333, 'average_precision': 0.8748838666256815, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7626436781609196, 'sensitivity': 0.7666666666666667, 'specificity': 0.7586206896551724, 'log_loss': 0.48775279603339755, 'confusion_matrix': [[22, 7], [7, 23]]}
+motor_pd random_forest_smote2_raw {'auroc': 0.8149425287356321, 'average_precision': 0.8660241441093971, 'accuracy': 0.7457627118644068, 'balanced_accuracy': 0.7459770114942528, 'sensitivity': 0.7333333333333333, 'specificity': 0.7586206896551724, 'log_loss': 0.5128638501031934, 'confusion_matrix': [[22, 7], [8, 22]]}
+motor_pd xgboost_smote128_pretrained {'auroc': 0.8356321839080461, 'average_precision': 0.8716646258956516, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7626436781609196, 'sensitivity': 0.7666666666666667, 'specificity': 0.7586206896551724, 'log_loss': 0.47998986490124473, 'confusion_matrix': [[22, 7], [7, 23]]}
+motor_pd random_forest_smote2_pretrained {'auroc': 0.8183908045977011, 'average_precision': 0.8579949365417737, 'accuracy': 0.7457627118644068, 'balanced_accuracy': 0.7459770114942528, 'sensitivity': 0.7333333333333333, 'specificity': 0.7586206896551724, 'log_loss': 0.4961527492314893, 'confusion_matrix': [[22, 7], [8, 22]]}
+motor_pd random_forest_smote8_raw {'auroc': 0.8241379310344827, 'average_precision': 0.8679666122828453, 'accuracy': 0.7796610169491526, 'balanced_accuracy': 0.7793103448275862, 'sensitivity': 0.8, 'specificity': 0.7586206896551724, 'log_loss': 0.5180089375135436, 'confusion_matrix': [[22, 7], [6, 24]]}
+motor_pd random_forest_smote8_pretrained {'auroc': 0.8252873563218391, 'average_precision': 0.8582068756493658, 'accuracy': 0.7796610169491526, 'balanced_accuracy': 0.7793103448275862, 'sensitivity': 0.8, 'specificity': 0.7586206896551724, 'log_loss': 0.5005251891664931, 'confusion_matrix': [[22, 7], [6, 24]]}
+motor_pd random_forest_smote32_raw {'auroc': 0.810344827586207, 'average_precision': 0.8561772676324808, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7626436781609196, 'sensitivity': 0.7666666666666667, 'specificity': 0.7586206896551724, 'log_loss': 0.5419567577467755, 'confusion_matrix': [[22, 7], [7, 23]]}
+motor_pd tabnet_none_raw {'auroc': 0.8149425287356322, 'average_precision': 0.8523283042406136, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7620689655172415, 'sensitivity': 0.8, 'specificity': 0.7241379310344828, 'log_loss': 0.5182654079683848, 'confusion_matrix': [[21, 8], [6, 24]]}
+motor_pd tabnet_none_pretrained {'auroc': 0.8022988505747127, 'average_precision': 0.8406658037035035, 'accuracy': 0.711864406779661, 'balanced_accuracy': 0.7114942528735633, 'sensitivity': 0.7333333333333333, 'specificity': 0.6896551724137931, 'log_loss': 0.5356597200321982, 'confusion_matrix': [[20, 9], [8, 22]]}
+motor_pd tabnet_smote2_raw {'auroc': 0.7862068965517242, 'average_precision': 0.8230731009060904, 'accuracy': 0.711864406779661, 'balanced_accuracy': 0.7120689655172414, 'sensitivity': 0.7, 'specificity': 0.7241379310344828, 'log_loss': 0.5698341015552001, 'confusion_matrix': [[21, 8], [9, 21]]}
+motor_pd tabnet_smote2_pretrained {'auroc': 0.7896551724137931, 'average_precision': 0.8384678669577609, 'accuracy': 0.7288135593220338, 'balanced_accuracy': 0.7293103448275862, 'sensitivity': 0.7, 'specificity': 0.7586206896551724, 'log_loss': 0.6072720398078414, 'confusion_matrix': [[22, 7], [9, 21]]}
+motor_pd random_forest_smote32_pretrained {'auroc': 0.8298850574712644, 'average_precision': 0.8614085784676605, 'accuracy': 0.7796610169491526, 'balanced_accuracy': 0.7798850574712644, 'sensitivity': 0.7666666666666667, 'specificity': 0.7931034482758621, 'log_loss': 0.49914756467370003, 'confusion_matrix': [[23, 6], [7, 23]]}
+motor_pd tabnet_smote8_raw {'auroc': 0.8321839080459771, 'average_precision': 0.8626547042715387, 'accuracy': 0.7457627118644068, 'balanced_accuracy': 0.7459770114942528, 'sensitivity': 0.7333333333333333, 'specificity': 0.7586206896551724, 'log_loss': 0.5101712523604165, 'confusion_matrix': [[22, 7], [8, 22]]}
+motor_pd tabnet_smote8_pretrained {'auroc': 0.7954022988505747, 'average_precision': 0.8299842313215058, 'accuracy': 0.7457627118644068, 'balanced_accuracy': 0.746551724137931, 'sensitivity': 0.7, 'specificity': 0.7931034482758621, 'log_loss': 0.6107832618185932, 'confusion_matrix': [[23, 6], [9, 21]]}
+motor_pd tabnet_smote32_raw {'auroc': 0.7954022988505747, 'average_precision': 0.8313432115240943, 'accuracy': 0.711864406779661, 'balanced_accuracy': 0.7114942528735633, 'sensitivity': 0.7333333333333333, 'specificity': 0.6896551724137931, 'log_loss': 0.5926569306387157, 'confusion_matrix': [[20, 9], [8, 22]]}
+motor_pd random_forest_smote128_raw {'auroc': 0.810919540229885, 'average_precision': 0.8557752169770274, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7626436781609196, 'sensitivity': 0.7666666666666667, 'specificity': 0.7586206896551724, 'log_loss': 0.5441076747773061, 'confusion_matrix': [[22, 7], [7, 23]]}
+motor_pd tabnet_smote32_pretrained {'auroc': 0.7942528735632184, 'average_precision': 0.8258280188171964, 'accuracy': 0.711864406779661, 'balanced_accuracy': 0.7126436781609196, 'sensitivity': 0.6666666666666666, 'specificity': 0.7586206896551724, 'log_loss': 0.5445927928478275, 'confusion_matrix': [[22, 7], [10, 20]]}
+motor_pd node_none_raw {'auroc': 0.8011494252873563, 'average_precision': 0.8437595938829169, 'accuracy': 0.7457627118644068, 'balanced_accuracy': 0.7459770114942528, 'sensitivity': 0.7333333333333333, 'specificity': 0.7586206896551724, 'log_loss': 0.534199517110204, 'confusion_matrix': [[22, 7], [8, 22]]}
+motor_pd node_none_pretrained {'auroc': 0.7781609195402298, 'average_precision': 0.8142061390803493, 'accuracy': 0.6949152542372882, 'balanced_accuracy': 0.6954022988505747, 'sensitivity': 0.6666666666666666, 'specificity': 0.7241379310344828, 'log_loss': 0.5680249887187412, 'confusion_matrix': [[21, 8], [10, 20]]}
+motor_pd node_smote2_raw {'auroc': 0.7999999999999999, 'average_precision': 0.8480707229018011, 'accuracy': 0.7288135593220338, 'balanced_accuracy': 0.728735632183908, 'sensitivity': 0.7333333333333333, 'specificity': 0.7241379310344828, 'log_loss': 0.529141560400472, 'confusion_matrix': [[21, 8], [8, 22]]}
+motor_pd node_smote2_pretrained {'auroc': 0.7954022988505748, 'average_precision': 0.8351574049882152, 'accuracy': 0.711864406779661, 'balanced_accuracy': 0.7120689655172414, 'sensitivity': 0.7, 'specificity': 0.7241379310344828, 'log_loss': 0.5542384114572536, 'confusion_matrix': [[21, 8], [9, 21]]}
+motor_pd node_smote8_raw {'auroc': 0.828735632183908, 'average_precision': 0.8746585418654448, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7626436781609196, 'sensitivity': 0.7666666666666667, 'specificity': 0.7586206896551724, 'log_loss': 0.4827185634301871, 'confusion_matrix': [[22, 7], [7, 23]]}
+motor_pd node_smote8_pretrained {'auroc': 0.7999999999999999, 'average_precision': 0.8391705291735431, 'accuracy': 0.7288135593220338, 'balanced_accuracy': 0.728735632183908, 'sensitivity': 0.7333333333333333, 'specificity': 0.7241379310344828, 'log_loss': 0.5666751291982914, 'confusion_matrix': [[21, 8], [8, 22]]}
+motor_pd random_forest_smote128_pretrained {'auroc': 0.82816091954023, 'average_precision': 0.8566507163630059, 'accuracy': 0.7796610169491526, 'balanced_accuracy': 0.7798850574712644, 'sensitivity': 0.7666666666666667, 'specificity': 0.7931034482758621, 'log_loss': 0.5009928288321437, 'confusion_matrix': [[23, 6], [7, 23]]}
+motor_pd node_smote32_raw {'auroc': 0.8448275862068966, 'average_precision': 0.8720225460413419, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7626436781609196, 'sensitivity': 0.7666666666666667, 'specificity': 0.7586206896551724, 'log_loss': 0.5261642157054599, 'confusion_matrix': [[22, 7], [7, 23]]}
+motor_pd node_smote32_pretrained {'auroc': 0.7781609195402299, 'average_precision': 0.8188831728763108, 'accuracy': 0.7457627118644068, 'balanced_accuracy': 0.7459770114942528, 'sensitivity': 0.7333333333333333, 'specificity': 0.7586206896551724, 'log_loss': 0.6197814806304428, 'confusion_matrix': [[22, 7], [8, 22]]}
+motor_pd tabnet_smote128_raw {'auroc': 0.8195402298850575, 'average_precision': 0.8616693369043221, 'accuracy': 0.7796610169491526, 'balanced_accuracy': 0.7798850574712644, 'sensitivity': 0.7666666666666667, 'specificity': 0.7931034482758621, 'log_loss': 0.5200395253023641, 'confusion_matrix': [[23, 6], [7, 23]]}
+motor_updrs dummy_none_raw {'mae': 9.617055084072044, 'rmse': 11.071442445967204, 'r2': -0.009160522853983277}
+motor_updrs xgboost_none_raw {'mae': 6.929240073187876, 'rmse': 8.653249443082718, 'r2': 0.38353235783071593}
+motor_updrs xgboost_none_pretrained {'mae': 6.911973314770197, 'rmse': 8.658705473382394, 'r2': 0.3827547247531775}
+motor_updrs random_forest_none_raw {'mae': 6.9637624182876605, 'rmse': 8.800734066058087, 'r2': 0.36233932342265174}
+motor_updrs random_forest_none_pretrained {'mae': 6.995159931197614, 'rmse': 8.773865673725233, 'r2': 0.3662269000609416}
+motor_updrs tabnet_none_raw {'mae': 6.869404629125434, 'rmse': 8.807368414915132, 'r2': 0.36137757230140144}
+motor_updrs tabnet_none_pretrained {'mae': 7.6015484494678045, 'rmse': 9.30772192833383, 'r2': 0.2867551577113634}
+motor_updrs node_none_raw {'mae': 6.927659196368719, 'rmse': 8.840293807219465, 'r2': 0.356593805719597}
+motor_updrs node_none_pretrained {'mae': 7.299283278190483, 'rmse': 9.255692557065656, 'r2': 0.29470682644735713}
+touchscreen_pd dummy_none_raw {'auroc': 0.4833333333333333, 'average_precision': 0.567929292929293, 'accuracy': 0.5454545454545454, 'balanced_accuracy': 0.5, 'sensitivity': 1.0, 'specificity': 0.0, 'log_loss': 0.692243826358827, 'confusion_matrix': [[0, 10], [0, 12]]}
+touchscreen_pd xgboost_none_raw {'auroc': 0.7291666666666666, 'average_precision': 0.8556397306397306, 'accuracy': 0.7727272727272727, 'balanced_accuracy': 0.7833333333333333, 'sensitivity': 0.6666666666666666, 'specificity': 0.9, 'log_loss': 0.594497179712787, 'confusion_matrix': [[9, 1], [4, 8]]}
+touchscreen_pd xgboost_smote2_raw {'auroc': 0.7, 'average_precision': 0.845931841636176, 'accuracy': 0.7727272727272727, 'balanced_accuracy': 0.7833333333333333, 'sensitivity': 0.6666666666666666, 'specificity': 0.9, 'log_loss': 0.6438835776008185, 'confusion_matrix': [[9, 1], [4, 8]]}
+touchscreen_pd xgboost_smote8_raw {'auroc': 0.7166666666666667, 'average_precision': 0.8511258417508417, 'accuracy': 0.7272727272727273, 'balanced_accuracy': 0.7333333333333334, 'sensitivity': 0.6666666666666666, 'specificity': 0.8, 'log_loss': 0.6780041064061333, 'confusion_matrix': [[8, 2], [4, 8]]}
+touchscreen_pd xgboost_smote32_raw {'auroc': 0.7166666666666667, 'average_precision': 0.8511258417508416, 'accuracy': 0.7272727272727273, 'balanced_accuracy': 0.7333333333333334, 'sensitivity': 0.6666666666666666, 'specificity': 0.8, 'log_loss': 0.6625174455590154, 'confusion_matrix': [[8, 2], [4, 8]]}
+touchscreen_pd xgboost_smote128_raw {'auroc': 0.7250000000000001, 'average_precision': 0.8538491532976827, 'accuracy': 0.7272727272727273, 'balanced_accuracy': 0.7333333333333334, 'sensitivity': 0.6666666666666666, 'specificity': 0.8, 'log_loss': 0.6606575637664739, 'confusion_matrix': [[8, 2], [4, 8]]}
+touchscreen_pd random_forest_none_raw {'auroc': 0.7416666666666667, 'average_precision': 0.859386433999437, 'accuracy': 0.7272727272727273, 'balanced_accuracy': 0.7333333333333334, 'sensitivity': 0.6666666666666666, 'specificity': 0.8, 'log_loss': 0.7016912245881421, 'confusion_matrix': [[8, 2], [4, 8]]}
+touchscreen_pd random_forest_smote2_raw {'auroc': 0.7416666666666666, 'average_precision': 0.8584259361639393, 'accuracy': 0.7272727272727273, 'balanced_accuracy': 0.7333333333333334, 'sensitivity': 0.6666666666666666, 'specificity': 0.8, 'log_loss': 0.8359395644278053, 'confusion_matrix': [[8, 2], [4, 8]]}
+touchscreen_pd random_forest_smote8_raw {'auroc': 0.7583333333333334, 'average_precision': 0.8646146616541353, 'accuracy': 0.6818181818181818, 'balanced_accuracy': 0.6833333333333333, 'sensitivity': 0.6666666666666666, 'specificity': 0.7, 'log_loss': 0.8048248751198425, 'confusion_matrix': [[7, 3], [4, 8]]}
+touchscreen_pd random_forest_smote32_raw {'auroc': 0.75, 'average_precision': 0.8615509361639393, 'accuracy': 0.6818181818181818, 'balanced_accuracy': 0.6833333333333333, 'sensitivity': 0.6666666666666666, 'specificity': 0.7, 'log_loss': 0.8278087054298403, 'confusion_matrix': [[7, 3], [4, 8]]}
+motor_pd tabnet_smote128_pretrained {'auroc': 0.7770114942528735, 'average_precision': 0.8252760396756239, 'accuracy': 0.7457627118644068, 'balanced_accuracy': 0.7459770114942528, 'sensitivity': 0.7333333333333333, 'specificity': 0.7586206896551724, 'log_loss': 0.6278984772650875, 'confusion_matrix': [[22, 7], [8, 22]]}
+touchscreen_pd tabnet_none_raw {'auroc': 0.7333333333333333, 'average_precision': 0.856415343915344, 'accuracy': 0.6363636363636364, 'balanced_accuracy': 0.6333333333333333, 'sensitivity': 0.6666666666666666, 'specificity': 0.6, 'log_loss': 0.6721901936768391, 'confusion_matrix': [[6, 4], [4, 8]]}
+touchscreen_pd tabnet_smote2_raw {'auroc': 0.75, 'average_precision': 0.8611062480547774, 'accuracy': 0.7272727272727273, 'balanced_accuracy': 0.7333333333333334, 'sensitivity': 0.6666666666666666, 'specificity': 0.8, 'log_loss': 0.7374049068904234, 'confusion_matrix': [[8, 2], [4, 8]]}
+touchscreen_pd tabnet_smote8_raw {'auroc': 0.7333333333333333, 'average_precision': 0.856013655462185, 'accuracy': 0.6818181818181818, 'balanced_accuracy': 0.6833333333333333, 'sensitivity': 0.6666666666666666, 'specificity': 0.7, 'log_loss': 0.9021927937421875, 'confusion_matrix': [[7, 3], [4, 8]]}
+touchscreen_pd random_forest_smote128_raw {'auroc': 0.7208333333333333, 'average_precision': 0.8507807695114196, 'accuracy': 0.7272727272727273, 'balanced_accuracy': 0.7333333333333334, 'sensitivity': 0.6666666666666666, 'specificity': 0.8, 'log_loss': 0.8720615449168068, 'confusion_matrix': [[8, 2], [4, 8]]}
+touchscreen_pd tabnet_smote32_raw {'auroc': 0.7, 'average_precision': 0.834187030075188, 'accuracy': 0.6818181818181818, 'balanced_accuracy': 0.6833333333333333, 'sensitivity': 0.6666666666666666, 'specificity': 0.7, 'log_loss': 1.0351142536963374, 'confusion_matrix': [[7, 3], [4, 8]]}
+touchscreen_pd node_none_raw {'auroc': 0.7583333333333332, 'average_precision': 0.872160514923673, 'accuracy': 0.7727272727272727, 'balanced_accuracy': 0.7833333333333333, 'sensitivity': 0.6666666666666666, 'specificity': 0.9, 'log_loss': 0.5614072384751952, 'confusion_matrix': [[9, 1], [4, 8]]}
+touchscreen_pd node_smote2_raw {'auroc': 0.7666666666666667, 'average_precision': 0.8789786967418548, 'accuracy': 0.7727272727272727, 'balanced_accuracy': 0.7833333333333333, 'sensitivity': 0.6666666666666666, 'specificity': 0.9, 'log_loss': 0.5604996154089893, 'confusion_matrix': [[9, 1], [4, 8]]}
+touchscreen_pd node_smote8_raw {'auroc': 0.7333333333333333, 'average_precision': 0.856415343915344, 'accuracy': 0.7727272727272727, 'balanced_accuracy': 0.7833333333333333, 'sensitivity': 0.6666666666666666, 'specificity': 0.9, 'log_loss': 0.5939401426171965, 'confusion_matrix': [[9, 1], [4, 8]]}
+touchscreen_pd node_smote32_raw {'auroc': 0.7333333333333333, 'average_precision': 0.856415343915344, 'accuracy': 0.7272727272727273, 'balanced_accuracy': 0.7333333333333334, 'sensitivity': 0.6666666666666666, 'specificity': 0.8, 'log_loss': 0.696198456185456, 'confusion_matrix': [[8, 2], [4, 8]]}
+touchscreen_pd tabnet_smote128_raw {'auroc': 0.6916666666666667, 'average_precision': 0.8280534967841471, 'accuracy': 0.6818181818181818, 'balanced_accuracy': 0.6916666666666667, 'sensitivity': 0.5833333333333334, 'specificity': 0.8, 'log_loss': 1.034200889891537, 'confusion_matrix': [[8, 2], [5, 7]]}
+touchscreen_updrs dummy_none_raw {'mae': 8.736363635813465, 'rmse': 10.291901308035635, 'r2': -0.10574679808953635}
+touchscreen_updrs xgboost_none_raw {'mae': 7.161731241778894, 'rmse': 9.386137494209299, 'r2': 0.0803167264011393}
+touchscreen_updrs random_forest_none_raw {'mae': 7.015930714080394, 'rmse': 9.37578727790915, 'r2': 0.08234390158286853}
+touchscreen_updrs tabnet_none_raw {'mae': 7.820216783068397, 'rmse': 10.665213099504717, 'r2': -0.1874177573461724}
+touchscreen_updrs node_none_raw {'mae': 7.333503034981814, 'rmse': 9.41177897198846, 'r2': 0.07528499753901674}
+online_pd dummy_none_raw {'auroc': 0.4928571428571429, 'average_precision': 0.43030669572725644, 'accuracy': 0.5652173913043478, 'balanced_accuracy': 0.5, 'sensitivity': 0.0, 'specificity': 1.0, 'log_loss': 0.6847650477332192, 'confusion_matrix': [[91, 0], [70, 0]]}
+online_pd xgboost_none_raw {'auroc': 0.773469387755102, 'average_precision': 0.72299394272977, 'accuracy': 0.6956521739130435, 'balanced_accuracy': 0.6730769230769231, 'sensitivity': 0.5, 'specificity': 0.8461538461538461, 'log_loss': 0.5589330731984266, 'confusion_matrix': [[77, 14], [35, 35]]}
+online_pd xgboost_none_pretrained {'auroc': 0.7756671899529042, 'average_precision': 0.7282679370697213, 'accuracy': 0.6894409937888198, 'balanced_accuracy': 0.6675824175824177, 'sensitivity': 0.5, 'specificity': 0.8351648351648352, 'log_loss': 0.5557648132363439, 'confusion_matrix': [[76, 15], [35, 35]]}
+online_pd xgboost_smote2_raw {'auroc': 0.7803767660910518, 'average_precision': 0.739257060963743, 'accuracy': 0.6894409937888198, 'balanced_accuracy': 0.6675824175824177, 'sensitivity': 0.5, 'specificity': 0.8351648351648352, 'log_loss': 0.5495799394706239, 'confusion_matrix': [[76, 15], [35, 35]]}
+online_pd xgboost_smote2_pretrained {'auroc': 0.7748822605965462, 'average_precision': 0.7347659843148795, 'accuracy': 0.6894409937888198, 'balanced_accuracy': 0.6659340659340659, 'sensitivity': 0.4857142857142857, 'specificity': 0.8461538461538461, 'log_loss': 0.5513927345737861, 'confusion_matrix': [[77, 14], [36, 34]]}
+online_pd xgboost_smote8_raw {'auroc': 0.7698587127158556, 'average_precision': 0.7261692325350829, 'accuracy': 0.6832298136645962, 'balanced_accuracy': 0.6620879120879121, 'sensitivity': 0.5, 'specificity': 0.8241758241758241, 'log_loss': 0.5520621885223975, 'confusion_matrix': [[75, 16], [35, 35]]}
+online_pd xgboost_smote8_pretrained {'auroc': 0.7697017268445839, 'average_precision': 0.725634197409428, 'accuracy': 0.6770186335403726, 'balanced_accuracy': 0.6532967032967033, 'sensitivity': 0.4714285714285714, 'specificity': 0.8351648351648352, 'log_loss': 0.5535485400920668, 'confusion_matrix': [[76, 15], [37, 33]]}
+online_pd xgboost_smote32_raw {'auroc': 0.7697017268445839, 'average_precision': 0.7304854741649954, 'accuracy': 0.6832298136645962, 'balanced_accuracy': 0.6620879120879121, 'sensitivity': 0.5, 'specificity': 0.8241758241758241, 'log_loss': 0.5518690299407075, 'confusion_matrix': [[75, 16], [35, 35]]}
+online_pd xgboost_smote32_pretrained {'auroc': 0.7634222919937206, 'average_precision': 0.7235024031612848, 'accuracy': 0.6894409937888198, 'balanced_accuracy': 0.6675824175824177, 'sensitivity': 0.5, 'specificity': 0.8351648351648352, 'log_loss': 0.5567374736855109, 'confusion_matrix': [[76, 15], [35, 35]]}
+online_pd xgboost_smote128_raw {'auroc': 0.7657770800627943, 'average_precision': 0.7242536134250499, 'accuracy': 0.6832298136645962, 'balanced_accuracy': 0.6620879120879121, 'sensitivity': 0.5, 'specificity': 0.8241758241758241, 'log_loss': 0.5551605528622395, 'confusion_matrix': [[75, 16], [35, 35]]}
+online_pd xgboost_smote128_pretrained {'auroc': 0.7662480376766091, 'average_precision': 0.723326243903617, 'accuracy': 0.6832298136645962, 'balanced_accuracy': 0.6620879120879121, 'sensitivity': 0.5, 'specificity': 0.8241758241758241, 'log_loss': 0.5571623523499043, 'confusion_matrix': [[75, 16], [35, 35]]}
+online_pd random_forest_none_raw {'auroc': 0.7816326530612245, 'average_precision': 0.7375406508564477, 'accuracy': 0.6832298136645962, 'balanced_accuracy': 0.6604395604395604, 'sensitivity': 0.4857142857142857, 'specificity': 0.8351648351648352, 'log_loss': 0.5418277881935363, 'confusion_matrix': [[76, 15], [36, 34]]}
+online_pd random_forest_none_pretrained {'auroc': 0.7792778649921508, 'average_precision': 0.7370057865386613, 'accuracy': 0.6956521739130435, 'balanced_accuracy': 0.6730769230769231, 'sensitivity': 0.5, 'specificity': 0.8461538461538461, 'log_loss': 0.5424471327713837, 'confusion_matrix': [[77, 14], [35, 35]]}
+online_pd random_forest_smote2_raw {'auroc': 0.7797488226059655, 'average_precision': 0.7356595490578501, 'accuracy': 0.6956521739130435, 'balanced_accuracy': 0.6763736263736264, 'sensitivity': 0.5285714285714286, 'specificity': 0.8241758241758241, 'log_loss': 0.5446733291492091, 'confusion_matrix': [[75, 16], [33, 37]]}
+online_pd random_forest_smote2_pretrained {'auroc': 0.7715855572998429, 'average_precision': 0.7295802740868493, 'accuracy': 0.6894409937888198, 'balanced_accuracy': 0.6692307692307692, 'sensitivity': 0.5142857142857142, 'specificity': 0.8241758241758241, 'log_loss': 0.5438157046865175, 'confusion_matrix': [[75, 16], [34, 36]]}
+touchscreen_pd node_smote128_raw {'auroc': 0.7166666666666667, 'average_precision': 0.8505329909741676, 'accuracy': 0.5909090909090909, 'balanced_accuracy': 0.5833333333333333, 'sensitivity': 0.6666666666666666, 'specificity': 0.5, 'log_loss': 1.0571673605170586, 'confusion_matrix': [[5, 5], [4, 8]]}
+online_pd random_forest_smote8_raw {'auroc': 0.7618524332810047, 'average_precision': 0.7214591836117161, 'accuracy': 0.6894409937888198, 'balanced_accuracy': 0.6675824175824177, 'sensitivity': 0.5, 'specificity': 0.8351648351648352, 'log_loss': 0.5535759863869175, 'confusion_matrix': [[76, 15], [35, 35]]}
+motor_pd node_smote128_raw {'auroc': 0.8402298850574712, 'average_precision': 0.8724840280700461, 'accuracy': 0.7288135593220338, 'balanced_accuracy': 0.728735632183908, 'sensitivity': 0.7333333333333333, 'specificity': 0.7241379310344828, 'log_loss': 0.5167271471787517, 'confusion_matrix': [[21, 8], [8, 22]]}
+online_pd random_forest_smote8_pretrained {'auroc': 0.7802197802197802, 'average_precision': 0.7353274270364518, 'accuracy': 0.6645962732919255, 'balanced_accuracy': 0.6423076923076922, 'sensitivity': 0.4714285714285714, 'specificity': 0.8131868131868132, 'log_loss': 0.5430015929577585, 'confusion_matrix': [[74, 17], [37, 33]]}
+motor_pd node_smote128_pretrained {'auroc': 0.7919540229885057, 'average_precision': 0.8467324720633209, 'accuracy': 0.7288135593220338, 'balanced_accuracy': 0.728735632183908, 'sensitivity': 0.7333333333333333, 'specificity': 0.7241379310344828, 'log_loss': 0.6358238655938695, 'confusion_matrix': [[21, 8], [8, 22]]}
+online_pd random_forest_smote32_raw {'auroc': 0.7520408163265306, 'average_precision': 0.7122560861678644, 'accuracy': 0.6708074534161491, 'balanced_accuracy': 0.6510989010989011, 'sensitivity': 0.5, 'specificity': 0.8021978021978022, 'log_loss': 0.5575379765771911, 'confusion_matrix': [[73, 18], [35, 35]]}
+online_pd tabnet_none_raw {'auroc': 0.7370486656200942, 'average_precision': 0.6794924164755191, 'accuracy': 0.7080745341614907, 'balanced_accuracy': 0.6906593406593406, 'sensitivity': 0.5571428571428572, 'specificity': 0.8241758241758241, 'log_loss': 0.6002481319736394, 'confusion_matrix': [[75, 16], [31, 39]]}
+online_pd tabnet_none_pretrained {'auroc': 0.7626373626373627, 'average_precision': 0.7063925572445973, 'accuracy': 0.6832298136645962, 'balanced_accuracy': 0.6653846153846155, 'sensitivity': 0.5285714285714286, 'specificity': 0.8021978021978022, 'log_loss': 0.5632227102697287, 'confusion_matrix': [[73, 18], [33, 37]]}
+online_pd tabnet_smote2_raw {'auroc': 0.7354788069073783, 'average_precision': 0.6912120065471573, 'accuracy': 0.6521739130434783, 'balanced_accuracy': 0.6395604395604395, 'sensitivity': 0.5428571428571428, 'specificity': 0.7362637362637363, 'log_loss': 0.5885274861070277, 'confusion_matrix': [[67, 24], [32, 38]]}
+online_pd tabnet_smote2_pretrained {'auroc': 0.7620094191522763, 'average_precision': 0.6953933993629049, 'accuracy': 0.6832298136645962, 'balanced_accuracy': 0.6736263736263737, 'sensitivity': 0.6, 'specificity': 0.7472527472527473, 'log_loss': 0.5942118514175613, 'confusion_matrix': [[68, 23], [28, 42]]}
+online_pd tabnet_smote8_raw {'auroc': 0.7788069073783359, 'average_precision': 0.7059212163398552, 'accuracy': 0.6770186335403726, 'balanced_accuracy': 0.6664835164835166, 'sensitivity': 0.5857142857142857, 'specificity': 0.7472527472527473, 'log_loss': 0.580999607371653, 'confusion_matrix': [[68, 23], [29, 41]]}
+online_pd random_forest_smote32_pretrained {'auroc': 0.7562009419152276, 'average_precision': 0.7220482309109328, 'accuracy': 0.6770186335403726, 'balanced_accuracy': 0.6532967032967033, 'sensitivity': 0.4714285714285714, 'specificity': 0.8351648351648352, 'log_loss': 0.5475053992851823, 'confusion_matrix': [[76, 15], [37, 33]]}
+online_pd tabnet_smote8_pretrained {'auroc': 0.7733124018838304, 'average_precision': 0.6972731269677377, 'accuracy': 0.7018633540372671, 'balanced_accuracy': 0.6934065934065934, 'sensitivity': 0.6285714285714286, 'specificity': 0.7582417582417582, 'log_loss': 0.6045566098314805, 'confusion_matrix': [[69, 22], [26, 44]]}
+online_pd tabnet_smote32_raw {'auroc': 0.7540031397174255, 'average_precision': 0.7007857386146099, 'accuracy': 0.6832298136645962, 'balanced_accuracy': 0.6752747252747253, 'sensitivity': 0.6142857142857143, 'specificity': 0.7362637362637363, 'log_loss': 0.5908173342313492, 'confusion_matrix': [[67, 24], [27, 43]]}
+online_pd tabnet_smote32_pretrained {'auroc': 0.734065934065934, 'average_precision': 0.6777042293729333, 'accuracy': 0.6521739130434783, 'balanced_accuracy': 0.6445054945054945, 'sensitivity': 0.5857142857142857, 'specificity': 0.7032967032967034, 'log_loss': 0.6397358238437915, 'confusion_matrix': [[64, 27], [29, 41]]}
+online_pd random_forest_smote128_raw {'auroc': 0.7491365777080062, 'average_precision': 0.7019221733370562, 'accuracy': 0.6459627329192547, 'balanced_accuracy': 0.6258241758241758, 'sensitivity': 0.4714285714285714, 'specificity': 0.7802197802197802, 'log_loss': 0.5646015486182161, 'confusion_matrix': [[71, 20], [37, 33]]}
+online_pd node_none_raw {'auroc': 0.7541601255886969, 'average_precision': 0.7224538638932048, 'accuracy': 0.6894409937888198, 'balanced_accuracy': 0.6725274725274726, 'sensitivity': 0.5428571428571428, 'specificity': 0.8021978021978022, 'log_loss': 0.5676085062882225, 'confusion_matrix': [[73, 18], [32, 38]]}
+online_pd node_none_pretrained {'auroc': 0.7642072213500785, 'average_precision': 0.7129344781671687, 'accuracy': 0.7080745341614907, 'balanced_accuracy': 0.6923076923076923, 'sensitivity': 0.5714285714285714, 'specificity': 0.8131868131868132, 'log_loss': 0.5663365200228468, 'confusion_matrix': [[74, 17], [30, 40]]}
+online_pd node_smote2_raw {'auroc': 0.7723704866562009, 'average_precision': 0.7234533053701948, 'accuracy': 0.6770186335403726, 'balanced_accuracy': 0.6664835164835166, 'sensitivity': 0.5857142857142857, 'specificity': 0.7472527472527473, 'log_loss': 0.5572983940546484, 'confusion_matrix': [[68, 23], [29, 41]]}
+online_pd node_smote2_pretrained {'auroc': 0.7627943485086343, 'average_precision': 0.7133098168962988, 'accuracy': 0.7018633540372671, 'balanced_accuracy': 0.6901098901098901, 'sensitivity': 0.6, 'specificity': 0.7802197802197802, 'log_loss': 0.5747734407596368, 'confusion_matrix': [[71, 20], [28, 42]]}
+online_pd node_smote8_raw {'auroc': 0.7850863422291994, 'average_precision': 0.7266698437844414, 'accuracy': 0.7204968944099379, 'balanced_accuracy': 0.7098901098901098, 'sensitivity': 0.6285714285714286, 'specificity': 0.7912087912087912, 'log_loss': 0.560280078874207, 'confusion_matrix': [[72, 19], [26, 44]]}
+online_pd node_smote8_pretrained {'auroc': 0.756043956043956, 'average_precision': 0.7031344757092841, 'accuracy': 0.6459627329192547, 'balanced_accuracy': 0.6406593406593406, 'sensitivity': 0.6, 'specificity': 0.6813186813186813, 'log_loss': 0.5772512518176248, 'confusion_matrix': [[62, 29], [28, 42]]}
+online_pd random_forest_smote128_pretrained {'auroc': 0.7638147566718995, 'average_precision': 0.7255230527037461, 'accuracy': 0.6894409937888198, 'balanced_accuracy': 0.6659340659340659, 'sensitivity': 0.4857142857142857, 'specificity': 0.8461538461538461, 'log_loss': 0.5517080481808647, 'confusion_matrix': [[77, 14], [36, 34]]}
+online_pd node_smote32_raw {'auroc': 0.7546310832025118, 'average_precision': 0.7187148390991591, 'accuracy': 0.6583850931677019, 'balanced_accuracy': 0.65, 'sensitivity': 0.5857142857142857, 'specificity': 0.7142857142857143, 'log_loss': 0.5699929162038188, 'confusion_matrix': [[65, 26], [29, 41]]}
+online_pd node_smote32_pretrained {'auroc': 0.7491365777080063, 'average_precision': 0.6757631245836162, 'accuracy': 0.6770186335403726, 'balanced_accuracy': 0.6664835164835166, 'sensitivity': 0.5857142857142857, 'specificity': 0.7472527472527473, 'log_loss': 0.6161496718718883, 'confusion_matrix': [[68, 23], [29, 41]]}
+online_pd tabnet_smote128_raw {'auroc': 0.7194662480376766, 'average_precision': 0.6599636281008633, 'accuracy': 0.6459627329192547, 'balanced_accuracy': 0.639010989010989, 'sensitivity': 0.5857142857142857, 'specificity': 0.6923076923076923, 'log_loss': 0.6736434770915545, 'confusion_matrix': [[63, 28], [29, 41]]}
+online_pd tabnet_smote128_pretrained {'auroc': 0.7323390894819466, 'average_precision': 0.6700800765656116, 'accuracy': 0.6708074534161491, 'balanced_accuracy': 0.665934065934066, 'sensitivity': 0.6285714285714286, 'specificity': 0.7032967032967034, 'log_loss': 0.6931695355223352, 'confusion_matrix': [[64, 27], [26, 44]]}
+online_pd node_smote128_raw {'auroc': 0.7532182103610675, 'average_precision': 0.6838182604462979, 'accuracy': 0.6770186335403726, 'balanced_accuracy': 0.6714285714285715, 'sensitivity': 0.6285714285714286, 'specificity': 0.7142857142857143, 'log_loss': 0.6484129314355987, 'confusion_matrix': [[65, 26], [26, 44]]}
+online_pd node_smote128_pretrained {'auroc': 0.7464678178963893, 'average_precision': 0.6836171269964019, 'accuracy': 0.639751552795031, 'balanced_accuracy': 0.6318681318681318, 'sensitivity': 0.5714285714285714, 'specificity': 0.6923076923076923, 'log_loss': 0.6342972826740962, 'confusion_matrix': [[63, 28], [30, 40]]}

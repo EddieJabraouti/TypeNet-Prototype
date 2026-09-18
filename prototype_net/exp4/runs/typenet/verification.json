@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "models_checked": 200,
+  "selected_evaluations_checked": 250,
+  "checks": [
+    "all checkpoint and source hashes",
+    "unchanged frozen TypeNet and original TabNet checkpoint",
+    "participant-disjoint folds",
+    "fold-only scaler fit statistics",
+    "CV-only selections",
+    "100 neural epochs",
+    "saved predictions reproduce accuracy",
+    "mean and sample SD recomputed"
+  ],
+  "results_sha256": "83405acdfa38c50b776b0d7a23c995fe3b871288ea7f33057687403e79e5d9e2",
+  "fit_rows_range": [
+    1753,
+    7994
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "family": "xgboost",
+  "model_count": 25,
+  "baseline_participant": "nq:95",
+  "threshold": 0.5,
+  "batch_size": 50,
+  "keys_per_sequence": 50,
+  "synthetic_keystrokes": 0,
+  "cases": [
+    {
+      "source_participant": "nq:95",
+      "label": 0,
+      "role": "baseline"
+    },
+    {
+      "source_participant": "nq:95",
+      "label": 0,
+      "role": "control_followup"
+    },
+    {
+      "source_participant": "nq:11",
+      "label": 1,
+      "role": "pd_followup"
+    },
+    {
+      "source_participant": "nq:71",
+      "label": 1,
+      "role": "pd_followup"
+    },
+    {
+      "source_participant": "nq:73",
+      "label": 1,
+      "role": "pd_followup"
+    },
+    {
+      "source_participant": "nq:74",
+      "label": 1,
+      "role": "pd_followup"
+    },
+    {
+      "source_participant": "nq:75",
+      "label": 1,
+      "role": "pd_followup"
+    },
+    {
+      "source_participant": "nq:84",
+      "label": 1,
+      "role": "pd_followup"
+    },
+    {
+      "source_participant": "nq:86",
+      "label": 1,
+      "role": "pd_followup"
+    },
+    {
+      "source_participant": "nq:88",
+      "label": 1,
+      "role": "pd_followup"
+    }
+  ],
+  "selection": "All PD participants with 50 complete real windows; earliest available recordings, no selection by score",
+  "scenario": "Cross-person demonstration: control baseline followed by control and PD-labeled recordings",
+  "time_basis": "Payload timestamps encode simulated arrival order; source recording timestamps are retained separately",
+  "baseline_policy": "Fixed original control baseline; no fitting or threshold changes",
+  "checkpoint_freeze_sha256": "9ac03510eeeecddc14f8101ee652b20b45a7d1c9fce5d39ea1effe2096954ead",
+  "encoder_sha256": "04b7c11aa4a91fcf8f19027b09527c9962f31a1f4ec68913a0359b18e75696b7",
+  "input_sha256": "c13c920c6d728cfdc04d548ff166ca16145e1c0db2c7a53fbe6717d589fc883d",
+  "source_audit": {
+    "raw_events": 177513,
+    "excluded_nonprinting_or_unmapped_keys": 11667,
+    "invalid_events": 817,
+    "neutral_symbol_codes": 3348,
+    "retained_events": 165029
+  },
+  "source_hashes": {
+    "prototype_net/exp4/model.py": "f5bb30aead3c9505f3b4175713a7bda2322a79267c50d3c452f7fafe26b5e5ea",
+    "prototype_net/failed/exp3/node.py": "50bd349274857387542c9a31f9615e934b99cf40277f5a440a5cdb278cb2110d",
+    "prototype_net/failed/exp3/tabnet.py": "41ec16ae6f18307ed13491cf7cc363784e494b5605db967a60344bcbaaaa9fcc",
+    "paper_typenet/nn.py": "e186c4fb737f58636130ede3b5f87c54f95fc4edc5dca9746c9b4c98291fd17c"
+  }
+}

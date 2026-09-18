@@ -1,0 +1,24 @@
+[
+  {
+    "to": [
+      "d.gkoumas@qmul.ac.uk"
+    ],
+    "cc": [
+      "m.liakata@qmul.ac.uk"
+    ],
+    "source": "https://link.springer.com/article/10.1007/s10579-023-09718-4",
+    "subject": "Research data access inquiry: longitudinal keystrokes and cognitive assessments",
+    "body": "Dear Dr. Gkoumas and Professor Liakata,\n\nI am developing an exploratory research prototype that evaluates keystroke timing against directly assessed cognitive or motor status. Your paper, A longitudinal multi-modal dataset for dementia monitoring and diagnosis (2024), appears particularly relevant because of its repeated typing sessions and clinical assessments.\n\nWould access to deidentified keystroke timing records and linked cognitive assessments be possible for this purpose? Useful fields would include anonymous participant and session IDs, key press/release or inter-key timings, session timing relative to assessments, diagnosis, and available cognitive scores. Text content and direct personal identifiers are not needed for the timing-based analysis.\n\nThe comparison uses XGBoost, random forests, TabNet and NODE with participant-disjoint 70/10/20 splits. Model selection, preprocessing and augmentation are confined to training participants; validation and test are reserved for final evaluation. The public clinical cohorts available to this project are small, so independent validation data would be valuable.\n\nPlease let me know the appropriate application process and any affiliation, ethics, licensing or data-use requirements, or whether a related dataset is more suitable. This is an initial access inquiry, not a request to send restricted records by email.\n\nThank you for your time.\nBest regards,\nEyad Jabraouti",
+    "status": "ready to send; credibility criterion failed; awaiting sender account"
+  },
+  {
+    "to": [
+      "roophy@naver.com"
+    ],
+    "cc": [],
+    "source": "https://www.jmir.org/2024/1/e59247/authors",
+    "subject": "Research data access inquiry: MCI keystroke timing and cognitive scores",
+    "body": "Dear Dr. Park,\n\nI am developing an exploratory research prototype that evaluates keystroke timing against directly assessed cognitive or motor status. I read your 2024 JMIR study, Discriminant Power of Smartphone-Derived Keystroke Dynamics for Mild Cognitive Impairment Compared to a Neuropsychological Screening Test, together with its correction identifying the custom keyboard application.\n\nWould access to deidentified session-level hold/flight timing data, anonymous participant IDs, MCI/control labels and available cognitive scores such as MoCA-K be possible for this purpose? If raw timing events cannot be shared, participant-linked session summaries would also help. Text content and direct personal identifiers are not needed. We would treat smartphone and desktop typing as separate domains.\n\nThe comparison uses XGBoost, random forests, TabNet and NODE with participant-disjoint 70/10/20 splits. Model selection, preprocessing and augmentation are confined to training participants; validation and test are reserved for final evaluation. The public clinical cohorts available to this project are small, so independent validation data would be valuable.\n\nPlease let me know the appropriate application process and any affiliation, ethics, licensing or data-use requirements. This is an initial access inquiry, not a request to send restricted records by email.\n\nThank you for your time.\nBest regards,\nEyad Jabraouti",
+    "status": "ready to send; credibility criterion failed; awaiting sender account"
+  }
+]

@@ -1,0 +1,415 @@
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd dummy_none_raw {'auroc': 0.48850574712643674, 'average_precision': 0.5028248587570622, 'accuracy': 0.4915254237288136, 'balanced_accuracy': 0.4885057471264368, 'sensitivity': 0.6666666666666666, 'specificity': 0.3103448275862069, 'log_loss': 0.6933701223357043, 'confusion_matrix': [[9, 20], [10, 20]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd xgboost_none_raw {'auroc': 0.8379310344827586, 'average_precision': 0.8803944053560437, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7626436781609196, 'sensitivity': 0.7666666666666667, 'specificity': 0.7586206896551724, 'log_loss': 0.4897959379067443, 'confusion_matrix': [[22, 7], [7, 23]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd xgboost_rose700_raw {'auroc': 0.8126436781609195, 'average_precision': 0.850182468667925, 'accuracy': 0.711864406779661, 'balanced_accuracy': 0.7120689655172414, 'sensitivity': 0.7, 'specificity': 0.7241379310344828, 'log_loss': 0.5132380625235652, 'confusion_matrix': [[21, 8], [9, 21]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd xgboost_none_pretrained {'auroc': 0.8275862068965518, 'average_precision': 0.8694638856725956, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7626436781609196, 'sensitivity': 0.7666666666666667, 'specificity': 0.7586206896551724, 'log_loss': 0.4969534437654071, 'confusion_matrix': [[22, 7], [7, 23]]}
+motor_pd xgboost_rose700_pretrained {'auroc': 0.7885057471264368, 'average_precision': 0.8361721135991199, 'accuracy': 0.7457627118644068, 'balanced_accuracy': 0.746551724137931, 'sensitivity': 0.7, 'specificity': 0.7931034482758621, 'log_loss': 0.5274561758983125, 'confusion_matrix': [[23, 6], [9, 21]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd xgboost_rose7000_raw {'auroc': 0.7942528735632184, 'average_precision': 0.8392423339743468, 'accuracy': 0.6949152542372882, 'balanced_accuracy': 0.6959770114942528, 'sensitivity': 0.6333333333333333, 'specificity': 0.7586206896551724, 'log_loss': 0.5247226884855641, 'confusion_matrix': [[22, 7], [11, 19]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd xgboost_rose7000_pretrained {'auroc': 0.764367816091954, 'average_precision': 0.8213839105609396, 'accuracy': 0.6949152542372882, 'balanced_accuracy': 0.6965517241379311, 'sensitivity': 0.6, 'specificity': 0.7931034482758621, 'log_loss': 0.5386882905104078, 'confusion_matrix': [[23, 6], [12, 18]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd random_forest_none_raw {'auroc': 0.8229885057471265, 'average_precision': 0.8709827956863815, 'accuracy': 0.7288135593220338, 'balanced_accuracy': 0.728735632183908, 'sensitivity': 0.7333333333333333, 'specificity': 0.7241379310344828, 'log_loss': 0.4927967337026384, 'confusion_matrix': [[21, 8], [8, 22]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd random_forest_none_pretrained {'auroc': 0.8379310344827586, 'average_precision': 0.8737765589573862, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7626436781609196, 'sensitivity': 0.7666666666666667, 'specificity': 0.7586206896551724, 'log_loss': 0.4855752373318261, 'confusion_matrix': [[22, 7], [7, 23]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd random_forest_rose700_raw {'auroc': 0.7988505747126436, 'average_precision': 0.8446873795920035, 'accuracy': 0.7288135593220338, 'balanced_accuracy': 0.728735632183908, 'sensitivity': 0.7333333333333333, 'specificity': 0.7241379310344828, 'log_loss': 0.5205641969025954, 'confusion_matrix': [[21, 8], [8, 22]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd random_forest_rose700_pretrained {'auroc': 0.7827586206896551, 'average_precision': 0.8382887415912569, 'accuracy': 0.7457627118644068, 'balanced_accuracy': 0.7454022988505747, 'sensitivity': 0.7666666666666667, 'specificity': 0.7241379310344828, 'log_loss': 0.5278060488722445, 'confusion_matrix': [[21, 8], [7, 23]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd tabnet_none_raw {'auroc': 0.8149425287356322, 'average_precision': 0.8523283042406136, 'accuracy': 0.7627118644067796, 'balanced_accuracy': 0.7620689655172415, 'sensitivity': 0.8, 'specificity': 0.7241379310344828, 'log_loss': 0.5182654079683848, 'confusion_matrix': [[21, 8], [6, 24]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd tabnet_none_pretrained {'auroc': 0.8022988505747127, 'average_precision': 0.8406658037035035, 'accuracy': 0.711864406779661, 'balanced_accuracy': 0.7114942528735633, 'sensitivity': 0.7333333333333333, 'specificity': 0.6896551724137931, 'log_loss': 0.5356597200321982, 'confusion_matrix': [[20, 9], [8, 22]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd tabnet_rose700_raw {'auroc': 0.8528735632183908, 'average_precision': 0.8707360555419953, 'accuracy': 0.7457627118644068, 'balanced_accuracy': 0.7471264367816092, 'sensitivity': 0.6666666666666666, 'specificity': 0.8275862068965517, 'log_loss': 0.4645141444082237, 'confusion_matrix': [[24, 5], [10, 20]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd tabnet_rose700_pretrained {'auroc': 0.7850574712643679, 'average_precision': 0.8232868925788658, 'accuracy': 0.711864406779661, 'balanced_accuracy': 0.7114942528735633, 'sensitivity': 0.7333333333333333, 'specificity': 0.6896551724137931, 'log_loss': 0.5628181158285988, 'confusion_matrix': [[20, 9], [8, 22]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd random_forest_rose7000_raw {'auroc': 0.7942528735632185, 'average_precision': 0.8370862177213235, 'accuracy': 0.6949152542372882, 'balanced_accuracy': 0.6954022988505747, 'sensitivity': 0.6666666666666666, 'specificity': 0.7241379310344828, 'log_loss': 0.5363662865108164, 'confusion_matrix': [[21, 8], [10, 20]]}
+motor_pd node_none_raw {'auroc': 0.8011494252873563, 'average_precision': 0.8437595938829169, 'accuracy': 0.7457627118644068, 'balanced_accuracy': 0.7459770114942528, 'sensitivity': 0.7333333333333333, 'specificity': 0.7586206896551724, 'log_loss': 0.534199517110204, 'confusion_matrix': [[22, 7], [8, 22]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd node_none_pretrained {'auroc': 0.7781609195402298, 'average_precision': 0.8142061390803493, 'accuracy': 0.6949152542372882, 'balanced_accuracy': 0.6954022988505747, 'sensitivity': 0.6666666666666666, 'specificity': 0.7241379310344828, 'log_loss': 0.5680249887187412, 'confusion_matrix': [[21, 8], [10, 20]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd random_forest_rose7000_pretrained {'auroc': 0.7919540229885057, 'average_precision': 0.8294444919118055, 'accuracy': 0.7288135593220338, 'balanced_accuracy': 0.7298850574712643, 'sensitivity': 0.6666666666666666, 'specificity': 0.7931034482758621, 'log_loss': 0.5438547995736432, 'confusion_matrix': [[23, 6], [10, 20]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd node_rose700_raw {'auroc': 0.7977011494252874, 'average_precision': 0.8385662755345673, 'accuracy': 0.711864406779661, 'balanced_accuracy': 0.7120689655172414, 'sensitivity': 0.7, 'specificity': 0.7241379310344828, 'log_loss': 0.5289735399030808, 'confusion_matrix': [[21, 8], [9, 21]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd node_rose700_pretrained {'auroc': 0.7735632183908047, 'average_precision': 0.8255691970317961, 'accuracy': 0.711864406779661, 'balanced_accuracy': 0.7126436781609196, 'sensitivity': 0.6666666666666666, 'specificity': 0.7586206896551724, 'log_loss': 0.5485912836232274, 'confusion_matrix': [[22, 7], [10, 20]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd tabnet_rose7000_raw {'auroc': 0.7482758620689655, 'average_precision': 0.8010085053572279, 'accuracy': 0.6779661016949152, 'balanced_accuracy': 0.6781609195402298, 'sensitivity': 0.6666666666666666, 'specificity': 0.6896551724137931, 'log_loss': 0.620592287130174, 'confusion_matrix': [[20, 9], [10, 20]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd tabnet_rose7000_pretrained {'auroc': 0.8241379310344829, 'average_precision': 0.8683847693154069, 'accuracy': 0.7288135593220338, 'balanced_accuracy': 0.7298850574712643, 'sensitivity': 0.6666666666666666, 'specificity': 0.7931034482758621, 'log_loss': 0.5155090575985171, 'confusion_matrix': [[23, 6], [10, 20]]}
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: divide by zero encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: overflow encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/model.py:714: RuntimeWarning: invalid value encountered in matmul
+  candidates = x[chosen[pending]] + rng.normal(size=(len(pending), 7)) @ distribution[label]["factor"].T
+motor_pd node_rose7000_raw {'auroc': 0.8080459770114943, 'average_precision': 0.8375456351504134, 'accuracy': 0.6949152542372882, 'balanced_accuracy': 0.6965517241379311, 'sensitivity': 0.6, 'specificity': 0.7931034482758621, 'log_loss': 0.5163424541583919, 'confusion_matrix': [[23, 6], [12, 18]]}
+motor_pd node_rose7000_pretrained {'auroc': 0.786206896551724, 'average_precision': 0.8269576647415441, 'accuracy': 0.6949152542372882, 'balanced_accuracy': 0.6954022988505747, 'sensitivity': 0.6666666666666666, 'specificity': 0.7241379310344828, 'log_loss': 0.5382006979041356, 'confusion_matrix': [[21, 8], [10, 20]]}

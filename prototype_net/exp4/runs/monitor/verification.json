@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "primary_batch_shape": [
+    50,
+    128
+  ],
+  "primary_participants": 1,
+  "primary_baseline_and_followup_disjoint_keys": 5000,
+  "primary_participant_excluded_from_classifier_training": true,
+  "checks": [
+    "prior training and inference functions unchanged",
+    "frozen checkpoint hashes verified",
+    "fresh embeddings match saved matrices",
+    "classifier scores reproduce after restart",
+    "CLI baseline and follow-up reproduce class API",
+    "fixed baseline unchanged across updates",
+    "MMD and distances match independent sklearn/scipy computations",
+    "matrix row order does not change MMD",
+    "insufficient batches do not change state",
+    "duplicate, overlapping, malformed, out-of-order and wrong-user inputs rejected",
+    "printable-key and normalized-keycode inputs agree",
+    "four persisted stream updates using disjoint real 10-window test batches"
+  ],
+  "audit_sha256": "2f417d8b389e62a0be72c9fcb66fec4901805f709e4316d88f19041423def57e"
+}

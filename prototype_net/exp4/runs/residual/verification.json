@@ -1,0 +1,270 @@
+{
+  "passed": true,
+  "fits": 75,
+  "keys": 300,
+  "diagnostics": [
+    {
+      "fold": 1,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.4418448209762573
+    },
+    {
+      "fold": 1,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.6127240061759949
+    },
+    {
+      "fold": 2,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.5578055381774902
+    },
+    {
+      "fold": 2,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.10838024318218231
+    },
+    {
+      "fold": 3,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.659740686416626
+    },
+    {
+      "fold": 3,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.6539100408554077
+    },
+    {
+      "fold": 4,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.5070590376853943
+    },
+    {
+      "fold": 4,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.35123151540756226
+    },
+    {
+      "fold": 5,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.8339385986328125
+    },
+    {
+      "fold": 5,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.4856131076812744
+    },
+    {
+      "fold": 6,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.38525819778442383
+    },
+    {
+      "fold": 6,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.33931952714920044
+    },
+    {
+      "fold": 7,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.6798577308654785
+    },
+    {
+      "fold": 7,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.3915068507194519
+    },
+    {
+      "fold": 8,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.8655536770820618
+    },
+    {
+      "fold": 8,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.6810144186019897
+    },
+    {
+      "fold": 9,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.5555720925331116
+    },
+    {
+      "fold": 9,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.46157556772232056
+    },
+    {
+      "fold": 10,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.6291610598564148
+    },
+    {
+      "fold": 10,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.3070542812347412
+    },
+    {
+      "fold": 11,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.3569870889186859
+    },
+    {
+      "fold": 11,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.46429911255836487
+    },
+    {
+      "fold": 12,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.617158055305481
+    },
+    {
+      "fold": 12,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.46918821334838867
+    },
+    {
+      "fold": 13,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.4209814667701721
+    },
+    {
+      "fold": 13,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.3713248670101166
+    },
+    {
+      "fold": 14,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.7839508056640625
+    },
+    {
+      "fold": 14,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.4583383798599243
+    },
+    {
+      "fold": 15,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.6517497301101685
+    },
+    {
+      "fold": 15,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.6533560156822205
+    },
+    {
+      "fold": 16,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.5544771552085876
+    },
+    {
+      "fold": 16,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.5159176588058472
+    },
+    {
+      "fold": 17,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.299640417098999
+    },
+    {
+      "fold": 17,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.4942358136177063
+    },
+    {
+      "fold": 18,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.5131098031997681
+    },
+    {
+      "fold": 18,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.22424930334091187
+    },
+    {
+      "fold": 19,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.8549765348434448
+    },
+    {
+      "fold": 19,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.2425571084022522
+    },
+    {
+      "fold": 20,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.5559893250465393
+    },
+    {
+      "fold": 20,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.4852212071418762
+    },
+    {
+      "fold": 21,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.581972599029541
+    },
+    {
+      "fold": 21,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.7091717720031738
+    },
+    {
+      "fold": 22,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.7347204685211182
+    },
+    {
+      "fold": 22,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.26860201358795166
+    },
+    {
+      "fold": 23,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.6878202557563782
+    },
+    {
+      "fold": 23,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.4698103070259094
+    },
+    {
+      "fold": 24,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.562103807926178
+    },
+    {
+      "fold": 24,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.23409917950630188
+    },
+    {
+      "fold": 25,
+      "mode": "residual",
+      "training_baseline_zero_mean_probability_change": 0.7491027116775513
+    },
+    {
+      "fold": 25,
+      "mode": "late",
+      "training_baseline_zero_mean_probability_change": 0.725308358669281
+    }
+  ],
+  "checks": [
+    "original real follow-up embeddings and full same-person earlier baseline matrices",
+    "no overlap of raw baseline and follow-up events",
+    "same participant splits and 25 CV folds",
+    "all prior functions unchanged; all 25 fresh control checkpoints exactly reproduce previous NODE weights",
+    "all 75 preprocessing states fit only CV training follow-up rows; same transform applied to baseline",
+    "100 epochs and same optimizer update counts; attention/correction train jointly with NODE",
+    "trained adapters invariant to baseline row permutation; residual gates moved from zero",
+    "all 75 saved predictions reproduced from checkpoints",
+    "encoder, dataset and model hashes verified",
+    "accuracy/AUROC/sample SD and ensembles independently reproduced"
+  ],
+  "audit_sha256": "a706b5893128373451851800cbb509c612b8bd85ada4d9998cbfd1b240e72c88"
+}

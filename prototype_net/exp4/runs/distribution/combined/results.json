@@ -1,0 +1,2753 @@
+{
+  "counts": {
+    "train": {
+      "real_rows": 812,
+      "synthetic_rows": 7000,
+      "rows": 7812,
+      "source_people": 59
+    },
+    "validation": {
+      "real_rows": 134,
+      "synthetic_rows": 1000,
+      "rows": 1134,
+      "source_people": 9
+    },
+    "test": {
+      "real_rows": 231,
+      "synthetic_rows": 2000,
+      "rows": 2231,
+      "source_people": 17
+    }
+  },
+  "rows": [
+    {
+      "candidate": "dummy_none_raw",
+      "role": "validation",
+      "model": "dummy",
+      "augmentation": "none",
+      "representation": "raw",
+      "fitted_training_rows": 812,
+      "auroc": 0.5,
+      "average_precision": 0.5061728395061729,
+      "accuracy": 0.5061728395061729,
+      "balanced_accuracy": 0.5,
+      "sensitivity": 1.0,
+      "specificity": 0.0,
+      "log_loss": 0.6930815692316405,
+      "confusion_matrix": [
+        [
+          0,
+          560
+        ],
+        [
+          0,
+          574
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.5,
+        "average_precision": 0.4444444444444444,
+        "accuracy": 0.4444444444444444,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.6951742572778872,
+        "confusion_matrix": [
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.5,
+          0.5
+        ],
+        "ci975": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "candidate": "node_none_pretrained",
+      "role": "validation",
+      "model": "node",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "fitted_training_rows": 812,
+      "auroc": 0.6820495271279243,
+      "average_precision": 0.7753304427564607,
+      "accuracy": 0.5802469135802469,
+      "balanced_accuracy": 0.5811411149825785,
+      "sensitivity": 0.5087108013937283,
+      "specificity": 0.6535714285714286,
+      "log_loss": 0.6369303901091641,
+      "confusion_matrix": [
+        [
+          366,
+          194
+        ],
+        [
+          282,
+          292
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.65,
+        "average_precision": 0.75,
+        "accuracy": 0.5555555555555556,
+        "balanced_accuracy": 0.55,
+        "sensitivity": 0.5,
+        "specificity": 0.6,
+        "log_loss": 0.6045397527785294,
+        "confusion_matrix": [
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2,
+          1.0
+        ],
+        "ci975": [
+          0.15,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "node_none_raw",
+      "role": "validation",
+      "model": "node",
+      "augmentation": "none",
+      "representation": "raw",
+      "fitted_training_rows": 812,
+      "auroc": 0.6152345694375311,
+      "average_precision": 0.747660066510842,
+      "accuracy": 0.5670194003527337,
+      "balanced_accuracy": 0.5678789198606271,
+      "sensitivity": 0.49825783972125437,
+      "specificity": 0.6375,
+      "log_loss": 0.6911784886318065,
+      "confusion_matrix": [
+        [
+          357,
+          203
+        ],
+        [
+          288,
+          286
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.6,
+        "average_precision": 0.7321428571428572,
+        "accuracy": 0.5555555555555556,
+        "balanced_accuracy": 0.55,
+        "sensitivity": 0.5,
+        "specificity": 0.6,
+        "log_loss": 0.6655727786463946,
+        "confusion_matrix": [
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2,
+          1.0
+        ],
+        "ci975": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "node_rose7000_pretrained",
+      "role": "validation",
+      "model": "node",
+      "augmentation": "rose7000",
+      "representation": "pretrained",
+      "fitted_training_rows": 7812,
+      "auroc": 0.9134426331508213,
+      "average_precision": 0.9360861478057663,
+      "accuracy": 0.8447971781305115,
+      "balanced_accuracy": 0.8449912891986062,
+      "sensitivity": 0.8292682926829268,
+      "specificity": 0.8607142857142858,
+      "log_loss": 0.36845133598727076,
+      "confusion_matrix": [
+        [
+          482,
+          78
+        ],
+        [
+          98,
+          476
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.9500000000000001,
+        "average_precision": 0.95,
+        "accuracy": 0.8888888888888888,
+        "balanced_accuracy": 0.9,
+        "sensitivity": 1.0,
+        "specificity": 0.8,
+        "log_loss": 0.25936804623112397,
+        "confusion_matrix": [
+          [
+            4,
+            1
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.7975000000000002,
+          1.0
+        ],
+        "ci975": [
+          0.7,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "node_rose7000_raw",
+      "role": "validation",
+      "model": "node",
+      "augmentation": "rose7000",
+      "representation": "raw",
+      "fitted_training_rows": 7812,
+      "auroc": 0.9424091587854653,
+      "average_precision": 0.9503828860999619,
+      "accuracy": 0.8571428571428571,
+      "balanced_accuracy": 0.8577308362369338,
+      "sensitivity": 0.8101045296167247,
+      "specificity": 0.9053571428571429,
+      "log_loss": 0.3033716193246545,
+      "confusion_matrix": [
+        [
+          507,
+          53
+        ],
+        [
+          109,
+          465
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 1.0,
+        "average_precision": 1.0,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "log_loss": 0.23933681009515168,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "ci975": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "node_rose700_pretrained",
+      "role": "validation",
+      "model": "node",
+      "augmentation": "rose700",
+      "representation": "pretrained",
+      "fitted_training_rows": 1512,
+      "auroc": 0.8173811597809855,
+      "average_precision": 0.8467365527332121,
+      "accuracy": 0.7178130511463845,
+      "balanced_accuracy": 0.7205574912891985,
+      "sensitivity": 0.49825783972125437,
+      "specificity": 0.9428571428571428,
+      "log_loss": 0.4985429568675754,
+      "confusion_matrix": [
+        [
+          528,
+          32
+        ],
+        [
+          288,
+          286
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.8,
+        "average_precision": 0.8166666666666667,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.4625017061996084,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.4,
+          1.0
+        ],
+        "ci975": [
+          0.4,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "node_rose700_raw",
+      "role": "validation",
+      "model": "node",
+      "augmentation": "rose700",
+      "representation": "raw",
+      "fitted_training_rows": 1512,
+      "auroc": 0.7566108760577401,
+      "average_precision": 0.8073837953047148,
+      "accuracy": 0.7081128747795414,
+      "balanced_accuracy": 0.7107360627177701,
+      "sensitivity": 0.49825783972125437,
+      "specificity": 0.9232142857142858,
+      "log_loss": 0.5501563467752876,
+      "confusion_matrix": [
+        [
+          517,
+          43
+        ],
+        [
+          288,
+          286
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.75,
+        "average_precision": 0.7928571428571429,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5117161731707303,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.35,
+          1.0
+        ],
+        "ci975": [
+          0.25,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "random_forest_none_pretrained",
+      "role": "validation",
+      "model": "random_forest",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "fitted_training_rows": 812,
+      "auroc": 0.7584899203583872,
+      "average_precision": 0.8208105890467152,
+      "accuracy": 0.7019400352733686,
+      "balanced_accuracy": 0.703941637630662,
+      "sensitivity": 0.5418118466898955,
+      "specificity": 0.8660714285714286,
+      "log_loss": 0.5282557396064814,
+      "confusion_matrix": [
+        [
+          485,
+          75
+        ],
+        [
+          263,
+          311
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.8,
+        "average_precision": 0.8166666666666667,
+        "accuracy": 0.6666666666666666,
+        "balanced_accuracy": 0.65,
+        "sensitivity": 0.5,
+        "specificity": 0.8,
+        "log_loss": 0.48198767983315016,
+        "confusion_matrix": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.4,
+          1.0
+        ],
+        "ci975": [
+          0.4,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "random_forest_none_raw",
+      "role": "validation",
+      "model": "random_forest",
+      "augmentation": "none",
+      "representation": "raw",
+      "fitted_training_rows": 812,
+      "auroc": 0.7826281732205077,
+      "average_precision": 0.8321945135972562,
+      "accuracy": 0.691358024691358,
+      "balanced_accuracy": 0.6932926829268293,
+      "sensitivity": 0.5365853658536586,
+      "specificity": 0.85,
+      "log_loss": 0.49233581246458313,
+      "confusion_matrix": [
+        [
+          476,
+          84
+        ],
+        [
+          266,
+          308
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.85,
+        "average_precision": 0.8541666666666666,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.46839030405170146,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.5,
+          1.0
+        ],
+        "ci975": [
+          0.4,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "random_forest_rose7000_pretrained",
+      "role": "validation",
+      "model": "random_forest",
+      "augmentation": "rose7000",
+      "representation": "pretrained",
+      "fitted_training_rows": 7812,
+      "auroc": 0.8282198855151817,
+      "average_precision": 0.8695772397460494,
+      "accuracy": 0.7601410934744268,
+      "balanced_accuracy": 0.762979094076655,
+      "sensitivity": 0.5331010452961672,
+      "specificity": 0.9928571428571429,
+      "log_loss": 0.4432777202653318,
+      "confusion_matrix": [
+        [
+          556,
+          4
+        ],
+        [
+          268,
+          306
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.9,
+        "average_precision": 0.8875,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.397657890594233,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.6,
+          1.0
+        ],
+        "ci975": [
+          0.55,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "random_forest_rose7000_raw",
+      "role": "validation",
+      "model": "random_forest",
+      "augmentation": "rose7000",
+      "representation": "raw",
+      "fitted_training_rows": 7812,
+      "auroc": 0.7018308237929318,
+      "average_precision": 0.804039791481722,
+      "accuracy": 0.7301587301587301,
+      "balanced_accuracy": 0.7328179442508711,
+      "sensitivity": 0.5174216027874564,
+      "specificity": 0.9482142857142857,
+      "log_loss": 0.6039352611623471,
+      "confusion_matrix": [
+        [
+          531,
+          29
+        ],
+        [
+          277,
+          297
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.75,
+        "average_precision": 0.7928571428571429,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5102334380043307,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.35,
+          1.0
+        ],
+        "ci975": [
+          0.25,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "random_forest_rose700_pretrained",
+      "role": "validation",
+      "model": "random_forest",
+      "augmentation": "rose700",
+      "representation": "pretrained",
+      "fitted_training_rows": 1512,
+      "auroc": 0.7479436286709806,
+      "average_precision": 0.8135059955159865,
+      "accuracy": 0.7248677248677249,
+      "balanced_accuracy": 0.7275261324041812,
+      "sensitivity": 0.5121951219512195,
+      "specificity": 0.9428571428571428,
+      "log_loss": 0.5089851025167943,
+      "confusion_matrix": [
+        [
+          528,
+          32
+        ],
+        [
+          280,
+          294
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.7,
+        "average_precision": 0.7678571428571428,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.4705506167136487,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.25,
+          1.0
+        ],
+        "ci975": [
+          0.2,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "random_forest_rose700_raw",
+      "role": "validation",
+      "model": "random_forest",
+      "augmentation": "rose700",
+      "representation": "raw",
+      "fitted_training_rows": 1512,
+      "auroc": 0.7924496017919364,
+      "average_precision": 0.834396698242046,
+      "accuracy": 0.699294532627866,
+      "balanced_accuracy": 0.7017421602787457,
+      "sensitivity": 0.5034843205574913,
+      "specificity": 0.9,
+      "log_loss": 0.4993910545511026,
+      "confusion_matrix": [
+        [
+          504,
+          56
+        ],
+        [
+          285,
+          289
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.75,
+        "average_precision": 0.7928571428571429,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.4606221570046162,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.35,
+          1.0
+        ],
+        "ci975": [
+          0.25,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "tabnet_none_pretrained",
+      "role": "validation",
+      "model": "tabnet",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "fitted_training_rows": 812,
+      "auroc": 0.6912207565953211,
+      "average_precision": 0.7840339825202146,
+      "accuracy": 0.5952380952380952,
+      "balanced_accuracy": 0.5954268292682927,
+      "sensitivity": 0.5801393728222997,
+      "specificity": 0.6107142857142858,
+      "log_loss": 0.9528305247537654,
+      "confusion_matrix": [
+        [
+          342,
+          218
+        ],
+        [
+          241,
+          333
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.7,
+        "average_precision": 0.7678571428571428,
+        "accuracy": 0.5555555555555556,
+        "balanced_accuracy": 0.55,
+        "sensitivity": 0.5,
+        "specificity": 0.6,
+        "log_loss": 0.5919771616288396,
+        "confusion_matrix": [
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.25,
+          1.0
+        ],
+        "ci975": [
+          0.2,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "tabnet_none_raw",
+      "role": "validation",
+      "model": "tabnet",
+      "augmentation": "none",
+      "representation": "raw",
+      "fitted_training_rows": 812,
+      "auroc": 0.7388657292185166,
+      "average_precision": 0.7803030146896783,
+      "accuracy": 0.6225749559082893,
+      "balanced_accuracy": 0.6229094076655053,
+      "sensitivity": 0.5958188153310104,
+      "specificity": 0.65,
+      "log_loss": 0.873921988267634,
+      "confusion_matrix": [
+        [
+          364,
+          196
+        ],
+        [
+          232,
+          342
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.8,
+        "average_precision": 0.8166666666666667,
+        "accuracy": 0.5555555555555556,
+        "balanced_accuracy": 0.55,
+        "sensitivity": 0.5,
+        "specificity": 0.6,
+        "log_loss": 0.6357690458521995,
+        "confusion_matrix": [
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.4,
+          1.0
+        ],
+        "ci975": [
+          0.4,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "tabnet_rose7000_pretrained",
+      "role": "validation",
+      "model": "tabnet",
+      "augmentation": "rose7000",
+      "representation": "pretrained",
+      "fitted_training_rows": 7812,
+      "auroc": 0.8554162518666003,
+      "average_precision": 0.8778056649308279,
+      "accuracy": 0.7522045855379189,
+      "balanced_accuracy": 0.7529181184668989,
+      "sensitivity": 0.6951219512195121,
+      "specificity": 0.8107142857142857,
+      "log_loss": 0.633142201323221,
+      "confusion_matrix": [
+        [
+          454,
+          106
+        ],
+        [
+          175,
+          399
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.9,
+        "average_precision": 0.9166666666666666,
+        "accuracy": 0.8888888888888888,
+        "balanced_accuracy": 0.875,
+        "sensitivity": 0.75,
+        "specificity": 1.0,
+        "log_loss": 0.3688395772926277,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.6,
+          1.0
+        ],
+        "ci975": [
+          0.55,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "tabnet_rose7000_raw",
+      "role": "validation",
+      "model": "tabnet",
+      "augmentation": "rose7000",
+      "representation": "raw",
+      "fitted_training_rows": 7812,
+      "auroc": 0.8565548780487805,
+      "average_precision": 0.8699152359364469,
+      "accuracy": 0.7522045855379189,
+      "balanced_accuracy": 0.7524172473867596,
+      "sensitivity": 0.735191637630662,
+      "specificity": 0.7696428571428572,
+      "log_loss": 0.6545276371076627,
+      "confusion_matrix": [
+        [
+          431,
+          129
+        ],
+        [
+          152,
+          422
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.85,
+        "average_precision": 0.8541666666666666,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.775,
+        "sensitivity": 0.75,
+        "specificity": 0.8,
+        "log_loss": 0.3666794916276092,
+        "confusion_matrix": [
+          [
+            4,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.55,
+          1.0
+        ],
+        "ci975": [
+          0.45,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "tabnet_rose700_pretrained",
+      "role": "validation",
+      "model": "tabnet",
+      "augmentation": "rose700",
+      "representation": "pretrained",
+      "fitted_training_rows": 1512,
+      "auroc": 0.8675647088103534,
+      "average_precision": 0.8922438100654881,
+      "accuracy": 0.7504409171075838,
+      "balanced_accuracy": 0.7503702090592335,
+      "sensitivity": 0.7560975609756098,
+      "specificity": 0.7446428571428572,
+      "log_loss": 0.5489881051425152,
+      "confusion_matrix": [
+        [
+          417,
+          143
+        ],
+        [
+          140,
+          434
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.9,
+        "average_precision": 0.8875,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.775,
+        "sensitivity": 0.75,
+        "specificity": 0.8,
+        "log_loss": 0.3918144274441312,
+        "confusion_matrix": [
+          [
+            4,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.6,
+          1.0
+        ],
+        "ci975": [
+          0.55,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "tabnet_rose700_raw",
+      "role": "validation",
+      "model": "tabnet",
+      "augmentation": "rose700",
+      "representation": "raw",
+      "fitted_training_rows": 1512,
+      "auroc": 0.7245053509208561,
+      "average_precision": 0.8006565242007753,
+      "accuracy": 0.6393298059964727,
+      "balanced_accuracy": 0.6401567944250871,
+      "sensitivity": 0.573170731707317,
+      "specificity": 0.7071428571428572,
+      "log_loss": 0.900863041459852,
+      "confusion_matrix": [
+        [
+          396,
+          164
+        ],
+        [
+          245,
+          329
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.7,
+        "average_precision": 0.775,
+        "accuracy": 0.6666666666666666,
+        "balanced_accuracy": 0.65,
+        "sensitivity": 0.5,
+        "specificity": 0.8,
+        "log_loss": 0.5920477466405853,
+        "confusion_matrix": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.25,
+          1.0
+        ],
+        "ci975": [
+          0.2,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "xgboost_none_pretrained",
+      "role": "validation",
+      "model": "xgboost",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "fitted_training_rows": 812,
+      "auroc": 0.7345538825286213,
+      "average_precision": 0.8057410157964897,
+      "accuracy": 0.681657848324515,
+      "balanced_accuracy": 0.6837543554006968,
+      "sensitivity": 0.5139372822299652,
+      "specificity": 0.8535714285714285,
+      "log_loss": 0.5432746225318633,
+      "confusion_matrix": [
+        [
+          478,
+          82
+        ],
+        [
+          279,
+          295
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.75,
+        "average_precision": 0.7928571428571429,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5084610574352039,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.35,
+          1.0
+        ],
+        "ci975": [
+          0.25,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "xgboost_none_raw",
+      "role": "validation",
+      "model": "xgboost",
+      "augmentation": "none",
+      "representation": "raw",
+      "fitted_training_rows": 812,
+      "auroc": 0.7283038825286212,
+      "average_precision": 0.805119091333308,
+      "accuracy": 0.6798941798941799,
+      "balanced_accuracy": 0.6815331010452962,
+      "sensitivity": 0.5487804878048781,
+      "specificity": 0.8142857142857143,
+      "log_loss": 0.5389090944128856,
+      "confusion_matrix": [
+        [
+          456,
+          104
+        ],
+        [
+          259,
+          315
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.75,
+        "average_precision": 0.7928571428571429,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5138981024447653,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.35,
+          1.0
+        ],
+        "ci975": [
+          0.25,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "xgboost_rose7000_pretrained",
+      "role": "validation",
+      "model": "xgboost",
+      "augmentation": "rose7000",
+      "representation": "pretrained",
+      "fitted_training_rows": 7812,
+      "auroc": 0.6710894723743155,
+      "average_precision": 0.7767773076253544,
+      "accuracy": 0.7398589065255732,
+      "balanced_accuracy": 0.7429224738675958,
+      "sensitivity": 0.49477351916376305,
+      "specificity": 0.9910714285714286,
+      "log_loss": 0.5675152302024884,
+      "confusion_matrix": [
+        [
+          555,
+          5
+        ],
+        [
+          290,
+          284
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.7,
+        "average_precision": 0.7678571428571428,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.520965575598493,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.25,
+          1.0
+        ],
+        "ci975": [
+          0.2,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "xgboost_rose7000_raw",
+      "role": "validation",
+      "model": "xgboost",
+      "augmentation": "rose7000",
+      "representation": "raw",
+      "fitted_training_rows": 7812,
+      "auroc": 0.6441762070681931,
+      "average_precision": 0.7689523310315611,
+      "accuracy": 0.746031746031746,
+      "balanced_accuracy": 0.7491289198606272,
+      "sensitivity": 0.49825783972125437,
+      "specificity": 1.0,
+      "log_loss": 0.5902354320179947,
+      "confusion_matrix": [
+        [
+          560,
+          0
+        ],
+        [
+          288,
+          286
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.65,
+        "average_precision": 0.75,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.5384317674969156,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2,
+          1.0
+        ],
+        "ci975": [
+          0.15,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "xgboost_rose700_pretrained",
+      "role": "validation",
+      "model": "xgboost",
+      "augmentation": "rose700",
+      "representation": "pretrained",
+      "fitted_training_rows": 1512,
+      "auroc": 0.7480509581881534,
+      "average_precision": 0.821686575334398,
+      "accuracy": 0.7433862433862434,
+      "balanced_accuracy": 0.7464067944250872,
+      "sensitivity": 0.5017421602787456,
+      "specificity": 0.9910714285714286,
+      "log_loss": 0.5071391301685233,
+      "confusion_matrix": [
+        [
+          555,
+          5
+        ],
+        [
+          286,
+          288
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.75,
+        "average_precision": 0.7928571428571429,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.47622347008990334,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.35,
+          1.0
+        ],
+        "ci975": [
+          0.25,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "xgboost_rose700_raw",
+      "role": "validation",
+      "model": "xgboost",
+      "augmentation": "rose700",
+      "representation": "raw",
+      "fitted_training_rows": 1512,
+      "auroc": 0.7330621577899452,
+      "average_precision": 0.8102158794926926,
+      "accuracy": 0.699294532627866,
+      "balanced_accuracy": 0.7017857142857142,
+      "sensitivity": 0.5,
+      "specificity": 0.9035714285714286,
+      "log_loss": 0.5306594823501128,
+      "confusion_matrix": [
+        [
+          506,
+          54
+        ],
+        [
+          287,
+          287
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.75,
+        "average_precision": 0.7928571428571429,
+        "accuracy": 0.7777777777777778,
+        "balanced_accuracy": 0.75,
+        "sensitivity": 0.5,
+        "specificity": 1.0,
+        "log_loss": 0.4946283212907787,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.35,
+          1.0
+        ],
+        "ci975": [
+          0.25,
+          1.0
+        ]
+      }
+    },
+    {
+      "candidate": "dummy_none_raw",
+      "role": "test",
+      "model": "dummy",
+      "augmentation": "none",
+      "representation": "raw",
+      "fitted_training_rows": 812,
+      "auroc": 0.5,
+      "average_precision": 0.49663827879874495,
+      "accuracy": 0.49663827879874495,
+      "balanced_accuracy": 0.5,
+      "sensitivity": 1.0,
+      "specificity": 0.0,
+      "log_loss": 0.6934048055833825,
+      "confusion_matrix": [
+        [
+          0,
+          1123
+        ],
+        [
+          0,
+          1108
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.5,
+        "average_precision": 0.47058823529411764,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.5,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "log_loss": 0.6942879423406532,
+        "confusion_matrix": [
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            8
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.5,
+          0.5
+        ],
+        "ci975": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "candidate": "node_none_pretrained",
+      "role": "test",
+      "model": "node",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "fitted_training_rows": 812,
+      "auroc": 0.5042562630396276,
+      "average_precision": 0.5809108006806901,
+      "accuracy": 0.4571940833706858,
+      "balanced_accuracy": 0.458679449386153,
+      "sensitivity": 0.6796028880866426,
+      "specificity": 0.2377560106856634,
+      "log_loss": 0.8574500818083522,
+      "confusion_matrix": [
+        [
+          267,
+          856
+        ],
+        [
+          355,
+          753
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.4861111111111111,
+        "average_precision": 0.572275641025641,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.4861111111111111,
+        "sensitivity": 0.75,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.8519767706241426,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.16666666666666666,
+          0.7777777777777778
+        ],
+        "ci975": [
+          0.125,
+          0.8194444444444444
+        ]
+      }
+    },
+    {
+      "candidate": "node_none_raw",
+      "role": "test",
+      "model": "node",
+      "augmentation": "none",
+      "representation": "raw",
+      "fitted_training_rows": 812,
+      "auroc": 0.5243151884939451,
+      "average_precision": 0.6319241694288398,
+      "accuracy": 0.4639175257731959,
+      "balanced_accuracy": 0.4654062095148696,
+      "sensitivity": 0.6868231046931408,
+      "specificity": 0.2439893143365984,
+      "log_loss": 0.9216004998737888,
+      "confusion_matrix": [
+        [
+          274,
+          849
+        ],
+        [
+          347,
+          761
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.5,
+        "average_precision": 0.6560991704374057,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.4861111111111111,
+        "sensitivity": 0.75,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.9120383393852398,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.18055555555555555,
+          0.8055555555555556
+        ],
+        "ci975": [
+          0.125,
+          0.8611111111111112
+        ]
+      }
+    },
+    {
+      "candidate": "node_rose7000_pretrained",
+      "role": "test",
+      "model": "node",
+      "augmentation": "rose7000",
+      "representation": "pretrained",
+      "fitted_training_rows": 7812,
+      "auroc": 0.5399563122245403,
+      "average_precision": 0.6029917314310551,
+      "accuracy": 0.4894666069027342,
+      "balanced_accuracy": 0.490350675569243,
+      "sensitivity": 0.621841155234657,
+      "specificity": 0.358860195903829,
+      "log_loss": 1.3044239151028165,
+      "confusion_matrix": [
+        [
+          403,
+          720
+        ],
+        [
+          419,
+          689
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.5138888888888888,
+        "average_precision": 0.5699592074592075,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 1.0711731078433626,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2222222222222222,
+          0.7916666666666666
+        ],
+        "ci975": [
+          0.16666666666666666,
+          0.8333333333333334
+        ]
+      }
+    },
+    {
+      "candidate": "node_rose7000_raw",
+      "role": "test",
+      "model": "node",
+      "augmentation": "rose7000",
+      "representation": "raw",
+      "fitted_training_rows": 7812,
+      "auroc": 0.5999036393620749,
+      "average_precision": 0.6757028759848777,
+      "accuracy": 0.5396683101748095,
+      "balanced_accuracy": 0.5403256009078313,
+      "sensitivity": 0.6380866425992779,
+      "specificity": 0.44256455921638466,
+      "log_loss": 1.1100687766087831,
+      "confusion_matrix": [
+        [
+          497,
+          626
+        ],
+        [
+          401,
+          707
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.5833333333333334,
+        "average_precision": 0.6631944444444444,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.9392949914553907,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2777777777777778,
+          0.8472222222222222
+        ],
+        "ci975": [
+          0.2361111111111111,
+          0.875
+        ]
+      }
+    },
+    {
+      "candidate": "node_rose700_pretrained",
+      "role": "test",
+      "model": "node",
+      "augmentation": "rose700",
+      "representation": "pretrained",
+      "fitted_training_rows": 1512,
+      "auroc": 0.5816718691231262,
+      "average_precision": 0.630227614406605,
+      "accuracy": 0.4764679515912147,
+      "balanced_accuracy": 0.47742677716662757,
+      "sensitivity": 0.6200361010830325,
+      "specificity": 0.3348174532502226,
+      "log_loss": 0.8656897743851006,
+      "confusion_matrix": [
+        [
+          376,
+          747
+        ],
+        [
+          421,
+          687
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.5555555555555556,
+        "average_precision": 0.6139423076923076,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.847534960905846,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.25,
+          0.8333333333333334
+        ],
+        "ci975": [
+          0.20833333333333334,
+          0.875
+        ]
+      }
+    },
+    {
+      "candidate": "node_rose700_raw",
+      "role": "test",
+      "model": "node",
+      "augmentation": "rose700",
+      "representation": "raw",
+      "fitted_training_rows": 1512,
+      "auroc": 0.5971008226417763,
+      "average_precision": 0.6638048010987322,
+      "accuracy": 0.4495741819811744,
+      "balanced_accuracy": 0.45073672891397787,
+      "sensitivity": 0.6236462093862816,
+      "specificity": 0.2778272484416741,
+      "log_loss": 0.8662575936446308,
+      "confusion_matrix": [
+        [
+          312,
+          811
+        ],
+        [
+          417,
+          691
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.6111111111111112,
+        "average_precision": 0.6931089743589743,
+        "accuracy": 0.4117647058823529,
+        "balanced_accuracy": 0.4236111111111111,
+        "sensitivity": 0.625,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.8483974984803969,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2916666666666667,
+          0.8888888888888888
+        ],
+        "ci975": [
+          0.25,
+          0.9166666666666666
+        ]
+      }
+    },
+    {
+      "candidate": "random_forest_none_pretrained",
+      "role": "test",
+      "model": "random_forest",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "fitted_training_rows": 812,
+      "auroc": 0.6034566867371114,
+      "average_precision": 0.6534272921051001,
+      "accuracy": 0.5060510981622591,
+      "balanced_accuracy": 0.5069992059690553,
+      "sensitivity": 0.648014440433213,
+      "specificity": 0.3659839715048976,
+      "log_loss": 0.8967557328706779,
+      "confusion_matrix": [
+        [
+          411,
+          712
+        ],
+        [
+          390,
+          718
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.5833333333333334,
+        "average_precision": 0.6298153235653237,
+        "accuracy": 0.4117647058823529,
+        "balanced_accuracy": 0.4236111111111111,
+        "sensitivity": 0.625,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.8349189836522795,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2777777777777778,
+          0.8611111111111112
+        ],
+        "ci975": [
+          0.25,
+          0.8888888888888888
+        ]
+      }
+    },
+    {
+      "candidate": "random_forest_none_raw",
+      "role": "test",
+      "model": "random_forest",
+      "augmentation": "none",
+      "representation": "raw",
+      "fitted_training_rows": 812,
+      "auroc": 0.6182836876468716,
+      "average_precision": 0.6722223045716309,
+      "accuracy": 0.4818467055132228,
+      "balanced_accuracy": 0.4829564633154489,
+      "sensitivity": 0.648014440433213,
+      "specificity": 0.3178984861976848,
+      "log_loss": 0.8508593574058589,
+      "confusion_matrix": [
+        [
+          357,
+          766
+        ],
+        [
+          390,
+          718
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.6111111111111112,
+        "average_precision": 0.650400641025641,
+        "accuracy": 0.4117647058823529,
+        "balanced_accuracy": 0.4236111111111111,
+        "sensitivity": 0.625,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.7957609783851987,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.3055555555555556,
+          0.875
+        ],
+        "ci975": [
+          0.2638888888888889,
+          0.9027777777777778
+        ]
+      }
+    },
+    {
+      "candidate": "random_forest_rose7000_pretrained",
+      "role": "test",
+      "model": "random_forest",
+      "augmentation": "rose7000",
+      "representation": "pretrained",
+      "fitted_training_rows": 7812,
+      "auroc": 0.6289408205843683,
+      "average_precision": 0.677545338124551,
+      "accuracy": 0.5477364410578216,
+      "balanced_accuracy": 0.5485267029070534,
+      "sensitivity": 0.6660649819494585,
+      "specificity": 0.43098842386464825,
+      "log_loss": 0.8545905729401173,
+      "confusion_matrix": [
+        [
+          484,
+          639
+        ],
+        [
+          370,
+          738
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.6111111111111112,
+        "average_precision": 0.6465277777777778,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5347222222222222,
+        "sensitivity": 0.625,
+        "specificity": 0.4444444444444444,
+        "log_loss": 0.7895249695339234,
+        "confusion_matrix": [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.3190972222222222,
+          0.875
+        ],
+        "ci975": [
+          0.2637152777777778,
+          0.9166666666666666
+        ]
+      }
+    },
+    {
+      "candidate": "random_forest_rose7000_raw",
+      "role": "test",
+      "model": "random_forest",
+      "augmentation": "rose7000",
+      "representation": "raw",
+      "fitted_training_rows": 7812,
+      "auroc": 0.6109686373850343,
+      "average_precision": 0.6813722942510855,
+      "accuracy": 0.46615867324069926,
+      "balanced_accuracy": 0.4668608613467665,
+      "sensitivity": 0.5712996389891697,
+      "specificity": 0.3624220837043633,
+      "log_loss": 0.841720597320396,
+      "confusion_matrix": [
+        [
+          407,
+          716
+        ],
+        [
+          475,
+          633
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.6111111111111112,
+        "average_precision": 0.6931089743589743,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.793946243380711,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2916666666666667,
+          0.8888888888888888
+        ],
+        "ci975": [
+          0.25,
+          0.9166666666666666
+        ]
+      }
+    },
+    {
+      "candidate": "random_forest_rose700_pretrained",
+      "role": "test",
+      "model": "random_forest",
+      "augmentation": "rose700",
+      "representation": "pretrained",
+      "fitted_training_rows": 1512,
+      "auroc": 0.6700154466343697,
+      "average_precision": 0.6975516996336973,
+      "accuracy": 0.5454952935903182,
+      "balanced_accuracy": 0.5460835307695028,
+      "sensitivity": 0.6335740072202166,
+      "specificity": 0.45859305431878894,
+      "log_loss": 0.7776980192085657,
+      "confusion_matrix": [
+        [
+          515,
+          608
+        ],
+        [
+          406,
+          702
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.6527777777777778,
+        "average_precision": 0.6647779304029304,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.7375486329188073,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.3746527777777778,
+          0.8888888888888888
+        ],
+        "ci975": [
+          0.3194444444444444,
+          0.9305555555555556
+        ]
+      }
+    },
+    {
+      "candidate": "random_forest_rose700_raw",
+      "role": "test",
+      "model": "random_forest",
+      "augmentation": "rose700",
+      "representation": "raw",
+      "fitted_training_rows": 1512,
+      "auroc": 0.6570184138026367,
+      "average_precision": 0.6857340532215125,
+      "accuracy": 0.5392200806813088,
+      "balanced_accuracy": 0.5397176207361021,
+      "sensitivity": 0.6137184115523465,
+      "specificity": 0.4657168299198575,
+      "log_loss": 0.7805650152209263,
+      "confusion_matrix": [
+        [
+          523,
+          600
+        ],
+        [
+          428,
+          680
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.6527777777777778,
+        "average_precision": 0.6766826923076923,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.47916666666666663,
+        "sensitivity": 0.625,
+        "specificity": 0.3333333333333333,
+        "log_loss": 0.7434655319387931,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.3611111111111111,
+          0.9027777777777778
+        ],
+        "ci975": [
+          0.3194444444444444,
+          0.9305555555555556
+        ]
+      }
+    },
+    {
+      "candidate": "tabnet_none_pretrained",
+      "role": "test",
+      "model": "tabnet",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "fitted_training_rows": 812,
+      "auroc": 0.49231164267964544,
+      "average_precision": 0.5914879548530457,
+      "accuracy": 0.47557149260421333,
+      "balanced_accuracy": 0.4770185102436421,
+      "sensitivity": 0.6922382671480144,
+      "specificity": 0.26179875333926983,
+      "log_loss": 1.4222776208687333,
+      "confusion_matrix": [
+        [
+          294,
+          829
+        ],
+        [
+          341,
+          767
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.4583333333333333,
+        "average_precision": 0.5858173076923077,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.4861111111111111,
+        "sensitivity": 0.75,
+        "specificity": 0.2222222222222222,
+        "log_loss": 1.1284651217870783,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.1385416666666667,
+          0.7638888888888888
+        ],
+        "ci975": [
+          0.1111111111111111,
+          0.7916666666666666
+        ]
+      }
+    },
+    {
+      "candidate": "tabnet_none_raw",
+      "role": "test",
+      "model": "tabnet",
+      "augmentation": "none",
+      "representation": "raw",
+      "fitted_training_rows": 812,
+      "auroc": 0.5955955392820289,
+      "average_precision": 0.6190590848857063,
+      "accuracy": 0.5575974899148364,
+      "balanced_accuracy": 0.558466555866667,
+      "sensitivity": 0.6877256317689531,
+      "specificity": 0.42920747996438113,
+      "log_loss": 1.0303482937234556,
+      "confusion_matrix": [
+        [
+          482,
+          641
+        ],
+        [
+          346,
+          762
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.5694444444444444,
+        "average_precision": 0.628545066045066,
+        "accuracy": 0.5882352941176471,
+        "balanced_accuracy": 0.5972222222222222,
+        "sensitivity": 0.75,
+        "specificity": 0.4444444444444444,
+        "log_loss": 0.8492736647500435,
+        "confusion_matrix": [
+          [
+            4,
+            5
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.25,
+          0.8333333333333334
+        ],
+        "ci975": [
+          0.2222222222222222,
+          0.8611111111111112
+        ]
+      }
+    },
+    {
+      "candidate": "tabnet_rose7000_pretrained",
+      "role": "test",
+      "model": "tabnet",
+      "augmentation": "rose7000",
+      "representation": "pretrained",
+      "fitted_training_rows": 7812,
+      "auroc": 0.49075934432975105,
+      "average_precision": 0.5672568403607128,
+      "accuracy": 0.47736441057821605,
+      "balanced_accuracy": 0.47748544544493055,
+      "sensitivity": 0.4954873646209386,
+      "specificity": 0.4594835262689225,
+      "log_loss": 3.015369052518087,
+      "confusion_matrix": [
+        [
+          516,
+          607
+        ],
+        [
+          559,
+          549
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.45833333333333337,
+        "average_precision": 0.5489750445632798,
+        "accuracy": 0.35294117647058826,
+        "balanced_accuracy": 0.35416666666666663,
+        "sensitivity": 0.375,
+        "specificity": 0.3333333333333333,
+        "log_loss": 1.2900190674258112,
+        "confusion_matrix": [
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            3
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.16666666666666666,
+          0.75
+        ],
+        "ci975": [
+          0.1388888888888889,
+          0.7777777777777778
+        ]
+      }
+    },
+    {
+      "candidate": "tabnet_rose7000_raw",
+      "role": "test",
+      "model": "tabnet",
+      "augmentation": "rose7000",
+      "representation": "raw",
+      "fitted_training_rows": 7812,
+      "auroc": 0.4919861542863205,
+      "average_precision": 0.4752356237839117,
+      "accuracy": 0.4957418198117436,
+      "balanced_accuracy": 0.4960716363788331,
+      "sensitivity": 0.5451263537906137,
+      "specificity": 0.44701691896705253,
+      "log_loss": 2.6506679729361413,
+      "confusion_matrix": [
+        [
+          502,
+          621
+        ],
+        [
+          504,
+          604
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.4722222222222222,
+        "average_precision": 0.4773088023088023,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5347222222222222,
+        "sensitivity": 0.625,
+        "specificity": 0.4444444444444444,
+        "log_loss": 1.2139640140536565,
+        "confusion_matrix": [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.19444444444444445,
+          0.7638888888888888
+        ],
+        "ci975": [
+          0.16666666666666666,
+          0.8055555555555556
+        ]
+      }
+    },
+    {
+      "candidate": "tabnet_rose700_pretrained",
+      "role": "test",
+      "model": "tabnet",
+      "augmentation": "rose700",
+      "representation": "pretrained",
+      "fitted_training_rows": 1512,
+      "auroc": 0.6228847272809102,
+      "average_precision": 0.687525786334485,
+      "accuracy": 0.523980277902286,
+      "balanced_accuracy": 0.5249894718569073,
+      "sensitivity": 0.6750902527075813,
+      "specificity": 0.3748886910062333,
+      "log_loss": 1.2778793130959447,
+      "confusion_matrix": [
+        [
+          421,
+          702
+        ],
+        [
+          360,
+          748
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.6111111111111112,
+        "average_precision": 0.6885416666666666,
+        "accuracy": 0.47058823529411764,
+        "balanced_accuracy": 0.4861111111111111,
+        "sensitivity": 0.75,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.8936370599399543,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.3055555555555556,
+          0.875
+        ],
+        "ci975": [
+          0.25,
+          0.9027777777777778
+        ]
+      }
+    },
+    {
+      "candidate": "tabnet_rose700_raw",
+      "role": "test",
+      "model": "tabnet",
+      "augmentation": "rose700",
+      "representation": "raw",
+      "fitted_training_rows": 1512,
+      "auroc": 0.623623304647492,
+      "average_precision": 0.674662960979854,
+      "accuracy": 0.551322277005827,
+      "balanced_accuracy": 0.5514617241722951,
+      "sensitivity": 0.572202166064982,
+      "specificity": 0.5307212822796082,
+      "log_loss": 1.2314321656782337,
+      "confusion_matrix": [
+        [
+          596,
+          527
+        ],
+        [
+          474,
+          634
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.6111111111111112,
+        "average_precision": 0.636183954933955,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5277777777777778,
+        "sensitivity": 0.5,
+        "specificity": 0.5555555555555556,
+        "log_loss": 0.8329753197821262,
+        "confusion_matrix": [
+          [
+            5,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.3194444444444444,
+          0.875
+        ],
+        "ci975": [
+          0.2777777777777778,
+          0.8890625000000005
+        ]
+      }
+    },
+    {
+      "candidate": "xgboost_none_pretrained",
+      "role": "test",
+      "model": "xgboost",
+      "augmentation": "none",
+      "representation": "pretrained",
+      "fitted_training_rows": 812,
+      "auroc": 0.5575310781139997,
+      "average_precision": 0.6205775849424444,
+      "accuracy": 0.4625728372926939,
+      "balanced_accuracy": 0.4637389856335049,
+      "sensitivity": 0.6371841155234657,
+      "specificity": 0.2902938557435441,
+      "log_loss": 0.8263240917466416,
+      "confusion_matrix": [
+        [
+          326,
+          797
+        ],
+        [
+          402,
+          706
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.5555555555555556,
+        "average_precision": 0.6401057276057276,
+        "accuracy": 0.4117647058823529,
+        "balanced_accuracy": 0.4236111111111111,
+        "sensitivity": 0.625,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.8113744473393467,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2361111111111111,
+          0.8333333333333334
+        ],
+        "ci975": [
+          0.19444444444444445,
+          0.875
+        ]
+      }
+    },
+    {
+      "candidate": "xgboost_none_raw",
+      "role": "test",
+      "model": "xgboost",
+      "augmentation": "none",
+      "representation": "raw",
+      "fitted_training_rows": 812,
+      "auroc": 0.5729925804719823,
+      "average_precision": 0.620870952515572,
+      "accuracy": 0.4652622142536979,
+      "balanced_accuracy": 0.46644656686094177,
+      "sensitivity": 0.6425992779783394,
+      "specificity": 0.2902938557435441,
+      "log_loss": 0.8145893466559986,
+      "confusion_matrix": [
+        [
+          326,
+          797
+        ],
+        [
+          396,
+          712
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.5694444444444444,
+        "average_precision": 0.6457875457875457,
+        "accuracy": 0.4117647058823529,
+        "balanced_accuracy": 0.4236111111111111,
+        "sensitivity": 0.625,
+        "specificity": 0.2222222222222222,
+        "log_loss": 0.7979899463248717,
+        "confusion_matrix": [
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2638888888888889,
+          0.8472222222222222
+        ],
+        "ci975": [
+          0.2222222222222222,
+          0.875
+        ]
+      }
+    },
+    {
+      "candidate": "xgboost_rose7000_pretrained",
+      "role": "test",
+      "model": "xgboost",
+      "augmentation": "rose7000",
+      "representation": "pretrained",
+      "fitted_training_rows": 7812,
+      "auroc": 0.6120471692957555,
+      "average_precision": 0.6705517620801216,
+      "accuracy": 0.5159121470192739,
+      "balanced_accuracy": 0.516083145005481,
+      "sensitivity": 0.5415162454873647,
+      "specificity": 0.4906500445235975,
+      "log_loss": 0.7225832152311717,
+      "confusion_matrix": [
+        [
+          551,
+          572
+        ],
+        [
+          508,
+          600
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.625,
+        "average_precision": 0.7034188034188034,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5347222222222222,
+        "sensitivity": 0.625,
+        "specificity": 0.4444444444444444,
+        "log_loss": 0.6874473503236151,
+        "confusion_matrix": [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.3194444444444444,
+          0.8888888888888888
+        ],
+        "ci975": [
+          0.2777777777777778,
+          0.9027777777777778
+        ]
+      }
+    },
+    {
+      "candidate": "xgboost_rose7000_raw",
+      "role": "test",
+      "model": "xgboost",
+      "augmentation": "rose7000",
+      "representation": "raw",
+      "fitted_training_rows": 7812,
+      "auroc": 0.5809939692224605,
+      "average_precision": 0.6483664843034458,
+      "accuracy": 0.5078440161362617,
+      "balanced_accuracy": 0.5078579327549017,
+      "sensitivity": 0.509927797833935,
+      "specificity": 0.5057880676758683,
+      "log_loss": 0.7533487007085004,
+      "confusion_matrix": [
+        [
+          568,
+          555
+        ],
+        [
+          543,
+          565
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.5972222222222222,
+        "average_precision": 0.6938034188034188,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5347222222222222,
+        "sensitivity": 0.625,
+        "specificity": 0.4444444444444444,
+        "log_loss": 0.7185002734184242,
+        "confusion_matrix": [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2777777777777778,
+          0.875
+        ],
+        "ci975": [
+          0.2361111111111111,
+          0.8890625000000005
+        ]
+      }
+    },
+    {
+      "candidate": "xgboost_rose700_pretrained",
+      "role": "test",
+      "model": "xgboost",
+      "augmentation": "rose700",
+      "representation": "pretrained",
+      "fitted_training_rows": 1512,
+      "auroc": 0.5929269362942865,
+      "average_precision": 0.6577880318783995,
+      "accuracy": 0.49170775437023756,
+      "balanced_accuracy": 0.49208259529175014,
+      "sensitivity": 0.5478339350180506,
+      "specificity": 0.4363312555654497,
+      "log_loss": 0.740145365921801,
+      "confusion_matrix": [
+        [
+          490,
+          633
+        ],
+        [
+          501,
+          607
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.5972222222222223,
+        "average_precision": 0.669345238095238,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5347222222222222,
+        "sensitivity": 0.625,
+        "specificity": 0.4444444444444444,
+        "log_loss": 0.7215253660972983,
+        "confusion_matrix": [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2916666666666667,
+          0.8611111111111112
+        ],
+        "ci975": [
+          0.25,
+          0.9027777777777778
+        ]
+      }
+    },
+    {
+      "candidate": "xgboost_rose700_raw",
+      "role": "test",
+      "model": "xgboost",
+      "augmentation": "rose700",
+      "representation": "raw",
+      "fitted_training_rows": 1512,
+      "auroc": 0.5926022515760068,
+      "average_precision": 0.6439610281030099,
+      "accuracy": 0.4961900493052443,
+      "balanced_accuracy": 0.4968001678073495,
+      "sensitivity": 0.5875451263537906,
+      "specificity": 0.40605520926090827,
+      "log_loss": 0.7554987571492767,
+      "confusion_matrix": [
+        [
+          456,
+          667
+        ],
+        [
+          457,
+          651
+        ]
+      ],
+      "source_participant_metrics": {
+        "auroc": 0.5972222222222223,
+        "average_precision": 0.6714819902319903,
+        "accuracy": 0.5294117647058824,
+        "balanced_accuracy": 0.5347222222222222,
+        "sensitivity": 0.625,
+        "specificity": 0.4444444444444444,
+        "log_loss": 0.7352994558245393,
+        "confusion_matrix": [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "source_participant_uncertainty": {
+        "ci95": [
+          0.2916666666666667,
+          0.8611111111111112
+        ],
+        "ci975": [
+          0.2361111111111111,
+          0.8890625000000005
+        ]
+      }
+    }
+  ],
+  "seed": 9172026,
+  "threshold": 0.5,
+  "metric_unit": "Combined real and synthetic rows; uncertainty is reported only at source-participant level.",
+  "training": "Maximum-generation models already fitted these exact combined training rows. Other candidates retain their registered augmentation levels; no retraining or tuning.",
+  "provenance": {
+    "input_hashes": {
+      "synthetic_train_7000.npz": "b7b61d2ee945a29416553d5599e850ce434763e6255a025b2d6d992f226feaf1",
+      "motor_pd/validation_synthetic.npz": "04789b1a67a235d408807208b7b77eb966b02a1f24dd77185dc7d2015e392e47",
+      "motor_pd/test_synthetic.npz": "03d07c85a403351995f3818179354104fdc55084d95a5e5e8819653ad90551ce",
+      "motor_pd/validation_synthetic_predictions.npz": "9b9001a8ce51525adcf4be968cca7fc0a929c8113174f9bac07263676f5cba97",
+      "motor_pd/test_synthetic_predictions.npz": "29b9e0d136804daedcc8836fb51bc23478370cebd12861219cc6d43be99396d7",
+      "manifest.json": "bc0b5895a2c5971e387ac01aa972b3ea65d24a68e067e4fc301c1b585731d084",
+      "registration.json": "9fa00ae7f1843e12d79e0abe1468c0f214c5f0ae47aecb3740693a91669faa77",
+      "freeze.json": "a539732d0d9d9c53310d911935eaa23036cd1cebb32a6486ca1013f39988186d",
+      "comparison.json": "9e7ae0f7f95ac5eeaa885931af79eb02f81e615f7aa722c22dda79955617ef8a"
+    },
+    "dataset_sha256": "14dd4ef2529bb6a4901c971e4371c99af165757fc894a041e1058964a6d192d2",
+    "predictions_sha256": "67e51ea1b8b0d3a9c9f2ca87ffa1c076c85584ea6f8248b646154c16eb15bbc5",
+    "trained_source_hashes": {
+      "prototype_net/exp4/model.py": "ccbca53c6e51363668d1e820c9cf1bbcdd89302932329e92fb6b30d4a779b9be",
+      "prototype_net/failed/exp3/node.py": "50bd349274857387542c9a31f9615e934b99cf40277f5a440a5cdb278cb2110d",
+      "prototype_net/failed/exp3/tabnet.py": "41ec16ae6f18307ed13491cf7cc363784e494b5605db967a60344bcbaaaa9fcc"
+    },
+    "reporting_source_hashes": {
+      "prototype_net/exp4/model.py": "f5c4b23fddf8b1d1af91a3eb2a0a06c0f9459b0d7372da703543b251ac4daa5c",
+      "prototype_net/failed/exp3/node.py": "50bd349274857387542c9a31f9615e934b99cf40277f5a440a5cdb278cb2110d",
+      "prototype_net/failed/exp3/tabnet.py": "41ec16ae6f18307ed13491cf7cc363784e494b5605db967a60344bcbaaaa9fcc"
+    }
+  }
+}

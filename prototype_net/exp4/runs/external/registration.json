@@ -1,0 +1,171 @@
+{
+  "cohort": "Online English",
+  "label_source": "self-reported PD",
+  "seed": 9172026,
+  "threshold": 0.5,
+  "model_count": 25,
+  "models": [
+    {
+      "index": 1,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold01.joblib",
+      "sha256": "8cbbd5eee8a5764ae44108c4c47c871a67ba5341ce09b0233246a0f09426949b"
+    },
+    {
+      "index": 2,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold02.joblib",
+      "sha256": "1928caa7b37c7a34244e3ad1952d2a1b72fb9ff1da2777eec0d43f2165e37a36"
+    },
+    {
+      "index": 3,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold03.joblib",
+      "sha256": "f93d799457d9d03c106d5a526d3c09f6e38673ace796ac3758c88c071b0732cc"
+    },
+    {
+      "index": 4,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold04.joblib",
+      "sha256": "51cd63aea86a227ae80f0a09641002fefadfe2fff73e3ff62f94d45e07f29c20"
+    },
+    {
+      "index": 5,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold05.joblib",
+      "sha256": "5209a51d1eaeb21eca12bfc308a3238423372ef5cb4ff291eb6d79651a4a3c0c"
+    },
+    {
+      "index": 6,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold06.joblib",
+      "sha256": "9f6f762027c2c7f02a77277bbf49cbf87dc7b338144094f844f213e3a32d562f"
+    },
+    {
+      "index": 7,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold07.joblib",
+      "sha256": "49b2f31b1062f15617b7c5991106dd79174664477c016870f08e03e8cf0a565c"
+    },
+    {
+      "index": 8,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold08.joblib",
+      "sha256": "07f946c47ab1173f75441af688b29596360a26a1acfacf5e359c67b45f902121"
+    },
+    {
+      "index": 9,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold09.joblib",
+      "sha256": "cc6d1af235a1d07151a86cfd75880353b5c025aab4492e0c36dc65912669bbe8"
+    },
+    {
+      "index": 10,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold10.joblib",
+      "sha256": "69bd80209a3b3281cd1a0ba44aeb6652be5aa9f55c1cb6c4b2fe1bfc498490b5"
+    },
+    {
+      "index": 11,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold11.joblib",
+      "sha256": "4fe995493cf5f11f17b2b7a97b4a725878e5135a419277c5c3843d404e9ec5cf"
+    },
+    {
+      "index": 12,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold12.joblib",
+      "sha256": "2abdbaa7766d3651549055bb8e917a8747c213f595e2180214b6f22d116b6591"
+    },
+    {
+      "index": 13,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold13.joblib",
+      "sha256": "d0abf7a81f29fcb6b50d9ce3a583c4cc24a3dfefcfbafc026a2b8deb1cd14440"
+    },
+    {
+      "index": 14,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold14.joblib",
+      "sha256": "3bd3e342143741f2d8bb9ab711f181ac0b0674a48e9e2b1e00321e4cb7e1b350"
+    },
+    {
+      "index": 15,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold15.joblib",
+      "sha256": "cd137f7078c08801259ca126ba0021c3f1094636eed125aa92637e31f7ed6880"
+    },
+    {
+      "index": 16,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold16.joblib",
+      "sha256": "9b97ec8a1e1dc6d57d5c4a99eafb4a15d58092f94649f8aa59b1dd9aba3030c2"
+    },
+    {
+      "index": 17,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold17.joblib",
+      "sha256": "e33af2b64d9abdb8980e47f0ed28abd706ab3e530ce6604da9459af728b62e92"
+    },
+    {
+      "index": 18,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold18.joblib",
+      "sha256": "4f336cb28c02469634ba2d2e78f58bfde9fc635c076884de56164bda29f08db1"
+    },
+    {
+      "index": 19,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold19.joblib",
+      "sha256": "45f69dd4ceda35f84699290717b2580ee7522ec702ac75433afb70bd48574ef3"
+    },
+    {
+      "index": 20,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold20.joblib",
+      "sha256": "78e6fe0cdac3c168ce241e781a53e8d8b5760c8fbe5cccc364fb8d9905e23fca"
+    },
+    {
+      "index": 21,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold21.joblib",
+      "sha256": "f3de7481f79007580346de4509f2692ab991a43c718c02600b52f8305e48d4b7"
+    },
+    {
+      "index": 22,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold22.joblib",
+      "sha256": "1606091c14dd4e7f4066aff6c4ce621c91a6ba7f5262a1b4a47600d5ce5dfc22"
+    },
+    {
+      "index": 23,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold23.joblib",
+      "sha256": "79830eb6a9eda3ea4cfbe80949264a7b7d1fa004e1f9f746546c7fef95372a0a"
+    },
+    {
+      "index": 24,
+      "candidate": "node_0",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold24.joblib",
+      "sha256": "a27eb0fd5a80664416505ddb1d88bc54d9184d9f3683974f459f3a648c50d557"
+    },
+    {
+      "index": 25,
+      "candidate": "node_128",
+      "checkpoint": "prototype_net/exp4/runs/typenet/fold25.joblib",
+      "sha256": "313340022dba71e4aa26db95489d7e5b20027324e1c6b294c97ef44a54e2ed33"
+    }
+  ],
+  "clinical_freeze_sha256": "ce0df0825b50b5faf031a2bf1782952d002ebabd6f3e38357e8685b35482c7dc",
+  "encoder_sha256": "04b7c11aa4a91fcf8f19027b09527c9962f31a1f4ec68913a0359b18e75696b7",
+  "input_sha256": "db2166b5211b359c0bea4fb3057d8a41fecfbc98057fdc23c2f8fbe946984403",
+  "fitting": "none",
+  "selection": "none",
+  "aggregation": "mean sequences within participant; equal-weight 25-model ensemble secondary",
+  "source_hashes": {
+    "prototype_net/exp4/model.py": "770e6b40d34b030d117ab4c4e3ff70bcebf8e433e0f4ea903b0d998ef2a4fc9a",
+    "prototype_net/failed/exp3/node.py": "50bd349274857387542c9a31f9615e934b99cf40277f5a440a5cdb278cb2110d",
+    "prototype_net/failed/exp3/tabnet.py": "41ec16ae6f18307ed13491cf7cc363784e494b5605db967a60344bcbaaaa9fcc",
+    "paper_typenet/nn.py": "e186c4fb737f58636130ede3b5f87c54f95fc4edc5dca9746c9b4c98291fd17c"
+  }
+}
