@@ -1449,3 +1449,99 @@ event guards, save/restore, frozen encoder weights, order-invariant distances,
 and a large distribution shift that remains negative when the classifier score
 is below .5. The command-line saved-state example also exactly matches replay.
 Results, scores, histories and audit scripts are in `runs/baseline_monitor`.
+
+## Nested XGBoost tuning and baseline-distance gate
+
+The registered comparison in `runs/tuning` uses current XGBoost, tuned XGBoost,
+and that same tuned classifier with a baseline-distance gate. All arms evaluate
+identical real follow-up batches: 218 training participants/763 batches,
+31 validation participants/128 batches, and 62 test participants/230 batches.
+The first 300 keys form each participant's fixed personal reference. Fitting
+retains all 8,979 original real training sequences from 221 participants, including
+people without sufficient data for a baseline/follow-up pair. Frozen TypeNet
+coordinates remain the only classifier inputs. There is no synthetic data.
+
+Outer folds are the existing five repeats of five participant-disjoint folds.
+Each outer fit performs an inner five-fold participant split, then two grid stages:
+
+- Stage 1 (36 configurations): tree depth 1/2/3, trees 75/150/300, learning rate
+  .03/.1, minimum child weight 3/10. Other parameters retain original defaults.
+- Stage 2 (24 configurations around the selected first-stage configuration):
+  L2 penalty 1/10/30, L1 penalty 0/1, row sampling .8/1, column sampling .75/1.
+
+This is a bounded staged grid, not every combination of all eight parameters.
+Selection maximizes mean inner-validation participant AUROC, then balanced
+accuracy at .5; ties retain grid order. All preprocessing and equal-per-person
+training weights fit within the corresponding inner training participants.
+Every selected outer classifier is fitted afresh; the fixed-configuration control
+is also fitted afresh on the same outer training rows. The distance arm shares
+the tuned classifier to isolate the rule's effect. There are 7,500 inner fits
+and 50 outer fits. Seed is 9172026; inner split seed is seed + 1000 + outer index.
+
+Using the selected candidate's inner out-of-fold predictions, choose a score
+threshold from a nominal .30–.70 grid in .025 increments, rounded to two decimal
+places as recorded in `registration.json`, by participant balanced accuracy,
+breaking ties toward .5. Then test no gate, raw mean Euclidean distance, and
+distance divided by mean off-diagonal baseline distance. Each distance grid
+uses the .10/.25/.50/.75/.90/.95 quantiles of outer-training distances. Thresholds
+are never calculated from held-out validation/test distances. Choose the gate
+by inner-OOF participant balanced accuracy, then sensitivity, then candidate
+order (no gate first). The plain and gated arms use the same score threshold.
+
+A rejected batch receives a gated score of zero; an accepted batch retains its
+PD score. The batch flag compares that score with the selected score threshold.
+For participant metrics, average follow-up scores within each participant before
+thresholding. Gated AUROC ranks these gated scores; they are not calibrated
+probabilities. The fixed equal-weight ensemble averages the 25 fold scores and
+uses the mean selected score threshold, applying each fold's gate before averaging.
+All three arms also retain batch-level metrics. Accuracy, balanced accuracy,
+AUROC, sensitivity and specificity are reported with sample SD across outer folds.
+The same fixed validation/test people recur across the 25 models, so their SD is
+model variability, not an independent-population confidence interval.
+
+Literature checked before implementation: [TypeNet](https://arxiv.org/html/2101.05570v3)
+reports successful identity verification with Euclidean enrollment/query distance.
+That supports the distance mechanism, not a PD-progression interpretation or a
+transferred authentication threshold. [Nested CV](https://scikit-learn.org/stable/auto_examples/model_selection/plot_nested_cross_validation_iris.html)
+separates parameter selection from outer evaluation. This experiment uses PD/control
+labels, not verified clinical-transition labels; it tests the gate's utility for
+that classification task. Previously inspected holdouts are not presented as a
+new independent cohort. Existing model exports remain unchanged.
+
+```sh
+python3 -m prototype_net.exp4.baseline --phase tune-prepare --output prototype_net/exp4/runs/tuning
+python3 -m prototype_net.exp4.baseline --phase tune-train --output prototype_net/exp4/runs/tuning
+python3 -m prototype_net.exp4.baseline --phase tune-evaluate --output prototype_net/exp4/runs/tuning
+```
+
+Completed: all 7,500 inner search fits and 50 outer classifier fits. No test or
+outer-fold labels were used to choose parameters or thresholds. Participant-level
+results below are means ± sample SD across the 25 outer models, with mean AUROC.
+
+- Current XGBoost: outer CV **66.6% ± 5.3%, AUROC 0.717**;
+  validation **61.0% ± 2.9%, 0.698**; test **70.8% ± 2.0%, 0.724**.
+- Tuned XGBoost with its selected score threshold: outer CV **64.5% ± 4.8%, 0.712**;
+  validation **61.8% ± 4.4%, 0.696**; test **66.2% ± 3.1%, 0.730**.
+- Tuned XGBoost plus selected distance rule: outer CV **64.5% ± 4.8%, 0.713**;
+  validation **61.9% ± 4.7%, 0.695**; test **65.9% ± 3.6%, 0.725**.
+
+The gate search retained no gate in 24/25 folds. Fold 19 selected normalized
+distance >= 0.8728108154, with score threshold .40. The mean selected classifier
+threshold was .4516, ranging from .35 to .55. Compared with the current model,
+tuning raised mean test sensitivity from 59.0% to 63.6%, while specificity fell
+from 80.5% to 68.4%. This search did not improve outer-CV discrimination or test
+accuracy; the slightly higher test AUROC alone does not justify replacing the
+current model. Distance thresholding added no consistent benefit.
+
+Separate deployed-style equal-weight ensemble results on the same 62 test people:
+current **72.6% accuracy, AUROC 0.725**; tuned **69.4%, 0.732**; tuned plus distance
+**69.4%, 0.732**. Batch accuracies across the same 230 test batches were 73.0%,
+67.0%, and 67.0%, respectively. These ensemble scores are not the fold means.
+
+Independent verification passed: all 25 controls exactly matched the original
+classifiers; the selected five inner models per outer fold were refitted (125
+verification fits) and reproduced every stored OOF prediction; nested participant
+separation, train-only preprocessing, parameter/threshold selection, every outer
+and held-out prediction, gated scores and reported metrics were checked. Source,
+encoder, dataset and checkpoint hashes matched. The existing MVP exports remain
+unchanged. Results, frozen fold models and verification are in `runs/tuning`.

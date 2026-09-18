@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "outer_folds": 25,
+  "selected_inner_models_refitted": 125,
+  "nested_participant_splits_verified": true,
+  "selection_recomputed": true,
+  "train_only_preprocessing_verified": true,
+  "all_predictions_and_metrics_reproduced": true,
+  "current_controls_match_original_models": true,
+  "original_exports_unchanged": true,
+  "registration_sha256": "c54a94e0fcc388a75cf19f33cc98530a5e58630cdab4fc75b93d07f9940a9e6d",
+  "freeze_sha256": "cfdff938134e139722699f3212130caa788c3f4ba1ad69f34084dbe31d9edd55",
+  "predictions_sha256": "16063cf7f39cafe24eeb3729c5aa730e9f9a0be89986a187516a6fa2b608c9a5"
+}

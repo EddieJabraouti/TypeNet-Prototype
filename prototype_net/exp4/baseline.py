@@ -7,15 +7,19 @@ import json
 import math
 import tempfile
 import zipfile
+from collections import defaultdict
+from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
 import numpy as np
 import joblib
 import torch
 from threadpoolctl import threadpool_limits
+from sklearn.model_selection import ParameterGrid, StratifiedKFold
+from sklearn.metrics import roc_auc_score
 
-from prototype_net.exp4.model import (ROOT, ROLES, TypingClassifier, metrics,
-                                      sha256, source_hashes, write_json)
+from prototype_net.exp4.model import (ROOT, ROLES, SEED, TypingClassifier, fit_model,
+                                      predict, metrics, sha256, source_hashes, write_json)
 
 
 class PersonalMonitor(TypingClassifier):
@@ -329,9 +333,256 @@ def replay_baselines(out, baseline):
     print(json.dumps(aggregates, indent=2), flush=True)
 
 
+def tuning_metrics(y, scores, threshold):
+    positive = scores >= threshold
+    tp, tn = int(np.sum(positive & (y == 1))), int(np.sum(~positive & (y == 0)))
+    fp, fn = int(np.sum(positive & (y == 0))), int(np.sum(~positive & (y == 1)))
+    sensitivity, specificity = tp/(tp+fn), tn/(tn+fp)
+    return dict(accuracy=(tp+tn)/len(y), balanced_accuracy=(sensitivity+specificity)/2,
+                auroc=float(roc_auc_score(y, scores)), sensitivity=sensitivity, specificity=specificity,
+                confusion_matrix=[[tn, fp], [fn, tp]])
+
+
+def tuning_people(owners, labels, scores):
+    people, first, inverse = np.unique(owners, return_index=True, return_inverse=True)
+    values = np.bincount(inverse, weights=scores)/np.bincount(inverse)
+    return people, labels[first], values
+
+
+def tuning_batch_scores(model, x):
+    return predict(model, x.reshape(-1, 128)).reshape(len(x), 6).mean(1).astype(np.float64)
+
+
+def distance_gate(data, policy):
+    if policy["metric"] == "none":
+        return np.ones(len(data["batch_owner"]), dtype=bool)
+    return data[policy["metric"]] >= policy["threshold"]
+
+
+def prepare_tuning(out, run):
+    source = Path(__file__).parent / "runs/baseline_embeddings"
+    original = json.loads((run / "registration.json").read_text())
+    paired = json.loads((source / "registration.json").read_text())
+    if (original["features"] != 128 or original["augmentation"] != [0]
+            or sha256(run / "dataset.npz") != original["dataset_sha256"]
+            or sha256(source / "300/dataset.npz") != paired["scenarios"]["300"]["dataset_sha256"]
+            or original["encoder_sha256"] != paired["encoder_sha256"]
+            or sha256(ROOT / original["encoder"]) != original["encoder_sha256"]):
+        raise ValueError("Unexpected source data or encoder")
+    with np.load(run / "dataset.npz", allow_pickle=False) as cache:
+        original_data = {k: cache[k] for k in cache.files}
+    with np.load(source / "300/dataset.npz", allow_pickle=False) as cache:
+        data = {k: cache[k] for k in ("x", "owner", "batch", "y", "split", "lineage")}
+    if original_data["synthetic"].any() or len(np.unique(data["lineage"])) != data["lineage"].size:
+        raise ValueError("Synthetic or reused events")
+    batches = defaultdict(list)
+    for uid in np.unique(data["owner"]):
+        person = data["owner"] == uid
+        base = data["x"][person & (data["batch"] == 0)]
+        if base.shape != (6, 128):
+            raise ValueError("Invalid enrollment matrix")
+        for number in sorted(set(data["batch"][person]) - {0}):
+            mask = person & (data["batch"] == number)
+            role = str(data["split"][mask][0])
+            if uid not in original["splits"][role]:
+                raise ValueError("Participant split changed")
+            x = data["x"][mask]
+            distance = baseline_distance(base, x)
+            values = dict(batch_x=x, batch_owner=str(uid), batch_y=int(data["y"][mask][0]),
+                batch=int(number), split=role, distance=distance["embedding_distance"],
+                ratio=distance["embedding_distance_ratio"])
+            for key, value in values.items():
+                batches[key].append(value)
+    batches = {key: np.asarray(value) for key, value in batches.items()}
+    if not np.isfinite(batches["distance"]).all() or not np.isfinite(batches["ratio"]).all():
+        raise ValueError("Degenerate enrollment variability")
+    out.mkdir(parents=True, exist_ok=False)
+    training = {key: original_data[key][original_data["split"] == "train"] for key in ("x", "y", "owner")}
+    training.update({key: value[batches["split"] == "train"] for key, value in batches.items()})
+    holdout = {key: value[batches["split"] != "train"] for key, value in batches.items()}
+    np.savez_compressed(out / "train.npz", **training)
+    np.savez_compressed(out / "holdout.npz", **holdout)
+    registration = dict(seed=SEED, classifier_run=str(run.resolve()), folds=original["folds"],
+        original_registration_sha256=sha256(run / "registration.json"),
+        original_dataset_sha256=original["dataset_sha256"], paired_dataset_sha256=paired["scenarios"]["300"]["dataset_sha256"],
+        encoder=original["encoder"], encoder_sha256=original["encoder_sha256"],
+        source_hashes={**source_hashes(), "paper_typenet/nn.py": sha256(ROOT / "paper_typenet/nn.py")},
+        train_sha256=sha256(out / "train.npz"), holdout_sha256=sha256(out / "holdout.npz"),
+        stage1=dict(max_depth=[1, 2, 3], n_estimators=[75, 150, 300], learning_rate=[.03, .1], min_child_weight=[3, 10]),
+        stage2=dict(reg_lambda=[1, 10, 30], reg_alpha=[0, 1], subsample=[.8, 1.], colsample_bytree=[.75, 1.]),
+        inner_folds=5, inner_seed_offset=1000, score_thresholds=[round(v, 2) for v in np.arange(.3, .701, .025)],
+        distance_quantiles=[.1, .25, .5, .75, .9, .95],
+        selection="Two-stage grid: mean inner-validation participant AUROC, then balanced accuracy at .5, then grid order. No selection on outer CV or held-out validation/test.",
+        thresholds="Score threshold maximizes inner-OOF participant balanced accuracy; ties prefer .5. Distance rule maximizes same objective with fixed score threshold; ties prefer sensitivity then no gate.",
+        decision="Each 300-key follow-up score is zeroed if its distance fails the gate. Scores are averaged per participant before thresholding. Ungated PD score remains separately available.",
+        distance="Mean of 36 baseline/current Euclidean distances, or divided by mean of 30 off-diagonal baseline distances. Both thresholds use outer-training distance quantiles only.",
+        ensemble="Equal mean scores across 25 fold models, with mean of their selected score thresholds. Gated scores apply each model's own gate before averaging.",
+        arms=["current", "tuned", "tuned_distance"], synthetic=False, baseline_keys=300,
+        counts={role: dict(people=len(set(batches["batch_owner"][batches["split"] == role])),
+                          batches=int(np.sum(batches["split"] == role))) for role in ROLES},
+        training_people=len(set(training["owner"])), training_rows=len(training["x"]),
+        sources=["https://arxiv.org/html/2101.05570v3", "https://scikit-learn.org/stable/auto_examples/model_selection/plot_nested_cross_validation_iris.html"],
+        interpretation="PD/control labels, not labels of clinical deterioration. Fixed existing participants have been evaluated previously.")
+    write_json(out / "registration.json", registration)
+    with zipfile.ZipFile(out / "source.zip", "x", compression=zipfile.ZIP_DEFLATED) as archive:
+        for name in registration["source_hashes"]:
+            archive.write(ROOT / name, name)
+        archive.write(Path(__file__).with_name("README.md"), "README.md")
+    print(json.dumps(dict(counts=registration["counts"], training_people=registration["training_people"],
+                          inner_fits=25*5*(36+24), outer_fits=50)), flush=True)
+
+
+def tuning_fold(args):
+    out, index = args
+    torch.set_num_threads(1)
+    with threadpool_limits(limits=1):
+        reg = json.loads((out / "registration.json").read_text())
+        with np.load(out / "train.npz", allow_pickle=False) as cache:
+            data = {key: cache[key] for key in cache.files}
+        outer = reg["folds"][index]
+        people = np.asarray(outer["fit"])
+        labels = np.array([data["y"][np.flatnonzero(data["owner"] == uid)[0]] for uid in people])
+        fit_data = {key: value[np.isin(data["owner"], people)] for key, value in data.items() if key in ("x", "owner", "y")}
+        batches = {key: value[np.isin(data["batch_owner"], people)] for key, value in data.items() if key not in ("x", "owner", "y")}
+        inner, records = [], []
+        for fit, score in StratifiedKFold(5, shuffle=True, random_state=SEED+1000+index).split(people, labels):
+            inner.append(dict(fit=people[fit].tolist(), score=people[score].tolist()))
+        best = None
+        for stage in (1, 2):
+            anchor = {} if stage == 1 else best["parameters"]
+            stage_best = None
+            for number, parameters in enumerate(ParameterGrid(reg[f"stage{stage}"])):
+                parameters = {**anchor, **parameters}
+                oof = np.full(len(batches["batch_owner"]), np.nan)
+                scores = []
+                for fold in inner:
+                    train = np.isin(fit_data["owner"], fold["fit"])
+                    score = np.isin(batches["batch_owner"], fold["score"])
+                    model = fit_model("xgboost", fit_data["x"][train], fit_data["y"][train],
+                        fit_data["owner"][train], "classification", "none", 0, parameters=parameters)
+                    oof[score] = tuning_batch_scores(model, batches["batch_x"][score])
+                    _, y, prediction = tuning_people(batches["batch_owner"][score], batches["batch_y"][score], oof[score])
+                    scores.append(tuning_metrics(y, prediction, .5))
+                if not np.isfinite(oof).all():
+                    raise ValueError("Missing inner out-of-fold predictions")
+                record = dict(stage=stage, candidate=number, parameters=parameters,
+                    auroc=float(np.mean([s["auroc"] for s in scores])),
+                    balanced_accuracy=float(np.mean([s["balanced_accuracy"] for s in scores])))
+                records.append(record)
+                key = (record["auroc"], record["balanced_accuracy"], -number)
+                if stage_best is None or key > stage_best["key"]:
+                    stage_best = dict(key=key, parameters=parameters, oof=oof, record=record)
+            best = stage_best
+            print(json.dumps(dict(fold=index+1, stage=stage, inner_auroc=best["record"]["auroc"])), flush=True)
+        _, y, prediction = tuning_people(batches["batch_owner"], batches["batch_y"], best["oof"])
+        thresholds = [(tuning_metrics(y, prediction, t), t) for t in reg["score_thresholds"]]
+        chosen, threshold = max(thresholds, key=lambda item: (item[0]["balanced_accuracy"], -abs(item[1]-.5), -item[1]))
+        policies = [dict(metric="none", threshold=0.)]
+        for metric in ("distance", "ratio"):
+            policies.extend(dict(metric=metric, threshold=float(t)) for t in np.unique(np.quantile(batches[metric], reg["distance_quantiles"])))
+        gates = []
+        for policy in policies:
+            _, gate_y, gate_scores = tuning_people(batches["batch_owner"], batches["batch_y"], best["oof"]*distance_gate(batches, policy))
+            gates.append(dict(policy=policy, metrics=tuning_metrics(gate_y, gate_scores, threshold)))
+        selected = max(range(len(gates)), key=lambda i: (gates[i]["metrics"]["balanced_accuracy"], gates[i]["metrics"]["sensitivity"], -i))
+        policy = gates[selected]["policy"]
+        models = {"current": fit_model("xgboost", fit_data["x"], fit_data["y"], fit_data["owner"], "classification", "none", 0),
+                  "tuned": fit_model("xgboost", fit_data["x"], fit_data["y"], fit_data["owner"], "classification", "none", 0, parameters=best["parameters"])}
+        held = np.isin(data["batch_owner"], outer["score"])
+        outer_data = {key: value[held] for key, value in data.items() if key not in ("x", "owner", "y")}
+        predictions = {key: tuning_batch_scores(model, outer_data["batch_x"]) for key, model in models.items()}
+        predictions["tuned_distance"] = predictions["tuned"]*distance_gate(outer_data, policy)
+        cv = {}
+        for arm, scores in predictions.items():
+            _, y, values = tuning_people(outer_data["batch_owner"], outer_data["batch_y"], scores)
+            cv[arm] = tuning_metrics(y, values, .5 if arm == "current" else threshold)
+        path = out / f"fold{index+1:02d}.joblib"
+        if path.exists():
+            raise FileExistsError(path)
+        joblib.dump(dict(models=models, parameters=best["parameters"], threshold=threshold, policy=policy,
+            outer=outer, inner=inner, search=records, gates=gates, inner_oof=best["oof"],
+            inner_batch_owner=batches["batch_owner"], inner_batch=batches["batch"],
+            threshold_scores=[dict(threshold=t, **m) for m, t in thresholds], cv=cv,
+            outer_predictions=predictions, outer_batch_owner=outer_data["batch_owner"], outer_batch=outer_data["batch"],
+            registration_sha256=sha256(out / "registration.json")), path, compress=3)
+        return dict(index=index+1, sha256=sha256(path), cv=cv, parameters=best["parameters"], threshold=threshold, policy=policy)
+
+
+def verify_tuning(out):
+    reg = json.loads((out / "registration.json").read_text())
+    for name, digest in reg["source_hashes"].items():
+        if sha256(ROOT / name) != digest:
+            raise ValueError(f"Registered source changed: {name}")
+    if sha256(out / "train.npz") != reg["train_sha256"]:
+        raise ValueError("Training data changed")
+    return reg
+
+
+def train_tuning(out):
+    reg = verify_tuning(out)
+    if (out / "freeze.json").exists() or any(out.glob("fold*.joblib")):
+        raise FileExistsError("Training output already exists")
+    with ProcessPoolExecutor(max_workers=4) as pool:
+        records = list(pool.map(tuning_fold, [(out, i) for i in range(len(reg["folds"]))]))
+    verify_tuning(out)
+    write_json(out / "freeze.json", dict(registration_sha256=sha256(out / "registration.json"), models=records))
+
+
+def evaluate_tuning(out):
+    if (out / "results.json").exists() or (out / "predictions.npz").exists():
+        raise FileExistsError("Evaluation output already exists")
+    reg = verify_tuning(out)
+    freeze = json.loads((out / "freeze.json").read_text())
+    if freeze["registration_sha256"] != sha256(out / "registration.json") or sha256(out / "holdout.npz") != reg["holdout_sha256"]:
+        raise ValueError("Frozen protocol or held-out data changed")
+    with np.load(out / "holdout.npz", allow_pickle=False) as cache:
+        data = {key: cache[key] for key in cache.files}
+    predictions, thresholds, rows = {arm: [] for arm in reg["arms"]}, [], []
+    for record in freeze["models"]:
+        path = out / f"fold{record['index']:02d}.joblib"
+        if sha256(path) != record["sha256"]:
+            raise ValueError("Model changed after freeze")
+        bundle = joblib.load(path)
+        threshold = bundle["threshold"]
+        thresholds.append(threshold)
+        scores = {arm: tuning_batch_scores(model, data["batch_x"]) for arm, model in bundle["models"].items()}
+        scores["tuned_distance"] = scores["tuned"]*distance_gate(data, bundle["policy"])
+        for arm in reg["arms"]:
+            predictions[arm].append(scores[arm])
+            for role in ("validation", "test"):
+                mask = data["split"] == role
+                people, y, values = tuning_people(data["batch_owner"][mask], data["batch_y"][mask], scores[arm][mask])
+                t = .5 if arm == "current" else threshold
+                rows.append(dict(index=record["index"], arm=arm, role=role, people=len(people),
+                    **tuning_metrics(y, values, t), batch_metrics=tuning_metrics(data["batch_y"][mask], scores[arm][mask], t)))
+    predictions = {key: np.stack(value) for key, value in predictions.items()}
+    aggregates = []
+    for arm in reg["arms"]:
+        for role in ("cv", "validation", "test"):
+            group = [record["cv"][arm] for record in freeze["models"]] if role == "cv" else [r for r in rows if r["arm"] == arm and r["role"] == role]
+            aggregate = dict(arm=arm, role=role, models=len(group), **{m: dict(mean=float(np.mean([r[m] for r in group])),
+                sd=float(np.std([r[m] for r in group], ddof=1))) for m in ("accuracy", "balanced_accuracy", "auroc", "sensitivity", "specificity")})
+            if role != "cv":
+                mask = data["split"] == role
+                scores = predictions[arm].mean(0)[mask]
+                people, y, values = tuning_people(data["batch_owner"][mask], data["batch_y"][mask], scores)
+                t = .5 if arm == "current" else float(np.mean(thresholds))
+                aggregate.update(people=len(people), batches=int(mask.sum()), ensemble_threshold=t,
+                    ensemble=tuning_metrics(y, values, t), batch_ensemble=tuning_metrics(data["batch_y"][mask], scores, t))
+            aggregates.append(aggregate)
+    np.savez_compressed(out / "predictions.npz", **predictions, thresholds=np.asarray(thresholds),
+        owner=data["batch_owner"], batch=data["batch"], y=data["batch_y"], split=data["split"])
+    write_json(out / "results.json", dict(rows=rows, aggregates=aggregates, counts=reg["counts"],
+        freeze_sha256=sha256(out / "freeze.json"), predictions_sha256=sha256(out / "predictions.npz"),
+        selected_policies=[r["policy"] for r in freeze["models"]],
+        sd_definition="Sample SD across 25 outer-fold models, not 25 independent test populations. CV scores are from untouched outer folds.",
+        auroc_definition="For the distance arm, AUROC ranks gated scores (failed gates become zero); these are not calibrated probabilities."))
+    print(json.dumps(aggregates, indent=2), flush=True)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--phase", choices=("observe", "export", "replay"), required=True)
+    parser.add_argument("--phase", choices=("observe", "export", "replay", "tune-prepare", "tune-train", "tune-evaluate"), required=True)
     parser.add_argument("--run", type=Path, default=Path(__file__).parent / "runs/embeddings")
     parser.add_argument("--artifact", type=Path)
     parser.add_argument("--baseline-batches", type=int, default=1)
@@ -339,10 +590,19 @@ def main():
     parser.add_argument("--state", type=Path)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    if args.output.exists():
+    if args.output.exists() and args.phase not in ("tune-train", "tune-evaluate"):
         raise FileExistsError(args.output)
     torch.set_num_threads(1)
     with threadpool_limits(limits=1):
+        if args.phase == "tune-prepare":
+            prepare_tuning(args.output, args.run)
+            return
+        if args.phase == "tune-train":
+            train_tuning(args.output)
+            return
+        if args.phase == "tune-evaluate":
+            evaluate_tuning(args.output)
+            return
         if args.phase == "replay":
             if args.artifact:
                 parser.error("replay requires a registered --run")

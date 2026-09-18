@@ -1,0 +1,1805 @@
+{
+  "registration_sha256": "c54a94e0fcc388a75cf19f33cc98530a5e58630cdab4fc75b93d07f9940a9e6d",
+  "models": [
+    {
+      "index": 1,
+      "sha256": "2a02e4af0bf44fc1d6aa984d89f7c629a8c09ec962492fc2113e43f09a140010",
+      "cv": {
+        "current": {
+          "accuracy": 0.7111111111111111,
+          "balanced_accuracy": 0.7,
+          "auroc": 0.766,
+          "sensitivity": 0.6,
+          "specificity": 0.8,
+          "confusion_matrix": [
+            [
+              20,
+              5
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6888888888888889,
+          "balanced_accuracy": 0.7,
+          "auroc": 0.76,
+          "sensitivity": 0.8,
+          "specificity": 0.6,
+          "confusion_matrix": [
+            [
+              15,
+              10
+            ],
+            [
+              4,
+              16
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6888888888888889,
+          "balanced_accuracy": 0.7,
+          "auroc": 0.76,
+          "sensitivity": 0.8,
+          "specificity": 0.6,
+          "confusion_matrix": [
+            [
+              15,
+              10
+            ],
+            [
+              4,
+              16
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 2,
+        "min_child_weight": 3,
+        "n_estimators": 300,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 1,
+        "reg_lambda": 30,
+        "subsample": 1.0
+      },
+      "threshold": 0.38,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 2,
+      "sha256": "a12570e46cdc6384c461df62606469df693ec23ebc5a20f4398400dc9a8c67c3",
+      "cv": {
+        "current": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy": 0.6636363636363636,
+          "auroc": 0.7340909090909091,
+          "sensitivity": 0.6,
+          "specificity": 0.7272727272727273,
+          "confusion_matrix": [
+            [
+              16,
+              6
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6428571428571429,
+          "balanced_accuracy": 0.6477272727272727,
+          "auroc": 0.7363636363636364,
+          "sensitivity": 0.75,
+          "specificity": 0.5454545454545454,
+          "confusion_matrix": [
+            [
+              12,
+              10
+            ],
+            [
+              5,
+              15
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6428571428571429,
+          "balanced_accuracy": 0.6477272727272727,
+          "auroc": 0.7363636363636364,
+          "sensitivity": 0.75,
+          "specificity": 0.5454545454545454,
+          "confusion_matrix": [
+            [
+              12,
+              10
+            ],
+            [
+              5,
+              15
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 2,
+        "min_child_weight": 10,
+        "n_estimators": 75,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 0,
+        "reg_lambda": 30,
+        "subsample": 1.0
+      },
+      "threshold": 0.45,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 3,
+      "sha256": "60e42b533da6b2a4995bbabc89a39913cdb866035392e2344bf594965f240106",
+      "cv": {
+        "current": {
+          "accuracy": 0.7045454545454546,
+          "balanced_accuracy": 0.6916666666666667,
+          "auroc": 0.6937500000000001,
+          "sensitivity": 0.55,
+          "specificity": 0.8333333333333334,
+          "confusion_matrix": [
+            [
+              20,
+              4
+            ],
+            [
+              9,
+              11
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6818181818181818,
+          "balanced_accuracy": 0.6708333333333334,
+          "auroc": 0.6937500000000001,
+          "sensitivity": 0.55,
+          "specificity": 0.7916666666666666,
+          "confusion_matrix": [
+            [
+              19,
+              5
+            ],
+            [
+              9,
+              11
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6818181818181818,
+          "balanced_accuracy": 0.6708333333333334,
+          "auroc": 0.6937500000000001,
+          "sensitivity": 0.55,
+          "specificity": 0.7916666666666666,
+          "confusion_matrix": [
+            [
+              19,
+              5
+            ],
+            [
+              9,
+              11
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.03,
+        "max_depth": 2,
+        "min_child_weight": 3,
+        "n_estimators": 150,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0,
+        "reg_lambda": 10,
+        "subsample": 1.0
+      },
+      "threshold": 0.48,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 4,
+      "sha256": "e38c579b2178c2b4c34f5d45a43c989c19c2851709f5d7f339258c7edbc94831",
+      "cv": {
+        "current": {
+          "accuracy": 0.6590909090909091,
+          "balanced_accuracy": 0.6541666666666667,
+          "auroc": 0.73125,
+          "sensitivity": 0.6,
+          "specificity": 0.7083333333333334,
+          "confusion_matrix": [
+            [
+              17,
+              7
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6363636363636364,
+          "balanced_accuracy": 0.6375,
+          "auroc": 0.7125,
+          "sensitivity": 0.65,
+          "specificity": 0.625,
+          "confusion_matrix": [
+            [
+              15,
+              9
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6363636363636364,
+          "balanced_accuracy": 0.6375,
+          "auroc": 0.7125,
+          "sensitivity": 0.65,
+          "specificity": 0.625,
+          "confusion_matrix": [
+            [
+              15,
+              9
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "min_child_weight": 10,
+        "n_estimators": 300,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 0,
+        "reg_lambda": 1,
+        "subsample": 0.8
+      },
+      "threshold": 0.48,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 5,
+      "sha256": "dea22bed8824a4582d92b7d9985af21137b2cd4f9bcf473e24bc92760c89d794",
+      "cv": {
+        "current": {
+          "accuracy": 0.6744186046511628,
+          "balanced_accuracy": 0.6597826086956522,
+          "auroc": 0.7956521739130434,
+          "sensitivity": 0.45,
+          "specificity": 0.8695652173913043,
+          "confusion_matrix": [
+            [
+              20,
+              3
+            ],
+            [
+              11,
+              9
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6744186046511628,
+          "balanced_accuracy": 0.6728260869565217,
+          "auroc": 0.7804347826086957,
+          "sensitivity": 0.65,
+          "specificity": 0.6956521739130435,
+          "confusion_matrix": [
+            [
+              16,
+              7
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6744186046511628,
+          "balanced_accuracy": 0.6728260869565217,
+          "auroc": 0.7804347826086957,
+          "sensitivity": 0.65,
+          "specificity": 0.6956521739130435,
+          "confusion_matrix": [
+            [
+              16,
+              7
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "min_child_weight": 3,
+        "n_estimators": 150,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 1,
+        "reg_lambda": 1,
+        "subsample": 1.0
+      },
+      "threshold": 0.38,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 6,
+      "sha256": "6f975f0f6667212cc9321d6494f05910708f0654995c5d734d2c549126176ad0",
+      "cv": {
+        "current": {
+          "accuracy": 0.7045454545454546,
+          "balanced_accuracy": 0.7041666666666666,
+          "auroc": 0.79375,
+          "sensitivity": 0.7,
+          "specificity": 0.7083333333333334,
+          "confusion_matrix": [
+            [
+              17,
+              7
+            ],
+            [
+              6,
+              14
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.7045454545454546,
+          "balanced_accuracy": 0.7,
+          "auroc": 0.7895833333333334,
+          "sensitivity": 0.65,
+          "specificity": 0.75,
+          "confusion_matrix": [
+            [
+              18,
+              6
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.7045454545454546,
+          "balanced_accuracy": 0.7,
+          "auroc": 0.7895833333333334,
+          "sensitivity": 0.65,
+          "specificity": 0.75,
+          "confusion_matrix": [
+            [
+              18,
+              6
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "min_child_weight": 3,
+        "n_estimators": 300,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 1,
+        "reg_lambda": 30,
+        "subsample": 1.0
+      },
+      "threshold": 0.55,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 7,
+      "sha256": "84ff0fd397a05fa56dbeb8669e5ddf36b374664837391185e7cc4d52dc62462f",
+      "cv": {
+        "current": {
+          "accuracy": 0.6976744186046512,
+          "balanced_accuracy": 0.6945652173913044,
+          "auroc": 0.7717391304347826,
+          "sensitivity": 0.65,
+          "specificity": 0.7391304347826086,
+          "confusion_matrix": [
+            [
+              17,
+              6
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6511627906976745,
+          "balanced_accuracy": 0.6641304347826087,
+          "auroc": 0.7456521739130435,
+          "sensitivity": 0.85,
+          "specificity": 0.4782608695652174,
+          "confusion_matrix": [
+            [
+              11,
+              12
+            ],
+            [
+              3,
+              17
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6511627906976745,
+          "balanced_accuracy": 0.6641304347826087,
+          "auroc": 0.7456521739130435,
+          "sensitivity": 0.85,
+          "specificity": 0.4782608695652174,
+          "confusion_matrix": [
+            [
+              11,
+              12
+            ],
+            [
+              3,
+              17
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "min_child_weight": 3,
+        "n_estimators": 300,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 1,
+        "reg_lambda": 30,
+        "subsample": 0.8
+      },
+      "threshold": 0.35,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 8,
+      "sha256": "6845be528c7b107fab7bbfd37a773d91c1f315799413db5efb35d77bf02cf7d1",
+      "cv": {
+        "current": {
+          "accuracy": 0.6511627906976745,
+          "balanced_accuracy": 0.6413043478260869,
+          "auroc": 0.7,
+          "sensitivity": 0.5,
+          "specificity": 0.782608695652174,
+          "confusion_matrix": [
+            [
+              18,
+              5
+            ],
+            [
+              10,
+              10
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6046511627906976,
+          "balanced_accuracy": 0.6043478260869566,
+          "auroc": 0.7,
+          "sensitivity": 0.6,
+          "specificity": 0.6086956521739131,
+          "confusion_matrix": [
+            [
+              14,
+              9
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6046511627906976,
+          "balanced_accuracy": 0.6043478260869566,
+          "auroc": 0.7,
+          "sensitivity": 0.6,
+          "specificity": 0.6086956521739131,
+          "confusion_matrix": [
+            [
+              14,
+              9
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 2,
+        "min_child_weight": 10,
+        "n_estimators": 300,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 0,
+        "reg_lambda": 10,
+        "subsample": 0.8
+      },
+      "threshold": 0.43,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 9,
+      "sha256": "e7e4cde979e34c2bf724e1d976c9fd8ada006acd9d52856ef0bef82c2a909a5b",
+      "cv": {
+        "current": {
+          "accuracy": 0.6363636363636364,
+          "balanced_accuracy": 0.6125,
+          "auroc": 0.7145833333333333,
+          "sensitivity": 0.35,
+          "specificity": 0.875,
+          "confusion_matrix": [
+            [
+              21,
+              3
+            ],
+            [
+              13,
+              7
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6363636363636364,
+          "balanced_accuracy": 0.6125,
+          "auroc": 0.7416666666666666,
+          "sensitivity": 0.35,
+          "specificity": 0.875,
+          "confusion_matrix": [
+            [
+              21,
+              3
+            ],
+            [
+              13,
+              7
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6363636363636364,
+          "balanced_accuracy": 0.6125,
+          "auroc": 0.7416666666666666,
+          "sensitivity": 0.35,
+          "specificity": 0.875,
+          "confusion_matrix": [
+            [
+              21,
+              3
+            ],
+            [
+              13,
+              7
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "min_child_weight": 3,
+        "n_estimators": 300,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 1,
+        "reg_lambda": 10,
+        "subsample": 1.0
+      },
+      "threshold": 0.5,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 10,
+      "sha256": "7dce2692fd69b838c126f386714ded3259ac4b9869721c218331b15bfbf30b34",
+      "cv": {
+        "current": {
+          "accuracy": 0.6363636363636364,
+          "balanced_accuracy": 0.6208333333333333,
+          "auroc": 0.6916666666666667,
+          "sensitivity": 0.45,
+          "specificity": 0.7916666666666666,
+          "confusion_matrix": [
+            [
+              19,
+              5
+            ],
+            [
+              11,
+              9
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6363636363636364,
+          "balanced_accuracy": 0.6208333333333333,
+          "auroc": 0.6895833333333333,
+          "sensitivity": 0.45,
+          "specificity": 0.7916666666666666,
+          "confusion_matrix": [
+            [
+              19,
+              5
+            ],
+            [
+              11,
+              9
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6363636363636364,
+          "balanced_accuracy": 0.6208333333333333,
+          "auroc": 0.6895833333333333,
+          "sensitivity": 0.45,
+          "specificity": 0.7916666666666666,
+          "confusion_matrix": [
+            [
+              19,
+              5
+            ],
+            [
+              11,
+              9
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "min_child_weight": 3,
+        "n_estimators": 150,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0,
+        "reg_lambda": 1,
+        "subsample": 1.0
+      },
+      "threshold": 0.5,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 11,
+      "sha256": "ceb0f5385cc7fe2c9e21804bc97d85a7f441fea7bc7df7bbf6f16d66c1dadeaa",
+      "cv": {
+        "current": {
+          "accuracy": 0.6444444444444445,
+          "balanced_accuracy": 0.62,
+          "auroc": 0.7020000000000001,
+          "sensitivity": 0.4,
+          "specificity": 0.84,
+          "confusion_matrix": [
+            [
+              21,
+              4
+            ],
+            [
+              12,
+              8
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.5777777777777777,
+          "balanced_accuracy": 0.5700000000000001,
+          "auroc": 0.5760000000000001,
+          "sensitivity": 0.5,
+          "specificity": 0.64,
+          "confusion_matrix": [
+            [
+              16,
+              9
+            ],
+            [
+              10,
+              10
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.5777777777777777,
+          "balanced_accuracy": 0.5700000000000001,
+          "auroc": 0.5760000000000001,
+          "sensitivity": 0.5,
+          "specificity": 0.64,
+          "confusion_matrix": [
+            [
+              16,
+              9
+            ],
+            [
+              10,
+              10
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.03,
+        "max_depth": 1,
+        "min_child_weight": 3,
+        "n_estimators": 75,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 0,
+        "reg_lambda": 1,
+        "subsample": 1.0
+      },
+      "threshold": 0.48,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 12,
+      "sha256": "4d8bf647a3823bcb36f38911be27a488e1fb5668cd139b77f73d5bda4438850e",
+      "cv": {
+        "current": {
+          "accuracy": 0.6136363636363636,
+          "balanced_accuracy": 0.5916666666666667,
+          "auroc": 0.6583333333333334,
+          "sensitivity": 0.35,
+          "specificity": 0.8333333333333334,
+          "confusion_matrix": [
+            [
+              20,
+              4
+            ],
+            [
+              13,
+              7
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.5909090909090909,
+          "balanced_accuracy": 0.5791666666666667,
+          "auroc": 0.6708333333333333,
+          "sensitivity": 0.45,
+          "specificity": 0.7083333333333334,
+          "confusion_matrix": [
+            [
+              17,
+              7
+            ],
+            [
+              11,
+              9
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.5909090909090909,
+          "balanced_accuracy": 0.5791666666666667,
+          "auroc": 0.6708333333333333,
+          "sensitivity": 0.45,
+          "specificity": 0.7083333333333334,
+          "confusion_matrix": [
+            [
+              17,
+              7
+            ],
+            [
+              11,
+              9
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "min_child_weight": 3,
+        "n_estimators": 150,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 0,
+        "reg_lambda": 30,
+        "subsample": 1.0
+      },
+      "threshold": 0.43,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 13,
+      "sha256": "3cd04f023358281caa0ac950d45ae61c0d8d5d17e908d9d6020cd65625f66480",
+      "cv": {
+        "current": {
+          "accuracy": 0.7272727272727273,
+          "balanced_accuracy": 0.7166666666666667,
+          "auroc": 0.7833333333333333,
+          "sensitivity": 0.6,
+          "specificity": 0.8333333333333334,
+          "confusion_matrix": [
+            [
+              20,
+              4
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6590909090909091,
+          "balanced_accuracy": 0.6416666666666667,
+          "auroc": 0.7562500000000001,
+          "sensitivity": 0.45,
+          "specificity": 0.8333333333333334,
+          "confusion_matrix": [
+            [
+              20,
+              4
+            ],
+            [
+              11,
+              9
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6590909090909091,
+          "balanced_accuracy": 0.6416666666666667,
+          "auroc": 0.7562500000000001,
+          "sensitivity": 0.45,
+          "specificity": 0.8333333333333334,
+          "confusion_matrix": [
+            [
+              20,
+              4
+            ],
+            [
+              11,
+              9
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 2,
+        "min_child_weight": 10,
+        "n_estimators": 300,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0,
+        "reg_lambda": 10,
+        "subsample": 1.0
+      },
+      "threshold": 0.55,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 14,
+      "sha256": "23ee1532ab9e62bab90d650032fdc0f93309f1677c8bd41731144ef81a6288fa",
+      "cv": {
+        "current": {
+          "accuracy": 0.7441860465116279,
+          "balanced_accuracy": 0.741304347826087,
+          "auroc": 0.7217391304347827,
+          "sensitivity": 0.7,
+          "specificity": 0.782608695652174,
+          "confusion_matrix": [
+            [
+              18,
+              5
+            ],
+            [
+              6,
+              14
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6976744186046512,
+          "balanced_accuracy": 0.6978260869565217,
+          "auroc": 0.75,
+          "sensitivity": 0.7,
+          "specificity": 0.6956521739130435,
+          "confusion_matrix": [
+            [
+              16,
+              7
+            ],
+            [
+              6,
+              14
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6976744186046512,
+          "balanced_accuracy": 0.6978260869565217,
+          "auroc": 0.75,
+          "sensitivity": 0.7,
+          "specificity": 0.6956521739130435,
+          "confusion_matrix": [
+            [
+              16,
+              7
+            ],
+            [
+              6,
+              14
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "min_child_weight": 3,
+        "n_estimators": 150,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 1,
+        "reg_lambda": 1,
+        "subsample": 0.8
+      },
+      "threshold": 0.43,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 15,
+      "sha256": "4a4573f27496ae7fa9e5e80082d3b8d3f2781f33867836d8990ff9b1fdeebbe3",
+      "cv": {
+        "current": {
+          "accuracy": 0.5952380952380952,
+          "balanced_accuracy": 0.5954545454545455,
+          "auroc": 0.6886363636363636,
+          "sensitivity": 0.6,
+          "specificity": 0.5909090909090909,
+          "confusion_matrix": [
+            [
+              13,
+              9
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.5952380952380952,
+          "balanced_accuracy": 0.6,
+          "auroc": 0.6886363636363636,
+          "sensitivity": 0.7,
+          "specificity": 0.5,
+          "confusion_matrix": [
+            [
+              11,
+              11
+            ],
+            [
+              6,
+              14
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.5952380952380952,
+          "balanced_accuracy": 0.6,
+          "auroc": 0.6886363636363636,
+          "sensitivity": 0.7,
+          "specificity": 0.5,
+          "confusion_matrix": [
+            [
+              11,
+              11
+            ],
+            [
+              6,
+              14
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "min_child_weight": 10,
+        "n_estimators": 300,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 1,
+        "reg_lambda": 10,
+        "subsample": 0.8
+      },
+      "threshold": 0.4,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 16,
+      "sha256": "a42424363578d8862cc09ae3a807bec25923f56cfb523ffb6aacd417ad941bae",
+      "cv": {
+        "current": {
+          "accuracy": 0.6666666666666666,
+          "balanced_accuracy": 0.655,
+          "auroc": 0.726,
+          "sensitivity": 0.55,
+          "specificity": 0.76,
+          "confusion_matrix": [
+            [
+              19,
+              6
+            ],
+            [
+              9,
+              11
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6444444444444445,
+          "balanced_accuracy": 0.64,
+          "auroc": 0.736,
+          "sensitivity": 0.6,
+          "specificity": 0.68,
+          "confusion_matrix": [
+            [
+              17,
+              8
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6444444444444445,
+          "balanced_accuracy": 0.64,
+          "auroc": 0.736,
+          "sensitivity": 0.6,
+          "specificity": 0.68,
+          "confusion_matrix": [
+            [
+              17,
+              8
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 2,
+        "min_child_weight": 10,
+        "n_estimators": 75,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 1,
+        "reg_lambda": 1,
+        "subsample": 1.0
+      },
+      "threshold": 0.48,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 17,
+      "sha256": "fee2340b7aa3a1a0fe2007b03f3bfef4324be6da61ffb9bf2d0f9a8efa4d2c92",
+      "cv": {
+        "current": {
+          "accuracy": 0.7441860465116279,
+          "balanced_accuracy": 0.7380434782608696,
+          "auroc": 0.8195652173913043,
+          "sensitivity": 0.65,
+          "specificity": 0.8260869565217391,
+          "confusion_matrix": [
+            [
+              19,
+              4
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.7441860465116279,
+          "balanced_accuracy": 0.7380434782608696,
+          "auroc": 0.8217391304347826,
+          "sensitivity": 0.65,
+          "specificity": 0.8260869565217391,
+          "confusion_matrix": [
+            [
+              19,
+              4
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.7441860465116279,
+          "balanced_accuracy": 0.7380434782608696,
+          "auroc": 0.8217391304347826,
+          "sensitivity": 0.65,
+          "specificity": 0.8260869565217391,
+          "confusion_matrix": [
+            [
+              19,
+              4
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "min_child_weight": 3,
+        "n_estimators": 300,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0,
+        "reg_lambda": 1,
+        "subsample": 0.8
+      },
+      "threshold": 0.53,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 18,
+      "sha256": "59f1ce3286beb16580cafbfa74d154c7093756c7f595819f2be8210c7801dbd4",
+      "cv": {
+        "current": {
+          "accuracy": 0.5909090909090909,
+          "balanced_accuracy": 0.575,
+          "auroc": 0.6208333333333333,
+          "sensitivity": 0.4,
+          "specificity": 0.75,
+          "confusion_matrix": [
+            [
+              18,
+              6
+            ],
+            [
+              12,
+              8
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6136363636363636,
+          "balanced_accuracy": 0.6166666666666667,
+          "auroc": 0.64375,
+          "sensitivity": 0.65,
+          "specificity": 0.5833333333333334,
+          "confusion_matrix": [
+            [
+              14,
+              10
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6136363636363636,
+          "balanced_accuracy": 0.6166666666666667,
+          "auroc": 0.64375,
+          "sensitivity": 0.65,
+          "specificity": 0.5833333333333334,
+          "confusion_matrix": [
+            [
+              14,
+              10
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "min_child_weight": 10,
+        "n_estimators": 300,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 1,
+        "reg_lambda": 30,
+        "subsample": 1.0
+      },
+      "threshold": 0.4,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 19,
+      "sha256": "79c6f4640f19dc117fbcb168da43bd3993f474434e17aa59067ab41ea22311fc",
+      "cv": {
+        "current": {
+          "accuracy": 0.5813953488372093,
+          "balanced_accuracy": 0.5695652173913044,
+          "auroc": 0.6782608695652174,
+          "sensitivity": 0.4,
+          "specificity": 0.7391304347826086,
+          "confusion_matrix": [
+            [
+              17,
+              6
+            ],
+            [
+              12,
+              8
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.627906976744186,
+          "balanced_accuracy": 0.6293478260869565,
+          "auroc": 0.6804347826086956,
+          "sensitivity": 0.65,
+          "specificity": 0.6086956521739131,
+          "confusion_matrix": [
+            [
+              14,
+              9
+            ],
+            [
+              7,
+              13
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.627906976744186,
+          "balanced_accuracy": 0.6228260869565218,
+          "auroc": 0.6934782608695653,
+          "sensitivity": 0.55,
+          "specificity": 0.6956521739130435,
+          "confusion_matrix": [
+            [
+              16,
+              7
+            ],
+            [
+              9,
+              11
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.03,
+        "max_depth": 1,
+        "min_child_weight": 3,
+        "n_estimators": 300,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 1,
+        "reg_lambda": 1,
+        "subsample": 1.0
+      },
+      "threshold": 0.4,
+      "policy": {
+        "metric": "ratio",
+        "threshold": 0.8728108153957584
+      }
+    },
+    {
+      "index": 20,
+      "sha256": "ac3f1f948044e0d94cfec7b62c19e5306fcb4b4276bb9e67df5af5aa326807d5",
+      "cv": {
+        "current": {
+          "accuracy": 0.6046511627906976,
+          "balanced_accuracy": 0.5880434782608696,
+          "auroc": 0.6456521739130434,
+          "sensitivity": 0.35,
+          "specificity": 0.8260869565217391,
+          "confusion_matrix": [
+            [
+              19,
+              4
+            ],
+            [
+              13,
+              7
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.5813953488372093,
+          "balanced_accuracy": 0.5826086956521739,
+          "auroc": 0.6260869565217392,
+          "sensitivity": 0.6,
+          "specificity": 0.5652173913043478,
+          "confusion_matrix": [
+            [
+              13,
+              10
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.5813953488372093,
+          "balanced_accuracy": 0.5826086956521739,
+          "auroc": 0.6260869565217392,
+          "sensitivity": 0.6,
+          "specificity": 0.5652173913043478,
+          "confusion_matrix": [
+            [
+              13,
+              10
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.03,
+        "max_depth": 3,
+        "min_child_weight": 10,
+        "n_estimators": 300,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0,
+        "reg_lambda": 30,
+        "subsample": 1.0
+      },
+      "threshold": 0.4,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 21,
+      "sha256": "6c98bac3b86ac5007303e6ac4c75df30c141399423ab4df38496b306a0d3ecdc",
+      "cv": {
+        "current": {
+          "accuracy": 0.6818181818181818,
+          "balanced_accuracy": 0.675,
+          "auroc": 0.7375,
+          "sensitivity": 0.6,
+          "specificity": 0.75,
+          "confusion_matrix": [
+            [
+              18,
+              6
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.7045454545454546,
+          "balanced_accuracy": 0.7041666666666666,
+          "auroc": 0.7395833333333334,
+          "sensitivity": 0.7,
+          "specificity": 0.7083333333333334,
+          "confusion_matrix": [
+            [
+              17,
+              7
+            ],
+            [
+              6,
+              14
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.7045454545454546,
+          "balanced_accuracy": 0.7041666666666666,
+          "auroc": 0.7395833333333334,
+          "sensitivity": 0.7,
+          "specificity": 0.7083333333333334,
+          "confusion_matrix": [
+            [
+              17,
+              7
+            ],
+            [
+              6,
+              14
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "min_child_weight": 10,
+        "n_estimators": 300,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0,
+        "reg_lambda": 1,
+        "subsample": 0.8
+      },
+      "threshold": 0.48,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 22,
+      "sha256": "1472c18ccfcd23ccddb32343bb1fdcd4002553e7bfc5513c5ff7e120e0fb9db3",
+      "cv": {
+        "current": {
+          "accuracy": 0.627906976744186,
+          "balanced_accuracy": 0.6260869565217391,
+          "auroc": 0.5956521739130435,
+          "sensitivity": 0.6,
+          "specificity": 0.6521739130434783,
+          "confusion_matrix": [
+            [
+              15,
+              8
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.5813953488372093,
+          "balanced_accuracy": 0.5956521739130435,
+          "auroc": 0.6021739130434782,
+          "sensitivity": 0.8,
+          "specificity": 0.391304347826087,
+          "confusion_matrix": [
+            [
+              9,
+              14
+            ],
+            [
+              4,
+              16
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.5813953488372093,
+          "balanced_accuracy": 0.5956521739130435,
+          "auroc": 0.6021739130434782,
+          "sensitivity": 0.8,
+          "specificity": 0.391304347826087,
+          "confusion_matrix": [
+            [
+              9,
+              14
+            ],
+            [
+              4,
+              16
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.03,
+        "max_depth": 2,
+        "min_child_weight": 10,
+        "n_estimators": 300,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 1,
+        "reg_lambda": 10,
+        "subsample": 0.8
+      },
+      "threshold": 0.38,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 23,
+      "sha256": "701a91f822b198193a7f7aa07abcb8a3d0a22559bc8b32c31ad26b281aa1663d",
+      "cv": {
+        "current": {
+          "accuracy": 0.6363636363636364,
+          "balanced_accuracy": 0.625,
+          "auroc": 0.5979166666666668,
+          "sensitivity": 0.5,
+          "specificity": 0.75,
+          "confusion_matrix": [
+            [
+              18,
+              6
+            ],
+            [
+              10,
+              10
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6136363636363636,
+          "balanced_accuracy": 0.6041666666666667,
+          "auroc": 0.5958333333333333,
+          "sensitivity": 0.5,
+          "specificity": 0.7083333333333334,
+          "confusion_matrix": [
+            [
+              17,
+              7
+            ],
+            [
+              10,
+              10
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6136363636363636,
+          "balanced_accuracy": 0.6041666666666667,
+          "auroc": 0.5958333333333333,
+          "sensitivity": 0.5,
+          "specificity": 0.7083333333333334,
+          "confusion_matrix": [
+            [
+              17,
+              7
+            ],
+            [
+              10,
+              10
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.03,
+        "max_depth": 2,
+        "min_child_weight": 10,
+        "n_estimators": 300,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0,
+        "reg_lambda": 10,
+        "subsample": 1.0
+      },
+      "threshold": 0.45,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 24,
+      "sha256": "669c237260f7d77ae7bd721118c96bda33a09a662f9c0c597599481d712fbd16",
+      "cv": {
+        "current": {
+          "accuracy": 0.6511627906976745,
+          "balanced_accuracy": 0.6380434782608696,
+          "auroc": 0.7565217391304347,
+          "sensitivity": 0.45,
+          "specificity": 0.8260869565217391,
+          "confusion_matrix": [
+            [
+              19,
+              4
+            ],
+            [
+              11,
+              9
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.6046511627906976,
+          "balanced_accuracy": 0.591304347826087,
+          "auroc": 0.7695652173913043,
+          "sensitivity": 0.4,
+          "specificity": 0.782608695652174,
+          "confusion_matrix": [
+            [
+              18,
+              5
+            ],
+            [
+              12,
+              8
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.6046511627906976,
+          "balanced_accuracy": 0.591304347826087,
+          "auroc": 0.7695652173913043,
+          "sensitivity": 0.4,
+          "specificity": 0.782608695652174,
+          "confusion_matrix": [
+            [
+              18,
+              5
+            ],
+            [
+              12,
+              8
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "min_child_weight": 3,
+        "n_estimators": 300,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 0,
+        "reg_lambda": 10,
+        "subsample": 1.0
+      },
+      "threshold": 0.53,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    },
+    {
+      "index": 25,
+      "sha256": "9d0c3f6195307554385929b7262bd88b0811ab223899939412673795733544c1",
+      "cv": {
+        "current": {
+          "accuracy": 0.7954545454545454,
+          "balanced_accuracy": 0.7791666666666667,
+          "auroc": 0.7979166666666667,
+          "sensitivity": 0.6,
+          "specificity": 0.9583333333333334,
+          "confusion_matrix": [
+            [
+              23,
+              1
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        },
+        "tuned": {
+          "accuracy": 0.7272727272727273,
+          "balanced_accuracy": 0.7166666666666667,
+          "auroc": 0.7979166666666667,
+          "sensitivity": 0.6,
+          "specificity": 0.8333333333333334,
+          "confusion_matrix": [
+            [
+              20,
+              4
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        },
+        "tuned_distance": {
+          "accuracy": 0.7272727272727273,
+          "balanced_accuracy": 0.7166666666666667,
+          "auroc": 0.7979166666666667,
+          "sensitivity": 0.6,
+          "specificity": 0.8333333333333334,
+          "confusion_matrix": [
+            [
+              20,
+              4
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        }
+      },
+      "parameters": {
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "min_child_weight": 3,
+        "n_estimators": 75,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 1,
+        "reg_lambda": 10,
+        "subsample": 1.0
+      },
+      "threshold": 0.45,
+      "policy": {
+        "metric": "none",
+        "threshold": 0.0
+      }
+    }
+  ]
+}

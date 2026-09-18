@@ -1,18 +1,3 @@
-"""Evidence-calibrated, severity-conditioned TypeNet timing perturbations.
-
-Hold latency (HL) and press-to-press latency (PL) are perturbed on the log
-scale. Inter-key (IL) and release (RL) latencies are reconstructed to
-preserve the physical timing identities:
-
-    IL[t] = PL[t] - HL[t]
-    RL[t] = IL[t] + HL[t + 1]
-
-Motor variation is temporally correlated and bidirectional. Cognitive pauses
-are sparse, heavy-tailed, and more likely after word boundaries or correction
-keys. Half of participant profiles are speed-matched so a classifier cannot
-depend only on a global slowdown. Keycodes and zero padding are never changed.
-"""
-
 from __future__ import annotations
 
 import math
