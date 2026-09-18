@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "models": 25,
+  "batches": 1432,
+  "max_prediction_error": 0.0,
+  "history_rows": 2864,
+  "all_distances_recomputed": true,
+  "baseline_flags_independent_of_reference_size": true,
+  "metrics_recomputed": true,
+  "classifier_source_and_checkpoints_verified": true,
+  "scores_sha256": "9abb2485ce862a4b90a57ac84f3f4ea86b6588712132918c5f8121a4b980777e",
+  "history_sha256": "150ee6f882546596f7f0d522d4609c1fdb8dd47f17e3b7e8afe9b7cd0dc66313"
+}

@@ -1,0 +1,9 @@
+{
+  "raw_input_embedding_max_abs_error": 0.0,
+  "unique_events": 429600,
+  "restored_observation_matches": true,
+  "participant_splits_unchanged": true,
+  "labels_used_only_for_evaluation": true,
+  "registration_sha256": "bbf84625549f563f1b21424822ba71f7fdef85f03caf97942cca1d3ea3a06cad",
+  "scores_sha256": "9abb2485ce862a4b90a57ac84f3f4ea86b6588712132918c5f8121a4b980777e"
+}

@@ -1,9 +1,79 @@
 # Exp4: clinical keystroke benchmarks
 
-One modular `model.py`; all generated files live in `runs/`. The original runs
-reuse the TabNet and NODE architecture layers in `prototype_net/failed/exp3`.
-The frozen TypeNet follow-up additionally reuses `paper_typenet/nn.py` and the
-existing physical-keyboard encoder checkpoint; its protocol is documented below.
+Two model files; generated files live in `runs/`:
+
+- `model.py`: `TypingClassifier`, standalone raw TypeNet → XGBoost classification,
+  parameterized fitting and the existing experiment runner.
+- `baseline.py`: `BaselineMonitor`, personal enrollment, baseline comparisons,
+  persistence and replay. Classification uses `TypingClassifier`; the baseline
+  never changes its decision boundary.
+
+Both default to the verified real-only `runs/embeddings` XGBoost ensemble. The
+runtime reuses `paper_typenet/nn.py`; historical experiments also reuse TabNet
+and NODE architecture layers in `prototype_net/failed/exp3`. Original run
+artifacts and their archived sources remain unchanged. Legacy monitor imports
+and commands continue to work.
+
+## Independent model exports
+
+```sh
+python3 -m prototype_net.exp4.model --phase export --output prototype_net/exp4/runs/exports/classifier.joblib
+python3 -m prototype_net.exp4.baseline --phase export --output prototype_net/exp4/runs/exports/baseline.joblib
+```
+
+The verified exports are `runs/exports/classifier.joblib` and
+`runs/exports/baseline.joblib` relative to exp4. Each contains all 25 XGBoost
+heads, preprocessing states and frozen TypeNet weights. They load independently
+of training-run directories and external encoder checkpoints. These are Python
+joblib artifacts, requiring this runtime and its dependencies; load only trusted
+artifacts. The baseline export additionally stores enrollment settings (default:
+one 300-key batch), but no participant identifiers, observations or baseline
+state. Save each person's state separately with `BaselineMonitor.save()`.
+Exports refuse to overwrite an existing artifact; use a new output name for
+each candidate. Both provided exports retain the current 25-model ensemble.
+
+```sh
+python3 -m prototype_net.exp4.model --phase classify --artifact prototype_net/exp4/runs/exports/classifier.joblib --input input.json --output classification.json
+python3 -m prototype_net.exp4.baseline --phase observe --artifact prototype_net/exp4/runs/exports/baseline.joblib --input input.json --state person.npz --output observation.json
+```
+
+Standalone input needs `events`; the baseline variant also requires
+`participant_id`, `context_id`, `batch_id` and `sequence_number`. Both take
+300 keys per batch (six 50-key sequences), use exactly 128 embedding coordinates,
+and classify with the existing .5 threshold. The baseline variant scores the
+enrollment batch and then reports each later classification alongside changes
+from that reference. Detailed input fields are documented below.
+
+## Hyperparameter experiments
+
+`TypingClassifier.fit()` returns a new classifier; it leaves the original
+ensemble and frozen encoder unchanged. Pass training-fold arrays only. Defaults
+match the original XGBoost configuration, including participant-balanced weights,
+train-only preprocessing and seed. Parameter overrides go to XGBoost, with
+unknown names rejected. No hyperparameter search is launched by export.
+
+```python
+from prototype_net.exp4.model import TypingClassifier
+from prototype_net.exp4.baseline import BaselineMonitor
+
+original = TypingClassifier.load("prototype_net/exp4/runs/exports/classifier.joblib")
+candidate = original.fit(x_train, y_train, participant_ids,
+                         parameters={"max_depth": 3, "learning_rate": 0.02})
+candidate.export("candidate.joblib")
+
+monitor = BaselineMonitor(candidate, participant_id="person-1", context_id="keyboard-1")
+monitor.export("candidate_baseline.joblib")
+```
+
+Each candidate is a fresh fit, not an addition to the 25-model ensemble.
+Use the existing participant-disjoint CV protocol for tuning, keeping the fixed
+validation/test observations outside fitting and selection. Export each variant
+from its chosen engine; loading one never modifies the other. A model fingerprint
+change rejects old baseline states whose stored scores belong to another model.
+The split and both exports reproduced all 1,432 recorded batch predictions
+exactly, retained old baseline-state compatibility, and passed independent CLI
+checks. A small parameterized training check left the original ensemble intact;
+no hyperparameter search or new model selection was performed.
 
 ## Completed run — 2026-09-17
 
@@ -1289,3 +1359,93 @@ fresh controls reproducing the prior predictions, correct neural epochs and
 TabNet penalty, and all 225 saved predictions independently reproduced. Metrics
 and checkpoint/encoder/dataset hashes were verified. Artifacts and audit source
 are archived in `runs/adapters`.
+
+## Persistent baseline and PD-pattern monitoring
+
+`BaselineMonitor` stores a person's enrollment matrices and then classifies each
+300-key batch with the existing 25 frozen XGBoost models from `runs/embeddings`.
+The classifier input is exactly 128 TypeNet coordinates, without timing summaries.
+The stored baseline is raw 6 × 128 embedding matrices, without timing summaries.
+No classifier or encoder is retrained, and no synthetic records are added.
+
+The first batch enrolls by default. Set `--baseline-batches 3` to use the first
+three batches (900 keys). Enrollment does not assume the person is healthy.
+Later observations never update the baseline, model weights, or threshold.
+The state includes baseline model scores, processed event identifiers, acquisition
+order and follow-up history, and can be saved and restored between observations.
+Participant, keyboard/context, encoder/model fingerprint, batch identifiers and
+event reuse are checked. A different keyboard/layout/context needs a separate
+state. Supply a strictly increasing `sequence_number` in acquisition order;
+key timestamps can be session-relative. Exactly 300 eligible printable keys,
+divisible into complete 50-key windows within each session, are required.
+
+Each follow-up returns a binary `flag`: 1 (`pd_pattern`) when the mean score
+across the 25 models and six sequences is at least .5, otherwise 0
+(`control_pattern`). It also returns the baseline score, signed score difference,
+embedding-distribution distance, and consecutive positive count. Two consecutive
+positives set `repeated_positive`; that is a descriptive count, not a separately
+validated alarm rule. Model scores are not calibrated clinical probabilities.
+The personal baseline contextualizes the classification but does not alter its
+decision boundary (`classifier_personalized: false`). A positive flag can remain
+positive while improving relative to an already PD-like baseline; a large
+embedding shift alone cannot trigger a positive flag.
+
+Distribution distance uses the biased, nonnegative RBF MMD² estimator and a
+bandwidth fixed from the enrollment embeddings. [Gretton et al., 2012](https://jmlr.org/papers/v13/gretton12a.html)
+demonstrated successful distribution comparisons using MMD. This implementation
+reports a descriptive distance, without claiming a significance test or a
+clinical threshold. It also reports mean cross-reference Euclidean distance
+relative to the baseline's mean within-reference distance. If all baseline
+embeddings coincide, the ratio is undefined (`null`). Distances from 300-key and
+900-key references should not be interpreted as identically calibrated scores.
+
+`baseline-replay` fixes both enrollment settings before processing all eligible
+real 300-key batches from `runs/baseline_embeddings`. It reconstructs embeddings
+from the recorded keys, checks them against the cache, and retains original
+participant splits. Labels enter only the retrospective PD/control evaluation.
+Repeated records are acquisition-ordered observations, not simulated days or
+verified clinical transitions. Participant metrics average follow-up scores per
+person; separate batch metrics count repeated observations. Fold means/SDs and
+the deployed equal-weight ensemble are reported separately. These are replays on
+previously evaluated participants, not a new independent validation cohort.
+
+```sh
+python3 -m prototype_net.exp4.model --phase baseline-replay --baseline prototype_net/exp4/runs/embeddings --output prototype_net/exp4/runs/baseline_monitor
+python3 -m prototype_net.exp4.model --phase baseline-monitor --baseline prototype_net/exp4/runs/embeddings --baseline-batches 3 --input input.json --state person.npz --output result.json
+```
+
+Input JSON fields are `participant_id`, `context_id`, `batch_id`,
+`sequence_number`, and `events`. Each event supplies `session_id`, `event_id`,
+`keydown_ms`, `keyup_ms`, and either a printable `key` or numeric `keycode`.
+The replay saves `example-input.json` and the corresponding pre-observation
+`example-state.npz` for a reproducible raw-input demonstration.
+
+Completed replay: 311 people, 1,432 batches, 429,600 distinct real key events.
+The 300-key reference leaves 1,121 follow-up batches from all 311 people. The
+900-key reference leaves 510 follow-up batches from 283 people. Both use exactly
+the same frozen classifier and threshold; different follow-up eligibility means
+their metrics do not measure a causal benefit or harm from reference size.
+
+For the 300-key reference, validation has 31 people/128 follow-up batches and
+test has 62 people/230 follow-up batches. Participant-level mean fold accuracy
+is 61.0% ± 2.9% (mean AUROC 0.698) on validation and 70.8% ± 2.0%
+(mean AUROC 0.724) on test. The actual 25-model ensemble is 72.6% accurate
+(45/62, AUROC 0.725) per test participant; its batch accuracy is 73.0%
+(168/230, AUROC 0.736). Repeated batches are not independent participants.
+
+For the 900-key reference, validation has 29 people/66 follow-up batches and
+test has 54 people/107 follow-up batches. Participant-level mean fold accuracy
+is 61.7% ± 3.2% (mean AUROC 0.678) on validation and 66.0% ± 3.0%
+(mean AUROC 0.674) on test. The ensemble is 66.7% accurate (36/54,
+AUROC 0.679) per test participant; its batch accuracy is 72.0% (77/107,
+AUROC 0.742). This replay does not replace the original raw-embedding benchmark
+of 71.1% ± 2.7%, AUROC 0.731 on all 64 test participants.
+
+Verification passed for all raw-input embeddings (exact cache equality), all
+25 classifiers' batch predictions, both histories and all MMD distances,
+checkpoint/source hashes, participant splits and reported metrics. Mechanism
+checks cover immutable references, acquisition order, context and duplicate
+event guards, save/restore, frozen encoder weights, order-invariant distances,
+and a large distribution shift that remains negative when the classifier score
+is below .5. The command-line saved-state example also exactly matches replay.
+Results, scores, histories and audit scripts are in `runs/baseline_monitor`.

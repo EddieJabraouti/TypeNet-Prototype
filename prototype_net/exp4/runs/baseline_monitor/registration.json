@@ -1,0 +1,27 @@
+{
+  "classifier_run": "/Users/eddiejabrouti/dev/research/TypeNet-Prototype/prototype_net/exp4/runs/embeddings",
+  "classifier_freeze_sha256": "cafe2b4324dd0c73d0324ac04cb768eb2af2326e34e0e02cd2316ef266392904",
+  "encoder_sha256": "04b7c11aa4a91fcf8f19027b09527c9962f31a1f4ec68913a0359b18e75696b7",
+  "dataset_sha256": "696c8295d76f19baee0f30bb6ae699843980b75095b16f7f69193ba9f50e0247",
+  "events_sha256": "675819ab9c1f1697de2c1941c9a4df128f815b89a39e5e0b9012ede6b8fa009c",
+  "baseline_batches": [
+    1,
+    3
+  ],
+  "keys_per_batch": 300,
+  "threshold": 0.5,
+  "synthetic": false,
+  "classifier": "Existing 25 XGBoost folds; 128 TypeNet coordinates only",
+  "decision": "Mean model score >= .5; baseline distance and score change do not alter the flag",
+  "baseline": "Fixed after enrollment; first one or three acquisition-ordered batches",
+  "time": "Recording/acquisition order, not simulated days or verified symptom transitions",
+  "sources": [
+    "https://jmlr.org/papers/v13/gretton12a.html"
+  ],
+  "source_hashes": {
+    "prototype_net/exp4/model.py": "336e285276043e5fde7a6e2485aab4833e7d8d08330a18ce96804cfb87ad2cdf",
+    "prototype_net/failed/exp3/node.py": "50bd349274857387542c9a31f9615e934b99cf40277f5a440a5cdb278cb2110d",
+    "prototype_net/failed/exp3/tabnet.py": "41ec16ae6f18307ed13491cf7cc363784e494b5605db967a60344bcbaaaa9fcc",
+    "paper_typenet/nn.py": "e186c4fb737f58636130ede3b5f87c54f95fc4edc5dca9746c9b4c98291fd17c"
+  }
+}

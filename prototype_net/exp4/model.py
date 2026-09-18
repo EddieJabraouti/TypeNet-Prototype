@@ -818,7 +818,9 @@ def neural_model(name, features, outputs):
     return model
 
 
-def fit_model(name, x, y, ids, kind, augmentation, epochs, encoder=None):
+def fit_model(name, x, y, ids, kind, augmentation, epochs, encoder=None, parameters=None):
+    if parameters is not None and name != "xgboost":
+        raise ValueError("Parameter overrides are supported for XGBoost only")
     raw = x
     x, state = preprocess(x)
     parents = []
@@ -853,9 +855,15 @@ def fit_model(name, x, y, ids, kind, augmentation, epochs, encoder=None):
     elif name in ("xgboost", "random_forest"):
         if name == "xgboost":
             cls = xgboost.XGBClassifier if kind == "classification" else xgboost.XGBRegressor
-            model = cls(n_estimators=150, max_depth=2, learning_rate=.03, min_child_weight=3,
-                        reg_lambda=10, subsample=1., colsample_bytree=1., tree_method="hist",
-                        n_jobs=1, random_state=SEED)
+            options = dict(n_estimators=150, max_depth=2, learning_rate=.03, min_child_weight=3,
+                           reg_lambda=10, subsample=1., colsample_bytree=1., tree_method="hist",
+                           n_jobs=1, random_state=SEED)
+            if parameters:
+                unknown = set(parameters) - set(cls().get_params())
+                if unknown:
+                    raise ValueError(f"Unknown XGBoost parameters: {sorted(unknown)}")
+                options.update(parameters)
+            model = cls(**options)
         else:
             cls = RandomForestClassifier if kind == "classification" else RandomForestRegressor
             model = cls(n_estimators=300, max_depth=4, min_samples_leaf=3, max_features=1., n_jobs=1, random_state=SEED)
@@ -958,7 +966,7 @@ def permutation_p(y, prediction):
 
 
 def source_hashes():
-    paths = [Path(__file__), ROOT / "prototype_net/failed/exp3/node.py", ROOT / "prototype_net/failed/exp3/tabnet.py"]
+    paths = [Path(__file__), Path(__file__).with_name("baseline.py"), ROOT / "prototype_net/failed/exp3/node.py", ROOT / "prototype_net/failed/exp3/tabnet.py"]
     return {str(p.relative_to(ROOT)): sha256(p) for p in paths}
 
 
@@ -1900,14 +1908,18 @@ def evaluate_real(out):
     print(json.dumps([r for r in aggregates if r["cohort"] == "all"], indent=2), flush=True)
 
 
-class PersonalMonitor:
-    def __init__(self, run, participant_id, family="xgboost", batch_size=50):
+class TypingClassifier:
+    """Frozen TypeNet and population classifier, without participant state."""
+    def __init__(self, run=None, family="xgboost", batch_size=6):
         from paper_typenet.nn import TypeNetEncoder
-        self.run, self.participant_id = Path(run).resolve(), str(participant_id)
+        self.run = Path(run or Path(__file__).parent / "runs/embeddings").resolve()
         if family not in MODELS or batch_size < 2:
             raise ValueError("Invalid model family or batch size")
         self.family, self.batch_size = family, batch_size
         reg = json.loads((self.run / "registration.json").read_text())
+        self.features = reg["features"]
+        if self.features not in (128, 135):
+            raise ValueError("Unsupported monitor feature representation")
         freeze = json.loads((self.run / "freeze.json").read_text())
         if freeze["registration_sha256"] != sha256(self.run / "registration.json"):
             raise ValueError("Registration changed")
@@ -1934,10 +1946,6 @@ class PersonalMonitor:
         if len(self.models) != 25:
             raise ValueError("Expected 25 frozen classifiers")
         self.fingerprint = hashlib.sha256((sha256(self.run / "freeze.json") + reg["encoder_sha256"] + family).encode()).hexdigest()
-        self.baseline = None
-        self.last_features = None
-        self.state = dict(participant_id=self.participant_id, family=family, batch_size=batch_size,
-                          fingerprint=self.fingerprint, batches=[], event_ids=[], last_timestamp_ms=None)
 
     def encode(self, events):
         from paper_typenet.nn import events_to_features
@@ -1975,98 +1983,98 @@ class PersonalMonitor:
         raw = np.stack(sequences)
         with torch.inference_mode():
             embedded = self.encoder(torch.from_numpy(raw), torch.full((len(raw),), 50, dtype=torch.long)).numpy()
-        stats = np.stack([summary(sequence[:, 0]) for sequence in raw])
-        features = np.concatenate([embedded, stats], axis=1).astype(np.float32)
+        features = embedded.astype(np.float32)
+        if self.features == 135:
+            stats = np.stack([summary(sequence[:, 0]) for sequence in raw])
+            features = np.concatenate([features, stats], axis=1).astype(np.float32)
         if not np.isfinite(features).all():
             raise ValueError("Nonfinite batch features")
         return features, sorted(identifiers), len(sequences)
 
+
     def probabilities(self, features):
         return np.stack([predict(model, features) for model in self.models])
 
-    def observe(self, payload):
-        if str(payload["participant_id"]) != self.participant_id:
-            raise ValueError("Participant mismatch")
-        batch_id, timestamp = str(payload["batch_id"]), float(payload["timestamp_ms"])
-        if batch_id in self.state["batches"]:
-            raise ValueError("Batch already processed")
-        if not math.isfinite(timestamp) or timestamp < 0:
-            raise ValueError("Invalid batch timestamp")
-        previous = self.state["last_timestamp_ms"]
-        if previous is not None and timestamp <= previous:
-            raise ValueError("Batch must follow the previous batch")
-        features, identifiers, windows = self.encode(payload["events"])
-        if set(identifiers) & set(self.state["event_ids"]):
-            raise ValueError("Events overlap an earlier batch")
+    def classify(self, payload):
+        if self.features != 128 or self.family != "xgboost":
+            raise ValueError("The standalone variant requires raw-embedding XGBoost")
+        if len(payload["events"]) != self.batch_size*50:
+            raise ValueError(f"Supply exactly {self.batch_size*50} eligible keys")
+        features, _, windows = self.encode(payload["events"])
         if features is None:
-            if windows > self.batch_size:
-                raise ValueError(f"Split the input into batches of {self.batch_size} complete windows")
-            return dict(status="insufficient_data", participant_id=self.participant_id, batch_id=batch_id,
-                        windows=windows, required_windows=self.batch_size)
-        probability = self.probabilities(features)
-        score = float(probability.mean())
-        result = dict(status="baseline_ready" if self.baseline is None else "scored", participant_id=self.participant_id,
-            batch_id=batch_id, timestamp_ms=timestamp, windows=windows, keystrokes=windows*50,
-            embedding_shape=[windows, 128], classifier_input_shape=list(features.shape), family=self.family,
-            model_count=len(self.models), pd_score=score, predicted_class=int(score >= .5),
-            model_score_sd=float(probability.mean(1).std(ddof=1)))
-        if self.baseline is None:
-            self.baseline = features.copy()
-            self.state.update(baseline_batch_id=batch_id, baseline_pd_score=score)
-        else:
-            result.update(baseline_batch_id=self.state["baseline_batch_id"], baseline_pd_score=self.state["baseline_pd_score"],
-                          pd_score_change=score-self.state["baseline_pd_score"],
-                          **baseline_distance(self.baseline[:, :128], features[:, :128]))
-        self.state["batches"].append(batch_id)
-        self.state["event_ids"].extend(identifiers)
-        self.state["last_timestamp_ms"] = timestamp
-        self.last_features = features
-        return result
+            raise ValueError("Input must contain complete 50-key session windows")
+        scores = self.probabilities(features).mean(axis=1).astype(np.float64)
+        score = float(scores.mean())
+        return dict(pd_score=score, flag=int(score >= .5),
+            label="pd_pattern" if score >= .5 else "control_pattern", threshold=.5,
+            model_score_sd=float(scores.std(ddof=1)) if len(scores) > 1 else 0.,
+            model_count=len(scores), keystrokes=windows*50,
+            embedding_shape=[windows, 128], classifier_input_shape=[windows, 128],
+            target="PD-associated typing versus control")
 
-    def save(self, path):
+    def fit(self, x, y, owners, parameters=None):
+        """Return a fresh classifier fitted only to the supplied training-fold rows."""
+        x, y, owners = np.asarray(x, dtype=np.float32), np.asarray(y), np.asarray(owners)
+        if (x.ndim != 2 or x.shape[1] != 128 or y.shape != (len(x),)
+                or owners.shape != y.shape or not np.isfinite(x).all()
+                or set(np.unique(y)) != {0, 1}):
+            raise ValueError("Expected aligned real 128-coordinate training rows, binary labels and owners")
+        model = fit_model("xgboost", x, y, owners, "classification", "none", 0, parameters=parameters)
+        bundle = self._bundle()
+        bundle["models"] = [model]
+        content = (model["estimator"].get_booster().save_raw(raw_format="json")
+                   + model["preprocess"]["medians"].tobytes()
+                   + model["preprocess"]["scaler"].mean_.tobytes()
+                   + model["preprocess"]["scaler"].scale_.tobytes())
+        bundle["fingerprint"] = hashlib.sha256(self.fingerprint.encode() + content).hexdigest()
+        return self._from_bundle(bundle)
+
+    def _bundle(self):
+        if self.features != 128 or self.family != "xgboost":
+            raise ValueError("Export requires raw-embedding XGBoost")
+        return dict(version=1, family=self.family, features=self.features, batch_size=self.batch_size,
+            fingerprint=self.fingerprint, encoder={k: v.detach().cpu().clone() for k, v in self.encoder.state_dict().items()},
+            models=self.models)
+
+    @classmethod
+    def _from_bundle(cls, bundle):
+        from paper_typenet.nn import TypeNetEncoder
+        if (bundle["version"] != 1 or bundle["family"] != "xgboost" or bundle["features"] != 128
+                or type(bundle["batch_size"]) is not int or bundle["batch_size"] < 2
+                or not bundle["models"]):
+            raise ValueError("Invalid classifier artifact")
+        instance = cls.__new__(cls)
+        instance.run = None
+        for name in ("family", "features", "batch_size", "fingerprint", "models"):
+            setattr(instance, name, bundle[name])
+        for model in instance.models:
+            if (model["name"] != "xgboost" or model["kind"] != "classification"
+                    or model["preprocess"]["scaler"].n_features_in_ != 128):
+                raise ValueError("Invalid exported classifier head")
+        instance.encoder = TypeNetEncoder()
+        instance.encoder.load_state_dict(bundle["encoder"])
+        instance.encoder.eval().requires_grad_(False)
+        instance.neutral_key = float(instance.encoder.input_batch_norm.running_mean[4])*255
+        return instance
+
+    def export(self, path):
         path = Path(path)
-        if self.baseline is None:
-            raise ValueError("No baseline to save")
         path.parent.mkdir(parents=True, exist_ok=True)
-        with tempfile.NamedTemporaryFile(dir=path.parent, suffix=".npz", delete=False) as stream:
-            temporary = Path(stream.name)
-            np.savez_compressed(stream, baseline=self.baseline, metadata=np.array(json.dumps(self.state, allow_nan=False)))
-        temporary.replace(path)
+        with path.open("xb") as stream:
+            joblib.dump(dict(variant="classifier", engine=self._bundle()), stream, compress=3)
 
-    def restore(self, path):
-        with np.load(path, allow_pickle=False) as cache:
-            baseline = cache["baseline"].copy()
-            state = json.loads(str(cache["metadata"]))
-        for key in ("participant_id", "family", "batch_size", "fingerprint"):
-            if state[key] != self.state[key]:
-                raise ValueError(f"State mismatch: {key}")
-        if baseline.shape != (self.batch_size, 135) or not np.isfinite(baseline).all():
-            raise ValueError("Invalid baseline matrix")
-        self.baseline, self.state = baseline, state
+    @classmethod
+    def load(cls, path):
+        bundle = joblib.load(path)
+        if bundle["variant"] != "classifier":
+            raise ValueError("Expected a standalone classifier artifact")
+        return cls._from_bundle(bundle["engine"])
 
 
-def baseline_distance(baseline, current):
-    baseline, current = np.asarray(baseline, dtype=np.float64), np.asarray(current, dtype=np.float64)
-    if baseline.ndim != 2 or current.shape != baseline.shape or baseline.shape[0] < 2:
-        raise ValueError("Expected matching matrices with at least two embeddings")
-    if not np.isfinite(baseline).all() or not np.isfinite(current).all():
-        raise ValueError("Invalid embeddings")
-    bb = np.sum((baseline[:, None] - baseline[None, :])**2, axis=-1)
-    cc = np.sum((current[:, None] - current[None, :])**2, axis=-1)
-    bc = np.sum((baseline[:, None] - current[None, :])**2, axis=-1)
-    off_diagonal = bb[~np.eye(len(baseline), dtype=bool)]
-    within = float(np.sqrt(off_diagonal).mean())
-    between = float(np.sqrt(bc).mean())
-    positive = off_diagonal[off_diagonal > 0]
-    bandwidth = float(np.median(positive)) if len(positive) else 1e-12
-    mmd = float(np.exp(-bb/bandwidth).mean() + np.exp(-cc/bandwidth).mean() - 2*np.exp(-bc/bandwidth).mean())
-    return dict(embedding_distance=between, baseline_within_distance=within,
-                embedding_distance_ratio=between/within if within > 0 else None,
-                mmd2=max(0., mmd), kernel_bandwidth_squared=bandwidth/2,
-                change_interpretation="Descriptive typing change; no clinical change threshold fitted")
 
 
 def simulate_monitor(out, baseline):
+    from prototype_net.exp4.baseline import PersonalMonitor
     from datetime import datetime, timezone
     out.mkdir(parents=True, exist_ok=False)
     baseline = Path(baseline).resolve()
@@ -2142,6 +2150,7 @@ def simulate_monitor(out, baseline):
 
 
 def simulate_impaired(out, baseline):
+    from prototype_net.exp4.baseline import PersonalMonitor
     out.mkdir(parents=True, exist_ok=False)
     baseline = Path(baseline).resolve()
     reg = json.loads((baseline / "registration.json").read_text())
@@ -2999,20 +3008,40 @@ def check():
     print("Passed: deterministic splits, train-only preprocessing, SMOTE lineage, all model heads, checkpoint round trips, exact permutation, overwrite refusal.")
 
 
+def __getattr__(name):
+    if name in {"PersonalMonitor", "BaselineMonitor", "baseline_distance", "replay_baselines"}:
+        from prototype_net.exp4 import baseline
+        return getattr(baseline, name)
+    raise AttributeError(name)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--phase", choices=("fetch", "prepare", "prepare-aalto", "expand", "distribution", "train", "evaluate", "report", "combined", "typenet-prepare", "typenet-train", "typenet-evaluate", "external", "real-prepare", "embeddings-prepare", "real-evaluate", "monitor", "simulate", "simulate-impaired", "personal-prepare", "personal-embeddings-prepare", "personal-train", "personal-evaluate", "residual-prepare", "residual-train", "residual-evaluate", "adapters-prepare", "adapters-train", "adapters-evaluate", "check"), required=True)
+    parser.add_argument("--phase", choices=("classify", "export", "fetch", "prepare", "prepare-aalto", "expand", "distribution", "train", "evaluate", "report", "combined", "typenet-prepare", "typenet-train", "typenet-evaluate", "external", "real-prepare", "embeddings-prepare", "real-evaluate", "monitor", "baseline-monitor", "baseline-replay", "simulate", "simulate-impaired", "personal-prepare", "personal-embeddings-prepare", "personal-train", "personal-evaluate", "residual-prepare", "residual-train", "residual-evaluate", "adapters-prepare", "adapters-train", "adapters-evaluate", "check"), required=True)
     parser.add_argument("--output", type=Path, default=Path(__file__).parent / "runs")
     parser.add_argument("--epochs", type=int, default=100)
     parser.add_argument("--baseline", type=Path, default=Path(__file__).parent / "runs")
     parser.add_argument("--input", type=Path)
     parser.add_argument("--state", type=Path)
+    parser.add_argument("--run", type=Path, default=Path(__file__).parent / "runs/embeddings")
+    parser.add_argument("--artifact", type=Path)
+    parser.add_argument("--baseline-batches", type=int, default=1)
     args = parser.parse_args()
     if args.epochs < 1:
         parser.error("--epochs must be positive")
     torch.set_num_threads(1)
     with threadpool_limits(limits=1):
-        if args.phase == "fetch":
+        if args.phase in ("classify", "export"):
+            if args.output.exists():
+                raise FileExistsError(args.output)
+            engine = TypingClassifier.load(args.artifact) if args.artifact else TypingClassifier(args.run)
+            if args.phase == "export":
+                engine.export(args.output)
+            else:
+                if args.input is None:
+                    parser.error("classify requires --input")
+                write_json(args.output, engine.classify(json.loads(args.input.read_text())))
+        elif args.phase == "fetch":
             fetch_tappy()
         elif args.phase == "prepare":
             prepare(args.output)
@@ -3066,7 +3095,27 @@ def main():
             simulate_impaired(args.output, args.baseline)
         elif args.phase == "simulate":
             simulate_monitor(args.output, args.baseline)
+        elif args.phase == "baseline-replay":
+            from prototype_net.exp4.baseline import replay_baselines
+            replay_baselines(args.output, args.baseline)
+        elif args.phase == "baseline-monitor":
+            from prototype_net.exp4.baseline import BaselineMonitor
+            if args.input is None or args.state is None:
+                parser.error("baseline-monitor requires --input and --state")
+            if args.output.exists():
+                raise FileExistsError(args.output)
+            if len({p.resolve() for p in (args.input, args.state, args.output)}) != 3:
+                parser.error("Input, state and output paths must differ")
+            payload = json.loads(args.input.read_text())
+            engine = TypingClassifier(args.baseline)
+            monitor = BaselineMonitor(engine, payload["participant_id"], payload["context_id"], args.baseline_batches)
+            if args.state.exists():
+                monitor.restore(args.state)
+            result = monitor.observe(payload)
+            monitor.save(args.state)
+            write_json(args.output, result)
         elif args.phase == "monitor":
+            from prototype_net.exp4.baseline import PersonalMonitor
             if args.input is None or args.state is None:
                 parser.error("monitor requires --input and --state")
             if args.output.exists():

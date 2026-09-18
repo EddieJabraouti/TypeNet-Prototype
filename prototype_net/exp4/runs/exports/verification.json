@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "models": 25,
+  "batches": 1432,
+  "predictions_exactly_preserved": true,
+  "old_baseline_state_compatible": true,
+  "both_exports_load_without_training_runs_or_encoder_files": true,
+  "model_exports_contain_no_personal_baseline": true,
+  "parameterized_training_smoke_test_only": true,
+  "current_models_unchanged": true,
+  "artifacts": {
+    "classifier.joblib": "5d06c15621157c1f08c89e3ecee68624e6ba0aa4824fbc8c492df30db4a0e1f9",
+    "baseline.joblib": "22837138cf877a54f33bde8c67f8a850d5e714eba448aa3378cacdf079e5d50e"
+  }
+}

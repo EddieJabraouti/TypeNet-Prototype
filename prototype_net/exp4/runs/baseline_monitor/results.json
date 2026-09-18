@@ -1,0 +1,324 @@
+{
+  "people": 311,
+  "batches": 1432,
+  "aggregates": [
+    {
+      "baseline_batches": 1,
+      "role": "train",
+      "people": 218,
+      "followup_batches": 763,
+      "mean_fold_accuracy": 0.7187155963302752,
+      "sd_fold_accuracy": 0.011598642977683728,
+      "mean_fold_auroc": 0.8055830508474577,
+      "person_ensemble": {
+        "auroc": 0.8151694915254238,
+        "average_precision": 0.786488231276677,
+        "accuracy": 0.7110091743119266,
+        "balanced_accuracy": 0.7025423728813559,
+        "sensitivity": 0.6,
+        "specificity": 0.8050847457627118,
+        "log_loss": 0.5640049841950846,
+        "confusion_matrix": [
+          [
+            95,
+            23
+          ],
+          [
+            40,
+            60
+          ]
+        ]
+      },
+      "batch_ensemble": {
+        "auroc": 0.817459104112521,
+        "average_precision": 0.7811217391506665,
+        "accuracy": 0.7260812581913499,
+        "balanced_accuracy": 0.7115606454392573,
+        "sensitivity": 0.5747800586510264,
+        "specificity": 0.8483412322274881,
+        "log_loss": 0.5600018610354065,
+        "confusion_matrix": [
+          [
+            358,
+            64
+          ],
+          [
+            145,
+            196
+          ]
+        ]
+      }
+    },
+    {
+      "baseline_batches": 1,
+      "role": "validation",
+      "people": 31,
+      "followup_batches": 128,
+      "mean_fold_accuracy": 0.6103225806451613,
+      "sd_fold_accuracy": 0.029329423004270643,
+      "mean_fold_auroc": 0.6981512605042016,
+      "person_ensemble": {
+        "auroc": 0.7100840336134454,
+        "average_precision": 0.6542736163077778,
+        "accuracy": 0.6129032258064516,
+        "balanced_accuracy": 0.5966386554621849,
+        "sensitivity": 0.42857142857142855,
+        "specificity": 0.7647058823529411,
+        "log_loss": 0.620541535426941,
+        "confusion_matrix": [
+          [
+            13,
+            4
+          ],
+          [
+            8,
+            6
+          ]
+        ]
+      },
+      "batch_ensemble": {
+        "auroc": 0.7793427230046948,
+        "average_precision": 0.6899349027194305,
+        "accuracy": 0.6953125,
+        "balanced_accuracy": 0.6803805287867557,
+        "sensitivity": 0.543859649122807,
+        "specificity": 0.8169014084507042,
+        "log_loss": 0.5789300178516466,
+        "confusion_matrix": [
+          [
+            58,
+            13
+          ],
+          [
+            26,
+            31
+          ]
+        ]
+      }
+    },
+    {
+      "baseline_batches": 1,
+      "role": "test",
+      "people": 62,
+      "followup_batches": 230,
+      "mean_fold_accuracy": 0.707741935483871,
+      "sd_fold_accuracy": 0.019928766658979188,
+      "mean_fold_auroc": 0.7244957983193278,
+      "person_ensemble": {
+        "auroc": 0.7247899159663866,
+        "average_precision": 0.6926157152501938,
+        "accuracy": 0.7258064516129032,
+        "balanced_accuracy": 0.7153361344537814,
+        "sensitivity": 0.6071428571428571,
+        "specificity": 0.8235294117647058,
+        "log_loss": 0.6078893209654332,
+        "confusion_matrix": [
+          [
+            28,
+            6
+          ],
+          [
+            11,
+            17
+          ]
+        ]
+      },
+      "batch_ensemble": {
+        "auroc": 0.7363127646702965,
+        "average_precision": 0.7297036605671194,
+        "accuracy": 0.7304347826086957,
+        "balanced_accuracy": 0.729658197217181,
+        "sensitivity": 0.6403508771929824,
+        "specificity": 0.8189655172413793,
+        "log_loss": 0.613741299892742,
+        "confusion_matrix": [
+          [
+            95,
+            21
+          ],
+          [
+            41,
+            73
+          ]
+        ]
+      }
+    },
+    {
+      "baseline_batches": 3,
+      "role": "train",
+      "people": 200,
+      "followup_batches": 337,
+      "mean_fold_accuracy": 0.7003999999999999,
+      "sd_fold_accuracy": 0.0146429732864151,
+      "mean_fold_auroc": 0.8052545619518097,
+      "person_ensemble": {
+        "auroc": 0.8140941627180158,
+        "average_precision": 0.7772301898196123,
+        "accuracy": 0.7,
+        "balanced_accuracy": 0.685754612360117,
+        "sensitivity": 0.5274725274725275,
+        "specificity": 0.8440366972477065,
+        "log_loss": 0.5639363438369949,
+        "confusion_matrix": [
+          [
+            92,
+            17
+          ],
+          [
+            43,
+            48
+          ]
+        ]
+      },
+      "batch_ensemble": {
+        "auroc": 0.8334407447189401,
+        "average_precision": 0.787136038681689,
+        "accuracy": 0.7270029673590505,
+        "balanced_accuracy": 0.7055495882563552,
+        "sensitivity": 0.5374149659863946,
+        "specificity": 0.8736842105263158,
+        "log_loss": 0.5543654209969652,
+        "confusion_matrix": [
+          [
+            166,
+            24
+          ],
+          [
+            68,
+            79
+          ]
+        ]
+      }
+    },
+    {
+      "baseline_batches": 3,
+      "role": "validation",
+      "people": 29,
+      "followup_batches": 66,
+      "mean_fold_accuracy": 0.616551724137931,
+      "sd_fold_accuracy": 0.031977994812054156,
+      "mean_fold_auroc": 0.6784313725490196,
+      "person_ensemble": {
+        "auroc": 0.6764705882352942,
+        "average_precision": 0.6334454330735796,
+        "accuracy": 0.5862068965517241,
+        "balanced_accuracy": 0.5490196078431372,
+        "sensitivity": 0.3333333333333333,
+        "specificity": 0.7647058823529411,
+        "log_loss": 0.6167753001345944,
+        "confusion_matrix": [
+          [
+            13,
+            4
+          ],
+          [
+            8,
+            4
+          ]
+        ]
+      },
+      "batch_ensemble": {
+        "auroc": 0.8630009319664491,
+        "average_precision": 0.8360681915478886,
+        "accuracy": 0.7727272727272727,
+        "balanced_accuracy": 0.7562907735321529,
+        "sensitivity": 0.6206896551724138,
+        "specificity": 0.8918918918918919,
+        "log_loss": 0.535058202328459,
+        "confusion_matrix": [
+          [
+            33,
+            4
+          ],
+          [
+            11,
+            18
+          ]
+        ]
+      }
+    },
+    {
+      "baseline_batches": 3,
+      "role": "test",
+      "people": 54,
+      "followup_batches": 107,
+      "mean_fold_accuracy": 0.66,
+      "sd_fold_accuracy": 0.02970668991485423,
+      "mean_fold_auroc": 0.6735483870967741,
+      "person_ensemble": {
+        "auroc": 0.6788218793828893,
+        "average_precision": 0.6255155271065279,
+        "accuracy": 0.6666666666666666,
+        "balanced_accuracy": 0.6479663394109396,
+        "sensitivity": 0.5217391304347826,
+        "specificity": 0.7741935483870968,
+        "log_loss": 0.6258556937995228,
+        "confusion_matrix": [
+          [
+            24,
+            7
+          ],
+          [
+            11,
+            12
+          ]
+        ]
+      },
+      "batch_ensemble": {
+        "auroc": 0.7415254237288135,
+        "average_precision": 0.7785111983834984,
+        "accuracy": 0.719626168224299,
+        "balanced_accuracy": 0.7263418079096045,
+        "sensitivity": 0.6610169491525424,
+        "specificity": 0.7916666666666666,
+        "log_loss": 0.6201112785396249,
+        "confusion_matrix": [
+          [
+            38,
+            10
+          ],
+          [
+            20,
+            39
+          ]
+        ]
+      }
+    }
+  ],
+  "example": {
+    "participant_id": "conll:100",
+    "batch_id": "3",
+    "sequence_number": 3,
+    "status": "scored",
+    "enrollment_batches": 3,
+    "keystrokes": 300,
+    "embedding_shape": [
+      6,
+      128
+    ],
+    "classifier_input_shape": [
+      6,
+      128
+    ],
+    "pd_score": 0.3605229365825653,
+    "model_score_sd": 0.040124941064074215,
+    "target": "PD-associated typing versus control",
+    "threshold": 0.5,
+    "classifier_personalized": false,
+    "flag": 0,
+    "label": "control_pattern",
+    "baseline_pd_score": 0.3565601052840551,
+    "pd_score_change": 0.0039628312985102165,
+    "positive_streak": 0,
+    "repeated_positive": false,
+    "embedding_distance": 0.9478697253964626,
+    "baseline_within_distance": 1.0708017174777689,
+    "embedding_distance_ratio": 0.8851963065852494,
+    "mmd2": 0.07671463670831957,
+    "kernel_bandwidth_squared": 0.5290115509261412,
+    "change_interpretation": "Descriptive typing change; no clinical change threshold fitted",
+    "baseline_batches_stored": 3
+  },
+  "interpretation": "PD/control discrimination on existing participants, not validation of deterioration detection; no new training or threshold tuning.",
+  "sd_definition": "Sample SD across 25 existing fold models on the same participants"
+}
